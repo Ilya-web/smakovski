@@ -1,0 +1,176 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    <section class="section">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-6">
+            <div class="sales text-center">
+              <div class="sales-icon">
+                <svg>
+                  <use xlink:href="images/icons/sprite.svg#moto"></use>
+                </svg>
+              </div>
+              <h2 class="h2 text-uppercase sales-title">всего <br> за 49 грн!</h2>
+              <div class="sales-desc">
+                <p>Доставка в черте города всего 49 грн!</p>
+                <p class="sales-time">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#clock"></use>
+                  </svg>
+                  Работаем с 9:00 до 20:00*</p>
+              </div>
+              <div class="sales-btn">
+                <a href="#" class="btn-site click-animation"><span>Подробнее</span></a>
+              </div>
+              <div class="sales-footnote font-Roboto-Condensed">*Все заявки после 19:00 будут проработаны
+                с утра на следующий день.</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="swiper sales-slider">
+              <div class="swiper-wrapper">
+
+                @@loop('components/sales-slider_item/index.html',
+                'components/sales-slider_item/bd.json')
+
+              </div>
+
+              <div class="sales-slider-pagination slider-pagination"></div>
+              <button type="button" class="sales-slider-prev slider-button-prev whiteBtn click-animation"></button>
+              <button type="button" class="sales-slider-next slider-button-next whiteBtn click-animation"></button>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="offers">
+              <div class="offers-item offers-item-img">
+                <img src="images/offer-img.svg" alt="">
+              </div>
+              @@loop('components/offer-item/index.html',
+              'components/offer-item/offer-bd.json')
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="nutritionist">
+              <h2 class="h2 nutritionist-title">Ваш шеф, <br>Ваш диетолог</h2>
+
+              <nav>
+                <div class="nav nutritionist-tabs mb-4" id="nutritionistTab" role="tablist">
+                  <button class="nutritionist-link active" id="nutritionist-tab-1" data-bs-toggle="tab" data-bs-target="#nutritionist-1" type="button" role="tab" aria-controls="nutritionist-1" aria-selected="true">01.</button>
+                  <button class="nutritionist-link" id="nutritionist-tab-2" data-bs-toggle="tab" data-bs-target="#nutritionist-2" type="button" role="tab" aria-controls="nutritionist-2" aria-selected="false">02.</button>
+                  <button class="nutritionist-link" id="nutritionist-tab-3" data-bs-toggle="tab" data-bs-target="#nutritionist-3" type="button" role="tab" aria-controls="nutritionist-3" aria-selected="false">03.</button>
+                  <button class="nutritionist-link" id="nutritionist-tab-4" data-bs-toggle="tab" data-bs-target="#nutritionist-4" type="button" role="tab" aria-controls="nutritionist-4" aria-selected="false">04.</button>
+                  <button class="nutritionist-link" id="nutritionist-tab-5" data-bs-toggle="tab" data-bs-target="#nutritionist-5" type="button" role="tab" aria-controls="nutritionist-5" aria-selected="false">05.</button>
+                </div>
+              </nav>
+              <div class="tab-content nutritionist-content" id="nutritionist-tabContent">
+                @@loop('components/nutritionist-tab/index.html',
+                'components/nutritionist-tab/bd.json')
+              </div>
+
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="nutritionist-img">
+              <img src="images/sales-slider/image-2.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('components/section-programs/index.html')
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="h1 mb-32 title-images d-none d-md-block">
+              Узнайте все
+              <div class="image"><img src="images/title-images/image-1.jpg" alt=""></div>
+              <br>
+               o
+              <div class="image"><img src="images/title-images/image-2.jpg" alt=""></div>
+              здоровом питании
+              <br>
+              <div class="image"><img src="images/title-images/image-3.jpg" alt=""></div>
+              вместе со
+              <div class="image"><img src="images/title-images/image-4.jpg" alt=""></div>
+              Smakovski</h2>
+
+            <h2 class="h1 d-md-none">Узнайте все o здоровом питании вместе со Smakovski</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="swiper reviews-slider">
+              <div class="swiper-wrapper">
+                @@loop('components/reviews-item/index.html',
+                'components/reviews-item/bd.json')
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-info--content">
+              <div class="section-info--content__left">
+                <h2 class="h1 section-info--content__title">Не знаешь какую
+                  программу выбрать?</h2>
+                <form action="#">
+                  <div class="section-info--content__callBack">
+                    <label class="input-site">
+                      <span class="input-site__label">Номер телефона</span>
+                      <input type="tel" class="input-site__input" value="+380 (95) 344 23 44">
+                    </label>
+                    <div>
+                      <a href="#" class="btn-site-3 click-animation green h-100">Подробнее</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="section-info--content__img">
+                <img src="images/info-img.svg" alt="">
+              </div>
+              <div class="section-info__img img-1">
+                <img src="images/bg/image-1.png" alt="">
+              </div>
+              <div class="section-info__img img-2">
+                <img src="images/bg/image-2.png" alt="">
+              </div>
+              <div class="section-info__img img-3">
+                <img src="images/bg/image-3.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('components/section-sales/index.html')
+
+    @@include('components/section-faq/index.html')
+
+  </main>
+
+  @@include('components/footer/index.html')
+
+</div>
+
+@@include('components/scripts/index.html')

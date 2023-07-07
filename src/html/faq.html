@@ -1,0 +1,20 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    @@include('components/breadcrumb/index.html',
+    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item"><a href="#">полезно</a></li><li class="breadcrumb-site__item" aria-current="page">FAQ</li>'}
+    )
+
+    @@include('components/section-faq/index.html')
+
+  </main>
+
+  @@include('components/footer/index.html')
+
+</div>
+
+@@include('components/scripts/index.html')

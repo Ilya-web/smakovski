@@ -1,0 +1,43 @@
+@@if(!context.col){
+<div class="offers-item">
+  <div class="offers-item__icon">
+    <svg>
+      <use xlink:href="images/icons/sprite.svg#@@icon"></use>
+    </svg>
+  </div>
+  <div class="offers-item__title">@@title</div>
+  <div class="offers-item__text">@@text</div>
+  <a href="#" class="offers-item__link">
+    <span>Подробнее</span>
+    <span class="offers-item__link-icon">
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#arrowRight"></use>
+      </svg>
+    </span>
+  </a>
+</div>
+}
+
+@@if(context.col){
+
+<div class="col-3">
+  <div class="offers-item offers-item-col">
+    <div class="offers-item__icon">
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#@@icon"></use>
+      </svg>
+    </div>
+    <div class="offers-item__title">@@title</div>
+    <div class="offers-item__text">@@text</div>
+    <a href="#" class="offers-item__link">
+      <span>Подробнее</span>
+      <span class="offers-item__link-icon">
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#arrowRight"></use>
+      </svg>
+    </span>
+    </a>
+  </div>
+</div>
+
+}

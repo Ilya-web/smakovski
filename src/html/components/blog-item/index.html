@@ -1,0 +1,24 @@
+<div class="col-3">
+  <div class="blog-item">
+    <div class="blog-item_img">
+      <img src="images/team/image-1.jpg" alt="">
+    </div>
+    <div class="blog-item_header">
+      <div class="blog-item_category
+    @@if(context.recipes){blog-item_category--recipes}
+    @@if(context.all){blog-item_category--all}
+    @@if(context.nutrition){blog-item_category--nutrition}
+    @@if(context.health){blog-item_category--health}">
+        @@if(context.recipes){Рецепты}
+        @@if(context.all){все}
+        @@if(context.nutrition){Питание}
+        @@if(context.health){Здоровье}
+      </div>
+      <div class="blog-item_date">18.12.2011</div>
+    </div>
+    <div class="blog-item_title">Как выйти из зоны комфорта и достичь цели!</div>
+    <div class="blog-item_link">
+      <a href="article.html" class="btn-site-3 green click-animation w-100">Подробнее</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,179 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    @@include('components/breadcrumb/index.html',
+    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item"><a href="#">полезно</a></li><li class="breadcrumb-site__item" aria-current="page">Как это работает</li>'}
+    )
+
+    <section class="section">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-9">
+            <div class="howWorks">
+              <h1 class="h2 mb-2">Как это работает?</h1>
+              <div class="howWorks_text">
+                Мы являемся диетическим кейтерингом, который доставляет свежие, вкусные и полезные диетические продукты прямо к вашей двери. Каждый сет тщательно готовится опытными поварами на профессионально оборудованной кухне. Мы готовим наши блюда из продуктов высочайшего качества из надежных источников. Мы доставляем наши диетические продукты во все 16 воеводств Польши. Мы используем только рефрижераторный транспорт, чтобы предоставить вам свежие, полные вкуса блюда.
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="info-box h-100">
+              <div class="info-box_item">
+                <div class="info-box_img">
+                  <img src="images/info/image-1.jpg" alt="">
+                </div>
+                <div class="info-box_desc">
+                  <div class="info-box_title">Нужна помощь диетолога?</div>
+                  <div class="info-box_link">
+                    <a href="#">Спроси специалиста</a>
+                  </div>
+                </div>
+              </div>
+              <div class="info-box_item">
+                <div class="info-box_img">
+                  <img src="images/info/image-2.jpg" alt="">
+                </div>
+                <div class="info-box_desc">
+                  <div class="info-box_title">какую программу выбрать?</div>
+                  <div class="info-box_link">
+                    <a href="#">подобрать индивидуально</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <div class="imgFullWidth">
+              <img src="images/bg/image-6.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="advantages">
+              <h2 class="h2 mb-2">Почему именно мы</h2>
+              <div class="advantages_text mb-32">Наші програми харчування підійдуть для вас, якщо ви</div>
+              <div class="advantages-items">
+                <div class="row">
+                  @@loop('components/advantages-item/index.html',
+                  'components/advantages-item/bd.json')
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <div class="quality">
+              <div class="quality-box">
+                <h2 class="h2 quality_title mb-32">безопасность пищевых продуктов</h2>
+                <div class="quality-box_desc">
+                  <h6 class="mb-2 h6">Качество, подтвержденное сертификатами</h6>
+                  <div class="quality_text">Высочайшее качество наших кормов в коробках подтверждено сотнями положительных отзывов и многочисленными сертификатами: Najwyższa Jakość Quality International, Zdrowa Marka, Dobra Marka, Polska Dobra Marka i Rzetelna Firma.</div>
+                </div>
+              </div>
+
+              <div class="quality-medals">
+                <div class="quality-medals_item">
+                  <img src="images/medals/image-1.png" alt="">
+                </div>
+                <div class="quality-medals_item">
+                  <img src="images/medals/image-2.png" alt="">
+                </div>
+                <div class="quality-medals_item">
+                  <img src="images/medals/image-3.png" alt="">
+                </div>
+                <div class="quality-medals_item">
+                  <img src="images/medals/image-4.png" alt="">
+                </div>
+                <div class="quality-medals_item">
+                  <img src="images/medals/image-5.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="wrap-quality-slider">
+              <div class="quality-slider__count quality-slider-pagination slider-fraction-pagination"></div>
+              <div class="swiper quality-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide quality-slider-item">
+                    <div class="quality-slider-item__img">
+                      <img src="images/quality-slider/image-1.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide quality-slider-item">
+                    <div class="quality-slider-item__img">
+                      <img src="images/quality-slider/image-1.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide quality-slider-item">
+                    <div class="quality-slider-item__img">
+                      <img src="images/quality-slider/image-1.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide quality-slider-item">
+                    <div class="quality-slider-item__img">
+                      <img src="images/quality-slider/image-1.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quality-slider__footer">
+                <div class="slider-buttons">
+                  <button type="button" class="quality-slider-prev slider-button-prev click-animation"></button>
+                  <button type="button" class="quality-slider-next slider-button-next click-animation"></button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('components/section-programs/index.html')
+
+    @@include('components/section-help/index.html')
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="swiper reviews-slider">
+              <div class="swiper-wrapper">
+                @@loop('components/reviews-item/index.html',
+                'components/reviews-item/bd.json')
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('components/section-faq/index.html')
+
+  </main>
+
+  @@include('components/footer/index.html')
+
+</div>
+
+@@include('components/scripts/index.html')

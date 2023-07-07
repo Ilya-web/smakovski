@@ -1,0 +1,112 @@
+@@if(context.slider){
+<div class="reviews-item @@if(context.slider){swiper-slide}">
+  <div class="reviews-item--author">
+    <div class="reviews-item__count">
+      <span>@@current</span> / @@total</div>
+    <div class="reviews-item--author__img">
+      <img src="images/reviews/@@imgUrl" alt="">
+    </div>
+    <div class="reviews-item--author__about">
+      <div class="reviews-item--author__name">@@name</div>
+      <div class="reviews-item--author__old">@@old</div>
+    </div>
+
+    @@if(context.slider){
+    <div class="slider-buttons">
+      <button type="button" class="reviews-slider-prev slider-button-prev click-animation"></button>
+      <button type="button" class="reviews-slider-next slider-button-next click-animation"></button>
+    </div>
+    }
+  </div>
+  <div class="reviews-item--text">
+    <div class="reviews-item--text__quote">
+      <div class="reviews-item--text__icon">
+        <svg>
+          <use xlink:href="images/icons/sprite.svg#quote"></use>
+        </svg>
+      </div>
+      <p>@@text</p>
+    </div>
+  </div>
+
+  <div class="reviews-item--program">
+    <div class="reviews-item--program__category">Программа питания</div>
+    <div class="reviews-item--program__title">Slim Balance</div>
+    <div class="reviews-item--program__subtitle">1000 ккал, 160 г</div>
+    <div class="reviews-item--program__bottom">
+      <div class="reviews-item--program__img">
+        <img src="images/programs/image-4.jpg" alt="">
+      </div>
+      <div class="reviews-item--program__footer">
+        <div class="reviews-item--program__footer--right">
+          <div class="reviews-item--program__head">Длительность</div>
+          <div class="reviews-item--program__time">20 дней</div>
+        </div>
+        <div class="reviews-item--program__btn">
+          <form action="#">
+            <button type="submit" class="btn-site-3 click-animation">Купить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+}
+
+
+@@if(context.col){
+<div class="col-12">
+  <div class="reviews-item @@if(context.slider){swiper-slide}">
+    <div class="reviews-item--author">
+      <div class="reviews-item__count"><span>@@current</span> / @@total</div>
+      <div class="reviews-item--author__img">
+        <img src="images/reviews/@@imgUrl" alt="">
+      </div>
+      <div class="reviews-item--author__about">
+        <div class="reviews-item--author__name">@@name</div>
+        <div class="reviews-item--author__old">@@old</div>
+      </div>
+
+      @@if(context.slider){
+      <div class="slider-buttons">
+        <button type="button" class="reviews-slider-prev slider-button-prev click-animation"></button>
+        <button type="button" class="reviews-slider-next slider-button-next click-animation"></button>
+      </div>
+      }
+    </div>
+    <div class="reviews-item--text">
+      <div class="reviews-item--text__quote">
+        <div class="reviews-item--text__icon">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#quote"></use>
+          </svg>
+        </div>
+        <p>@@text</p>
+      </div>
+    </div>
+
+    <div class="reviews-item--program">
+      <div class="reviews-item--program__category">Программа питания</div>
+      <div class="reviews-item--program__title">Slim Balance</div>
+      <div class="reviews-item--program__subtitle">1000 ккал, 160 г</div>
+      <div class="reviews-item--program__bottom">
+        <div class="reviews-item--program__img">
+          <img src="images/programs/image-4.jpg" alt="">
+        </div>
+        <div class="reviews-item--program__footer">
+          <div class="reviews-item--program__footer--right">
+            <div class="reviews-item--program__head">Длительность</div>
+            <div class="reviews-item--program__time">20 дней</div>
+          </div>
+          <div class="reviews-item--program__btn">
+            <form action="#">
+              <button type="submit" class="btn-site-3 click-animation">Купить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+}

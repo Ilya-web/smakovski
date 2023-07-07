@@ -1,0 +1,109 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+<div class="wrapper bodyBg-1">
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    @@include('components/breadcrumb/index.html',
+    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item" aria-current="page">Одноразовые заказы</li>'}
+    )
+
+
+    <section class="section">
+      <form action="#">
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col-12">
+              <h1 class="h2 mb-32">Доставка отдельных блюд</h1>
+            </div>
+            <div class="col-12">
+              <div class="wrap-filter">
+                <div class="filter-row mb-2">
+                  <div class="filter-row__title">
+                    <div class="filter-row__title--count">1</div>
+                    Система
+                  </div>
+                  @@include('components/filter-radioBtns/index.html')
+                </div>
+
+                <div class="filter-row">
+                  <div class="filter-row__title">
+                    <div class="filter-row__title--count">2</div>
+                    выбор блюд
+                  </div>
+                  <div class="filter-radioBtns mb-3" data-col="11">
+
+                    @@loop('components/input-radio/index.html',
+                    'components/input-radio/bd.json')
+
+                  </div>
+
+                  <div class="filter-checkboxBtns" data-col="6">
+                    <label class="input-checkbox">
+                      <input type="checkbox" name="composition" checked>
+                      <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                    </label>
+                    <label class="input-checkbox">
+                      <input type="checkbox" name="composition">
+                      <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                    </label>
+                    <label class="input-checkbox">
+                      <input type="checkbox" name="composition">
+                      <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                    </label>
+                    <label class="input-checkbox">
+                      <input type="checkbox" name="composition">
+                      <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                    </label>
+                    <label class="input-checkbox">
+                      <input type="checkbox" name="composition">
+                      <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                    </label>
+                    <label class="input-checkbox">
+                      <input type="checkbox" name="composition">
+                      <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3">
+            @@loop('components/product-item/index.html',
+            'components/product-item/bd.json')
+          </div>
+        </div>
+      </form>
+    </section>
+
+    @@include('components/section-sales/index.html')
+
+    @@include('components/section-faq/index.html')
+
+  </main>
+
+  @@include('components/fixed-box/index.html')
+  @@include('components/footer/index.html')
+
+</div>
+
+@@include('components/scripts/index.html')

@@ -1,0 +1,12 @@
+<div class="accordion-site__item">
+  <h2 class="accordion-site__header" id="heading-@@count">
+    <button class="accordion-site__button @@if(!context.show){collapsed}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@@count" aria-expanded="true" aria-controls="collapse-@@count">
+      @@title
+    </button>
+  </h2>
+  <div id="collapse-@@count" class="accordion-collapse collapse @@if(context.show){show}" aria-labelledby="heading-@@count">
+    <div class="accordion-site__body">
+      @@text
+    </div>
+  </div>
+</div>

@@ -1,0 +1,119 @@
+@import "variables";
+@import "mixins";
+
+.slider {
+  &-pagination {
+    .swiper-pagination-bullet {
+      width: 9px;
+      height: 9px;
+      border-radius: 2px;
+      background: $color-white;
+      opacity: 1;
+      margin: 0 1px !important;
+
+      &-active {
+        background: $color-orange;
+      }
+    }
+  }
+  
+  &-progressbar {
+    position: relative;
+    margin-top: var(--gap-32);
+    background: rgba(166, 166, 166, 0.50);
+    height: 3px !important;
+
+    .swiper-pagination-progressbar-fill {
+      background: $color-green-2;
+    }
+  }
+
+  &-fraction-pagination {
+    color: $color-gray;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    .swiper-pagination-current {
+      color: $color-text;
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-top: var(--gap-32);
+  }
+
+  &-button-prev, &-button-next {
+    width: 72px;
+    height: 48px;
+    background: $color-text;
+    border-radius: $border-radius-8;
+    border: 1px solid $color-text;
+    position: relative;
+    @include transition();
+    @include clickAnimationBg($color-text);
+
+    @media all and (hover: hover) {
+      &:hover,
+      &:focus-visible {
+        border-color: $color-gray-2;
+        background: $color-gray-2;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      margin-top: -12px;
+      margin-left: -12px;
+      mask: url("../../images/icons/chevron.svg");
+      mask-repeat: no-repeat;
+      background: $color-white;
+      @include transition();
+    }
+
+    &.swiper-button-disabled {
+      background: transparent;
+      pointer-events: none;
+      &:after {
+        background: $color-text;
+      }
+    }
+
+    &.whiteBtn {
+      background: $color-white;
+      border-color: $color-white;
+
+      @include clickAnimationBg($color-yellow_hover);
+
+      @media all and (hover: hover) {
+        &:hover,
+        &:focus-visible {
+          border-color: $color-yellow;
+          background: $color-yellow;
+        }
+      }
+
+      &:after {
+        background: $color-text;
+      }
+    }
+
+    &.swiper-button-lock {
+      display: none;
+    }
+
+  }
+
+  &-button-next {
+    &:after {
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -1,0 +1,167 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    @@include('components/breadcrumb/index.html',
+    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item" aria-current="page">Диетолог</li>'}
+    )
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="info-box-2">
+              <h2 class="h2 mb-3">Худей легко. <br> Худей со вкусом.</h2>
+              <div class="info-box-2_text mb-32">Четырехразовое меню на ~1 400 ккал/день для тех,
+                кто не занимается спортом, но заботится о своем ежедневном рационе.</div>
+              <div>
+                <a href="#" class="btn-site-3 green click-animation">Оставить заявку</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-6">
+            <div class="nutritionist nutritionist-green">
+              <h2 class="h2 nutritionist-title">Что входит <br> в работу с диетологом!</h2>
+              <nav>
+                <div class="nav nutritionist-tabs mb-4" id="nutritionistTab" role="tablist">
+                  <button class="nutritionist-link active" id="nutritionist-tab-1" data-bs-toggle="tab" data-bs-target="#nutritionist-1" type="button" role="tab" aria-controls="nutritionist-1" aria-selected="true">01.</button>
+                  <button class="nutritionist-link" id="nutritionist-tab-2" data-bs-toggle="tab" data-bs-target="#nutritionist-2" type="button" role="tab" aria-controls="nutritionist-2" aria-selected="false">02.</button>
+                  <button class="nutritionist-link" id="nutritionist-tab-3" data-bs-toggle="tab" data-bs-target="#nutritionist-3" type="button" role="tab" aria-controls="nutritionist-3" aria-selected="false">03.</button>
+                  <button class="nutritionist-link" id="nutritionist-tab-4" data-bs-toggle="tab" data-bs-target="#nutritionist-4" type="button" role="tab" aria-controls="nutritionist-4" aria-selected="false">04.</button>
+                  <button class="nutritionist-link" id="nutritionist-tab-5" data-bs-toggle="tab" data-bs-target="#nutritionist-5" type="button" role="tab" aria-controls="nutritionist-5" aria-selected="false">05.</button>
+                </div>
+              </nav>
+              <div class="tab-content nutritionist-content" id="nutritionist-tabContent">
+                @@loop('components/nutritionist-tab/index.html',
+                'components/nutritionist-tab/bd-2.json')
+              </div>
+
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="nutritionist-img">
+              <img src="images/sales-slider/image-4.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-images-2">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12">
+            <h2 class="h1 mb-32 title-images d-none d-md-block">
+              Кому
+              <div class="image"><img src="images/title-images/image-1.jpg" alt=""></div>
+              нужна <br>
+              <div class="image"><img src="images/title-images/image-3.jpg" alt=""></div>
+              консультация?
+              <div class="image"><img src="images/title-images/image-4.jpg" alt=""></div>
+            </h2>
+            <h2 class="h1 d-md-none">Кому нужна консультация?</h2>
+            <div class="row">
+              <div class="col-9">
+                <div>У вас завжди є можливість поділитися власною думкою про замовлення у нашій компанії, поставити запитання, порадитись стосовно вибору раціону — це важливо для нас, адже ми постійно прагнемо ставати ще кращими для наших клієнтів.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-box">
+              <div class="form-box_bg form-box_bg--left">
+                <img src="images/formBg.png" alt="">
+              </div>
+              <div class="form-box_bg form-box_bg--right">
+                <img src="images/formBg-2.png" alt="">
+              </div>
+              <div class="row position-relative z-1">
+                <div class="col-6 offset-lg-3">
+                  <form action="#">
+                    <div class="row gap-3">
+                      <div class="col-12">
+                        <label class="input-site w-100">
+                          <span class="input-site__label">ФИО</span>
+                          <input type="text" class="input-site__input">
+                        </label>
+                      </div>
+                      <div class="col-12">
+                        <label class="input-site w-100">
+                          <span class="input-site__label">Номер телефона</span>
+                          <input type="tel" class="input-site__input">
+                        </label>
+                      </div>
+                      <div class="col-12">
+                        <label class="input-site w-100">
+                          <span class="input-site__label">Відгук</span>
+                          <textarea class="input-site__input" rows="5"></textarea>
+                        </label>
+                      </div>
+                      <div class="col-12">
+                        <label class="input-checkbox-2 w-100">
+                          <input type="checkbox" checked>
+                          <span class="input-checkbox-2_icon"></span>
+                          <span class="input-checkbox-2__label">Соглашаюсь с условиями положения о сборе и защите персональных данных и пользовательским соглашением</span>
+                        </label>
+                      </div>
+                      <div class="col-12">
+                        <div class="row mt-3 align-items-center">
+                          <div class="col-6">
+                            <div class="priceConsultation">
+                              <div class="priceConsultation_title">стоимость консультации</div>
+                              <div class="priceConsultation_total">120.00 UAH</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <button type="submit" class="btn-site-3 click-animation green w-100">запросить</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="swiper reviews-slider">
+              <div class="swiper-wrapper">
+                @@loop('components/reviews-item/index.html',
+                'components/reviews-item/bd.json')
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('components/section-faq/index.html')
+
+  </main>
+
+  @@include('components/footer/index.html')
+
+</div>
+
+@@include('components/scripts/index.html')

@@ -1,0 +1,41 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    @@include('components/breadcrumb/index.html',
+    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item"><a href="#">полезно</a></li><li class="breadcrumb-site__item" aria-current="page">полезно</li>'}
+    )
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="h1 mb-4">Отзывы</h1>
+          </div>
+        </div>
+        <div class="row g-3">
+          @@loop('components/reviews-item/index.html',
+          'components/reviews-item/bd-2.json')
+        </div>
+        <div class="row">
+          <div class="col-12">
+            @@include('components/pagination/index.html')
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('components/section-help/index.html')
+
+    @@include('components/section-faq/index.html')
+
+  </main>
+
+  @@include('components/footer/index.html')
+
+</div>
+
+@@include('components/scripts/index.html')

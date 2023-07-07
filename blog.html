@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smakovski</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/plugins.css">
+  <link rel="stylesheet" href="src/css/style.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+
+    <header class="header">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="header-left">
+              <div class="logo">
+                <a href="#">
+                  <img src="images/Smakovski.svg" alt="">
+                </a>
+              </div>
+
+              <div class="header-btns dropdown">
+                <button type="button" class="header-btns__item" data-bs-toggle="modal" data-bs-target="#modalLocation">
+                  <span class="header-btns__item-icon">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#marker"></use>
+                    </svg>
+                  </span>
+                  Ивано-Франковск
+                </button>
+                <button type="button" class="header-btns__item dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="header-btns__item-icon">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#phone"></use>
+                    </svg>
+                  </span>
+                  +380(67) 505 05 10
+                </button>
+
+                <div class="drop-menu drop-menu-contacts dropdown-menu">
+                  <a href="#" class="contact-item">
+                    <div class="contact-item_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#chat"></use>
+                      </svg>
+                    </div>
+                    <span class="contact-item_text">
+                      <span class="contact-item_title">Чат на сайте</span>
+                      <span class="contact-item_info"></span>
+                    </span>
+                  </a>
+                  <a href="#" class="contact-item">
+                    <div class="contact-item_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#messenger"></use>
+                      </svg>
+                    </div>
+                    <span class="contact-item_text">
+                      <span class="contact-item_title">Messenger</span>
+                      <span class="contact-item_info"></span>
+                    </span>
+                  </a>
+                  <a href="#" class="contact-item">
+                    <div class="contact-item_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#telegram"></use>
+                      </svg>
+                    </div>
+                    <span class="contact-item_text">
+                      <span class="contact-item_title">Telegram</span>
+                      <span class="contact-item_info"></span>
+                    </span>
+                  </a>
+                  <a href="tel:+380675050510" class="contact-item">
+                    <div class="contact-item_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+                      </svg>
+                    </div>
+                    <span class="contact-item_text">
+                      <span class="contact-item_title">+380(67) 505 05 10</span>
+                      <span class="contact-item_info">с 9:00 по 21:00 (пн-нд)</span>
+                    </span>
+                  </a>
+                  <a href="tel:006 34 33 454" class="contact-item">
+                    <div class="contact-item_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+                      </svg>
+                    </div>
+                    <span class="contact-item_text">
+                      <span class="contact-item_title">006 34 33 454</span>
+                      <span class="contact-item_info">бесплатно по Киеву со стационарного</span>
+                    </span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="header-right">
+
+              <div class="header-nutrition dropdown">
+                <button type="button" class="header-btns__item header-nutrition__btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Питание
+                </button>
+                <div class="drop-menu-nutrition dropdown-menu">
+                  <ul class="nutrition-list">
+                    <li>
+                      <a href="#">
+                        <span class="nutrition-list_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#takeout"></use>
+                          </svg>
+                        </span>
+                        <span>Доставка отдельных блюд</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="nutrition-list_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#lab"></use>
+                          </svg>
+                        </span>
+                        <span>Программное питание</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="nutrition-list_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#dinner"></use>
+                          </svg>
+                        </span>
+                        <span>heat & eat</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="nutrition-list_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#nutrition"></use>
+                          </svg>
+                        </span>
+                        <span>системы питания</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+              <div class="header-lang dropdown">
+                <button type="button" class="header-btns__item header-lang__btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ua
+                </button>
+                <div class="drop-menu-lang dropdown-menu">
+                  <ul class="lang-list">
+                    <li>
+                      <a href="#">ENg</a>
+                    </li>
+                    <li>
+                      <a href="#">PL</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!--пользователь не авторизован или не зарегестрирован -->
+
+              <!--          <div class="header-account">-->
+              <!--            <button type="button" class="header-accountBtn" data-bs-toggle="modal" data-bs-target="#modalLogin">-->
+              <!--              <svg>-->
+              <!--                <use xlink:href="images/icons/sprite.svg#account"></use>-->
+              <!--              </svg>-->
+              <!--            </button>-->
+              <!--          </div>-->
+
+              <!--пользователь не авторизован или не зарегестрирован -->
+
+
+              <!--пользователь авторизован  -->
+
+              <div class="header-account dropdown">
+                <button type="button" class="header-account__btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#account"></use>
+                  </svg>
+                </button>
+
+                <div class="drop-menu-account dropdown-menu dropdown-menu-end">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <div class="account-box">
+                        <a href="#" class="account-item">
+                          <div class="account-item_icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#account"></use>
+                            </svg>
+                          </div>
+                          <div class="account-item_desc">
+                            <div class="account-item_title">Сергей Кобец</div>
+                            <div class="account-item_subtitle">sergeykobetc@gmail.com</div>
+                          </div>
+                          <div class="account-item_icon-2">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#login"></use>
+                            </svg>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="account-box">
+                        <a href="#" class="account-item">
+                          <div class="account-item_icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#dining"></use>
+                            </svg>
+                          </div>
+                          <div class="account-item_desc">
+                            <div class="account-item_title">текущие заказы</div>
+                          </div>
+                        </a>
+                        <a href="#" class="account-item">
+                          <div class="account-item_icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#list"></use>
+                            </svg>
+                          </div>
+                          <div class="account-item_desc">
+                            <div class="account-item_title">История заказов</div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="button" class="btn-site-3 noBg click-animation w-100" data-bs-toggle="modal" data-bs-target="#modalGoOut">Выйти</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--пользователь авторизован  -->
+
+              <div class="header-wrapperBusket">
+                <button type="button" class="header-busketBtn">
+                  <div class="header-busketBtn__icon">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#busket"></use>
+                    </svg>
+                  </div>
+                  1 заказ
+                </button>
+                <button type="button" class="header-menuBtn" id="menuBtn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  <div class="menu">-->
+
+      <!--  </div>-->
+
+    </header>
+
+    <main id="main">
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav aria-label="breadcrumb">
+                <ul class="breadcrumb-site">
+                  <li class="breadcrumb-site__item">
+                    <a href="#">Главная</a>
+                  </li>
+                  <li class="breadcrumb-site__item" aria-current="page">Блог</li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="row mb-32">
+            <div class="col-12">
+              <div class="blog-filter">
+                <h1 class="h2 mb-3">Блог</h1>
+                <form action="#">
+                  <div class="filter-radioBtns" data-col="4">
+
+                    <label class="input-radio">
+                      <input type="radio" name="blogCategory" checked>
+                      <span class="input-radio_box">
+                        <span class="input-radio_label">
+                          <span class="input-radio_label--text">Все</span>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="input-radio">
+                      <input type="radio" name="blogCategory">
+                      <span class="input-radio_box">
+                        <span class="input-radio_label">
+                          <span class="input-radio_label--text">Здоровье</span>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="input-radio">
+                      <input type="radio" name="blogCategory">
+                      <span class="input-radio_box">
+                        <span class="input-radio_label">
+                          <span class="input-radio_label--text">Питание</span>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="input-radio">
+                      <input type="radio" name="blogCategory">
+                      <span class="input-radio_box">
+                        <span class="input-radio_label">
+                          <span class="input-radio_label--text">Рецепты</span>
+                        </span>
+                      </span>
+                    </label>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-3">
+              <div class="blog-item">
+                <div class="blog-item_img">
+                  <picture>
+                    <source srcset="images/team/image-1.webp" type="image/webp">
+                    <img src="images/team/image-1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="blog-item_header">
+                  <div class="blog-item_category
+    blog-item_category--recipes
+    
+    
+    ">
+                    Рецепты
+
+
+
+                  </div>
+                  <div class="blog-item_date">18.12.2011</div>
+                </div>
+                <div class="blog-item_title">Как выйти из зоны комфорта и достичь цели!</div>
+                <div class="blog-item_link">
+                  <a href="article.html" class="btn-site-3 green click-animation w-100">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="blog-item">
+                <div class="blog-item_img">
+                  <picture>
+                    <source srcset="images/team/image-1.webp" type="image/webp">
+                    <img src="images/team/image-1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="blog-item_header">
+                  <div class="blog-item_category
+    
+    
+    blog-item_category--nutrition
+    ">
+
+
+                    Питание
+
+                  </div>
+                  <div class="blog-item_date">18.12.2011</div>
+                </div>
+                <div class="blog-item_title">Как выйти из зоны комфорта и достичь цели!</div>
+                <div class="blog-item_link">
+                  <a href="article.html" class="btn-site-3 green click-animation w-100">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="blog-item">
+                <div class="blog-item_img">
+                  <picture>
+                    <source srcset="images/team/image-1.webp" type="image/webp">
+                    <img src="images/team/image-1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="blog-item_header">
+                  <div class="blog-item_category
+    
+    blog-item_category--all
+    
+    ">
+
+                    все
+
+
+                  </div>
+                  <div class="blog-item_date">18.12.2011</div>
+                </div>
+                <div class="blog-item_title">Как выйти из зоны комфорта и достичь цели!</div>
+                <div class="blog-item_link">
+                  <a href="article.html" class="btn-site-3 green click-animation w-100">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="blog-item">
+                <div class="blog-item_img">
+                  <picture>
+                    <source srcset="images/team/image-1.webp" type="image/webp">
+                    <img src="images/team/image-1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="blog-item_header">
+                  <div class="blog-item_category
+    
+    
+    
+    blog-item_category--health">
+
+
+
+                    Здоровье
+                  </div>
+                  <div class="blog-item_date">18.12.2011</div>
+                </div>
+                <div class="blog-item_title">Как выйти из зоны комфорта и достичь цели!</div>
+                <div class="blog-item_link">
+                  <a href="article.html" class="btn-site-3 green click-animation w-100">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="blog-item">
+                <div class="blog-item_img">
+                  <picture>
+                    <source srcset="images/team/image-1.webp" type="image/webp">
+                    <img src="images/team/image-1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="blog-item_header">
+                  <div class="blog-item_category
+    blog-item_category--recipes
+    
+    
+    ">
+                    Рецепты
+
+
+
+                  </div>
+                  <div class="blog-item_date">18.12.2011</div>
+                </div>
+                <div class="blog-item_title">Как выйти из зоны комфорта и достичь цели!</div>
+                <div class="blog-item_link">
+                  <a href="article.html" class="btn-site-3 green click-animation w-100">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="blog-item">
+                <div class="blog-item_img">
+                  <picture>
+                    <source srcset="images/team/image-1.webp" type="image/webp">
+                    <img src="images/team/image-1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="blog-item_header">
+                  <div class="blog-item_category
+    
+    
+    blog-item_category--nutrition
+    ">
+
+
+                    Питание
+
+                  </div>
+                  <div class="blog-item_date">18.12.2011</div>
+                </div>
+                <div class="blog-item_title">Как выйти из зоны комфорта и достичь цели!</div>
+                <div class="blog-item_link">
+                  <a href="article.html" class="btn-site-3 green click-animation w-100">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="blog-item">
+                <div class="blog-item_img">
+                  <picture>
+                    <source srcset="images/team/image-1.webp" type="image/webp">
+                    <img src="images/team/image-1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="blog-item_header">
+                  <div class="blog-item_category
+    
+    blog-item_category--all
+    
+    ">
+
+                    все
+
+
+                  </div>
+                  <div class="blog-item_date">18.12.2011</div>
+                </div>
+                <div class="blog-item_title">Как выйти из зоны комфорта и достичь цели!</div>
+                <div class="blog-item_link">
+                  <a href="article.html" class="btn-site-3 green click-animation w-100">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="blog-item">
+                <div class="blog-item_img">
+                  <picture>
+                    <source srcset="images/team/image-1.webp" type="image/webp">
+                    <img src="images/team/image-1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="blog-item_header">
+                  <div class="blog-item_category
+    
+    
+    
+    blog-item_category--health">
+
+
+
+                    Здоровье
+                  </div>
+                  <div class="blog-item_date">18.12.2011</div>
+                </div>
+                <div class="blog-item_title">Как выйти из зоны комфорта и достичь цели!</div>
+                <div class="blog-item_link">
+                  <a href="article.html" class="btn-site-3 green click-animation w-100">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <nav aria-label="Page navigation">
+                <ul class="pagination">
+                  <li class="pagination-item pagination-item-prev disabled">
+                    <a class="pagination-link" aria-label="Previous"></a>
+                  </li>
+                  <li class="pagination-item active">
+                    <a class="pagination-link click-animation" href="#">01</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link click-animation" href="#">02</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link click-animation" href="#">03</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link click-animation" href="#">...</a>
+                  </li>
+                  <li class="pagination-item pagination-item-next">
+                    <a href="#" class="pagination-link click-animation" aria-label="Next"></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top mb-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="footer-top__left">
+                <div class="footer-top__img">
+                  <img src="images/footer-img.svg" alt="">
+                </div>
+
+                <div class="footer-btns">
+                  <button type="button" class="footer-btns__item">
+                    <span class="footer-btns__item-icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#marker"></use>
+                      </svg>
+                    </span>
+                    Ивано-Франковск
+                  </button>
+                  <button type="button" class="footer-btns__item whiteBg">
+                    <span class="footer-btns__item-icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#phone"></use>
+                      </svg>
+                    </span>
+                    +380(67) 505 05 10
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-9">
+              <div class="row h-100">
+                <div class="col-6">
+                  <div class="footer-top__menu h-100">
+                    <div class="row g-4">
+                      <div class="col-6">
+                        <div class="footer-top__menuItem">
+                          <div class="footer-top__menuItem--title">Доставка отдельных блюд</div>
+                          <ul class="footer-top__menuItem--list">
+                            <li>
+                              <a href="#">Ем все</a>
+                            </li>
+                            <li>
+                              <a href="#">вегетарианец</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="footer-top__menuItem">
+                          <div class="footer-top__menuItem--title">Программное питание</div>
+                          <ul class="footer-top__menuItem--list">
+                            <li>
+                              <a href="#">Худей</a>
+                            </li>
+                            <li>
+                              <a href="#">Сохрани вес</a>
+                            </li>
+                            <li>
+                              <a href="#">Набирай</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="footer-top__menuItem">
+                          <div class="footer-top__menuItem--title">heat & eat</div>
+                          <ul class="footer-top__menuItem--list">
+                            <li>
+                              <a href="#">Ем все</a>
+                            </li>
+                            <li>
+                              <a href="#">вегетарианец</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="footer-top__menuItem">
+                          <div class="footer-top__menuItem--title">системы питания</div>
+                          <ul class="footer-top__menuItem--list">
+                            <li>
+                              <a href="#">Ем все</a>
+                            </li>
+                            <li>
+                              <a href="#">вегетарианец</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="footer-top__menuItem fullWidth">
+                          <div class="footer-top__menuItem--title">полезно</div>
+                          <ul class="footer-top__menuItem--list">
+                            <li>
+                              <a href="#">Как это работает</a>
+                            </li>
+                            <li>
+                              <a href="#">О нас</a>
+                            </li>
+                            <li>
+                              <a href="#">Диетолог</a>
+                            </li>
+                            <li>
+                              <a href="#">Контакты</a>
+                            </li>
+                            <li>
+                              <a href="#">Блог</a>
+                            </li>
+                            <li>
+                              <a href="#">FAQ</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 d-flex flex-column">
+                  <div class="footer-top__contacts mb-3 flex-grow-1">
+                    <div class="row h-100">
+                      <div class="col-12 d-flex flex-column">
+                        <div class="row mb-4">
+                          <div class="col-6">
+                            <div class="footer-top__menuItem">
+                              <div class="footer-top__menuItem--title">НАш адрес</div>
+                              <ul class="footer-top__menuItem--list">
+                                <li>
+                                  <a href="https://goo.gl/maps/DSh4o7cvy7bhQjqx7" target="_blank"> м. Івано-Франківськ,
+                                    <br> вул. Звязкова 6
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="footer-top__menuItem">
+                              <div class="footer-top__menuItem--title">телефон</div>
+                              <ul class="footer-top__menuItem--list">
+                                <li>
+                                  <a href="tel:+380675050510">+380(67) 505 05 10</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-auto">
+                          <div class="col-6">
+                            <div class="footer-top__menuItem">
+                              <div class="footer-top__menuItem--title">Email</div>
+                              <ul class="footer-top__menuItem--list">
+                                <li>
+                                  <a href="mailto:emotion2goukraine@gmail.com">emotion2goukraine@gmail.com</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="footer-top__menuItem">
+                              <div class="footer-top__menuItem--title">График работы</div>
+                              <ul class="footer-top__menuItem--list">
+                                <li>пн-пт - 08:00 - 20:00</li>
+                                <li>сб-нд - 09:00 - 20:00</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-top__info">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="footer-top__cards">
+                          <div class="footer-top__cards--img">
+                            <img src="images/icons/cards.svg" alt="">
+                          </div>
+
+                          <div class="footer-top__cards--title text-uppercase">
+                            <a href="#">договор оферты</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+
+                        <div class="social">
+                          <a href="#" target="_blank" class="social--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#instagram"></use>
+                            </svg>
+                          </a>
+                          <a href="#" target="_blank" class="social--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#facebook"></use>
+                            </svg>
+                          </a>
+                          <a href="#" target="_blank" class="social--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#telegram"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row px-3">
+            <div class="col-6 d-flex">
+              <div class="footer-bottom__copyright">
+                © smakovski 2022. All rights reserved
+              </div>
+              <div class="footer-bottom__privacyPolicy">
+                <a href="#">Privacy Policy</a>
+              </div>
+            </div>
+            <div class="col">
+              <a href="#" target="_blank" class="footer-bottom__madeBy">
+                Made by
+                <div class="footer-bottom__madeBy--logo">
+                  <img src="images/brab.svg" alt="">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+      <span class="callback_icon">
+        <svg>
+          <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+        </svg>
+      </span>
+    </button>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">
+      Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal_content">
+          <div class="modal_header">
+            <h4 class="modal_title h4">Вход</h4>
+            <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+              <svg>
+                <use xlink:href="images/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal_body">
+            <form action="#">
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="wrap-input-site">
+                    <label class="input-site w-100">
+                      <span class="input-site__label">Ел. почта</span>
+                      <input type="email" class="input-site__input">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="wrap-input-site">
+                    <label class="input-site input-site-password w-100">
+                      <span class="input-site__label">Пароль</span>
+                      <input type="password" class="input-site__input">
+                      <button type="button" class="input-site-password_icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#password"></use>
+                        </svg>
+                      </button>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row align-items-center mt-2">
+                    <div class="col-6">
+                      <label class="input-checkbox-2 w-100 align-items-center">
+                        <input type="checkbox" checked>
+                        <span class="input-checkbox-2_icon"></span>
+                        <span class="input-checkbox-2__label text-uppercase">Запомнить меня</span>
+                      </label>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                      <a href="#" class="text-uppercase">Забыли пароль?</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row g-2">
+                    <div class="col-12">
+                      <button type="submit" class="btn-site-3 click-animation black w-100"> Войти</button>
+                    </div>
+                    <div class="col-12">
+                      <button type="button" class="btn-site-3 click-animation noBg w-100" data-bs-target="#modalRegistration" data-bs-toggle="modal">Зарегистрироватся</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mt-0">
+                  <div class="line">
+                    <span>или</span>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="row g-2">
+                    <div class="col-12">
+                      <a href="#" class="btn-site-3 click-animation noBg w-100">
+                        <span class="btn-site-3_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#google"></use>
+                          </svg>
+                        </span>
+                        Google
+                      </a>
+                    </div>
+                    <div class="col-12">
+                      <a href="#" class="btn-site-3 click-animation noBg w-100">
+                        <span class="btn-site-3_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#facebook-2"></use>
+                          </svg>
+                        </span>
+                        Facebook
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalRegistration" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal_content">
+          <div class="modal_header">
+            <h4 class="modal_title h4">Регистрация</h4>
+            <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+              <svg>
+                <use xlink:href="images/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal_body">
+            <form action="#">
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="wrap-input-site">
+                    <label class="input-site w-100 input-site-error">
+                      <span class="input-site__label">ФИО</span>
+                      <input type="text" class="input-site__input">
+                    </label>
+                    <span class="input-site-error_text text-uppercase">Неверный формат</span>
+                  </div>
+
+                </div>
+                <div class="col-12">
+                  <div class="wrap-input-site">
+                    <label class="input-site w-100">
+                      <span class="input-site__label">телефон</span>
+                      <input type="tel" class="input-site__input">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="wrap-input-site">
+                    <label class="input-site w-100">
+                      <span class="input-site__label">Ел. почта</span>
+                      <input type="email" class="input-site__input">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="wrap-input-site">
+                    <label class="input-site input-site-password w-100">
+                      <span class="input-site__label">Пароль</span>
+                      <input type="password" class="input-site__input">
+                      <button type="button" class="input-site-password_icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#password"></use>
+                        </svg>
+                      </button>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row mt-2">
+                    <div class="col-12">
+                      <label class="input-checkbox-2 w-100">
+                        <input type="checkbox">
+                        <span class="input-checkbox-2_icon"></span>
+                        <span class="input-checkbox-2__label">Соглашаюсь с условиями положения о сборе и защите персональных данных и пользовательским соглашением</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row g-2">
+                    <div class="col-12">
+                      <button type="button" class="btn-site-3 click-animation black w-100" data-bs-target="#modalLogin" data-bs-toggle="modal"> Войти</button>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn-site-3 click-animation noBg w-100">Зарегистрироватся</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mt-0">
+                  <div class="line">
+                    <span>или</span>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="row g-2">
+                    <div class="col-12">
+                      <a href="#" class="btn-site-3 click-animation noBg w-100">
+                        <span class="btn-site-3_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#google"></use>
+                          </svg>
+                        </span>
+                        Google
+                      </a>
+                    </div>
+                    <div class="col-12">
+                      <a href="#" class="btn-site-3 click-animation noBg w-100">
+                        <span class="btn-site-3_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#facebook-2"></use>
+                          </svg>
+                        </span>
+                        Facebook
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalCallback" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal_content">
+          <div class="modal_header">
+            <h4 class="modal_title h4">Форма</h4>
+            <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+              <svg>
+                <use xlink:href="images/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal_body">
+            <form action="#">
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="wrap-input-site">
+                    <label class="input-site w-100">
+                      <span class="input-site__label">ФИО</span>
+                      <input type="text" class="input-site__input">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="wrap-input-site">
+                    <label class="input-site w-100">
+                      <span class="input-site__label">телефон</span>
+                      <input type="tel" class="input-site__input">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row g-2">
+                    <div class="col-12">
+                      <button type="submit" class="btn-site-3 yellow click-animation w-100">
+                        <span class="btn-site-3_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+                          </svg>
+                        </span>
+
+                        Заказать звонок
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 text-center">
+                  <div class="politics-info">
+                    Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalLocation" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal_content">
+          <div class="modal_header">
+            <div class="location-info">
+              <div class="location-info_title">Сейчас указан</div>
+              <div class="location-info_current">Ивано-Франковск</div>
+            </div>
+            <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+              <svg>
+                <use xlink:href="images/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal_body location-body">
+            <div class="row">
+              <div class="col-12">
+                <h6 class="h6 mb-2">Выбрать город</h6>
+              </div>
+              <div class="col-12 mb-32">
+                <form action="#">
+                  <div class="wrap-input-site">
+                    <label class="input-site input-site-search w-100">
+                      <span class="input-site-search_icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#search"></use>
+                        </svg>
+                      </span>
+                      <span class="input-site__label">Введите навазние города</span>
+                      <input type="text" class="input-site__input">
+                    </label>
+                  </div>
+                  <input type="submit" hidden>
+                </form>
+              </div>
+
+              <div class="col-12">
+                <ul class="cities">
+                  <li>
+                    <a href="#">Ужгород</a>
+                  </li>
+                  <li>
+                    <a href="#">Днепр</a>
+                  </li>
+                  <li>
+                    <a href="#">Харьков</a>
+                  </li>
+                  <li>
+                    <a href="#">Николаев</a>
+                  </li>
+                  <li>
+                    <a href="#">Тернопиль</a>
+                  </li>
+                  <li>
+                    <a href="#">Запорожье</a>
+                  </li>
+                  <li>
+                    <a href="#">Луцк</a>
+                  </li>
+                  <li>
+                    <a href="#">Полтава</a>
+                  </li>
+                  <li>
+                    <a href="#">Житомер</a>
+                  </li>
+                  <li>
+                    <a href="#">Кривой рог</a>
+                  </li>
+                  <li>
+                    <a href="#">Киев</a>
+                  </li>
+                  <li>
+                    <a href="#">Херсон</a>
+                  </li>
+                  <li>
+                    <a href="#">Львов</a>
+                  </li>
+                  <li>
+                    <a href="#">Луцк</a>
+                  </li>
+                  <li>
+                    <a href="#">Одесса</a>
+                  </li>
+                  <li>
+                    <a href="#">Сумы</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalGoOut" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal_content modal_content--green">
+          <div class="modal_header  mb-4">
+            <div>
+              <h4 class="modal_title h4">Выйти</h4>
+              <div class="modal_subtitle">Вы уверене, что хотите выйти из аккаунта?</div>
+            </div>
+
+            <!--        <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">-->
+            <!--          <svg>-->
+            <!--            <use xlink:href="images/icons/sprite.svg#close"></use>-->
+            <!--          </svg>-->
+            <!--        </button>-->
+          </div>
+          <div class="modal_body">
+            <form action="#">
+              <div class="row g-3">
+                <div class="col-6">
+                  <button type="submit" class="btn-site-3 click-animation noBg w-100">Да</button>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn-site-3 click-animation w-100" data-bs-dismiss="modal" aria-label="Close">нет</button>
+                </div>
+
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="js/main.min.js"></script>
+
+
+</body>
+
+</html>

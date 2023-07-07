@@ -1,0 +1,97 @@
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="h1 mb-32">FAQ</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <nav>
+          <div class="faq-tabs mb-3" id="faqTab" role="tablist">
+            <button class="faq-link active" id="cashback-tab" data-bs-toggle="tab" data-bs-target="#cashback" type="button" role="tab" aria-controls="cashback" aria-selected="true">
+              <span class="faq-title">Кешбэк</span>
+              <span class="faq-count">6</span>
+            </button>
+            <button class="faq-link" id="nutrition-tab" data-bs-toggle="tab" data-bs-target="#nutrition" type="button" role="tab" aria-controls="nutrition" aria-selected="false">
+              <span class="faq-title">Питание</span>
+              <span class="faq-count">4</span>
+            </button>
+            <button class="faq-link" id="product-tab" data-bs-toggle="tab" data-bs-target="#product" type="button" role="tab" aria-controls="product" aria-selected="false">
+              <span class="faq-title">продукт</span>
+              <span class="faq-count">8</span>
+            </button>
+            <button class="faq-link" id="tariff-tab" data-bs-toggle="tab" data-bs-target="#tariff" type="button" role="tab" aria-controls="tariff" aria-selected="false">
+              <span class="faq-title">тарифы</span>
+              <span class="faq-count">10</span>
+            </button>
+            <button class="faq-link" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment" type="button" role="tab" aria-controls="payment" aria-selected="false">
+              <span class="faq-title">оплата и доставка</span>
+              <span class="faq-count">8</span>
+            </button>
+            <button class="faq-link" id="storage-tab" data-bs-toggle="tab" data-bs-target="#storage" type="button" role="tab" aria-controls="storage" aria-selected="false">
+              <span class="faq-title">хранение</span>
+              <span class="faq-count">15</span>
+            </button>
+          </div>
+        </nav>
+        <div class="tab-content faq-content" id="faq-tabContent">
+
+          <div class="tab-pane fade show active" id="cashback" role="tabpanel" aria-labelledby="cashback-tab">
+
+            <div class="accordion-site" id="cashback-accordion">
+              @@loop('../../components/accordion-item/index.html',
+              'components/accordion-item/bd.json')
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="nutrition" role="tabpanel" aria-labelledby="nutrition-tab">
+
+            <div class="accordion-site" id="nutrition-accordion">
+              @@loop('../../components/accordion-item/index.html',
+              'components/accordion-item/bd-2.json')
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
+
+            <div class="accordion-site" id="product-accordion">
+              @@loop('../../components/accordion-item/index.html',
+              'components/accordion-item/bd-3.json')
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="tariff" role="tabpanel" aria-labelledby="tariff-tab">
+
+            <div class="accordion-site" id="tariff-accordion">
+              @@loop('../../components/accordion-item/index.html',
+              'components/accordion-item/bd-4.json')
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="payment" role="tabpanel" aria-labelledby="payment-tab">
+
+            <div class="accordion-site" id="payment-accordion">
+              @@loop('../../components/accordion-item/index.html',
+              'components/accordion-item/bd-5.json')
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="storage" role="tabpanel" aria-labelledby="storage-tab">
+
+            <div class="accordion-site" id="storage-accordion">
+              @@loop('../../components/accordion-item/index.html',
+              'components/accordion-item/bd-6.json')
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,128 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    @@include('components/breadcrumb/index.html',
+    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item" aria-current="page">Блог</li>'}
+    )
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="blog">
+              <div class="row g-3">
+                <div class="col-7">
+                  <div class="blog_header">
+                    <div class="blog_category">Все</div>
+                    <div class="blog_date">18.12.2011</div>
+                  </div>
+                  <h2 class="blog_title h2 mb-3">Huron's Director of Strategy and Retention </h2>
+                  <h2 class="blog_text fs-16">Jonny Yu joins the podcast to talk about how he and
+                    the Huron team look at LTV to improve their overall customer retention.</h2>
+                </div>
+                <div class="col-5">
+                  <div class="blog_img">
+                    <img src="images/team/image-1.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 content-box fs-16">
+            <h2>How do you Choose to Keep Score of Retention?</h2>
+            <h6>The Huron team is one of Repeat's favorites to talk to when it comes to analytics. Many of the team come from a banking and finance background meaning they are no strangers to "the numbers." In this episode of Put it On Repeat Jonny Yu is walking us through all the ways they slice LTV to make it more actionable, and some of his tips on CPG retention.</h6>
+            <p>By slicing LTV into smaller digestable pieces Huron is able to see whats happening on the retention front faster and as Jonny says "allows an apple to apples comparison." I also love that the Huron team is bringing in COGS (cost of goods sold) and the cost to acquire customers into the equation to focus on profit rather than top line revenue. Retention (especially in CPG) is about increasing both growth and profitability.</p>
+            <blockquote>
+              The Huron team is one of Repeat's favorites to talk to when it comes to analytics. Many of the team come from a banking and finance background meaning they are no strangers to "the numbers." In this episode of Put it On Repeat Jonny Yu is walking us through all the ways they slice LTV to make it more actionable, and some of his tips on CPG retention.
+            </blockquote>
+            <img src="images/bg/image-8.jpg" alt="">
+
+            <h2>Other retention tips covered in the full episode.</h2>
+
+            <p>Not only did we discuss LTV and how to take action on the data, we also talked a lot about how Huron creates an amazing customer experience that gets customers to return.</p>
+
+            <h1>h1</h1>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <h4>h4</h4>
+            <h5>h5</h5>
+            <h6>h6</h6>
+
+            <ul>
+              <li>The use of Jumbo sizes SKUs</li>
+              <li>The use of Jumbo sizes SKUs</li>
+              <li>The use of Jumbo sizes SKUs</li>
+              <li>The use of Jumbo sizes SKUs</li>
+            </ul>
+
+            <ol>
+              <li>The use of Jumbo sizes SKUs</li>
+              <li>The use of Jumbo sizes SKUs</li>
+              <li>The use of Jumbo sizes SKUs</li>
+              <li>The use of Jumbo sizes SKUs</li>
+            </ol>
+
+            <blockquote>
+              In this episode of Put it On Repeat Jonny Yu is walking us through all the ways they slice LTV to make it more actionable, and some of his tips on CPG retention.
+            </blockquote>
+
+            <p>You can hear all the details of the conversation by listening to the full episode below.</p>
+            <p>How do you Choose to Keep Score of Retention?</p>
+            <p>You can hear all the details of the conversation by listening to the full episode below.</p>
+          </div>
+
+          <div class="col-12">
+            <div class="share">
+              <div class="share_title">Share this post</div>
+              <div class="share_social">
+                @@include('components/social/index.html')
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="article-footer">
+              <div class="article-item">
+                <div class="article-item_img">
+                  <img src="images/team/image-1.jpg" alt="">
+                </div>
+                <div class="article-item_desc">
+                  <div class="article-item_post">Newer post</div>
+                  <div class="article-item_title">Other retention tips covered in the full episode.</div>
+                </div>
+              </div>
+
+              <div class="article-item">
+                <div class="article-item_img">
+                  <img src="images/team/image-1.jpg" alt="">
+                </div>
+                <div class="article-item_desc">
+                  <div class="article-item_post">Older post</div>
+                  <div class="article-item_title">Other retention tips covered in the full episode.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('components/footer/index.html')
+
+</div>
+
+@@include('components/scripts/index.html')

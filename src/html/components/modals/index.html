@@ -1,0 +1,364 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal_content">
+      <div class="modal_header">
+        <h4 class="modal_title h4">Вход</h4>
+        <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal_body">
+        <form action="#">
+          <div class="row g-3">
+            <div class="col-12">
+               <div class="wrap-input-site">
+                <label class="input-site w-100">
+                  <span class="input-site__label">Ел. почта</span>
+                  <input type="email" class="input-site__input">
+                </label>
+               </div>
+            </div>
+            <div class="col-12">
+               <div class="wrap-input-site">
+                <label class="input-site input-site-password w-100">
+                  <span class="input-site__label">Пароль</span>
+                  <input type="password" class="input-site__input">
+                  <button type="button" class="input-site-password_icon">
+                    <svg>
+                        <use xlink:href="images/icons/sprite.svg#password"></use>
+                      </svg>
+                  </button>
+                </label>
+               </div>
+            </div>
+            <div class="col-12">
+              <div class="row align-items-center mt-2">
+                <div class="col-6">
+                  <label class="input-checkbox-2 w-100 align-items-center">
+                    <input type="checkbox" checked>
+                    <span class="input-checkbox-2_icon"></span>
+                    <span class="input-checkbox-2__label text-uppercase">Запомнить меня</span>
+                  </label>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                  <a href="#" class="text-uppercase">Забыли пароль?</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row g-2">
+                <div class="col-12">
+                  <button type="submit" class="btn-site-3 click-animation black w-100"> Войти</button>
+                </div>
+                <div class="col-12">
+                  <button type="button" class="btn-site-3 click-animation noBg w-100" data-bs-target="#modalRegistration" data-bs-toggle="modal">Зарегистрироватся</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mt-0">
+              <div class="line"><span>или</span></div>
+            </div>
+
+            <div class="col-12">
+              <div class="row g-2">
+                <div class="col-12">
+                  <a href="#" class="btn-site-3 click-animation noBg w-100">
+                    <span class="btn-site-3_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#google"></use>
+                      </svg>
+                    </span>
+                    Google
+                  </a>
+                </div>
+                <div class="col-12">
+                  <a href="#" class="btn-site-3 click-animation noBg w-100">
+                    <span class="btn-site-3_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#facebook-2"></use>
+                      </svg>
+                    </span>
+                    Facebook
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalRegistration" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal_content">
+      <div class="modal_header">
+        <h4 class="modal_title h4">Регистрация</h4>
+        <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal_body">
+        <form action="#">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="wrap-input-site">
+                <label class="input-site w-100 input-site-error">
+                  <span class="input-site__label">ФИО</span>
+                  <input type="text" class="input-site__input">
+                </label>
+                <span class="input-site-error_text text-uppercase">Неверный формат</span>
+              </div>
+
+            </div>
+            <div class="col-12">
+              <div class="wrap-input-site">
+                <label class="input-site w-100">
+                  <span class="input-site__label">телефон</span>
+                  <input type="tel" class="input-site__input">
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="wrap-input-site">
+                <label class="input-site w-100">
+                  <span class="input-site__label">Ел. почта</span>
+                  <input type="email" class="input-site__input">
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="wrap-input-site">
+                <label class="input-site input-site-password w-100">
+                  <span class="input-site__label">Пароль</span>
+                  <input type="password" class="input-site__input">
+                  <button type="button" class="input-site-password_icon">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#password"></use>
+                    </svg>
+                  </button>
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row mt-2">
+                <div class="col-12">
+                  <label class="input-checkbox-2 w-100">
+                    <input type="checkbox">
+                    <span class="input-checkbox-2_icon"></span>
+                    <span class="input-checkbox-2__label">Соглашаюсь с условиями положения о сборе и защите персональных данных и пользовательским соглашением</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row g-2">
+                <div class="col-12">
+                  <button type="button" class="btn-site-3 click-animation black w-100"  data-bs-target="#modalLogin" data-bs-toggle="modal"> Войти</button>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn-site-3 click-animation noBg w-100">Зарегистрироватся</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mt-0">
+              <div class="line"><span>или</span></div>
+            </div>
+
+            <div class="col-12">
+              <div class="row g-2">
+                <div class="col-12">
+                  <a href="#" class="btn-site-3 click-animation noBg w-100">
+                    <span class="btn-site-3_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#google"></use>
+                      </svg>
+                    </span>
+                    Google
+                  </a>
+                </div>
+                <div class="col-12">
+                  <a href="#" class="btn-site-3 click-animation noBg w-100">
+                    <span class="btn-site-3_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#facebook-2"></use>
+                      </svg>
+                    </span>
+                    Facebook
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalCallback" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal_content">
+      <div class="modal_header">
+        <h4 class="modal_title h4">Форма</h4>
+        <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal_body">
+        <form action="#">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="wrap-input-site">
+                <label class="input-site w-100">
+                  <span class="input-site__label">ФИО</span>
+                  <input type="text" class="input-site__input">
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="wrap-input-site">
+                <label class="input-site w-100">
+                  <span class="input-site__label">телефон</span>
+                  <input type="tel" class="input-site__input">
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row g-2">
+                <div class="col-12">
+                  <button type="submit" class="btn-site-3 yellow click-animation w-100">
+                    <span class="btn-site-3_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+                      </svg>
+                    </span>
+
+                    Заказать звонок
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 text-center">
+              <div class="politics-info">
+                Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalLocation" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal_content">
+      <div class="modal_header">
+        <div class="location-info">
+          <div class="location-info_title">Сейчас указан</div>
+          <div class="location-info_current">Ивано-Франковск</div>
+        </div>
+        <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal_body location-body">
+        <div class="row">
+          <div class="col-12">
+            <h6 class="h6 mb-2">Выбрать город</h6>
+          </div>
+          <div class="col-12 mb-32">
+            <form action="#">
+              <div class="wrap-input-site">
+                <label class="input-site input-site-search w-100">
+                  <span class="input-site-search_icon">
+                     <svg>
+                      <use xlink:href="images/icons/sprite.svg#search"></use>
+                    </svg>
+                  </span>
+                  <span class="input-site__label">Введите навазние города</span>
+                  <input type="text" class="input-site__input">
+                </label>
+              </div>
+              <input type="submit" hidden>
+            </form>
+          </div>
+
+          <div class="col-12">
+            <ul class="cities">
+              <li><a href="#">Ужгород</a></li>
+              <li><a href="#">Днепр</a></li>
+              <li><a href="#">Харьков</a></li>
+              <li><a href="#">Николаев</a></li>
+              <li><a href="#">Тернопиль</a></li>
+              <li><a href="#">Запорожье</a></li>
+              <li><a href="#">Луцк</a></li>
+              <li><a href="#">Полтава</a></li>
+              <li><a href="#">Житомер</a></li>
+              <li><a href="#">Кривой рог</a></li>
+              <li><a href="#">Киев</a></li>
+              <li><a href="#">Херсон</a></li>
+              <li><a href="#">Львов</a></li>
+              <li><a href="#">Луцк</a></li>
+              <li><a href="#">Одесса</a></li>
+              <li><a href="#">Сумы</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalGoOut" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal_content modal_content--green">
+      <div class="modal_header  mb-4">
+        <div>
+          <h4 class="modal_title h4">Выйти</h4>
+          <div class="modal_subtitle">Вы уверене, что хотите выйти из аккаунта?</div>
+        </div>
+
+<!--        <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">-->
+<!--          <svg>-->
+<!--            <use xlink:href="images/icons/sprite.svg#close"></use>-->
+<!--          </svg>-->
+<!--        </button>-->
+      </div>
+      <div class="modal_body">
+        <form action="#">
+          <div class="row g-3">
+            <div class="col-6">
+              <button type="submit" class="btn-site-3 click-animation noBg w-100">Да</button>
+            </div>
+            <div class="col-6">
+              <button type="button" class="btn-site-3 click-animation w-100" data-bs-dismiss="modal" aria-label="Close">нет</button>
+            </div>
+
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
