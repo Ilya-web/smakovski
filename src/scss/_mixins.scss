@@ -1,4 +1,5 @@
 
+
 @mixin transition($time: 0.3s) {
   transition: all ease-in-out $time;
 }
@@ -83,5 +84,26 @@
     border-top: 4px solid transparent;
     border-left: 4px solid $colorArrow;
     border-bottom: 4px solid transparent;
+  }
+}
+
+@mixin scrollStyle($color-green-2, $color-gray) {
+  &::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color: $color-gray;
+  }
+  &::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+    background-color: $color-gray;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: $color-green-2;
+  }
+  &::selection {
+    background: $color-gray;
+    border-radius: 10px;
   }
 }

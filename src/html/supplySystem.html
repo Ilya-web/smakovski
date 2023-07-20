@@ -45,7 +45,7 @@
                 <div class="filter-row__text mb-5">Smakovsky предлагает полноценное питание не зависимо веган ты или мясоед</div>
                 <div class="mb-3">
                   <form action="#">
-                    @@include('components/filter-radioBtns/index.html')
+                    @@include('components/filter-radioBtns/index.html', {'selectMobile': true})
                   </form>
                 </div>
                 <h4 class="h4 mb-4">Для тех кто ест все, выбери услугу, которая Вам по душе</h4>
@@ -186,5 +186,17 @@
   @@include('components/footer/index.html')
 
 </div>
+
+<button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+  <span class="callback_icon">
+     <svg>
+    <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+  </svg>
+  </span>
+</button>
+
+@@include('components/modals/index.html')
+
+
 
 @@include('components/scripts/index.html')

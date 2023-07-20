@@ -8,15 +8,19 @@ $grid-breakpoints: (
 $container-max-widths: (
         sm: 540px,
         md: 720px,
-        lg: 1024px,
+        lg: 100%,
         xl: 1264px,
 );
 
 $grid-columns:                12 !default;  //12
 $grid-gutter-width:           16px !default;  //30
 
-$modal-xl:                    1200px;
-$modal-md:                    405px;
+
+$modal-sm: 405px;
+$modal-md: 550px;
+$modal-lg: 825px;
+$modal-xl: 1248px;
+
 
 
 @import "node_modules/bootstrap/scss/bootstrap-utilities";
@@ -26,10 +30,10 @@ $modal-md:                    405px;
 @import "node_modules/bootstrap/scss/accordion";
 @import "node_modules/bootstrap/scss/dropdown";
 @import "node_modules/bootstrap/scss/transitions";
-
-
-
+@import "node_modules/bootstrap/scss/tooltip";
 @import "node_modules/bootstrap/scss/modal";
+
+
 //@import "node_modules/bootstrap/scss/bootstrap";
 //@import "node_modules/bootstrap/scss/close";
 

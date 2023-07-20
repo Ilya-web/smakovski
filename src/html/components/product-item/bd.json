@@ -6,7 +6,8 @@
     "veganCircle": true,
     "setMeal": true,
     "title": "Гречана локшина Soba з курячим філе Sous Vide та грибами",
-    "weight": "300/30 г"
+    "weight": "300/30 г",
+    "footerIsVisible": true
   },
   {
     "imgUrl": "image-2.jpg",
@@ -15,7 +16,8 @@
     "veganCircle": true,
     "setMeal": true,
     "title": "Гречана локшина Soba",
-    "weight": "300/30 г"
+    "weight": "300/30 г",
+    "footerIsVisible": true
   },
   {
     "imgUrl": "image-3.jpg",
@@ -24,7 +26,8 @@
     "drink": true,
     "energy": true,
     "title": "Гречана локшина Soba",
-    "weight": "300/30 г"
+    "weight": "300/30 г",
+    "footerIsVisible": true
   },
   {
     "imgUrl": "image-4.jpg",
@@ -33,7 +36,8 @@
     "drink": true,
     "energy": true,
     "title": "Гречана локшина Soba з курячим філе Sous Vide та грибами",
-    "weight": "300/30 г"
+    "weight": "300/30 г",
+    "footerIsVisible": true
   },
   {
     "imgUrl": "image-5.jpg",
@@ -41,7 +45,8 @@
     "drink": true,
     "energy": true,
     "title": "Гречана локшина Soba з курячим філе Sous Vide та грибами",
-    "weight": "300/30 г"
+    "weight": "300/30 г",
+    "footerIsVisible": true
   },
   {
     "imgUrl": "image-6.jpg",
@@ -50,6 +55,7 @@
     "drink": true,
     "energy": true,
     "title": "Гречана локшина Soba з курячим філе Sous Vide та грибами",
-    "weight": "300/30 г"
+    "weight": "300/30 г",
+    "footerIsVisible": true
   }
 ]

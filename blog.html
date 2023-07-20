@@ -8,12 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="src/css/plugins.css">
-  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+
+  <link rel="stylesheet" href="css/styles.min.css">
 
 </head>
 
 <body>
+
 
   <div class="wrapper">
 
@@ -25,7 +27,7 @@
           <div class="col-6">
             <div class="header-left">
               <div class="logo">
-                <a href="#">
+                <a href="index.html">
                   <img src="images/Smakovski.svg" alt="">
                 </a>
               </div>
@@ -113,13 +115,13 @@
             <div class="header-right">
 
               <div class="header-nutrition dropdown">
-                <button type="button" class="header-btns__item header-nutrition__btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button type="button" class="header-btns__item header-nutrition__btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                   Питание
                 </button>
                 <div class="drop-menu-nutrition dropdown-menu">
                   <ul class="nutrition-list">
                     <li>
-                      <a href="#">
+                      <a href="delivery.html">
                         <span class="nutrition-list_icon">
                           <svg>
                             <use xlink:href="images/icons/sprite.svg#takeout"></use>
@@ -129,7 +131,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="programNutrition.html">
                         <span class="nutrition-list_icon">
                           <svg>
                             <use xlink:href="images/icons/sprite.svg#lab"></use>
@@ -139,7 +141,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="heatAndEat.html">
                         <span class="nutrition-list_icon">
                           <svg>
                             <use xlink:href="images/icons/sprite.svg#dinner"></use>
@@ -149,7 +151,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="supplySystem.html">
                         <span class="nutrition-list_icon">
                           <svg>
                             <use xlink:href="images/icons/sprite.svg#nutrition"></use>
@@ -164,7 +166,7 @@
 
 
               <div class="header-lang dropdown">
-                <button type="button" class="header-btns__item header-lang__btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button type="button" class="header-btns__item header-lang__btn dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   ua
                 </button>
                 <div class="drop-menu-lang dropdown-menu">
@@ -195,7 +197,7 @@
               <!--пользователь авторизован  -->
 
               <div class="header-account dropdown">
-                <button type="button" class="header-account__btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button type="button" class="header-account__btn dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <svg>
                     <use xlink:href="images/icons/sprite.svg#account"></use>
                   </svg>
@@ -257,7 +259,7 @@
               <!--пользователь авторизован  -->
 
               <div class="header-wrapperBusket">
-                <button type="button" class="header-busketBtn">
+                <button type="button" class="header-busketBtn" data-bs-toggle="modal" data-bs-target="#modalBusket">
                   <div class="header-busketBtn__icon">
                     <svg>
                       <use xlink:href="images/icons/sprite.svg#busket"></use>
@@ -265,7 +267,7 @@
                   </div>
                   1 заказ
                 </button>
-                <button type="button" class="header-menuBtn" id="menuBtn">
+                <button type="button" class="header-menuBtn menuBtn">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -276,9 +278,105 @@
         </div>
       </div>
 
-      <!--  <div class="menu">-->
+      <div class="wrap-menu">
+        <div class="menu" id="menuDesktop">
+          <div class="menu-overlay">
+            <div class="menu-top">
+              <div class="menu-header">
+                <div class="menu-title h4 mb-4">полезно</div>
 
-      <!--  </div>-->
+                <button type="button" class="modal_close menuBtn">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <ul class="menu-list">
+                <li>
+                  <a href="howWorks.html">Как это работает</a>
+                </li>
+                <li>
+                  <a href="about.html">О нас</a>
+                </li>
+                <li>
+                  <a href="nutritionist.html">Диетолог</a>
+                </li>
+                <li>
+                  <a href="">Контакты</a>
+                </li>
+                <li>
+                  <a href="reviews.html">Отзывы</a>
+                </li>
+                <li>
+                  <a href="blog.html">Блог</a>
+                </li>
+                <li>
+                  <a href="faq.html">FAQ</a>
+                </li>
+              </ul>
+
+            </div>
+            <div class="drop-menu-contacts lightBg">
+              <a href="#" class="contact-item">
+                <div class="contact-item_icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#chat"></use>
+                  </svg>
+                </div>
+                <span class="contact-item_text">
+                  <span class="contact-item_title">Чат на сайте</span>
+                  <span class="contact-item_info"></span>
+                </span>
+              </a>
+              <a href="#" class="contact-item">
+                <div class="contact-item_icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#messenger"></use>
+                  </svg>
+                </div>
+                <span class="contact-item_text">
+                  <span class="contact-item_title">Messenger</span>
+                  <span class="contact-item_info"></span>
+                </span>
+              </a>
+              <a href="#" class="contact-item">
+                <div class="contact-item_icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#telegram"></use>
+                  </svg>
+                </div>
+                <span class="contact-item_text">
+                  <span class="contact-item_title">Telegram</span>
+                  <span class="contact-item_info"></span>
+                </span>
+              </a>
+              <a href="tel:+380675050510" class="contact-item">
+                <div class="contact-item_icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+                  </svg>
+                </div>
+                <span class="contact-item_text">
+                  <span class="contact-item_title">+380(67) 505 05 10</span>
+                  <span class="contact-item_info">с 9:00 по 21:00 (пн-нд)</span>
+                </span>
+              </a>
+              <a href="tel:006 34 33 454" class="contact-item">
+                <div class="contact-item_icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+                  </svg>
+                </div>
+                <span class="contact-item_text">
+                  <span class="contact-item_title">006 34 33 454</span>
+                  <span class="contact-item_info">бесплатно по Киеву со стационарного</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </header>
 
@@ -835,417 +933,2495 @@
       </div>
     </footer>
 
-    <button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
-      <span class="callback_icon">
-        <svg>
-          <use xlink:href="images/icons/sprite.svg#phone-2"></use>
-        </svg>
-      </span>
-    </button>
-
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">
-      Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal_content">
-          <div class="modal_header">
-            <h4 class="modal_title h4">Вход</h4>
-            <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
-              <svg>
-                <use xlink:href="images/icons/sprite.svg#close"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="modal_body">
-            <form action="#">
-              <div class="row g-3">
-                <div class="col-12">
-                  <div class="wrap-input-site">
-                    <label class="input-site w-100">
-                      <span class="input-site__label">Ел. почта</span>
-                      <input type="email" class="input-site__input">
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="wrap-input-site">
-                    <label class="input-site input-site-password w-100">
-                      <span class="input-site__label">Пароль</span>
-                      <input type="password" class="input-site__input">
-                      <button type="button" class="input-site-password_icon">
-                        <svg>
-                          <use xlink:href="images/icons/sprite.svg#password"></use>
-                        </svg>
-                      </button>
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="row align-items-center mt-2">
-                    <div class="col-6">
-                      <label class="input-checkbox-2 w-100 align-items-center">
-                        <input type="checkbox" checked>
-                        <span class="input-checkbox-2_icon"></span>
-                        <span class="input-checkbox-2__label text-uppercase">Запомнить меня</span>
-                      </label>
-                    </div>
-                    <div class="col-6 d-flex justify-content-end">
-                      <a href="#" class="text-uppercase">Забыли пароль?</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="row g-2">
-                    <div class="col-12">
-                      <button type="submit" class="btn-site-3 click-animation black w-100"> Войти</button>
-                    </div>
-                    <div class="col-12">
-                      <button type="button" class="btn-site-3 click-animation noBg w-100" data-bs-target="#modalRegistration" data-bs-toggle="modal">Зарегистрироватся</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 mt-0">
-                  <div class="line">
-                    <span>или</span>
-                  </div>
-                </div>
-
-                <div class="col-12">
-                  <div class="row g-2">
-                    <div class="col-12">
-                      <a href="#" class="btn-site-3 click-animation noBg w-100">
-                        <span class="btn-site-3_icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#google"></use>
-                          </svg>
-                        </span>
-                        Google
-                      </a>
-                    </div>
-                    <div class="col-12">
-                      <a href="#" class="btn-site-3 click-animation noBg w-100">
-                        <span class="btn-site-3_icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#facebook-2"></use>
-                          </svg>
-                        </span>
-                        Facebook
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="modalRegistration" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal_content">
-          <div class="modal_header">
-            <h4 class="modal_title h4">Регистрация</h4>
-            <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
-              <svg>
-                <use xlink:href="images/icons/sprite.svg#close"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="modal_body">
-            <form action="#">
-              <div class="row g-3">
-                <div class="col-12">
-                  <div class="wrap-input-site">
-                    <label class="input-site w-100 input-site-error">
-                      <span class="input-site__label">ФИО</span>
-                      <input type="text" class="input-site__input">
-                    </label>
-                    <span class="input-site-error_text text-uppercase">Неверный формат</span>
-                  </div>
-
-                </div>
-                <div class="col-12">
-                  <div class="wrap-input-site">
-                    <label class="input-site w-100">
-                      <span class="input-site__label">телефон</span>
-                      <input type="tel" class="input-site__input">
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="wrap-input-site">
-                    <label class="input-site w-100">
-                      <span class="input-site__label">Ел. почта</span>
-                      <input type="email" class="input-site__input">
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="wrap-input-site">
-                    <label class="input-site input-site-password w-100">
-                      <span class="input-site__label">Пароль</span>
-                      <input type="password" class="input-site__input">
-                      <button type="button" class="input-site-password_icon">
-                        <svg>
-                          <use xlink:href="images/icons/sprite.svg#password"></use>
-                        </svg>
-                      </button>
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="row mt-2">
-                    <div class="col-12">
-                      <label class="input-checkbox-2 w-100">
-                        <input type="checkbox">
-                        <span class="input-checkbox-2_icon"></span>
-                        <span class="input-checkbox-2__label">Соглашаюсь с условиями положения о сборе и защите персональных данных и пользовательским соглашением</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="row g-2">
-                    <div class="col-12">
-                      <button type="button" class="btn-site-3 click-animation black w-100" data-bs-target="#modalLogin" data-bs-toggle="modal"> Войти</button>
-                    </div>
-                    <div class="col-12">
-                      <button type="submit" class="btn-site-3 click-animation noBg w-100">Зарегистрироватся</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 mt-0">
-                  <div class="line">
-                    <span>или</span>
-                  </div>
-                </div>
-
-                <div class="col-12">
-                  <div class="row g-2">
-                    <div class="col-12">
-                      <a href="#" class="btn-site-3 click-animation noBg w-100">
-                        <span class="btn-site-3_icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#google"></use>
-                          </svg>
-                        </span>
-                        Google
-                      </a>
-                    </div>
-                    <div class="col-12">
-                      <a href="#" class="btn-site-3 click-animation noBg w-100">
-                        <span class="btn-site-3_icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#facebook-2"></use>
-                          </svg>
-                        </span>
-                        Facebook
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="modalCallback" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal_content">
-          <div class="modal_header">
-            <h4 class="modal_title h4">Форма</h4>
-            <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
-              <svg>
-                <use xlink:href="images/icons/sprite.svg#close"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="modal_body">
-            <form action="#">
-              <div class="row g-3">
-                <div class="col-12">
-                  <div class="wrap-input-site">
-                    <label class="input-site w-100">
-                      <span class="input-site__label">ФИО</span>
-                      <input type="text" class="input-site__input">
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="wrap-input-site">
-                    <label class="input-site w-100">
-                      <span class="input-site__label">телефон</span>
-                      <input type="tel" class="input-site__input">
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="row g-2">
-                    <div class="col-12">
-                      <button type="submit" class="btn-site-3 yellow click-animation w-100">
-                        <span class="btn-site-3_icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#phone-2"></use>
-                          </svg>
-                        </span>
-
-                        Заказать звонок
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 text-center">
-                  <div class="politics-info">
-                    Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="modalLocation" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
-        <div class="modal_content">
-          <div class="modal_header">
-            <div class="location-info">
-              <div class="location-info_title">Сейчас указан</div>
-              <div class="location-info_current">Ивано-Франковск</div>
-            </div>
-            <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
-              <svg>
-                <use xlink:href="images/icons/sprite.svg#close"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="modal_body location-body">
-            <div class="row">
-              <div class="col-12">
-                <h6 class="h6 mb-2">Выбрать город</h6>
-              </div>
-              <div class="col-12 mb-32">
-                <form action="#">
-                  <div class="wrap-input-site">
-                    <label class="input-site input-site-search w-100">
-                      <span class="input-site-search_icon">
-                        <svg>
-                          <use xlink:href="images/icons/sprite.svg#search"></use>
-                        </svg>
-                      </span>
-                      <span class="input-site__label">Введите навазние города</span>
-                      <input type="text" class="input-site__input">
-                    </label>
-                  </div>
-                  <input type="submit" hidden>
-                </form>
-              </div>
-
-              <div class="col-12">
-                <ul class="cities">
-                  <li>
-                    <a href="#">Ужгород</a>
-                  </li>
-                  <li>
-                    <a href="#">Днепр</a>
-                  </li>
-                  <li>
-                    <a href="#">Харьков</a>
-                  </li>
-                  <li>
-                    <a href="#">Николаев</a>
-                  </li>
-                  <li>
-                    <a href="#">Тернопиль</a>
-                  </li>
-                  <li>
-                    <a href="#">Запорожье</a>
-                  </li>
-                  <li>
-                    <a href="#">Луцк</a>
-                  </li>
-                  <li>
-                    <a href="#">Полтава</a>
-                  </li>
-                  <li>
-                    <a href="#">Житомер</a>
-                  </li>
-                  <li>
-                    <a href="#">Кривой рог</a>
-                  </li>
-                  <li>
-                    <a href="#">Киев</a>
-                  </li>
-                  <li>
-                    <a href="#">Херсон</a>
-                  </li>
-                  <li>
-                    <a href="#">Львов</a>
-                  </li>
-                  <li>
-                    <a href="#">Луцк</a>
-                  </li>
-                  <li>
-                    <a href="#">Одесса</a>
-                  </li>
-                  <li>
-                    <a href="#">Сумы</a>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="modalGoOut" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal_content modal_content--green">
-          <div class="modal_header  mb-4">
-            <div>
-              <h4 class="modal_title h4">Выйти</h4>
-              <div class="modal_subtitle">Вы уверене, что хотите выйти из аккаунта?</div>
-            </div>
-
-            <!--        <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">-->
-            <!--          <svg>-->
-            <!--            <use xlink:href="images/icons/sprite.svg#close"></use>-->
-            <!--          </svg>-->
-            <!--        </button>-->
-          </div>
-          <div class="modal_body">
-            <form action="#">
-              <div class="row g-3">
-                <div class="col-6">
-                  <button type="submit" class="btn-site-3 click-animation noBg w-100">Да</button>
-                </div>
-                <div class="col-6">
-                  <button type="button" class="btn-site-3 click-animation w-100" data-bs-dismiss="modal" aria-label="Close">нет</button>
-                </div>
-
-
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
   </div>
+  <button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+    <span class="callback_icon">
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+      </svg>
+    </span>
+  </button>
+
+  <!-- Modals -->
+  <div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal_title h4">Вход</h4>
+          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="wrap-input-site">
+                  <label class="input-site w-100">
+                    <span class="input-site__label">Ел. почта</span>
+                    <input type="email" class="input-site__input">
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="wrap-input-site">
+                  <label class="input-site input-site-password w-100">
+                    <span class="input-site__label">Пароль</span>
+                    <input type="password" class="input-site__input">
+                    <button type="button" class="input-site-password_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#password"></use>
+                      </svg>
+                    </button>
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row align-items-center mt-2">
+                  <div class="col-6">
+                    <label class="input-checkbox-2 w-100 align-items-center">
+                      <input type="checkbox" checked>
+                      <span class="input-checkbox-2_icon"></span>
+                      <span class="input-checkbox-2__label text-uppercase">Запомнить меня</span>
+                    </label>
+                  </div>
+                  <div class="col-6 d-flex justify-content-end">
+                    <a href="#" class="text-uppercase">Забыли пароль?</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row g-2">
+                  <div class="col-12">
+                    <button type="submit" class="btn-site-3 click-animation black w-100"> Войти</button>
+                  </div>
+                  <div class="col-12">
+                    <button type="button" class="btn-site-3 click-animation noBg w-100" data-bs-target="#modalRegistration" data-bs-toggle="modal">Зарегистрироватся</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-0">
+                <div class="line">
+                  <span>или</span>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="row g-2">
+                  <div class="col-12">
+                    <a href="#" class="btn-site-3 click-animation noBg w-100">
+                      <span class="btn-site-3_icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#google"></use>
+                        </svg>
+                      </span>
+                      Google
+                    </a>
+                  </div>
+                  <div class="col-12">
+                    <a href="#" class="btn-site-3 click-animation noBg w-100">
+                      <span class="btn-site-3_icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#facebook-2"></use>
+                        </svg>
+                      </span>
+                      Facebook
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalRegistration" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal_title h4">Регистрация</h4>
+          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="wrap-input-site">
+                  <label class="input-site w-100 input-site-error">
+                    <span class="input-site__label">ФИО</span>
+                    <input type="text" class="input-site__input">
+                  </label>
+                  <span class="input-site-error_text text-uppercase">Неверный формат</span>
+                </div>
+
+              </div>
+              <div class="col-12">
+                <div class="wrap-input-site">
+                  <label class="input-site w-100">
+                    <span class="input-site__label">телефон</span>
+                    <input type="tel" class="input-site__input">
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="wrap-input-site">
+                  <label class="input-site w-100">
+                    <span class="input-site__label">Ел. почта</span>
+                    <input type="email" class="input-site__input">
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="wrap-input-site">
+                  <label class="input-site input-site-password w-100">
+                    <span class="input-site__label">Пароль</span>
+                    <input type="password" class="input-site__input">
+                    <button type="button" class="input-site-password_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#password"></use>
+                      </svg>
+                    </button>
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row mt-2">
+                  <div class="col-12">
+                    <label class="input-checkbox-2 w-100">
+                      <input type="checkbox">
+                      <span class="input-checkbox-2_icon"></span>
+                      <span class="input-checkbox-2__label">Соглашаюсь с условиями положения о сборе и защите персональных данных и пользовательским соглашением</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row g-2">
+                  <div class="col-12">
+                    <button type="button" class="btn-site-3 click-animation black w-100" data-bs-target="#modalLogin" data-bs-toggle="modal"> Войти</button>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn-site-3 click-animation noBg w-100">Зарегистрироватся</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-0">
+                <div class="line">
+                  <span>или</span>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="row g-2">
+                  <div class="col-12">
+                    <a href="#" class="btn-site-3 click-animation noBg w-100">
+                      <span class="btn-site-3_icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#google"></use>
+                        </svg>
+                      </span>
+                      Google
+                    </a>
+                  </div>
+                  <div class="col-12">
+                    <a href="#" class="btn-site-3 click-animation noBg w-100">
+                      <span class="btn-site-3_icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#facebook-2"></use>
+                        </svg>
+                      </span>
+                      Facebook
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalCallback" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal_title h4">Форма</h4>
+          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="wrap-input-site">
+                  <label class="input-site w-100">
+                    <span class="input-site__label">ФИО</span>
+                    <input type="text" class="input-site__input">
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="wrap-input-site">
+                  <label class="input-site w-100">
+                    <span class="input-site__label">телефон</span>
+                    <input type="tel" class="input-site__input">
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row g-2">
+                  <div class="col-12">
+                    <button type="submit" class="btn-site-3 yellow click-animation w-100">
+                      <span class="btn-site-3_icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+                        </svg>
+                      </span>
+
+                      Заказать звонок
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 text-center">
+                <div class="politics-info">
+                  Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalLocation" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="location-info">
+            <div class="location-info_title">Сейчас указан</div>
+            <div class="location-info_current">Ивано-Франковск</div>
+          </div>
+          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body location-body">
+          <div class="row">
+            <div class="col-12">
+              <h6 class="h6 mb-2">Выбрать город</h6>
+            </div>
+            <div class="col-12 mb-32">
+              <form action="#">
+                <div class="wrap-input-site">
+                  <label class="input-site input-site-search w-100">
+                    <span class="input-site-search_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#search"></use>
+                      </svg>
+                    </span>
+                    <span class="input-site__label">Введите навазние города</span>
+                    <input type="text" class="input-site__input">
+                  </label>
+                </div>
+                <input type="submit" hidden>
+              </form>
+            </div>
+
+            <div class="col-12">
+              <ul class="cities">
+                <li>
+                  <a href="#">Ужгород</a>
+                </li>
+                <li>
+                  <a href="#">Днепр</a>
+                </li>
+                <li>
+                  <a href="#">Харьков</a>
+                </li>
+                <li>
+                  <a href="#">Николаев</a>
+                </li>
+                <li>
+                  <a href="#">Тернопиль</a>
+                </li>
+                <li>
+                  <a href="#">Запорожье</a>
+                </li>
+                <li>
+                  <a href="#">Луцк</a>
+                </li>
+                <li>
+                  <a href="#">Полтава</a>
+                </li>
+                <li>
+                  <a href="#">Житомер</a>
+                </li>
+                <li>
+                  <a href="#">Кривой рог</a>
+                </li>
+                <li>
+                  <a href="#">Киев</a>
+                </li>
+                <li>
+                  <a href="#">Херсон</a>
+                </li>
+                <li>
+                  <a href="#">Львов</a>
+                </li>
+                <li>
+                  <a href="#">Луцк</a>
+                </li>
+                <li>
+                  <a href="#">Одесса</a>
+                </li>
+                <li>
+                  <a href="#">Сумы</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalGoOut" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content modal-content--green">
+        <div class="modal-header  mb-4">
+          <div>
+            <h4 class="modal_title h6 mb-1">Выйти</h4>
+            <div class="modal_subtitle">Вы уверене, что хотите выйти из аккаунта?</div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="row g-3">
+              <div class="col-6">
+                <button type="submit" class="btn-site-3 click-animation noBg w-100">Да</button>
+              </div>
+              <div class="col-6">
+                <button type="button" class="btn-site-3 click-animation w-100" data-bs-dismiss="modal" aria-label="Close">нет</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalDelete" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content modal-content--green">
+        <div class="modal-header mb-4">
+          <div>
+            <h4 class="modal_title h6 mb-1">Удалить</h4>
+            <div class="modal_subtitle">Вы уверены, что хотите удалить блюдо?</div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="row g-3">
+              <div class="col-6">
+                <button type="submit" class="btn-site-3 click-animation noBg w-100">Да</button>
+              </div>
+              <div class="col-6">
+                <button type="button" class="btn-site-3 click-animation w-100" data-bs-dismiss="modal" aria-label="Close">нет</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalReset" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content modal-content--green">
+        <div class="modal-header mb-4">
+          <div>
+            <h4 class="modal_title h6 mb-1">Сбросить параметры</h4>
+            <div class="modal_subtitle">Вы уверне, что хотите сбросить параметры?</div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="row g-3">
+              <div class="col-6">
+                <button type="submit" class="btn-site-3 click-animation noBg w-100">Да</button>
+              </div>
+              <div class="col-6">
+                <button type="button" class="btn-site-3 click-animation w-100" data-bs-dismiss="modal" aria-label="Close">нет</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-busket" id="modalBusket" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-header--top">
+            <div>
+              <div class="modal-header__subtitle mb-2">Ваша программа</div>
+              <div class="modal-header__title h6 mb-1">Ем все</div>
+              <div class="modal-header__count">
+                <span class="modal-header__count--current">6</span>
+                /
+                <span class="modal-header__count--total">6</span>
+              </div>
+            </div>
+            <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+              <svg>
+                <use xlink:href="images/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <nav class="w-100">
+            <div class="delivery-tabs" id="deliveryTab" role="tablist">
+              <button class="delivery-link active" id="delivery-tab-1" data-bs-toggle="tab" data-bs-target="#delivery-1" type="button" role="tab" aria-controls="delivery-1" aria-selected="true">
+                <span>1-я Доставка</span>
+                <span class="delivery-link__date">17.12.2023</span>
+              </button>
+              <button class="delivery-link" id="delivery-tab-2" data-bs-toggle="tab" data-bs-target="#delivery-2" type="button" role="tab" aria-controls="delivery-2" aria-selected="false">
+                <span>2-я Доставка</span>
+                <span class="delivery-link__date">17.12.2023</span>
+              </button>
+            </div>
+          </nav>
+        </div>
+        <div class="clear-box mb-4">
+          <div class="clear-box__title">Позиции</div>
+          <button type="button" class="clear-box__btn btn-site-3 noBg click-animation">Очистить все</button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="tab-content delivery-content" id="delivery-tabContent">
+
+              <div class="tab-pane fade show active" id="delivery-1" role="tabpanel" aria-labelledby="delivery-tab-1">
+                <div class="modal-product-list">
+
+
+
+
+                  <div class="product-item product-item--row">
+                    <div class="product-item_img">
+                      <picture>
+                        <source srcset="images/product/image-7.webp" type="image/webp">
+                        <img src="images/product/image-7.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="product-item_box">
+                      <div class="product-item_header">
+                        <div class="product-item_header--left">
+
+
+                          <div class="product-item_status product-item_status--updated">
+                            <div class="product-item_status--icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#info"></use>
+                              </svg>
+                            </div>
+                            <span>Обновлено</span>
+                          </div>
+
+
+
+
+
+
+
+                          <div class="product-item_category">Завтрак 1</div>
+                        </div>
+                        <div class="product-item_composition">
+
+
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                            </svg>
+                          </div>
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                            </svg>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="product-item_desc">
+                        <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                        <div class="product-item_weight">300/30 г</div>
+                      </div>
+                      <div class="product-item_footer">
+                        <div class="d-flex justify-content-between g-3">
+                          <div class="counter">
+                            <button type="button" class="counter-minus counter-btn click-animation"></button>
+                            <input type="text" readonly value="12">
+                            <button type="button" class="counter-plus counter-btn click-animation"></button>
+                          </div>
+
+                          <button type="button" class="deleteBtn click-animation">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="product-item product-item--row">
+                    <div class="product-item_img">
+                      <picture>
+                        <source srcset="images/product/image-7.webp" type="image/webp">
+                        <img src="images/product/image-7.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="product-item_box">
+                      <div class="product-item_header">
+                        <div class="product-item_header--left">
+
+
+
+
+
+
+
+                          <div class="product-item_status product-item_status--hit">
+                            <div class="product-item_status--icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#info"></use>
+                              </svg>
+                            </div>
+                            <span>хит</span>
+                          </div>
+
+
+                          <div class="product-item_category">Завтрак 1</div>
+                        </div>
+                        <div class="product-item_composition">
+
+
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                            </svg>
+                          </div>
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                            </svg>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="product-item_desc">
+                        <h2 class="product-item_title">Гречана локшина Soba</h2>
+                        <div class="product-item_weight">300/30 г</div>
+                      </div>
+                      <div class="product-item_footer">
+                        <div class="d-flex justify-content-between g-3">
+                          <div class="counter">
+                            <button type="button" class="counter-minus counter-btn click-animation"></button>
+                            <input type="text" readonly value="12">
+                            <button type="button" class="counter-plus counter-btn click-animation"></button>
+                          </div>
+
+                          <button type="button" class="deleteBtn click-animation">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="product-item product-item--row">
+                    <div class="product-item_img">
+                      <picture>
+                        <source srcset="images/product/image-7.webp" type="image/webp">
+                        <img src="images/product/image-7.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="product-item_box">
+                      <div class="product-item_header">
+                        <div class="product-item_header--left">
+
+
+
+                          <div class="product-item_status product-item_status--new">
+                            <div class="product-item_status--icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#info"></use>
+                              </svg>
+                            </div>
+                            <span>Новинка</span>
+                          </div>
+
+
+
+
+
+
+                          <div class="product-item_category">Завтрак 1</div>
+                        </div>
+                        <div class="product-item_composition">
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#drink"></use>
+                            </svg>
+                          </div>
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#energy"></use>
+                            </svg>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+                      <div class="product-item_desc">
+                        <h2 class="product-item_title">Гречана локшина Soba</h2>
+                        <div class="product-item_weight">300/30 г</div>
+                      </div>
+                      <div class="product-item_footer">
+                        <div class="d-flex justify-content-between g-3">
+                          <div class="counter">
+                            <button type="button" class="counter-minus counter-btn click-animation"></button>
+                            <input type="text" readonly value="12">
+                            <button type="button" class="counter-plus counter-btn click-animation"></button>
+                          </div>
+
+                          <button type="button" class="deleteBtn click-animation">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="product-item product-item--row">
+                    <div class="product-item_img">
+                      <picture>
+                        <source srcset="images/product/image-7.webp" type="image/webp">
+                        <img src="images/product/image-7.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="product-item_box">
+                      <div class="product-item_header">
+                        <div class="product-item_header--left">
+
+
+
+
+
+                          <div class="product-item_status product-item_status--sales">
+                            <div class="product-item_status--icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#info"></use>
+                              </svg>
+                            </div>
+                            <span>скидка</span>
+                          </div>
+
+
+
+
+                          <div class="product-item_category">Поkдник</div>
+                        </div>
+                        <div class="product-item_composition">
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#drink"></use>
+                            </svg>
+                          </div>
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#energy"></use>
+                            </svg>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+                      <div class="product-item_desc">
+                        <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                        <div class="product-item_weight">300/30 г</div>
+                      </div>
+                      <div class="product-item_footer">
+                        <div class="d-flex justify-content-between g-3">
+                          <div class="counter">
+                            <button type="button" class="counter-minus counter-btn click-animation"></button>
+                            <input type="text" readonly value="12">
+                            <button type="button" class="counter-plus counter-btn click-animation"></button>
+                          </div>
+
+                          <button type="button" class="deleteBtn click-animation">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="product-item product-item--row">
+                    <div class="product-item_img">
+                      <picture>
+                        <source srcset="images/product/image-7.webp" type="image/webp">
+                        <img src="images/product/image-7.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="product-item_box">
+                      <div class="product-item_header">
+                        <div class="product-item_header--left">
+
+
+
+
+
+
+
+
+                          <div class="product-item_category">ужин</div>
+                        </div>
+                        <div class="product-item_composition">
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#drink"></use>
+                            </svg>
+                          </div>
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#energy"></use>
+                            </svg>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+                      <div class="product-item_desc">
+                        <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                        <div class="product-item_weight">300/30 г</div>
+                      </div>
+                      <div class="product-item_footer">
+                        <div class="d-flex justify-content-between g-3">
+                          <div class="counter">
+                            <button type="button" class="counter-minus counter-btn click-animation"></button>
+                            <input type="text" readonly value="12">
+                            <button type="button" class="counter-plus counter-btn click-animation"></button>
+                          </div>
+
+                          <button type="button" class="deleteBtn click-animation">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="product-item product-item--row">
+                    <div class="product-item_img">
+                      <picture>
+                        <source srcset="images/product/image-7.webp" type="image/webp">
+                        <img src="images/product/image-7.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="product-item_box">
+                      <div class="product-item_header">
+                        <div class="product-item_header--left">
+
+
+
+
+
+                          <div class="product-item_status product-item_status--sales">
+                            <div class="product-item_status--icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#info"></use>
+                              </svg>
+                            </div>
+                            <span>скидка</span>
+                          </div>
+
+
+
+
+                          <div class="product-item_category">Поkдник</div>
+                        </div>
+                        <div class="product-item_composition">
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#drink"></use>
+                            </svg>
+                          </div>
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#energy"></use>
+                            </svg>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+                      <div class="product-item_desc">
+                        <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                        <div class="product-item_weight">300/30 г</div>
+                      </div>
+                      <div class="product-item_footer">
+                        <div class="d-flex justify-content-between g-3">
+                          <div class="counter">
+                            <button type="button" class="counter-minus counter-btn click-animation"></button>
+                            <input type="text" readonly value="12">
+                            <button type="button" class="counter-plus counter-btn click-animation"></button>
+                          </div>
+
+                          <button type="button" class="deleteBtn click-animation">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="delivery-2" role="tabpanel" aria-labelledby="delivery-tab-2">
+                <div class="modal-product-list">
+
+
+
+
+                  <div class="product-item product-item--row">
+                    <div class="product-item_img">
+                      <picture>
+                        <source srcset="images/product/image-7.webp" type="image/webp">
+                        <img src="images/product/image-7.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="product-item_box">
+                      <div class="product-item_header">
+                        <div class="product-item_header--left">
+
+
+                          <div class="product-item_status product-item_status--updated">
+                            <div class="product-item_status--icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#info"></use>
+                              </svg>
+                            </div>
+                            <span>Обновлено</span>
+                          </div>
+
+
+
+
+
+
+
+                          <div class="product-item_category">Завтрак 1</div>
+                        </div>
+                        <div class="product-item_composition">
+
+
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                            </svg>
+                          </div>
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                            </svg>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="product-item_desc">
+                        <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                        <div class="product-item_weight">300/30 г</div>
+                      </div>
+                      <div class="product-item_footer">
+                        <div class="d-flex justify-content-between g-3">
+                          <div class="counter">
+                            <button type="button" class="counter-minus counter-btn click-animation"></button>
+                            <input type="text" readonly value="12">
+                            <button type="button" class="counter-plus counter-btn click-animation"></button>
+                          </div>
+
+                          <button type="button" class="deleteBtn click-animation">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="product-item product-item--row">
+                    <div class="product-item_img">
+                      <picture>
+                        <source srcset="images/product/image-7.webp" type="image/webp">
+                        <img src="images/product/image-7.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="product-item_box">
+                      <div class="product-item_header">
+                        <div class="product-item_header--left">
+
+
+
+
+
+
+
+                          <div class="product-item_status product-item_status--hit">
+                            <div class="product-item_status--icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#info"></use>
+                              </svg>
+                            </div>
+                            <span>хит</span>
+                          </div>
+
+
+                          <div class="product-item_category">Завтрак 1</div>
+                        </div>
+                        <div class="product-item_composition">
+
+
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                            </svg>
+                          </div>
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                            </svg>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="product-item_desc">
+                        <h2 class="product-item_title">Гречана локшина Soba</h2>
+                        <div class="product-item_weight">300/30 г</div>
+                      </div>
+                      <div class="product-item_footer">
+                        <div class="d-flex justify-content-between g-3">
+                          <div class="counter">
+                            <button type="button" class="counter-minus counter-btn click-animation"></button>
+                            <input type="text" readonly value="12">
+                            <button type="button" class="counter-plus counter-btn click-animation"></button>
+                          </div>
+
+                          <button type="button" class="deleteBtn click-animation">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="product-item product-item--row">
+                    <div class="product-item_img">
+                      <picture>
+                        <source srcset="images/product/image-7.webp" type="image/webp">
+                        <img src="images/product/image-7.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="product-item_box">
+                      <div class="product-item_header">
+                        <div class="product-item_header--left">
+
+
+
+                          <div class="product-item_status product-item_status--new">
+                            <div class="product-item_status--icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#info"></use>
+                              </svg>
+                            </div>
+                            <span>Новинка</span>
+                          </div>
+
+
+
+
+
+
+                          <div class="product-item_category">Завтрак 1</div>
+                        </div>
+                        <div class="product-item_composition">
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#drink"></use>
+                            </svg>
+                          </div>
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#energy"></use>
+                            </svg>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+                      <div class="product-item_desc">
+                        <h2 class="product-item_title">Гречана локшина Soba</h2>
+                        <div class="product-item_weight">300/30 г</div>
+                      </div>
+                      <div class="product-item_footer">
+                        <div class="d-flex justify-content-between g-3">
+                          <div class="counter">
+                            <button type="button" class="counter-minus counter-btn click-animation"></button>
+                            <input type="text" readonly value="12">
+                            <button type="button" class="counter-plus counter-btn click-animation"></button>
+                          </div>
+
+                          <button type="button" class="deleteBtn click-animation">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="product-item product-item--row">
+                    <div class="product-item_img">
+                      <picture>
+                        <source srcset="images/product/image-7.webp" type="image/webp">
+                        <img src="images/product/image-7.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="product-item_box">
+                      <div class="product-item_header">
+                        <div class="product-item_header--left">
+
+
+
+
+
+                          <div class="product-item_status product-item_status--sales">
+                            <div class="product-item_status--icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#info"></use>
+                              </svg>
+                            </div>
+                            <span>скидка</span>
+                          </div>
+
+
+
+
+                          <div class="product-item_category">Поkдник</div>
+                        </div>
+                        <div class="product-item_composition">
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#drink"></use>
+                            </svg>
+                          </div>
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#energy"></use>
+                            </svg>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+                      <div class="product-item_desc">
+                        <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                        <div class="product-item_weight">300/30 г</div>
+                      </div>
+                      <div class="product-item_footer">
+                        <div class="d-flex justify-content-between g-3">
+                          <div class="counter">
+                            <button type="button" class="counter-minus counter-btn click-animation"></button>
+                            <input type="text" readonly value="12">
+                            <button type="button" class="counter-plus counter-btn click-animation"></button>
+                          </div>
+
+                          <button type="button" class="deleteBtn click-animation">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="product-item product-item--row">
+                    <div class="product-item_img">
+                      <picture>
+                        <source srcset="images/product/image-7.webp" type="image/webp">
+                        <img src="images/product/image-7.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="product-item_box">
+                      <div class="product-item_header">
+                        <div class="product-item_header--left">
+
+
+
+
+
+
+
+
+                          <div class="product-item_category">ужин</div>
+                        </div>
+                        <div class="product-item_composition">
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#drink"></use>
+                            </svg>
+                          </div>
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#energy"></use>
+                            </svg>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+                      <div class="product-item_desc">
+                        <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                        <div class="product-item_weight">300/30 г</div>
+                      </div>
+                      <div class="product-item_footer">
+                        <div class="d-flex justify-content-between g-3">
+                          <div class="counter">
+                            <button type="button" class="counter-minus counter-btn click-animation"></button>
+                            <input type="text" readonly value="12">
+                            <button type="button" class="counter-plus counter-btn click-animation"></button>
+                          </div>
+
+                          <button type="button" class="deleteBtn click-animation">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="product-item product-item--row">
+                    <div class="product-item_img">
+                      <picture>
+                        <source srcset="images/product/image-7.webp" type="image/webp">
+                        <img src="images/product/image-7.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="product-item_box">
+                      <div class="product-item_header">
+                        <div class="product-item_header--left">
+
+
+
+
+
+                          <div class="product-item_status product-item_status--sales">
+                            <div class="product-item_status--icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#info"></use>
+                              </svg>
+                            </div>
+                            <span>скидка</span>
+                          </div>
+
+
+
+
+                          <div class="product-item_category">Поkдник</div>
+                        </div>
+                        <div class="product-item_composition">
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#drink"></use>
+                            </svg>
+                          </div>
+
+
+                          <div class="product-item_composition--item">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#energy"></use>
+                            </svg>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+                      <div class="product-item_desc">
+                        <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                        <div class="product-item_weight">300/30 г</div>
+                      </div>
+                      <div class="product-item_footer">
+                        <div class="d-flex justify-content-between g-3">
+                          <div class="counter">
+                            <button type="button" class="counter-minus counter-btn click-animation"></button>
+                            <input type="text" readonly value="12">
+                            <button type="button" class="counter-plus counter-btn click-animation"></button>
+                          </div>
+
+                          <button type="button" class="deleteBtn click-animation">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <a href="basket.html" class="btn-site-3 w-100 mt-4">Перейти в корзину</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalCalculate" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content modal-content--light">
+        <div class="modal-header">
+          <a href="#" class="btn-site-3 click-animation noBg fs-16">
+            <span class="btn-site-3_icon size-24">
+              <svg>
+                <use xlink:href="images/icons/sprite.svg#lab-2"></use>
+              </svg>
+            </span>
+            Программное питание
+          </a>
+          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <h4 class="modal_title h4 mb-4">рассчитать дневную норму калорий исходя
+              из ваших особенностей и цели</h4>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="calculate">
+                <form action="#" id="calculateForm">
+                  <div class="row g-4">
+                    <div class="col-lg-7">
+                      <div class="calculate_title">Настройте калькулятор с учетом своих данных</div>
+                    </div>
+                    <div class="col-12">
+                      <div class="filter-radioBtns" data-col="2">
+
+                        <label class="input-radio">
+                          <input type="radio" name="calculateGender" checked value="Мужчина">
+                          <span class="input-radio_box">
+                            <span class="input-radio_label">
+                              <span class="input-radio_label--text">Мужчина</span>
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="input-radio">
+                          <input type="radio" name="calculateGender" value="Женщина">
+                          <span class="input-radio_box">
+                            <span class="input-radio_label">
+                              <span class="input-radio_label--text">Женщина</span>
+                            </span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="d-flex justify-content-between gap-3 mb-2">
+                        <div class="text-uppercase fs-16">Уровень активности</div>
+                        <button type="button" class="calculate_btnInfo btnInfo">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#info-2"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="activity">
+                        <div class="activity-levels">
+                          <input type="radio" name="activity" id="activity-5">
+                          <label for="activity-5" class="activity-level">5</label>
+
+                          <input type="radio" name="activity" id="activity-4">
+                          <label for="activity-4" class="activity-level">4</label>
+
+                          <input type="radio" name="activity" id="activity-3">
+                          <label for="activity-3" class="activity-level">3</label>
+
+                          <input type="radio" name="activity" id="activity-2">
+                          <label for="activity-2" class="activity-level">2</label>
+
+                          <input type="radio" name="activity" id="activity-1" checked>
+                          <label for="activity-1" class="activity-level">1</label>
+
+                          <div class="activity-desc" data-activity-1="Минимальная" data-activity-2="Низкая" data-activity-3="Средняя" data-activity-4="Высокая" data-activity-5="Предельная"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="d-flex justify-content-between gap-3 mb-2">
+                        <div class="text-uppercase fs-16">Цель</div>
+                      </div>
+                      <div class="filter-radioBtns" data-col="3">
+
+                        <label class="input-radio">
+                          <input type="radio" name="calculateProgram" checked>
+                          <span class="input-radio_box">
+                            <span class="input-radio_label">
+                              <span class="input-radio_label--text">Худей</span>
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="input-radio">
+                          <input type="radio" name="calculateProgram">
+                          <span class="input-radio_box">
+                            <span class="input-radio_label">
+                              <span class="input-radio_label--text">Сохрани вес</span>
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="input-radio">
+                          <input type="radio" name="calculateProgram">
+                          <span class="input-radio_box">
+                            <span class="input-radio_label">
+                              <span class="input-radio_label--text">набирай</span>
+                            </span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-12 d-flex flex-column gap-2">
+                      <div class="range-item">
+                        <div class="range-item_title">Возраст</div>
+                        <div class="range-item_input">
+                          <input type="range" min="14" max="80" step="1" value="20" />
+                        </div>
+                        <div class="range-item_count">
+                          <span>35</span> лет
+                        </div>
+                      </div>
+
+                      <div class="range-item">
+                        <div class="range-item_title">Вес</div>
+                        <div class="range-item_input">
+                          <input type="range" min="40" max="170" step="1" value="90" />
+                        </div>
+                        <div class="range-item_count">
+                          <span></span> кг
+                        </div>
+                      </div>
+
+                      <div class="range-item">
+                        <div class="range-item_title">Рост</div>
+                        <div class="range-item_input">
+                          <input type="range" min="140" max="220" step="1" value="175" />
+                        </div>
+                        <div class="range-item_count">
+                          <span></span> см
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <hr>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col">
+                          <div class="calculate_info">Ваша дневная норма калорий для удержания веса</div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="calculate_total">
+                            <span>1 554</span> кКал
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="calculateResult">
+                <div class="row g-4">
+                  <div class="col-lg-7">
+                    <div class="calculateResult_title">Рекомендуемые программы для достижения Вашей цели</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="program-item">
+                      <div class="program-item_desc">
+                        <div class="program-item_box mb-4">
+                          <div class="program-item_title h6">Худей</div>
+                          <div class="d-flex gap-3 align-items-center mb-1">
+                            <div class="program-item_category">Для него</div>
+                            <div class="program-item_kkal">от 2 2000 ккал</div>
+                          </div>
+                          <div class="program-item_result">-6кг за 3 недели</div>
+                        </div>
+
+                        <div class="row g-2 mt-auto">
+                          <div class="col-6">
+                            <a href="#" class="btn-site-3 noBg click-animation w-100">Подробнее</a>
+                          </div>
+                          <div class="col-6">
+                            <a href="#" class="btn-site-3 click-animation w-100">Купить</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="program-item_img">
+                        <picture>
+                          <source srcset="images/programs/image-1.webp" type="image/webp">
+                          <img src="images/programs/image-1.png" alt="">
+                        </picture>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="program-item">
+                      <div class="program-item_desc">
+                        <div class="program-item_box mb-4">
+                          <div class="program-item_title h6">Сохранить вес</div>
+                          <div class="d-flex gap-3 align-items-center mb-1">
+                            <div class="program-item_category">Slim Balance</div>
+                            <div class="program-item_kkal">от 800 ккал</div>
+                          </div>
+                          <div class="program-item_result">-6кг за 3 недели</div>
+                        </div>
+
+                        <div class="row g-2 mt-auto">
+                          <div class="col-6">
+                            <a href="#" class="btn-site-3 noBg click-animation w-100">Подробнее</a>
+                          </div>
+                          <div class="col-6">
+                            <a href="#" class="btn-site-3 click-animation w-100">Купить</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="program-item_img">
+                        <picture>
+                          <source srcset="images/programs/image-1.webp" type="image/webp">
+                          <img src="images/programs/image-1.png" alt="">
+                        </picture>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalAddDish" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content modal-content--light">
+        <div class="modal-header">
+          <a href="#" class="btn-site-3 click-animation noBg fs-16">
+            <span class="btn-site-3_icon size-24">
+              <svg>
+                <use xlink:href="images/icons/sprite.svg#restaurant"></use>
+              </svg>
+            </span>
+            Замена на прятницу, 30.12
+          </a>
+          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+
+
+            <div class="col-3">
+              <div class="product-item">
+                <div class="product-item_img">
+                  <picture>
+                    <source srcset="images/product/image-1.webp" type="image/webp">
+                    <img src="images/product/image-1.jpg" alt="">
+                  </picture>
+
+
+                </div>
+
+                <div class="product-item_header">
+                  <div class="product-item_header--left">
+
+
+                    <div class="product-item_status product-item_status--updated">
+                      <div class="product-item_status--icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <span>Обновлено</span>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="product-item_category">Завтрак 1</div>
+                  </div>
+                  <div class="product-item_composition">
+
+
+
+
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                      </svg>
+                    </div>
+
+
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                      </svg>
+                    </div>
+
+
+                  </div>
+                </div>
+                <div class="product-item_desc">
+                  <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                  <div class="product-item_weight">300/30 г</div>
+                </div>
+                <div class="product-item_footer">
+                  <div class="compound">
+                    <div class="compound_total">
+                      <div class="compound_title">всего</div>
+                      <div class="compound_count">378 ккал</div>
+                    </div>
+                    <div class="compound_items">
+                      <div class="compound_col">
+                        <div class="compound_title">Белки</div>
+                        <div class="compound_count">15.90 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Жиры</div>
+                        <div class="compound_count">32.20 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Углеводы</div>
+                        <div class="compound_count">35.80 гр</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form action="#">
+                    <div class="product-item_form">
+                      <div class="product-item_price">+ 30.00 ₴</div>
+                      <button type="submit" class="btn-plus click-animation">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-3">
+              <div class="product-item">
+                <div class="product-item_img">
+                  <picture>
+                    <source srcset="images/product/image-2.webp" type="image/webp">
+                    <img src="images/product/image-2.jpg" alt="">
+                  </picture>
+
+
+                </div>
+
+                <div class="product-item_header">
+                  <div class="product-item_header--left">
+
+
+
+
+
+
+
+                    <div class="product-item_status product-item_status--hit">
+                      <div class="product-item_status--icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <span>хит</span>
+                    </div>
+
+
+                    <div class="product-item_category">Завтрак 1</div>
+                  </div>
+                  <div class="product-item_composition">
+
+
+
+
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                      </svg>
+                    </div>
+
+
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                      </svg>
+                    </div>
+
+
+                  </div>
+                </div>
+                <div class="product-item_desc">
+                  <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba</h2>
+                  <div class="product-item_weight">300/30 г</div>
+                </div>
+                <div class="product-item_footer">
+                  <div class="compound">
+                    <div class="compound_total">
+                      <div class="compound_title">всего</div>
+                      <div class="compound_count">378 ккал</div>
+                    </div>
+                    <div class="compound_items">
+                      <div class="compound_col">
+                        <div class="compound_title">Белки</div>
+                        <div class="compound_count">15.90 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Жиры</div>
+                        <div class="compound_count">32.20 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Углеводы</div>
+                        <div class="compound_count">35.80 гр</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form action="#">
+                    <div class="product-item_form">
+                      <div class="product-item_price">+ 30.00 ₴</div>
+                      <button type="submit" class="btn-plus click-animation">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-3">
+              <div class="product-item">
+                <div class="product-item_img">
+                  <picture>
+                    <source srcset="images/product/image-3.webp" type="image/webp">
+                    <img src="images/product/image-3.jpg" alt="">
+                  </picture>
+
+
+                </div>
+
+                <div class="product-item_header">
+                  <div class="product-item_header--left">
+
+
+
+                    <div class="product-item_status product-item_status--new">
+                      <div class="product-item_status--icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <span>Новинка</span>
+                    </div>
+
+
+
+
+
+
+                    <div class="product-item_category">Завтрак 1</div>
+                  </div>
+                  <div class="product-item_composition">
+
+
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#drink"></use>
+                      </svg>
+                    </div>
+
+
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#energy"></use>
+                      </svg>
+                    </div>
+
+
+
+
+                  </div>
+                </div>
+                <div class="product-item_desc">
+                  <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba</h2>
+                  <div class="product-item_weight">300/30 г</div>
+                </div>
+                <div class="product-item_footer">
+                  <div class="compound">
+                    <div class="compound_total">
+                      <div class="compound_title">всего</div>
+                      <div class="compound_count">378 ккал</div>
+                    </div>
+                    <div class="compound_items">
+                      <div class="compound_col">
+                        <div class="compound_title">Белки</div>
+                        <div class="compound_count">15.90 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Жиры</div>
+                        <div class="compound_count">32.20 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Углеводы</div>
+                        <div class="compound_count">35.80 гр</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form action="#">
+                    <div class="product-item_form">
+                      <div class="product-item_price">+ 30.00 ₴</div>
+                      <button type="submit" class="btn-plus click-animation">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-3">
+              <div class="product-item">
+                <div class="product-item_img">
+                  <picture>
+                    <source srcset="images/product/image-4.webp" type="image/webp">
+                    <img src="images/product/image-4.jpg" alt="">
+                  </picture>
+
+
+                </div>
+
+                <div class="product-item_header">
+                  <div class="product-item_header--left">
+
+
+
+
+
+                    <div class="product-item_status product-item_status--sales">
+                      <div class="product-item_status--icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <span>скидка</span>
+                    </div>
+
+
+
+
+                    <div class="product-item_category">Поkдник</div>
+                  </div>
+                  <div class="product-item_composition">
+
+
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#drink"></use>
+                      </svg>
+                    </div>
+
+
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#energy"></use>
+                      </svg>
+                    </div>
+
+
+
+
+                  </div>
+                </div>
+                <div class="product-item_desc">
+                  <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                  <div class="product-item_weight">300/30 г</div>
+                </div>
+                <div class="product-item_footer">
+                  <div class="compound">
+                    <div class="compound_total">
+                      <div class="compound_title">всего</div>
+                      <div class="compound_count">378 ккал</div>
+                    </div>
+                    <div class="compound_items">
+                      <div class="compound_col">
+                        <div class="compound_title">Белки</div>
+                        <div class="compound_count">15.90 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Жиры</div>
+                        <div class="compound_count">32.20 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Углеводы</div>
+                        <div class="compound_count">35.80 гр</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form action="#">
+                    <div class="product-item_form">
+                      <div class="product-item_price">+ 30.00 ₴</div>
+                      <button type="submit" class="btn-plus click-animation">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-3">
+              <div class="product-item">
+                <div class="product-item_img">
+                  <picture>
+                    <source srcset="images/product/image-5.webp" type="image/webp">
+                    <img src="images/product/image-5.jpg" alt="">
+                  </picture>
+
+
+                </div>
+
+                <div class="product-item_header">
+                  <div class="product-item_header--left">
+
+
+
+
+
+
+
+
+                    <div class="product-item_category">ужин</div>
+                  </div>
+                  <div class="product-item_composition">
+
+
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#drink"></use>
+                      </svg>
+                    </div>
+
+
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#energy"></use>
+                      </svg>
+                    </div>
+
+
+
+
+                  </div>
+                </div>
+                <div class="product-item_desc">
+                  <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                  <div class="product-item_weight">300/30 г</div>
+                </div>
+                <div class="product-item_footer">
+                  <div class="compound">
+                    <div class="compound_total">
+                      <div class="compound_title">всего</div>
+                      <div class="compound_count">378 ккал</div>
+                    </div>
+                    <div class="compound_items">
+                      <div class="compound_col">
+                        <div class="compound_title">Белки</div>
+                        <div class="compound_count">15.90 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Жиры</div>
+                        <div class="compound_count">32.20 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Углеводы</div>
+                        <div class="compound_count">35.80 гр</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form action="#">
+                    <div class="product-item_form">
+                      <div class="product-item_price">+ 30.00 ₴</div>
+                      <button type="submit" class="btn-plus click-animation">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-3">
+              <div class="product-item">
+                <div class="product-item_img">
+                  <picture>
+                    <source srcset="images/product/image-6.webp" type="image/webp">
+                    <img src="images/product/image-6.jpg" alt="">
+                  </picture>
+
+
+                </div>
+
+                <div class="product-item_header">
+                  <div class="product-item_header--left">
+
+
+
+
+
+                    <div class="product-item_status product-item_status--sales">
+                      <div class="product-item_status--icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <span>скидка</span>
+                    </div>
+
+
+
+
+                    <div class="product-item_category">Поkдник</div>
+                  </div>
+                  <div class="product-item_composition">
+
+
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#drink"></use>
+                      </svg>
+                    </div>
+
+
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#energy"></use>
+                      </svg>
+                    </div>
+
+
+
+
+                  </div>
+                </div>
+                <div class="product-item_desc">
+                  <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                  <div class="product-item_weight">300/30 г</div>
+                </div>
+                <div class="product-item_footer">
+                  <div class="compound">
+                    <div class="compound_total">
+                      <div class="compound_title">всего</div>
+                      <div class="compound_count">378 ккал</div>
+                    </div>
+                    <div class="compound_items">
+                      <div class="compound_col">
+                        <div class="compound_title">Белки</div>
+                        <div class="compound_count">15.90 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Жиры</div>
+                        <div class="compound_count">32.20 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Углеводы</div>
+                        <div class="compound_count">35.80 гр</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form action="#">
+                    <div class="product-item_form">
+                      <div class="product-item_price">+ 30.00 ₴</div>
+                      <button type="submit" class="btn-plus click-animation">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="modal fade" id="modalChangeDish" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content modal-content--light">
+        <div class="modal-header">
+          <a href="#" class="btn-site-3 click-animation noBg fs-16">
+            Добавки
+          </a>
+          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-7">
+              <div class="swiper productCard-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="images/productSlider/image-big-2.jpg" class="productCard-slider_item" data-fancybox="gallery">
+                      <picture>
+                        <source srcset="images/productSlider/image-big.webp" type="image/webp">
+                        <img src="images/productSlider/image-big.jpg" alt="">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="images/productSlider/image-big-2.jpg" class="productCard-slider_item" data-fancybox="gallery">
+                      <picture>
+                        <source srcset="images/productSlider/image-big.webp" type="image/webp">
+                        <img src="images/productSlider/image-big.jpg" alt="">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="images/productSlider/image-big-2.jpg" class="productCard-slider_item" data-fancybox="gallery">
+                      <picture>
+                        <source srcset="images/productSlider/image-big.webp" type="image/webp">
+                        <img src="images/productSlider/image-big.jpg" alt="">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="images/productSlider/image-big-2.jpg" class="productCard-slider_item" data-fancybox="gallery">
+                      <picture>
+                        <source srcset="images/productSlider/image-big.webp" type="image/webp">
+                        <img src="images/productSlider/image-big.jpg" alt="">
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="productCard-nav">
+                <div class="swiper productCard-thumbs-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide productCard-thumbs_item">
+                      <picture>
+                        <source srcset="images/productSlider/image-thumbs-1.webp" type="image/webp">
+                        <img src="images/productSlider/image-thumbs-1.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="swiper-slide productCard-thumbs_item">
+                      <picture>
+                        <source srcset="images/productSlider/image-thumbs-2.webp" type="image/webp">
+                        <img src="images/productSlider/image-thumbs-2.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="swiper-slide productCard-thumbs_item">
+                      <picture>
+                        <source srcset="images/productSlider/image-thumbs-1.webp" type="image/webp">
+                        <img src="images/productSlider/image-thumbs-1.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="swiper-slide productCard-thumbs_item">
+                      <picture>
+                        <source srcset="images/productSlider/image-thumbs-2.webp" type="image/webp">
+                        <img src="images/productSlider/image-thumbs-2.jpg" alt="">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider-buttons">
+                  <button type="button" class="productCard-slider-prev slider-button-prev click-animation"></button>
+                  <button type="button" class="productCard-slider-next slider-button-next click-animation"></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="productCard-desc">
+                <div class="product-item_header">
+                  <div class="product-item_header--left">
+                    <div class="product-item_status product-item_status--sales">
+                      <div class="product-item_status--icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <span>скидка</span>
+                    </div>
+                    <div class="product-item_category">Завтрак 1</div>
+                  </div>
+                  <div class="product-item_composition">
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                      </svg>
+                    </div>
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-item_desc">
+                  <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                  <div class="product-item_weight">300/30 г</div>
+                </div>
+                <div>
+                  <hr>
+                </div>
+
+                <div class="product-item_specification">
+                  <div class="product-item_specification--title">Склад</div>
+                  <p>млинці шпинатні, цибуля ріпчаста, гриби білі, вершки, соус териякі, кунжут, олія соняшникова, філе індика sous vide, печериці,</p>
+                </div>
+
+                <div class="productCard_footer">
+                  <div class="compound">
+                    <div class="compound_total">
+                      <div class="compound_title">всего</div>
+                      <div class="compound_count">378 ккал</div>
+                    </div>
+                    <div class="compound_items">
+                      <div class="compound_col">
+                        <div class="compound_title">Белки</div>
+                        <div class="compound_count">15.90 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Жиры</div>
+                        <div class="compound_count">32.20 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Углеводы</div>
+                        <div class="compound_count">35.80 гр</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalInfo" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content modal-content--light">
+        <div class="modal-header mb-4">
+          <div>
+            <h4 class="modal_title h6 mb-1">Норма привышена</h4>
+            <div class="modal_subtitle">Изменить количество блюд с 6 на 8 ?</div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <div class="product-item">
+                <div class="product-item_img">
+                  <picture>
+                    <source srcset="images/product/image-2.webp" type="image/webp">
+                    <img src="images/product/image-2.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="product-item_header">
+                  <div class="product-item_header--left">
+                    <div class="product-item_status product-item_status--hit">
+                      <div class="product-item_status--icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#info"></use>
+                        </svg>
+                      </div>
+                      <span>хит</span>
+                    </div>
+
+                    <div class="product-item_category">Завтрак 1</div>
+                  </div>
+                  <div class="product-item_composition">
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                      </svg>
+                    </div>
+                    <div class="product-item_composition--item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-item_desc">
+                  <h2 class="product-item_title">Гречана локшина Soba</h2>
+                  <div class="product-item_weight">300/30 г</div>
+                </div>
+                <div class="product-item_footer">
+                  <div class="compound">
+                    <div class="compound_total">
+                      <div class="compound_title">всего</div>
+                      <div class="compound_count">378 ккал</div>
+                    </div>
+                    <div class="compound_items">
+                      <div class="compound_col">
+                        <div class="compound_title">Белки</div>
+                        <div class="compound_count">15.90 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Жиры</div>
+                        <div class="compound_count">32.20 гр</div>
+                      </div>
+                      <div class="compound_col">
+                        <div class="compound_title">Углеводы</div>
+                        <div class="compound_count">35.80 гр</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <form action="#">
+            <div class="row mt-4">
+              <div class="col-6">
+                <button type="submit" class="btn-site-3 click-animation green w-100">Да</button>
+              </div>
+              <div class="col-6">
+                <button type="button" class="btn-site-3 click-animation noBg w-100" data-bs-dismiss="modal" aria-label="Close">нет</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
   <script src="js/main.min.js"></script>
 

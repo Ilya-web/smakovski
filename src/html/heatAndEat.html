@@ -1,0 +1,449 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+<div class="wrapper bodyBg-3 fixed-box-IsShow">
+
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    @@include('components/breadcrumb/index.html',
+    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item"><a href="#">системное питание</a></li><li class="breadcrumb-site__item"><a href="#">Ем все</a></li><li class="breadcrumb-site__item" aria-current="page">Heat and eat</li>'}
+    )
+
+
+    <section class="section">
+      <form action="#">
+        <div class="container">
+          <div class="row g-3">
+            <div class="col-12">
+              <h1 class="h2 mb-32">Heat and eat</h1>
+            </div>
+            <div class="col-4">
+              <div class="filter-row h-100 d-flex flex-column">
+                <div class="mb-32">
+                  <div class="filter-row__title mb-2">
+                    <div class="filter-row__title--count">2</div>
+                    Система
+                  </div>
+                  @@include('components/filter-radioBtns/index.html', {'selectDesktop': true})
+
+                </div>
+
+                <div class="mb-32">
+                  <div class="filter-row__title mb-2">
+                    <div class="filter-row__title--count">2</div>
+                    кол. блюд в неделю
+                  </div>
+
+                  <div class="dropdown selectDesktop">
+                    <button class="dropdown-toggle drop-btn justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="drop-btn_text">6 блюд</span>
+                      <span class="drop-btn_subtitle">скидка <span>0%</span></span>
+                      <span class="drop-btn_arrow"></span>
+                    </button>
+                    <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop">
+
+                      <label class="input-radio">
+                        <input type="radio" name="countDish" checked>
+                        <span class="input-radio_box">
+                          <span class="input-radio_label d-flex gap-3 justify-content-between w-100">
+                            <span class="input-radio_label--text">6 блюд</span>
+                            <span class="input-radio_label--text gray">скидка <span>0%</span></span>
+                          </span>
+                        </span>
+                      </label>
+                      <label class="input-radio">
+                        <input type="radio" name="countDish">
+                        <span class="input-radio_box">
+                          <span class="input-radio_label d-flex gap-3 justify-content-between w-100">
+                            <span class="input-radio_label--text">10 блюд</span>
+                            <span class="input-radio_label--text gray">скидка <span>2%</span></span>
+                          </span>
+                        </span>
+                      </label>
+                      <label class="input-radio">
+                        <input type="radio" name="countDish">
+                        <span class="input-radio_box">
+                          <span class="input-radio_label d-flex gap-3 justify-content-between w-100">
+                            <span class="input-radio_label--text">12 блюд</span>
+                            <span class="input-radio_label--text gray">скидка <span>3%</span></span>
+                          </span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="filter-row__info mt-2">
+                    <div class="filter-row__info--icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#info"></use>
+                      </svg>
+                    </div>
+                    <span class="mt-1">блюда хранятся до 5 дней</span>
+                  </div>
+                </div>
+
+                <div class="mb-32">
+                  <div class="filter-row__title mb-2">
+                    <div class="filter-row__title--count">3</div>
+                    неделя доставки
+                  </div>
+                  <nav class="w-100 mb-3">
+                    <div class="delivery-tabs" id="filterDeliveryTab" role="tablist">
+                      <button class="delivery-link active" id="filterDelivery-tab-1" data-bs-toggle="tab" data-bs-target="#filterDelivery-1" type="button" role="tab" aria-controls="filterDelivery-1" aria-selected="true">
+                        1-я Доставка
+                      </button>
+                      <button class="delivery-link" id="filterDelivery-tab-2" data-bs-toggle="tab" data-bs-target="#filterDelivery-2" type="button" role="tab" aria-controls="filterDelivery-2" aria-selected="false">
+                        2-я Доставка
+                      </button>
+                    </div>
+                  </nav>
+                  <div class="tab-content delivery-content" id="filterDelivery-tabContent">
+                    <div class="tab-pane fade show active" id="filterDelivery-1" role="tabpanel" aria-labelledby="filterDelivery-tab-1">
+                        <div class="d-flex justify-content-between gap-3 text-uppercase mb-3">
+                          <div class="tab-header_title">дата доставки*</div>
+                          <div>17.12.2023</div>
+                        </div>
+                      <div class="dropdown selectDesktop">
+                        <button class="dropdown-toggle drop-btn drop-btn--label" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="drop-btn_icon">
+                           <svg>
+                              <use xlink:href="images/icons/sprite.svg#clockPath"></use>
+                            </svg>
+                          </span>
+                          <span class="drop-btn_desc">
+                              <span class="drop-btn_label">Время доставки</span>
+                              <span class="drop-btn_text"></span>
+                            </span>
+                          <span class="drop-btn_arrow"></span>
+                        </button>
+
+                        <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop p-2">
+
+                          <div class="row g-2">
+                            <div class="col-6">
+                              <label class="input-radio input-radio--border">
+                                <input type="radio" name="timeDelivery-1">
+                                <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">09:00 - 19:00</span>
+                                    </span>
+                                  </span>
+                              </label>
+                            </div>
+                            <div class="col-6">
+                              <label class="input-radio input-radio--border">
+                                <input type="radio" name="timeDelivery-1">
+                                <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">09:00 - 19:00</span>
+                                    </span>
+                                  </span>
+                              </label>
+                            </div>
+                            <div class="col-6">
+                              <label class="input-radio input-radio--border">
+                                <input type="radio" name="timeDelivery-1">
+                                <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">09:00 - 19:00</span>
+                                    </span>
+                                  </span>
+                              </label>
+                            </div>
+                            <div class="col-6">
+                              <label class="input-radio input-radio--border">
+                                <input type="radio" name="timeDelivery-1">
+                                <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">06:00 - 09:00</span>
+                                    </span>
+                                  </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="filterDelivery-2" role="tabpanel" aria-labelledby="filterDelivery-tab-2">
+                      <div class="d-flex justify-content-between gap-3 text-uppercase mb-3">
+                        <div class="tab-header_title">дата доставки*</div>
+                        <div>25.12.2023</div>
+                      </div>
+                      <div class="dropdown selectDesktop">
+                        <button class="dropdown-toggle drop-btn drop-btn--label" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="drop-btn_icon">
+                           <svg>
+                              <use xlink:href="images/icons/sprite.svg#clockPath"></use>
+                            </svg>
+                          </span>
+                          <span class="drop-btn_desc">
+                            <span class="drop-btn_label">Время доставки</span>
+                            <span class="drop-btn_text"></span>
+                          </span>
+                          <span class="drop-btn_arrow"></span>
+                        </button>
+
+                        <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop p-2">
+
+                          <div class="row g-2">
+                            <div class="col-6">
+                              <label class="input-radio input-radio--border">
+                                <input type="radio" name="timeDelivery-2">
+                                <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">09:00 - 19:00</span>
+                                    </span>
+                                  </span>
+                              </label>
+                            </div>
+                            <div class="col-6">
+                              <label class="input-radio input-radio--border">
+                                <input type="radio" name="timeDelivery-2">
+                                <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">09:00 - 19:00</span>
+                                    </span>
+                                  </span>
+                              </label>
+                            </div>
+                            <div class="col-6">
+                              <label class="input-radio input-radio--border">
+                                <input type="radio" name="timeDelivery-2">
+                                <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">09:00 - 19:00</span>
+                                    </span>
+                                  </span>
+                              </label>
+                            </div>
+                            <div class="col-6">
+                              <label class="input-radio input-radio--border">
+                                <input type="radio" name="timeDelivery-2">
+                                <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">06:00 - 09:00</span>
+                                    </span>
+                                  </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-row__info mt-auto">
+                  <div class="filter-row__info--icon">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#info"></use>
+                    </svg>
+                  </div>
+                  <span class="mt-1">мы доставляем Heat & Eat по понедельникам
+                  и четвергам</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-8">
+              <div class="program-info h-100">
+                <div class="program-info_header">
+                  <div class="program-info_header--desc">
+                    <div class="program-info_title h3 mb-4">программа питания Heat and eat подойдет вам, если</div>
+                    <a href="https://youtu.be/or047P2NOjc" class="btn-site-3 noBg" data-fancybox>
+                      <span class="btn-site-3_icon size-24">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#play"></use>
+                        </svg>
+                      </span>
+                      Смотреть видео
+                    </a>
+                  </div>
+                  <div class="program-info_img">
+                    <img src="images/program-info/image-1.png" alt="">
+                  </div>
+                </div>
+
+                <div class="program-info_desc">
+                  <div class="mb-4 font-Roboto-Condensed">Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій.  Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.</div>
+                  <div class="row g-3">
+                    <div class="col-3">
+                      <div class="info-item">
+                        <div class="info-item_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#menuBook"></use>
+                          </svg>
+                        </div>
+                        <div class="info-item_text">максимальный асортимент/все меню</div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="info-item">
+                        <div class="info-item_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#calendar-2"></use>
+                          </svg>
+                        </div>
+                        <div class="info-item_text">доставка 2 раза в неделю</div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="info-item">
+                        <div class="info-item_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#bento"></use>
+                          </svg>
+                        </div>
+                        <div class="info-item_text">выбор от 6 и до 18 блюд в неделю</div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="info-item">
+                        <div class="info-item_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#takeout-fill"></use>
+                          </svg>
+                        </div>
+                        <div class="info-item_text">специальная упаковка позволяющая долгое хранение</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="wrap-filter">
+
+                <div class="filter-header">
+                  <div class="filter-header__title">Разделите заказ по дням доставки</div>
+
+                  <div class="row">
+                    <div class="col-6 offset-lg-3">
+                      <div class="filter-radioBtns" data-col="2">
+
+                        <label class="input-radio">
+                          <input type="radio" name="filterDeliveryDate" checked>
+                          <span class="input-radio_box">
+                        <span class="input-radio_label">
+                          <span class="input-radio_label--text">1-я Доставка <span class="date">17.12.2023</span></span>
+                        </span>
+                      </span>
+                        </label>
+
+                        <label class="input-radio">
+                          <input type="radio" name="filterDeliveryDate">
+                          <span class="input-radio_box">
+                        <span class="input-radio_label">
+                          <span class="input-radio_label--text">2-я Доставка <span class="date">25.12.2023</span></span>
+                        </span>
+                      </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="filter-row">
+                  <div class="filter-row__title">
+                    <div class="filter-row__title--count">4</div>
+                    выбор блюд
+                  </div>
+                  <div class="filter-radioBtns mb-3" data-col="11">
+
+                    @@loop('components/input-radio/index.html',
+                    'components/input-radio/bd.json')
+
+                  </div>
+
+                  <div class="filter-checkboxBtns" data-col="6">
+                    <label class="input-checkbox">
+                      <input type="checkbox" name="composition" checked>
+                      <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                    </label>
+                    <label class="input-checkbox">
+                      <input type="checkbox" name="composition">
+                      <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                    </label>
+                    <label class="input-checkbox">
+                      <input type="checkbox" name="composition">
+                      <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                    </label>
+                    <label class="input-checkbox">
+                      <input type="checkbox" name="composition">
+                      <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                    </label>
+                    <label class="input-checkbox">
+                      <input type="checkbox" name="composition">
+                      <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                    </label>
+                    <label class="input-checkbox">
+                      <input type="checkbox" name="composition">
+                      <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row g-3">
+            @@loop('components/product-item/index.html',
+            'components/product-item/bd.json')
+          </div>
+        </div>
+      </form>
+    </section>
+
+    @@include('components/section-sales/index.html')
+
+    @@include('components/section-faq/index.html')
+
+  </main>
+
+  @@include('components/footer/index.html')
+
+</div>
+
+
+<button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+  <span class="callback_icon">
+     <svg>
+      <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+    </svg>
+  </span>
+</button>
+
+<div class="backdrop"></div>
+
+@@include('components/fixed-box/index.html')
+
+@@include('components/modals/index.html', {"card": true})
+
+@@include('components/scripts/index.html')

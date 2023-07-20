@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, Thumbs } from "swiper";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -180,5 +180,64 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const datesSlider = '.dates-slider';
+  if(document.querySelector(datesSlider)) {
+    new Swiper(datesSlider, {
+      slidesPerView: "auto",
+      spaceBetween: 8,
+      speed: 300,
+      simulateTouch: false,
+      modules: [Navigation],
+      navigation: {
+        nextEl: `${datesSlider}-next`,
+        prevEl: `${datesSlider}-prev`,
+      },
+      on: {
+        slideChange: function (i) {
+          const nav = document.querySelector('.dates-slider-buttons');
+          if(i.isEnd) {
+            nav.classList.add('last-slide');
+          }
+          else {
+            nav.classList.remove('last-slide');
+          }
+        },
+        resize: function (i) {
+          const nav = document.querySelector('.dates-slider-buttons');
+          if(i.isLocked) {
+            nav.classList.add('d-none');
+          }
+          else {
+            nav.classList.remove('d-none');
+          }
+        },
+      },
+    });
+  }
+
+  const productCardSlider = '.productCard-slider';
+  const productCardThumbs = '.productCard-thumbs-slider';
+
+  if(document.querySelector(productCardSlider) && document.querySelector(productCardThumbs)) {
+
+    const productCardThumbsSlider = new Swiper(productCardThumbs, {
+      spaceBetween: 4,
+      slidesPerView: "auto",
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    new Swiper(productCardSlider, {
+      spaceBetween: 10,
+      modules: [Navigation, Thumbs],
+      navigation: {
+        nextEl: `${productCardSlider}-next`,
+        prevEl: `${productCardSlider}-prev`,
+      },
+      thumbs: {
+        swiper: productCardThumbsSlider,
+      },
+    });
+  }
 
 });

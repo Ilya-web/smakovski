@@ -1,0 +1,18 @@
+<div class="swiper-slide">
+  <label class="date">
+    <input type="checkbox" @@if(context.checked){checked}>
+    <span class="date_box">
+    <span class="date_title">@@dateTitle</span>
+    <span class="date_day @@if(context.lock){lock}">
+      @@if(context.lock) {
+      <span class="date_day--icon">
+        <svg>
+          <use xlink:href="images/icons/sprite.svg#lock"></use>
+        </svg>
+      </span>
+      }
+      @@day
+    </span>
+  </span>
+  </label>
+</div>

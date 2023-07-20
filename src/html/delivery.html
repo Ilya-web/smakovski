@@ -24,7 +24,7 @@
                     <div class="filter-row__title--count">1</div>
                     Система
                   </div>
-                  @@include('components/filter-radioBtns/index.html')
+                  @@include('components/filter-radioBtns/index.html', {'selectMobile': true})
                 </div>
 
                 <div class="filter-row">
@@ -101,9 +101,20 @@
 
   </main>
 
-  @@include('components/fixed-box/index.html')
   @@include('components/footer/index.html')
 
 </div>
+
+<button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+  <span class="callback_icon">
+     <svg>
+    <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+  </svg>
+  </span>
+</button>
+
+@@include('components/modals/index.html')
+
+
 
 @@include('components/scripts/index.html')

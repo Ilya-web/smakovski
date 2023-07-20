@@ -94,7 +94,7 @@
         <div class="row">
           <div class="col-12">
             <div class="article-footer">
-              <div class="article-item">
+              <a href="#" class="article-item">
                 <div class="article-item_img">
                   <img src="images/team/image-1.jpg" alt="">
                 </div>
@@ -102,9 +102,9 @@
                   <div class="article-item_post">Newer post</div>
                   <div class="article-item_title">Other retention tips covered in the full episode.</div>
                 </div>
-              </div>
+              </a>
 
-              <div class="article-item">
+              <a href="#" class="article-item">
                 <div class="article-item_img">
                   <img src="images/team/image-1.jpg" alt="">
                 </div>
@@ -112,7 +112,7 @@
                   <div class="article-item_post">Older post</div>
                   <div class="article-item_title">Other retention tips covered in the full episode.</div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -124,5 +124,17 @@
   @@include('components/footer/index.html')
 
 </div>
+
+<button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+  <span class="callback_icon">
+     <svg>
+    <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+  </svg>
+  </span>
+</button>
+
+@@include('components/modals/index.html')
+
+
 
 @@include('components/scripts/index.html')

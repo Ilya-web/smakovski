@@ -1,0 +1,811 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+<div class="wrapper bodyBg-1 fixed-box-IsShow">
+
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    @@include('components/breadcrumb/index.html',
+    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item"><a href="#">Программное питание</a></li><li class="breadcrumb-site__item"><a href="#">Худей</a></li><li class="breadcrumb-site__item" aria-current="page">для нее</li>'}
+    )
+
+
+    <section class="section">
+      <form action="#">
+        <div class="container">
+          <div class="row g-3">
+            <div class="col-12">
+              <h1 class="h2 mb-32">Программное питание</h1>
+            </div>
+            <div class="col-4">
+              <div class="filter-row h-100 d-flex flex-column">
+                <div class="mb-32">
+                  <div class="filter-row__title mb-2">
+                    <div class="filter-row__title--count">1</div>
+                    Цель
+                  </div>
+                  <div class="filter-radioBtns" data-col="3">
+
+                    <label class="input-radio">
+                      <input type="radio" name="program" checked>
+                      <span class="input-radio_box">
+                        <span class="input-radio_label">
+                          <span class="input-radio_label--text">Худей</span>
+                        </span>
+                      </span>
+                    </label>
+
+                    <label class="input-radio">
+                      <input type="radio" name="program">
+                      <span class="input-radio_box">
+                        <span class="input-radio_label">
+                          <span class="input-radio_label--text">Сохрани вес</span>
+                        </span>
+                      </span>
+                    </label>
+
+                    <label class="input-radio">
+                      <input type="radio" name="program">
+                      <span class="input-radio_box">
+                      <span class="input-radio_label">
+                        <span class="input-radio_label--text">набирай</span>
+                      </span>
+                    </span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="mb-32">
+                  <div class="filter-row__title mb-2">
+                    <div class="filter-row__title--count">2</div>
+                    Система
+                  </div>
+                  @@include('components/filter-radioBtns/index.html', {'selectDesktop': true})
+
+                </div>
+
+                <div class="mb-32">
+                  <div class="filter-row__title mb-2">
+                    <div class="filter-row__title--count">3</div>
+                    Пол
+                  </div>
+                  <div class="filter-radioBtns" data-col="2">
+
+                    <label class="input-radio">
+                      <input type="radio" name="gender" checked>
+                      <span class="input-radio_box">
+                      <span class="input-radio_label">
+                        <span class="input-radio_label--text">Для нее</span>
+                      </span>
+                    </span>
+                    </label>
+
+                    <label class="input-radio">
+                      <input type="radio" name="gender">
+                      <span class="input-radio_box">
+                        <span class="input-radio_label">
+                          <span class="input-radio_label--text">Для него</span>
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="mb-32">
+                  <div class="filter-row__title mb-2">
+                    <div class="filter-row__title--count">4</div>
+                    ккал в день
+                  </div>
+                  <div class="dropdown selectDesktop">
+                    <button class="dropdown-toggle drop-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="drop-btn_text">На 800 Ккал</span>
+                      <span class="drop-btn_arrow"></span>
+                    </button>
+
+                    <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop" >
+
+                      <label class="input-radio">
+                        <input type="radio" name="KKAL" checked>
+                        <span class="input-radio_box">
+                          <span class="input-radio_label">
+                            <span class="input-radio_label--text">На 800 Ккал</span>
+                          </span>
+                        </span>
+                      </label>
+                      <label class="input-radio">
+                        <input type="radio" name="KKAL">
+                        <span class="input-radio_box">
+                          <span class="input-radio_label">
+                            <span class="input-radio_label--text">На 1200 Ккал</span>
+                          </span>
+                        </span>
+                      </label>
+                      <label class="input-radio">
+                        <input type="radio" name="KKAL">
+                        <span class="input-radio_box">
+                          <span class="input-radio_label">
+                            <span class="input-radio_label--text">На 1400 Ккал</span>
+                          </span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-auto">
+                  <button type="button" class="btn-site-3 w-100 click-animation yellow" data-bs-toggle="modal" data-bs-target="#modalCalculate">
+                    <span class="btn-site-3_icon size-24">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#smile"></use>
+                      </svg>
+                    </span>
+                    подобрать индивидуально
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="program-info h-100">
+                <div class="program-info_header">
+                  <div class="program-info_header--desc">
+                    <div class="program-info_title h3 mb-4">программа питания Худей подойдет вам, если</div>
+                    <a href="https://youtu.be/or047P2NOjc" class="btn-site-3 noBg" data-fancybox>
+                      <span class="btn-site-3_icon size-24">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#play"></use>
+                        </svg>
+                      </span>
+                      Смотреть видео
+                    </a>
+                  </div>
+                  <div class="program-info_img">
+                    <img src="images/program-info/image-1.png" alt="">
+                  </div>
+                </div>
+
+                <div class="program-info_desc">
+                  <div class="mb-4 font-Roboto-Condensed">Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій.  Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.</div>
+                  <div class="row g-3">
+                    <div class="col-3">
+                      <div class="info-item">
+                        <div class="info-item_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#monitor"></use>
+                          </svg>
+                        </div>
+                        <div class="info-item_text">Хочете безпечно та ефективно позбутися зайвої ваги</div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="info-item">
+                        <div class="info-item_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#calculate"></use>
+                          </svg>
+                        </div>
+                        <div class="info-item_text">Не любите рахувати калорії</div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="info-item">
+                        <div class="info-item_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#oncology"></use>
+                          </svg>
+                        </div>
+                        <div class="info-item_text">Бажаєте не відчувати голоду</div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="info-item">
+                        <div class="info-item_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#airline"></use>
+                          </svg>
+                        </div>
+                        <div class="info-item_text">Маєте малорухливий спосіб життя</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="filter-row green">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  <div class="filter-row__title mb-0">
+                    <div class="filter-row__title--count">5</div>
+                    Выберите дни заказа
+                  </div>
+                  <button type="button" class="btn-site-3 noBg click-animation">Очистить календарь</button>
+                </div>
+                <div class="row">
+                  <div class="col-4">
+                    <div class="orderDays">
+                      <div class="orderDays_box orderDays_box--green mb-1">
+                        <div class="dropdown selectDesktop">
+                          <button class="dropdown-toggle drop-btn drop-btn--label active" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="drop-btn_icon">
+                             <svg>
+                                <use xlink:href="images/icons/sprite.svg#calendar"></use>
+                              </svg>
+                            </span>
+                            <span class="drop-btn_desc">
+                              <span class="drop-btn_label">Длительность</span>
+                              <span class="drop-btn_text">1 неделя</span>
+                            </span>
+                            <span class="drop-btn_arrow"></span>
+                          </button>
+
+                          <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop" >
+
+                            <label class="input-radio">
+                              <input type="radio" name="weeks">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">1 неделя</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="weeks">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">2 неделя</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="weeks">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">3 неделя</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="weeks">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">месяц</span>
+                                </span>
+                              </span>
+                            </label>
+                          </div>
+
+                        </div>
+                        <div class="orderDays_info">
+                          <div class="orderDays_info__title">дни доставки:</div>
+                          <div class="orderDays_info__dates">с 19 по 23, 1, 2</div>
+                        </div>
+                      </div>
+
+                      <div class="orderDays_box">
+                        <div class="row g-4">
+                          <div class="col-12">
+                            <div class="dropdown selectDesktop">
+                              <button class="dropdown-toggle drop-btn drop-btn--label" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="drop-btn_icon">
+                                 <svg>
+                                    <use xlink:href="images/icons/sprite.svg#event"></use>
+                                  </svg>
+                                </span>
+                                <span class="drop-btn_desc">
+                                  <span class="drop-btn_label">Первый день доставки </span>
+                                  <!--                                  <span class="drop-btn_text">1 неделя</span>-->
+                                </span>
+                                <span class="drop-btn_arrow"></span>
+                              </button>
+
+                              <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop" >
+
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">07.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">09.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">10.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">11.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="dropdown selectDesktop">
+                              <button class="dropdown-toggle drop-btn drop-btn--label" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="drop-btn_icon">
+                                 <svg>
+                                    <use xlink:href="images/icons/sprite.svg#clockPath"></use>
+                                  </svg>
+                                </span>
+                                <span class="drop-btn_desc">
+                                  <span class="drop-btn_label">Время доставки</span>
+                                  <span class="drop-btn_text"></span>
+                                </span>
+                                <span class="drop-btn_arrow"></span>
+                              </button>
+
+                              <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop p-2">
+
+                                <div class="row g-2">
+                                  <div class="col-6">
+                                    <label class="input-radio input-radio--border">
+                                      <input type="radio" name="timeDelivery">
+                                      <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">09:00 - 19:00</span>
+                                    </span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6">
+                                    <label class="input-radio input-radio--border">
+                                      <input type="radio" name="timeDelivery">
+                                      <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">09:00 - 19:00</span>
+                                    </span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6">
+                                    <label class="input-radio input-radio--border">
+                                      <input type="radio" name="timeDelivery">
+                                      <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">09:00 - 19:00</span>
+                                    </span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6">
+                                    <label class="input-radio input-radio--border">
+                                      <input type="radio" name="timeDelivery">
+                                      <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">06:00 - 09:00</span>
+                                    </span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="drop-btn noArrow d-flex justify-content-between g-3">
+                              <div class="drop-btn_title">Без выходных</div>
+                              <label class="input-checkbox-2">
+                                <input type="checkbox">
+                                <span class="input-checkbox-2_icon m-0"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    calendar
+                  </div>
+                </div>
+
+                <div class="row mt-5 ">
+                  <div class="col-4">
+                    <div class="saleDays">
+                      <div class="saleDays_scale" data-col="3">
+                        <div class="saleDays_scale--line" style="width: 66%"></div>
+                        <span class="active">7</span><!--33%-->
+                        <span class="active">14</span><!--66%-->
+                        <span>30+</span><!--100%-->
+                      </div>
+                      <div class="saleDays_title">Дней</div>
+                    </div>
+
+                    <div class="salePercent">
+                      <div class="salePercent_title">Скидка</div>
+                      <div class="salePercent_scale">
+                        <div class="salePercent_scale--col">
+                          <span>5%</span>
+                        </div>
+                        <div class="salePercent_scale--col active">
+                          <span>10%</span>
+                        </div>
+                        <div class="salePercent_scale--col">
+                          <span>15%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-8 ps-lg-3">
+                    <div class="row align-items-center">
+                      <div class="col">
+                        <div class="salesBuy"><span>Ваша</span> скидка — 300.00 <span>uah</span></div>
+                        <div class="infoBuy">
+                          <div class="infoBuy_row">
+                            <span class="infoBuy_title">Добавьте</span>
+                            12 дней,</div>
+                          <div class="infoBuy_row">
+                            <span class="infoBuy_title">чтобы сэкономить</span>
+                            500.00 грн в день!</div>
+                        </div>
+                      </div>
+                      <div class="col-auto d-flex flex-column gap-2">
+                        <button type="submit" class="btn-site-3 click-animation">Применить</button>
+                        <!--                        <button type="button" class="btn-site-3 noBg click-animation ">Очистить календарь</button>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-12">
+              <div class="filter-row">
+                <div class="d-flex justify-content-between mb-4">
+                  <div class="filter-row__title m-0">
+                    <div class="filter-row__title--count">6</div>
+                    Просмотр меню по дням
+                  </div>
+
+                  <div class="infoChangeOrder">
+                    <div class="infoChangeOrder_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#order"></use>
+                      </svg>
+                    </div>
+                    <div class="infoChangeOrder_desc">
+                      <div class="infoChangeOrder_title">Диета на завтра? изменения до 15:00*</div>
+                      <div class="infoChangeOrder_subtitle">* За рабочий день до доставки.</div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="wrapper-dates-slider mb-3">
+                  <div class="swiper dates-slider">
+                    <div class="swiper-wrapper">
+                      @@loop('components/dates-slider-item/index.html',
+                      'components/dates-slider-item/bd.json')
+                    </div>
+                  </div>
+                  <div class="slider-buttons dates-slider-buttons">
+                    <button type="button" class="dates-slider-prev slider-button-prev click-animation"></button>
+                    <button type="button" class="dates-slider-next slider-button-next click-animation"></button>
+                  </div>
+                </div>
+
+
+                <div class="filter-checkboxBtns" data-col="6">
+                  <label class="input-checkbox">
+                    <input type="checkbox" name="composition" checked>
+                    <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                  </label>
+                  <label class="input-checkbox">
+                    <input type="checkbox" name="composition">
+                    <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                  </label>
+                  <label class="input-checkbox">
+                    <input type="checkbox" name="composition">
+                    <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                  </label>
+                  <label class="input-checkbox">
+                    <input type="checkbox" name="composition">
+                    <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                  </label>
+                  <label class="input-checkbox">
+                    <input type="checkbox" name="composition">
+                    <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                  </label>
+                  <label class="input-checkbox">
+                    <input type="checkbox" name="composition">
+                    <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3">
+
+
+            @@loop('components/product-item/index.html',
+            'components/product-item/bd-3.json')
+            <div class="col-6">
+              <div class="addDish">
+
+                <button type="button" class="addDish_btn" data-bs-target="#modalAddDish" data-bs-toggle="modal">
+                  <span class="addDish_btn--icon">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#plus"></use>
+                    </svg>
+                  </span>
+                  добавить блюдо
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    @@include('components/section-help/index.html')
+
+    @@include('components/section-sales/index.html')
+
+    @@include('components/section-faq/index.html')
+
+  </main>
+
+  @@include('components/footer/index.html')
+
+</div>
+
+
+<button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+  <span class="callback_icon">
+     <svg>
+      <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+    </svg>
+  </span>
+</button>
+
+<div class="activity-box">
+  <div class="activity-box-overlay">
+    <div class="activity-box_header">
+      <div class="activity-box_header--title">Как узнать уровень своей активности</div>
+      <button type="button" class="activity-box_header--close btnInfo">
+        <svg>
+          <use xlink:href="images/icons/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="activity-box_head">
+      <div class="activity-box_title">АКТИВНОСТЬ</div>
+      <div class="activity-box_title">РАБОТА</div>
+      <div class="activity-box_title">ТРЕНИРОВКИ</div>
+    </div>
+    <div class="activity-box_body">
+      <div class="activity-box_item">
+        <div class="activity-box_col">
+          <div class="activity-box_title">АКТИВНОСТЬ</div>
+          <div class="activity-box-info">
+            <div class="activity-box_text">Минимальная</div>
+            <div class="activity-box-scale">
+              <span class="active">1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
+          </div>
+        </div>
+        <div class="activity-box_col">
+          <div class="activity-box_title">РАБОТА</div>
+          <div class="activity-box_text">Сидячая, в офисе или за рулём. Ходите мало и/или недалеко.</div>
+        </div>
+        <div class="activity-box_col">
+          <div class="activity-box_title">ТРЕНИРОВКИ</div>
+          <div class="activity-box_text">Физической нагрузки нет.</div>
+        </div>
+      </div>
+
+      <div class="activity-box_item">
+        <div class="activity-box_col">
+          <div class="activity-box_title">АКТИВНОСТЬ</div>
+          <div class="activity-box-info">
+            <div class="activity-box_text">Низкая</div>
+            <div class="activity-box-scale">
+              <span class="active">1</span>
+              <span class="active">2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
+          </div>
+        </div>
+        <div class="activity-box_col">
+          <div class="activity-box_title">РАБОТА</div>
+          <div class="activity-box_text">Небольшой физический труд или долгие пешие прогулки: например, сборка мебели, работа курьером.</div>
+        </div>
+        <div class="activity-box_col">
+          <div class="activity-box_title">ТРЕНИРОВКИ</div>
+          <div class="activity-box_text">Интенсивные, от 20 минут 1–3 раза в неделю: плавание, катание на коньках или велосипеде, бег трусцой.</div>
+        </div>
+      </div>
+
+      <div class="activity-box_item">
+        <div class="activity-box_col">
+          <div class="activity-box_title">АКТИВНОСТЬ</div>
+          <div class="activity-box-info">
+            <div class="activity-box_text">Средняя</div>
+            <div class="activity-box-scale">
+              <span class="active">1</span>
+              <span class="active">2</span>
+              <span class="active">3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
+          </div>
+        </div>
+        <div class="activity-box_col">
+          <div class="activity-box_title">РАБОТА</div>
+          <div class="activity-box_text">Физическая: занимаетесь погрузкой-разгрузкой, нетяжелой работой на стройке.</div>
+        </div>
+        <div class="activity-box_col">
+          <div class="activity-box_title">ТРЕНИРОВКИ</div>
+          <div class="activity-box_text">Интенсивные, 30 минут до 3–4 раза в неделю.</div>
+        </div>
+      </div>
+
+      <div class="activity-box_item">
+        <div class="activity-box_col">
+          <div class="activity-box_title">АКТИВНОСТЬ</div>
+          <div class="activity-box-info">
+            <div class="activity-box_text">Высокая</div>
+            <div class="activity-box-scale">
+              <span class="active">1</span>
+              <span class="active">2</span>
+              <span class="active">3</span>
+              <span class="active">4</span>
+              <span>5</span>
+            </div>
+          </div>
+        </div>
+        <div class="activity-box_col">
+          <div class="activity-box_title">РАБОТА</div>
+          <div class="activity-box_text">Тяжёлая и длительная: часто таскаете тяжёлые предметы, строите, работаете с землей или по хозяйству.</div>
+        </div>
+        <div class="activity-box_col">
+          <div class="activity-box_title">ТРЕНИРОВКИ</div>
+          <div class="activity-box_text">Интенсивные силовые упражнения 60–80 минут 4 и более раз в неделю: тяжелая атлетика, борьба.</div>
+        </div>
+      </div>
+
+      <div class="activity-box_item">
+        <div class="activity-box_col">
+          <div class="activity-box_title">АКТИВНОСТЬ</div>
+          <div class="activity-box-info">
+            <div class="activity-box_text">Предельная</div>
+            <div class="activity-box-scale">
+              <span class="active">1</span>
+              <span class="active">2</span>
+              <span class="active">3</span>
+              <span class="active">4</span>
+              <span class="active">5</span>
+            </div>
+          </div>
+        </div>
+        <div class="activity-box_col">
+          <div class="activity-box_title">РАБОТА</div>
+          <div class="activity-box_text">Тяжёлая и длительная: часто погружаете-разгружаете тяжёлые предметы, строите, работаете с землей или по хозяйству.</div>
+        </div>
+        <div class="activity-box_col">
+          <div class="activity-box_title">ТРЕНИРОВКИ</div>
+          <div class="activity-box_text">Интенсивные силовые упражнения от 60 минут 5–7 раз в неделю: тяжелая атлетика, борьба.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="backdrop"></div>
+
+@@include('components/fixed-box/index.html', {'compound': true})
+
+@@include('components/modals/index.html')
+
+@@include('components/scripts/index.html')

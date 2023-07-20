@@ -1,5 +1,7 @@
 @@include('components/head/index.html', {'title': 'Smakovski'})
 
+
+
 <div class="wrapper">
   @@include('components/header/index.html')
 
@@ -172,5 +174,18 @@
   @@include('components/footer/index.html')
 
 </div>
+
+<button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+  <span class="callback_icon">
+     <svg>
+    <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+  </svg>
+  </span>
+</button>
+
+@@include('components/modals/index.html')
+
+
+
 
 @@include('components/scripts/index.html')

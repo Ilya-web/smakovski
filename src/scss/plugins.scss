@@ -1,3 +1,9 @@
 @import "fonts";
 @import "../../node_modules/swiper/swiper-bundle.min";
+@import "../../node_modules/rangeslider-pure/dist/range-slider.min";
+@import "../../node_modules/@fancyapps/ui/dist/fancybox";
+
+.fancybox__container {
+  z-index: 999999;
+}
 
