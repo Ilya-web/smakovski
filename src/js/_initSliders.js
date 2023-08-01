@@ -46,13 +46,24 @@ document.addEventListener("DOMContentLoaded", () => {
   if(document.querySelector(programsSlider)) {
     new Swiper(programsSlider, {
       slidesPerView: 1,
+      spaceBetween: 16,
       speed: 400,
       modules: [Navigation],
       navigation: {
         nextEl: `${programsSlider}-next`,
         prevEl: `${programsSlider}-prev`,
       },
-      breakpoints: breakpointsThreeSliders,
+      breakpoints: {
+        300: {
+          slidesPerView: 1.1,
+        },
+        650: {
+          slidesPerView: 2,
+        },
+        1200: {
+          slidesPerView: 3,
+        }
+      }
     });
   }
 
@@ -85,7 +96,20 @@ document.addEventListener("DOMContentLoaded", () => {
         nextEl: `${promoSlider}-next`,
         prevEl: `${promoSlider}-prev`,
       },
-      breakpoints: breakpointsThreeSliders,
+      breakpoints: {
+        300: {
+          slidesPerView: 1.1,
+          spaceBetween: 20,
+        },
+        650: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        }
+      }
     });
   }
 
@@ -147,6 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if(document.querySelector(partnersSlider)) {
     new Swiper(partnersSlider, {
       speed: 400,
+      spaceBetween: 16,
       modules: [Navigation, Pagination],
       pagination: {
         el: `${partnersSlider}-pagination`,
@@ -165,16 +190,14 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       breakpoints: {
         300: {
-          slidesPerView: 1.1,
-          spaceBetween: 20,
-        },
-        768: {
           slidesPerView: 2,
           spaceBetween: 16,
         },
+        768: {
+          slidesPerView: 4,
+        },
         1200: {
           slidesPerView: 6,
-          spaceBetween: 16,
         }
       }
     });
@@ -194,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       on: {
         slideChange: function (i) {
-          const nav = document.querySelector('.dates-slider-buttons');
+          const nav = document.querySelector(`${datesSlider}-buttons`);
           if(i.isEnd) {
             nav.classList.add('last-slide');
           }
@@ -203,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         },
         resize: function (i) {
-          const nav = document.querySelector('.dates-slider-buttons');
+          const nav = document.querySelector(`${datesSlider}-buttons`);
           if(i.isLocked) {
             nav.classList.add('d-none');
           }
@@ -236,6 +259,18 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       thumbs: {
         swiper: productCardThumbsSlider,
+      },
+      on: {
+        slideChange: function (i) {
+          const nav = document.querySelector(`${productCardSlider}-buttons`);
+          console.log(i.isEnd)
+          if(i.isEnd) {
+            nav.classList.add('last-slide');
+          }
+          else {
+            nav.classList.remove('last-slide');
+          }
+        },
       },
     });
   }

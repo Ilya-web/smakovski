@@ -14,11 +14,14 @@
     <section class="section">
       <form action="#">
         <div class="container">
-          <div class="row g-3">
+          <div class="row">
             <div class="col-12">
               <h1 class="h2 mb-32">Программное питание</h1>
             </div>
-            <div class="col-4">
+          </div>
+          <div class="row g-3 mb-3">
+
+            <div class="col-lg-4">
               <div class="filter-row h-100 d-flex flex-column">
                 <div class="mb-32">
                   <div class="filter-row__title mb-2">
@@ -145,7 +148,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-8">
+
+            <div class="col-lg-8">
               <div class="program-info h-100">
                 <div class="program-info_header">
                   <div class="program-info_header--desc">
@@ -167,7 +171,7 @@
                 <div class="program-info_desc">
                   <div class="mb-4 font-Roboto-Condensed">Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій.  Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.</div>
                   <div class="row g-3">
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                       <div class="info-item">
                         <div class="info-item_icon">
                           <svg>
@@ -177,7 +181,7 @@
                         <div class="info-item_text">Хочете безпечно та ефективно позбутися зайвої ваги</div>
                       </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                       <div class="info-item">
                         <div class="info-item_icon">
                           <svg>
@@ -187,7 +191,7 @@
                         <div class="info-item_text">Не любите рахувати калорії</div>
                       </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                       <div class="info-item">
                         <div class="info-item_icon">
                           <svg>
@@ -197,7 +201,7 @@
                         <div class="info-item_text">Бажаєте не відчувати голоду</div>
                       </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                       <div class="info-item">
                         <div class="info-item_icon">
                           <svg>
@@ -212,7 +216,8 @@
 
               </div>
             </div>
-
+          </div>
+          <div class="row g-3">
             <div class="col-12">
               <div class="filter-row green">
                 <div class="d-flex justify-content-between align-items-center mb-4">
@@ -220,10 +225,10 @@
                     <div class="filter-row__title--count">5</div>
                     Выберите дни заказа
                   </div>
-                  <button type="button" class="btn-site-3 noBg click-animation">Очистить календарь</button>
+                  <button type="button" class="btn-site-3 noBg click-animation d-none d-lg-block">Очистить календарь</button>
                 </div>
                 <div class="row">
-                  <div class="col-4">
+                  <div class="col-lg-4">
                     <div class="orderDays">
                       <div class="orderDays_box orderDays_box--green mb-1">
                         <div class="dropdown selectDesktop">
@@ -283,8 +288,14 @@
                         </div>
                       </div>
 
+
                       <div class="orderDays_box">
                         <div class="row g-4">
+
+                          <div class="col-12 d-lg-none">
+                            CALENDAR
+                          </div>
+
                           <div class="col-12">
                             <div class="dropdown selectDesktop">
                               <button class="dropdown-toggle drop-btn drop-btn--label" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -478,13 +489,13 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-8">
+                  <div class="col-lg-8 d-none d-lg-block">
                     calendar
                   </div>
                 </div>
 
-                <div class="row mt-5 ">
-                  <div class="col-4">
+                <div class="row mt-5 gy-3">
+                  <div class="col-lg-4">
                     <div class="saleDays">
                       <div class="saleDays_scale" data-col="3">
                         <div class="saleDays_scale--line" style="width: 66%"></div>
@@ -510,8 +521,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-8 ps-lg-3">
-                    <div class="row align-items-center">
+                  <div class="col-lg-8">
+                    <div class="row align-items-center gy-3">
                       <div class="col">
                         <div class="salesBuy"><span>Ваша</span> скидка — 300.00 <span>uah</span></div>
                         <div class="infoBuy">
@@ -523,9 +534,9 @@
                             500.00 грн в день!</div>
                         </div>
                       </div>
-                      <div class="col-auto d-flex flex-column gap-2">
+                      <div class="col-md-auto d-flex flex-column gap-2">
                         <button type="submit" class="btn-site-3 click-animation">Применить</button>
-                        <!--                        <button type="button" class="btn-site-3 noBg click-animation ">Очистить календарь</button>-->
+                        <button type="button" class="btn-site-3 noBg click-animation d-lg-none">Очистить календарь</button>
                       </div>
                     </div>
                   </div>
@@ -533,16 +544,13 @@
               </div>
             </div>
 
-
-
             <div class="col-12">
               <div class="filter-row">
-                <div class="d-flex justify-content-between mb-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-4 gap-3">
                   <div class="filter-row__title m-0">
                     <div class="filter-row__title--count">6</div>
                     Просмотр меню по дням
                   </div>
-
                   <div class="infoChangeOrder">
                     <div class="infoChangeOrder_icon">
                       <svg>
@@ -554,7 +562,6 @@
                       <div class="infoChangeOrder_subtitle">* За рабочий день до доставки.</div>
                     </div>
                   </div>
-
                 </div>
                 <div class="wrapper-dates-slider mb-3">
                   <div class="swiper dates-slider">
@@ -570,7 +577,83 @@
                 </div>
 
 
-                <div class="filter-checkboxBtns" data-col="6">
+                <div class="dropdown d-lg-none">
+                  <button class="dropdown-toggle drop-btn pe-3" type="button" data-bs-toggle="modal" data-bs-target="#modalFilter">
+                    <span class="drop-btn_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#filter"></use>
+                      </svg>
+                    </span>
+                    <span class="drop-btn_text">Фильтр</span>
+                    <span class="drop-btn_subtitle ms-auto">исключено: <span>3</span></span>
+                  </button>
+                </div>
+
+                <div class="modal fade" id="modalFilter" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog modal-sm modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header mb-3">
+                        <div>
+                          <h4 class="modal_title h6 mb-1">Фильтр</h4>
+                          <div class="modal_subtitle">исключено: <span>3</span></div>
+                        </div>
+                        <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="filter-box">
+                          <label class="input-checkbox">
+                            <input type="checkbox" name="composition" checked>
+                            <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                          </label>
+                          <label class="input-checkbox">
+                            <input type="checkbox" name="composition">
+                            <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                          </label>
+                          <label class="input-checkbox">
+                            <input type="checkbox" name="composition">
+                            <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                          </label>
+                          <label class="input-checkbox">
+                            <input type="checkbox" name="composition">
+                            <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                          </label>
+                          <label class="input-checkbox">
+                            <input type="checkbox" name="composition">
+                            <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                          </label>
+                          <label class="input-checkbox">
+                            <input type="checkbox" name="composition">
+                            <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-checkboxBtns d-none d-lg-grid" data-col="6">
                   <label class="input-checkbox">
                     <input type="checkbox" name="composition" checked>
                     <span class="input-checkbox_box">
@@ -617,12 +700,11 @@
               </div>
             </div>
           </div>
+
           <div class="row g-3">
-
-
             @@loop('components/product-item/index.html',
             'components/product-item/bd-3.json')
-            <div class="col-6">
+            <div class="col-xl-3">
               <div class="addDish">
 
                 <button type="button" class="addDish_btn" data-bs-target="#modalAddDish" data-bs-toggle="modal">

@@ -14,8 +14,8 @@
       <form action="#">
 
         <div class="container">
-          <div class="row position-relative">
-            <div class="col-9">
+          <div class="row position-relative g-3">
+            <div class="col-lg flex-grow-1">
               <div class="basket-box">
                 <h1 class="h1 basket-box_title">Оформление заказа</h1>
                 <div class="basket-box_subtitle h4 mb-3">Заказ №1</div>
@@ -36,8 +36,9 @@
                             <div class="basket-item_desc--title">Похудеть для нее</div>
                             <div class="basket-item_desc--subtitle">Период программы</div>
                             <div class="basket-item_desc--time">10 дней</div>
+                            <div class="basket-item_price d-sm-none mt-2">2 900.00 ₴</div>
                           </div>
-                          <div class="basket-item_price">2 900.00 ₴</div>
+                          <div class="basket-item_price d-none d-sm-block">2 900.00 ₴</div>
                         </div>
                       </div>
                     </div>
@@ -175,7 +176,7 @@
                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                         data-bs-custom-class="custom-tooltip"
                                         data-bs-html="true"
-                                        data-bs-title="Не возможно заменить блюдо в первых 3-х днях, если доставка завтра или блюдо без аллергенов">
+                                        data-bs-title="Some text">
                                   <svg>
                                     <use xlink:href="images/icons/sprite.svg#info"></use>
                                   </svg>
@@ -190,7 +191,7 @@
                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                         data-bs-custom-class="custom-tooltip"
                                         data-bs-html="true"
-                                        data-bs-title="Не возможно заменить блюдо в первых 3-х днях, если доставка завтра или блюдо без аллергенов">
+                                        data-bs-title="Some text">
                                   <svg>
                                     <use xlink:href="images/icons/sprite.svg#info"></use>
                                   </svg>
@@ -447,6 +448,7 @@
                           </div>
                         </div>
                       </div>
+
                       <div class="addProducts">
                         <div class="addProducts_header">
                           <div class="addProducts_header--desc">
@@ -466,7 +468,7 @@
                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                         data-bs-custom-class="custom-tooltip"
                                         data-bs-html="true"
-                                        data-bs-title="Не возможно заменить блюдо в первых 3-х днях, если доставка завтра или блюдо без аллергенов">
+                                        data-bs-title="Some text">
                                   <svg>
                                     <use xlink:href="images/icons/sprite.svg#info"></use>
                                   </svg>
@@ -481,7 +483,7 @@
                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                         data-bs-custom-class="custom-tooltip"
                                         data-bs-html="true"
-                                        data-bs-title="Не возможно заменить блюдо в первых 3-х днях, если доставка завтра или блюдо без аллергенов">
+                                        data-bs-title="Some text">
                                   <svg>
                                     <use xlink:href="images/icons/sprite.svg#info"></use>
                                   </svg>
@@ -706,8 +708,8 @@
                   </div>
 
                   <div class="col-12">
-                    <div class="row">
-                      <div class="col-4">
+                    <div class="row g-3">
+                      <div class="col-sm-4">
                         <div class="wrap-input-site">
                           <label class="input-site w-100">
                             <span class="input-site__label">ФИО</span>
@@ -715,7 +717,7 @@
                           </label>
                         </div>
                       </div>
-                      <div class="col-4">
+                      <div class="col-sm-4">
                         <div class="wrap-input-site">
                           <label class="input-site w-100">
                             <span class="input-site__label">Номер телефона</span>
@@ -723,7 +725,7 @@
                           </label>
                         </div>
                       </div>
-                      <div class="col-4">
+                      <div class="col-sm-4">
                         <div class="wrap-input-site">
                           <label class="input-site w-100">
                             <span class="input-site__label">Email</span>
@@ -762,7 +764,7 @@
                           <div>
                             <div class="collapse-box_item">
                               <div class="row gy-4">
-                                <div class="col-3">
+                                <div class="col-6 col-md-4 col-lg-3">
                                   <label class="input-checkbox allergen-input ">
                                     <input type="checkbox">
                                     <span class="input-checkbox_box justify-content-start">
@@ -771,7 +773,7 @@
                                   </span>
                                   </label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-md-4 col-lg-3">
                                   <label class="input-checkbox allergen-input "> 
                                     <input type="checkbox">
                                     <span class="input-checkbox_box justify-content-start">
@@ -780,7 +782,7 @@
                                   </span>
                                   </label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-md-4 col-lg-3">
                                   <label class="input-checkbox allergen-input "> 
                                     <input type="checkbox">
                                     <span class="input-checkbox_box justify-content-start">
@@ -789,7 +791,7 @@
                                   </span>
                                   </label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-md-4 col-lg-3">
                                   <label class="input-checkbox allergen-input "> 
                                     <input type="checkbox">
                                     <span class="input-checkbox_box justify-content-start">
@@ -798,7 +800,7 @@
                                   </span>
                                   </label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-md-4 col-lg-3">
                                   <label class="input-checkbox allergen-input "> 
                                     <input type="checkbox">
                                     <span class="input-checkbox_box justify-content-start">
@@ -807,7 +809,7 @@
                                   </span>
                                   </label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-md-4 col-lg-3">
                                   <label class="input-checkbox allergen-input "> 
                                     <input type="checkbox">
                                     <span class="input-checkbox_box justify-content-start">
@@ -816,7 +818,7 @@
                                   </span>
                                   </label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-md-4 col-lg-3">
                                   <label class="input-checkbox allergen-input "> 
                                     <input type="checkbox">
                                     <span class="input-checkbox_box justify-content-start">
@@ -825,7 +827,7 @@
                                   </span>
                                   </label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-md-4 col-lg-3">
                                   <label class="input-checkbox allergen-input "> 
                                     <input type="checkbox">
                                     <span class="input-checkbox_box justify-content-start">
@@ -834,7 +836,7 @@
                                   </span>
                                   </label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-md-4 col-lg-3">
                                   <label class="input-checkbox allergen-input "> 
                                     <input type="checkbox">
                                     <span class="input-checkbox_box justify-content-start">
@@ -843,7 +845,7 @@
                                   </span>
                                   </label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-md-4 col-lg-3">
                                   <label class="input-checkbox allergen-input "> 
                                     <input type="checkbox">
                                     <span class="input-checkbox_box justify-content-start">
@@ -852,7 +854,7 @@
                                   </span>
                                   </label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-md-4 col-lg-3">
                                   <label class="input-checkbox allergen-input "> 
                                     <input type="checkbox">
                                     <span class="input-checkbox_box justify-content-start">
@@ -861,7 +863,7 @@
                                   </span>
                                   </label>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-6 col-md-4 col-lg-3">
                                   <label class="input-checkbox allergen-input "> 
                                     <input type="checkbox">
                                     <span class="input-checkbox_box justify-content-start">
@@ -926,13 +928,13 @@
                             <span class="input-radio-2_label fs-16">Курьер по вашему адресу</span>
                             <span class="input-radio-2_icon"></span>
                           </label>
-                          <div class="fs-16">45.00 ₴</div>
+                          <div class="fs-16 text-nowrap">45.00 ₴</div>
                         </div>
                         <div class="col-12">
                           <div class="deliveryForm_content">
                             <div class="form-label mb-2">Адрес доставки</div>
-                            <div class="row mb-3">
-                              <div class="col-3">
+                            <div class="row mb-3 g-3">
+                              <div class="col-sm-6 col-xl-3">
                                 <select class="js-choice">
                                   <option selected disabled>Вибирите город</option>
                                   <option>Киев</option>
@@ -941,7 +943,7 @@
                                   <option>Тернопиль</option>
                                 </select>
                               </div>
-                              <div class="col-4">
+                              <div class="col-sm-6 col-xl-4">
                                 <select class="js-choice">
                                   <option selected disabled>Вибирите улицу</option>
                                   <option>ул. Богдана хмельницкого-черного,  132</option>
@@ -951,7 +953,7 @@
                                   <option>ул. Киевская, 778</option>
                                 </select>
                               </div>
-                              <div class="col">
+                              <div class="col-sm">
                                 <div class="wrap-input-site">
                                   <label class="input-site w-100">
                                     <span class="input-site__label">Дом</span>
@@ -959,7 +961,7 @@
                                   </label>
                                 </div>
                               </div>
-                              <div class="col">
+                              <div class="col-sm">
                                 <div class="wrap-input-site">
                                   <label class="input-site w-100">
                                     <span class="input-site__label">Квартира</span>
@@ -967,7 +969,7 @@
                                   </label>
                                 </div>
                               </div>
-                              <div class="col">
+                              <div class="col-sm">
                                 <div class="wrap-input-site">
                                   <label class="input-site w-100">
                                     <span class="input-site__label">Этаж</span>
@@ -1064,7 +1066,7 @@
               </div>
             </div>
 
-            <div class="col-3 basket-sticky">
+            <div class="col-lg basket-sticky">
               <div class="basket-total">
                 <div class="basket-total_row">
                   <div class="basket-total_title">Итого</div>

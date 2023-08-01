@@ -1,6 +1,6 @@
 
 @@if(!context.grid){
-<div class="col-3">
+<div class="col-sm-6 col-lg-4 col-xl-3">
   <div class="product-item">
     <div class="product-item_img">
       <img src="images/product/@@imgUrl" alt="">
@@ -140,16 +140,26 @@
         </div>
       </div>
       @@if(context.footerIsVisible) {
-      <form action="#">
-        <div class="product-item_form">
-          <div class="product-item_price">+ 30.00 ₴</div>
-          <button type="submit" class="btn-plus click-animation">
+        <form action="#">
+          <div class="product-item_form">
+            <div class="product-item_price">+ 30.00 ₴</div>
+            <button type="submit" class="btn-plus click-animation">
+              <svg>
+                <use xlink:href="images/icons/sprite.svg#plus"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      }
+      @@if(context.backdrop) {
+        <div class="product-item_mobileBtn mt-2 d-flex gap-2">
+          <button type="button" class="btn-site-3 green click-animation h-100 flex-grow-1" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>
+          <button type="button" class="product-item_changeBox--delete deleteBtn click-animation h-100" data-bs-target="#modalDelete" data-bs-toggle="modal">
             <svg>
-              <use xlink:href="images/icons/sprite.svg#plus"></use>
+              <use xlink:href="images/icons/sprite.svg#delete"></use>
             </svg>
           </button>
         </div>
-      </form>
       }
     </div>
   </div>

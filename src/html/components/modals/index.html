@@ -327,7 +327,7 @@
 </div>
 
 <div class="modal fade" id="modalGoOut" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
     <div class="modal-content modal-content--green">
       <div class="modal-header  mb-4">
         <div>
@@ -352,7 +352,7 @@
 </div>
 
 <div class="modal fade" id="modalDelete" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
     <div class="modal-content modal-content--green">
       <div class="modal-header mb-4">
         <div>
@@ -377,7 +377,7 @@
 </div>
 
 <div class="modal fade" id="modalReset" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
     <div class="modal-content modal-content--green">
       <div class="modal-header mb-4">
         <div>
@@ -484,17 +484,17 @@
         </button>
       </div>
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-xl-8">
           <h4 class="modal_title h4 mb-4">рассчитать дневную норму калорий исходя
             из ваших особенностей и цели</h4>
         </div>
       </div>
       <div class="modal-body">
-        <div class="row">
-          <div class="col-6">
+        <div class="row g-3">
+          <div class="col-xl-6">
             <div class="calculate">
               <form action="#" id="calculateForm">
-                <div class="row g-4">
+                <div class="row g-3 g-sm-4">
                   <div class="col-lg-7">
                     <div class="calculate_title">Настройте калькулятор с учетом своих данных</div>
                   </div>
@@ -642,11 +642,11 @@
                   </div>
 
                   <div class="col-12">
-                    <div class="row d-flex justify-content-between align-items-center">
-                      <div class="col">
+                    <div class="row gy-1 d-flex justify-content-between align-items-center">
+                      <div class="col-sm">
                         <div class="calculate_info">Ваша дневная норма калорий для удержания веса</div>
                       </div>
-                      <div class="col-auto">
+                      <div class="col-sm-auto">
                         <div class="calculate_total"><span>1 554</span> кКал</div>
                       </div>
                     </div>
@@ -656,7 +656,7 @@
             </div>
           </div>
 
-          <div class="col-6">
+          <div class="col-xl-6">
             <div class="calculateResult">
               <div class="row g-4">
                 <div class="col-lg-7">
@@ -686,10 +686,8 @@
                     <div class="program-item_img">
                       <img src="images/programs/image-1.png" alt="">
                     </div>
-                    
                   </div>
                 </div>
-
                 <div class="col-12">
                   <div class="program-item">
                     <div class="program-item_desc">
@@ -717,9 +715,7 @@
 
                   </div>
                 </div>
-
               </div>
-
             </div>
           </div>
         </div>
@@ -756,9 +752,6 @@
   </div>
 </div>
 
-
-
-
 <div class="modal fade" id="modalChangeDish" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content modal-content--light">
@@ -773,8 +766,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="row">
-          <div class="col-7">
+        <div class="row gy-3">
+          <div class="col-lg-7">
             <div class="swiper productCard-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -817,13 +810,13 @@
                   </div>
                 </div>
               </div>
-              <div class="slider-buttons">
+              <div class="slider-buttons productCard-slider-buttons">
                 <button type="button" class="productCard-slider-prev slider-button-prev click-animation"></button>
                 <button type="button" class="productCard-slider-next slider-button-next click-animation"></button>
               </div>
             </div>
           </div>
-          <div class="col-5">
+          <div class="col-lg-5">
             <div class="productCard-desc">
               <div class="product-item_header">
                 <div class="product-item_header--left">
@@ -850,7 +843,7 @@
                   </div>
                 </div>
               </div>
-              <div class="product-item_desc">
+              <div class="product-item_desc mb-0">
                 <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
                 <div class="product-item_weight">300/30 г</div>
               </div>
@@ -996,6 +989,43 @@
             </div>
           </div>
         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalReviewProgram" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content modal-content--green">
+      <div class="modal-header mb-4">
+        <div class="h6">Программа питания</div>
+        <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="reviews-item--program">
+          <div class="reviews-item--program__title">Slim Balance</div>
+          <div class="reviews-item--program__subtitle">1000 ккал, 160 г</div>
+          <div class="reviews-item--program__bottom">
+            <div class="reviews-item--program__img">
+              <img src="images/programs/image-4.jpg" alt="">
+            </div>
+            <div class="reviews-item--program__footer">
+              <div class="reviews-item--program__footer--right">
+                <div class="reviews-item--program__head">Длительность</div>
+                <div class="reviews-item--program__time">20 дней</div>
+              </div>
+              <div class="reviews-item--program__btn">
+                <form action="#">
+                  <button type="submit" class="btn-site-3 click-animation">Купить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

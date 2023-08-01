@@ -10,15 +10,14 @@
     {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item"><a href="#">системное питание</a></li><li class="breadcrumb-site__item"><a href="#">Ем все</a></li><li class="breadcrumb-site__item" aria-current="page">Heat and eat</li>'}
     )
 
-
     <section class="section">
       <form action="#">
         <div class="container">
-          <div class="row g-3">
+          <div class="row g-3 mb-3">
             <div class="col-12">
               <h1 class="h2 mb-32">Heat and eat</h1>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4">
               <div class="filter-row h-100 d-flex flex-column">
                 <div class="mb-32">
                   <div class="filter-row__title mb-2">
@@ -250,7 +249,7 @@
               </div>
             </div>
 
-            <div class="col-8">
+            <div class="col-lg-8">
               <div class="program-info h-100">
                 <div class="program-info_header">
                   <div class="program-info_header--desc">
@@ -272,7 +271,7 @@
                 <div class="program-info_desc">
                   <div class="mb-4 font-Roboto-Condensed">Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій.  Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.</div>
                   <div class="row g-3">
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                       <div class="info-item">
                         <div class="info-item_icon">
                           <svg>
@@ -282,7 +281,7 @@
                         <div class="info-item_text">максимальный асортимент/все меню</div>
                       </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                       <div class="info-item">
                         <div class="info-item_icon">
                           <svg>
@@ -292,7 +291,7 @@
                         <div class="info-item_text">доставка 2 раза в неделю</div>
                       </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                       <div class="info-item">
                         <div class="info-item_icon">
                           <svg>
@@ -302,7 +301,7 @@
                         <div class="info-item_text">выбор от 6 и до 18 блюд в неделю</div>
                       </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                       <div class="info-item">
                         <div class="info-item_icon">
                           <svg>
@@ -325,7 +324,7 @@
                   <div class="filter-header__title">Разделите заказ по дням доставки</div>
 
                   <div class="row">
-                    <div class="col-6 offset-lg-3">
+                    <div class="col-lg-6 offset-lg-3">
                       <div class="filter-radioBtns" data-col="2">
 
                         <label class="input-radio">
@@ -355,14 +354,98 @@
                     <div class="filter-row__title--count">4</div>
                     выбор блюд
                   </div>
-                  <div class="filter-radioBtns mb-3" data-col="11">
 
-                    @@loop('components/input-radio/index.html',
-                    'components/input-radio/bd.json')
-
+                  <div class="dropdown selectMobile mb-3">
+                    <button class="dropdown-toggle drop-btn d-flex d-xl-none justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="drop-btn_text">Все</span>
+                      <span class="drop-btn_subtitle">132 БЛЮДА</span>
+                      <span class="drop-btn_arrow"></span>
+                    </button>
+                    <div class="filter-radioBtns dropdown-menu dropdown-menu--mobile" data-col="11">
+                      @@loop('components/input-radio/index.html',
+                      'components/input-radio/bd.json')
+                    </div>
                   </div>
 
-                  <div class="filter-checkboxBtns" data-col="6">
+
+
+                  <div class="dropdown d-xl-none">
+                    <button class="dropdown-toggle drop-btn pe-3" type="button" data-bs-toggle="modal" data-bs-target="#modalFilter">
+                    <span class="drop-btn_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#filter"></use>
+                      </svg>
+                    </span>
+                      <span class="drop-btn_text">Фильтр</span>
+                      <span class="drop-btn_subtitle ms-auto">исключено: <span>3</span></span>
+                    </button>
+                  </div>
+
+                  <div class="modal fade" id="modalFilter" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-sm modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header mb-3">
+                          <div>
+                            <h4 class="modal_title h6 mb-1">Фильтр</h4>
+                            <div class="modal_subtitle">исключено: <span>3</span></div>
+                          </div>
+                          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#close"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="filter-box">
+                            <label class="input-checkbox">
+                              <input type="checkbox" name="composition" checked>
+                              <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                            </label>
+                            <label class="input-checkbox">
+                              <input type="checkbox" name="composition">
+                              <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                            </label>
+                            <label class="input-checkbox">
+                              <input type="checkbox" name="composition">
+                              <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                            </label>
+                            <label class="input-checkbox">
+                              <input type="checkbox" name="composition">
+                              <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                            </label>
+                            <label class="input-checkbox">
+                              <input type="checkbox" name="composition">
+                              <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                            </label>
+                            <label class="input-checkbox">
+                              <input type="checkbox" name="composition">
+                              <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter-checkboxBtns d-none d-xl-grid" data-col="6">
                     <label class="input-checkbox">
                       <input type="checkbox" name="composition" checked>
                       <span class="input-checkbox_box">

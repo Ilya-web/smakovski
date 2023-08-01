@@ -6,8 +6,8 @@ $grid-breakpoints: (
         xl: 1250px,
 );
 $container-max-widths: (
-        sm: 540px,
-        md: 720px,
+        sm: 100%,
+        md: 100%,
         lg: 100%,
         xl: 1264px,
 );
@@ -32,8 +32,4 @@ $modal-xl: 1248px;
 @import "node_modules/bootstrap/scss/transitions";
 @import "node_modules/bootstrap/scss/tooltip";
 @import "node_modules/bootstrap/scss/modal";
-
-
-//@import "node_modules/bootstrap/scss/bootstrap";
-//@import "node_modules/bootstrap/scss/close";
 

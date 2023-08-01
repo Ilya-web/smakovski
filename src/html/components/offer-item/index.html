@@ -1,34 +1,71 @@
 @@if(!context.col){
 <div class="offers-item">
-  <div class="offers-item__icon">
-    <svg>
-      <use xlink:href="images/icons/sprite.svg#@@icon"></use>
-    </svg>
+  <div class="offers-item__header">
+    <div class="offers-item__icon">
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#@@icon"></use>
+      </svg>
+    </div>
+    <button type="button" class="offers-item__info d-sm-none" data-bs-toggle="modal" data-bs-target="#@@id">
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#info"></use>
+      </svg>
+    </button>
   </div>
   <div class="offers-item__title">@@title</div>
-  <div class="offers-item__text">@@text</div>
+  <div class="offers-item__text d-none d-sm-block">@@text</div>
   <a href="#" class="offers-item__link">
-    <span>Подробнее</span>
+    <span class="offers-item__link--text">Подробнее</span>
     <span class="offers-item__link-icon">
       <svg>
         <use xlink:href="images/icons/sprite.svg#arrowRight"></use>
       </svg>
     </span>
   </a>
+  <div class="modal fade" id="@@id" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content modal-content--yellow">
+        <div class="modal-header mb-1">
+          <div class="offers-item__icon">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#@@icon"></use>
+            </svg>
+          </div>
+          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="offers-item__title">@@title</div>
+          <div class="offers-item__text mb-0">@@text</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 }
 
+
 @@if(context.col){
 
-<div class="col-3">
-  <div class="offers-item offers-item-col">
-    <div class="offers-item__icon">
-      <svg>
-        <use xlink:href="images/icons/sprite.svg#@@icon"></use>
-      </svg>
+<div class="col-sm-6 col-lg-3">
+  <div class="offers-item offers-item--col">
+    <div class="offers-item__header">
+      <div class="offers-item__icon">
+        <svg>
+          <use xlink:href="images/icons/sprite.svg#@@icon"></use>
+        </svg>
+      </div>
+      <button type="button" class="offers-item__info d-sm-none" data-bs-toggle="modal" data-bs-target="#@@id">
+        <svg>
+          <use xlink:href="images/icons/sprite.svg#info"></use>
+        </svg>
+      </button>
     </div>
     <div class="offers-item__title">@@title</div>
-    <div class="offers-item__text">@@text</div>
+    <div class="offers-item__text d-none d-md-block">@@text</div>
     <a href="#" class="offers-item__link">
       <span>Подробнее</span>
       <span class="offers-item__link-icon">
@@ -37,6 +74,29 @@
       </svg>
     </span>
     </a>
+
+    <div class="modal fade" id="@@id" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content modal-content--yellow">
+          <div class="modal-header mb-1">
+            <div class="offers-item__icon">
+              <svg>
+                <use xlink:href="images/icons/sprite.svg#@@icon"></use>
+              </svg>
+            </div>
+            <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+              <svg>
+                <use xlink:href="images/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="offers-item__title">@@title</div>
+            <div class="offers-item__text mb-0">@@text</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

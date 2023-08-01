@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
-
-  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="src/css/plugins.css">
+  <link rel="stylesheet" href="src/css/style.css">
 
 </head>
 
@@ -23,7 +23,7 @@
     <header class="header">
 
       <div class="container">
-        <div class="row">
+        <div class="row gx-2 gx-sm-3">
           <div class="col-6">
             <div class="header-left">
               <div class="logo">
@@ -32,7 +32,7 @@
                 </a>
               </div>
 
-              <div class="header-btns dropdown">
+              <div class="header-btns dropdown d-none d-lg-flex">
                 <button type="button" class="header-btns__item" data-bs-toggle="modal" data-bs-target="#modalLocation">
                   <span class="header-btns__item-icon">
                     <svg>
@@ -114,7 +114,7 @@
           <div class="col-6">
             <div class="header-right">
 
-              <div class="header-nutrition dropdown">
+              <div class="header-nutrition dropdown d-none d-lg-flex">
                 <button type="button" class="header-btns__item header-nutrition__btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                   Питание
                 </button>
@@ -165,12 +165,15 @@
               </div>
 
 
-              <div class="header-lang dropdown">
+              <div class="header-lang dropdown d-none d-lg-flex">
                 <button type="button" class="header-btns__item header-lang__btn dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   ua
                 </button>
                 <div class="drop-menu-lang dropdown-menu">
                   <ul class="lang-list">
+                    <li class="active">
+                      <a href="#">ua</a>
+                    </li>
                     <li>
                       <a href="#">ENg</a>
                     </li>
@@ -183,7 +186,7 @@
 
               <!--пользователь не авторизован или не зарегестрирован -->
 
-              <!--          <div class="header-account">-->
+              <!--          <div class="header-account d-none d-lg-flex">-->
               <!--            <button type="button" class="header-accountBtn" data-bs-toggle="modal" data-bs-target="#modalLogin">-->
               <!--              <svg>-->
               <!--                <use xlink:href="images/icons/sprite.svg#account"></use>-->
@@ -196,7 +199,7 @@
 
               <!--пользователь авторизован  -->
 
-              <div class="header-account dropdown">
+              <div class="header-account dropdown d-none d-lg-flex">
                 <button type="button" class="header-account__btn dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <svg>
                     <use xlink:href="images/icons/sprite.svg#account"></use>
@@ -281,7 +284,8 @@
       <div class="wrap-menu">
         <div class="menu" id="menuDesktop">
           <div class="menu-overlay">
-            <div class="menu-top">
+
+            <div class="menu-top d-none d-lg-block">
               <div class="menu-header">
                 <div class="menu-title h4 mb-4">полезно</div>
 
@@ -317,7 +321,106 @@
               </ul>
 
             </div>
-            <div class="drop-menu-contacts lightBg">
+
+            <div class="account-box mb-2 d-lg-none">
+              <a href="#" class="account-item">
+                <div class="account-item_icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#account"></use>
+                  </svg>
+                </div>
+                <div class="account-item_desc">
+                  <div class="account-item_title">Сергей Кобец</div>
+                  <div class="account-item_subtitle">sergeykobetc@gmail.com</div>
+                </div>
+                <div class="account-item_icon-2">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#login"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <div class="header-nutrition d-block d-lg-none mb-2">
+              <button type="button" class="header-btns__item header-nutrition__btn dropdown-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#nutritionMenu" aria-expanded="false" aria-controls="nutritionMenu">
+                Питание
+              </button>
+              <div class="collapse" id="nutritionMenu">
+                <div class="drop-menu-nutrition">
+                  <ul class="nutrition-list">
+                    <li>
+                      <a href="delivery.html">
+                        <span class="nutrition-list_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#takeout"></use>
+                          </svg>
+                        </span>
+                        <span>Доставка отдельных блюд</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="programNutrition.html">
+                        <span class="nutrition-list_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#lab"></use>
+                          </svg>
+                        </span>
+                        <span>Программное питание</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="heatAndEat.html">
+                        <span class="nutrition-list_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#dinner"></use>
+                          </svg>
+                        </span>
+                        <span>heat & eat</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="supplySystem.html">
+                        <span class="nutrition-list_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#nutrition"></use>
+                          </svg>
+                        </span>
+                        <span>системы питания</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="header-mobileMenu d-lg-none mb-2">
+              <div class="header-mobileMenu_title">полезно</div>
+              <ul class="menu-list">
+                <li>
+                  <a href="howWorks.html">Как это работает</a>
+                </li>
+                <li>
+                  <a href="about.html">О нас</a>
+                </li>
+                <li>
+                  <a href="nutritionist.html">Диетолог</a>
+                </li>
+                <li>
+                  <a href="">Контакты</a>
+                </li>
+                <li>
+                  <a href="reviews.html">Отзывы</a>
+                </li>
+                <li>
+                  <a href="blog.html">Блог</a>
+                </li>
+                <li>
+                  <a href="faq.html">FAQ</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="drop-menu-contacts lightBg d-none d-lg-block">
               <a href="#" class="contact-item">
                 <div class="contact-item_icon">
                   <svg>
@@ -374,6 +477,109 @@
                 </span>
               </a>
             </div>
+
+            <div class="header-btns dropdown d-lg-none mb-2">
+              <button type="button" class="header-btns__item collapsed" data-bs-toggle="modal" data-bs-target="#modalLocation">
+                <span class="header-btns__item-icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#marker"></use>
+                  </svg>
+                </span>
+                Ивано-Франковск
+              </button>
+            </div>
+
+            <div class="header-btns dropdown mb-2 d-lg-none">
+              <button type="button" class="header-btns__item dropdown-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#contactsMenu" aria-expanded="false" aria-controls="contactsMenu">
+                <span class="header-btns__item-icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#phone"></use>
+                  </svg>
+                </span>
+                +380(67) 505 05 10
+              </button>
+
+              <div class="collapse" id="contactsMenu">
+                <div class="drop-menu-contacts pt-3">
+
+                  <a href="#" class="contact-item">
+                    <div class="contact-item_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#chat"></use>
+                      </svg>
+                    </div>
+                    <span class="contact-item_text">
+                      <span class="contact-item_title">Чат на сайте</span>
+                      <span class="contact-item_info"></span>
+                    </span>
+                  </a>
+                  <a href="#" class="contact-item">
+                    <div class="contact-item_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#messenger"></use>
+                      </svg>
+                    </div>
+                    <span class="contact-item_text">
+                      <span class="contact-item_title">Messenger</span>
+                      <span class="contact-item_info"></span>
+                    </span>
+                  </a>
+                  <a href="#" class="contact-item">
+                    <div class="contact-item_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#telegram"></use>
+                      </svg>
+                    </div>
+                    <span class="contact-item_text">
+                      <span class="contact-item_title">Telegram</span>
+                      <span class="contact-item_info"></span>
+                    </span>
+                  </a>
+                  <a href="tel:+380675050510" class="contact-item">
+                    <div class="contact-item_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+                      </svg>
+                    </div>
+                    <span class="contact-item_text">
+                      <span class="contact-item_title">+380(67) 505 05 10</span>
+                      <span class="contact-item_info">с 9:00 по 21:00 (пн-нд)</span>
+                    </span>
+                  </a>
+                  <a href="tel:006 34 33 454" class="contact-item">
+                    <div class="contact-item_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+                      </svg>
+                    </div>
+                    <span class="contact-item_text">
+                      <span class="contact-item_title">006 34 33 454</span>
+                      <span class="contact-item_info">бесплатно по Киеву со стационарного</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="header-btns dropdown d-lg-none">
+              <button type="button" class="header-btns__item collapsed" data-bs-toggle="collapse" data-bs-target="#langMenu" aria-expanded="false" aria-controls="langMenu">
+                ua
+              </button>
+              <div class="collapse" id="langMenu">
+                <ul class="lang-list">
+                  <li class="active">
+                    <a href="#">ua</a>
+                  </li>
+                  <li>
+                    <a href="#">ENg</a>
+                  </li>
+                  <li>
+                    <a href="#">PL</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -414,9 +620,10 @@
 
 
 
+
             <div class="col-12">
-              <div class="reviews-item ">
-                <div class="reviews-item--author">
+              <div class="reviews-item">
+                <div class="reviews-item--author flex-grow-1 flex-lg-grow-0">
                   <div class="reviews-item__count">
                     <span>01</span> / 04
                   </div>
@@ -431,9 +638,28 @@
                     <div class="reviews-item--author__old">23 года</div>
                   </div>
 
+                  <div class="reviews-item--text d-lg-none">
+                    <div class="reviews-item--text__quote">
+                      <div class="reviews-item--text__icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#quote"></use>
+                        </svg>
+                      </div>
+                      <p>Мне очень нравится ваша еда! У меня никогда не было каких-либо очень привередливых вкусов в еде, плюс когда я решила встать на «путь истинный» похудения, я понимала, что, мне не так важно, насколько это будет вкусно, как насколько это будет эффективно! Чтобы я не была голодной и при этом худела»</p>
+                    </div>
+                  </div>
+                  <div class="reviews-item--programBtn d-lg-none">
+                    <div class="reviews-item--programBtn__icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#restaurant"></use>
+                      </svg>
+                    </div>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProgram">посмотреть программу питания</button>
+                  </div>
 
                 </div>
-                <div class="reviews-item--text">
+
+                <div class="reviews-item--text d-none d-lg-flex">
                   <div class="reviews-item--text__quote">
                     <div class="reviews-item--text__icon">
                       <svg>
@@ -444,7 +670,7 @@
                   </div>
                 </div>
 
-                <div class="reviews-item--program">
+                <div class="reviews-item--program d-none d-lg-block">
                   <div class="reviews-item--program__category">Программа питания</div>
                   <div class="reviews-item--program__title">Slim Balance</div>
                   <div class="reviews-item--program__subtitle">1000 ккал, 160 г</div>
@@ -475,9 +701,11 @@
 
 
 
+
+
             <div class="col-12">
-              <div class="reviews-item ">
-                <div class="reviews-item--author">
+              <div class="reviews-item">
+                <div class="reviews-item--author flex-grow-1 flex-lg-grow-0">
                   <div class="reviews-item__count">
                     <span>02</span> / 04
                   </div>
@@ -492,9 +720,28 @@
                     <div class="reviews-item--author__old">23 года</div>
                   </div>
 
+                  <div class="reviews-item--text d-lg-none">
+                    <div class="reviews-item--text__quote">
+                      <div class="reviews-item--text__icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#quote"></use>
+                        </svg>
+                      </div>
+                      <p>Мне очень нравится ваша еда! У меня никогда не было каких-либо очень привередливых вкусов в еде, плюс когда я решила встать на «путь истинный» похудения, я понимала, что, мне не так важно, насколько это будет вкусно, как насколько это будет эффективно! Чтобы я не была голодной и при этом худела»</p>
+                    </div>
+                  </div>
+                  <div class="reviews-item--programBtn d-lg-none">
+                    <div class="reviews-item--programBtn__icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#restaurant"></use>
+                      </svg>
+                    </div>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProgram">посмотреть программу питания</button>
+                  </div>
 
                 </div>
-                <div class="reviews-item--text">
+
+                <div class="reviews-item--text d-none d-lg-flex">
                   <div class="reviews-item--text__quote">
                     <div class="reviews-item--text__icon">
                       <svg>
@@ -505,7 +752,7 @@
                   </div>
                 </div>
 
-                <div class="reviews-item--program">
+                <div class="reviews-item--program d-none d-lg-block">
                   <div class="reviews-item--program__category">Программа питания</div>
                   <div class="reviews-item--program__title">Slim Balance</div>
                   <div class="reviews-item--program__subtitle">1000 ккал, 160 г</div>
@@ -536,9 +783,11 @@
 
 
 
+
+
             <div class="col-12">
-              <div class="reviews-item ">
-                <div class="reviews-item--author">
+              <div class="reviews-item">
+                <div class="reviews-item--author flex-grow-1 flex-lg-grow-0">
                   <div class="reviews-item__count">
                     <span>03</span> / 04
                   </div>
@@ -553,9 +802,28 @@
                     <div class="reviews-item--author__old">23 года</div>
                   </div>
 
+                  <div class="reviews-item--text d-lg-none">
+                    <div class="reviews-item--text__quote">
+                      <div class="reviews-item--text__icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#quote"></use>
+                        </svg>
+                      </div>
+                      <p>Мне очень нравится ваша еда! У меня никогда не было каких-либо очень привередливых вкусов в еде, плюс когда я решила встать на «путь истинный» похудения, я понимала, что, мне не так важно, насколько это будет вкусно, как насколько это будет эффективно! Чтобы я не была голодной и при этом худела»</p>
+                    </div>
+                  </div>
+                  <div class="reviews-item--programBtn d-lg-none">
+                    <div class="reviews-item--programBtn__icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#restaurant"></use>
+                      </svg>
+                    </div>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProgram">посмотреть программу питания</button>
+                  </div>
 
                 </div>
-                <div class="reviews-item--text">
+
+                <div class="reviews-item--text d-none d-lg-flex">
                   <div class="reviews-item--text__quote">
                     <div class="reviews-item--text__icon">
                       <svg>
@@ -566,7 +834,7 @@
                   </div>
                 </div>
 
-                <div class="reviews-item--program">
+                <div class="reviews-item--program d-none d-lg-block">
                   <div class="reviews-item--program__category">Программа питания</div>
                   <div class="reviews-item--program__title">Slim Balance</div>
                   <div class="reviews-item--program__subtitle">1000 ккал, 160 г</div>
@@ -597,9 +865,11 @@
 
 
 
+
+
             <div class="col-12">
-              <div class="reviews-item ">
-                <div class="reviews-item--author">
+              <div class="reviews-item">
+                <div class="reviews-item--author flex-grow-1 flex-lg-grow-0">
                   <div class="reviews-item__count">
                     <span>04</span> / 04
                   </div>
@@ -614,9 +884,28 @@
                     <div class="reviews-item--author__old">23 года</div>
                   </div>
 
+                  <div class="reviews-item--text d-lg-none">
+                    <div class="reviews-item--text__quote">
+                      <div class="reviews-item--text__icon">
+                        <svg>
+                          <use xlink:href="images/icons/sprite.svg#quote"></use>
+                        </svg>
+                      </div>
+                      <p>Мне очень нравится ваша еда! У меня никогда не было каких-либо очень привередливых вкусов в еде, плюс когда я решила встать на «путь истинный» похудения, я понимала, что, мне не так важно, насколько это будет вкусно, как насколько это будет эффективно! Чтобы я не была голодной и при этом худела»</p>
+                    </div>
+                  </div>
+                  <div class="reviews-item--programBtn d-lg-none">
+                    <div class="reviews-item--programBtn__icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#restaurant"></use>
+                      </svg>
+                    </div>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProgram">посмотреть программу питания</button>
+                  </div>
 
                 </div>
-                <div class="reviews-item--text">
+
+                <div class="reviews-item--text d-none d-lg-flex">
                   <div class="reviews-item--text__quote">
                     <div class="reviews-item--text__icon">
                       <svg>
@@ -627,7 +916,7 @@
                   </div>
                 </div>
 
-                <div class="reviews-item--program">
+                <div class="reviews-item--program d-none d-lg-block">
                   <div class="reviews-item--program__category">Программа питания</div>
                   <div class="reviews-item--program__title">Slim Balance</div>
                   <div class="reviews-item--program__subtitle">1000 ккал, 160 г</div>
@@ -653,6 +942,7 @@
                 </div>
               </div>
             </div>
+
 
 
           </div>
@@ -688,8 +978,8 @@
 
       <section class="section section-images">
         <div class="container">
-          <div class="row">
-            <div class="col-6">
+          <div class="row gy-3">
+            <div class="col-lg-6">
               <div class="imageBg">
                 <div class="help-box position-relative z-1">
                   <h3 class="h3 mb-4">Не знаешь какую
@@ -726,7 +1016,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6">
               <div class="help-box help-box-wrapImg">
                 <div class="position-relative z-1">
                   <h3 class="h3 mb-4">Нужна помощь
@@ -741,7 +1031,6 @@
                     <img src="images/bg/image-5.png" alt="">
                   </picture>
                 </div>
-
               </div>
             </div>
           </div>
@@ -1199,15 +1488,15 @@
     <footer class="footer">
       <div class="footer-top mb-3">
         <div class="container">
-          <div class="row">
-            <div class="col-3">
+          <div class="row g-3">
+            <div class="col-lg-3">
               <div class="footer-top__left">
                 <div class="footer-top__img">
                   <img src="images/footer-img.svg" alt="">
                 </div>
 
                 <div class="footer-btns">
-                  <button type="button" class="footer-btns__item">
+                  <button type="button" class="footer-btns__item" data-bs-toggle="modal" data-bs-target="#modalLocation">
                     <span class="footer-btns__item-icon">
                       <svg>
                         <use xlink:href="images/icons/sprite.svg#marker"></use>
@@ -1227,9 +1516,9 @@
               </div>
             </div>
 
-            <div class="col-9">
-              <div class="row h-100">
-                <div class="col-6">
+            <div class="col-lg-9">
+              <div class="row h-100 g-3">
+                <div class="col-md-6">
                   <div class="footer-top__menu h-100">
                     <div class="row g-4">
                       <div class="col-6">
@@ -1315,12 +1604,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 d-flex flex-column">
+                <div class="col-md-6 d-flex flex-column">
                   <div class="footer-top__contacts mb-3 flex-grow-1">
                     <div class="row h-100">
                       <div class="col-12 d-flex flex-column">
-                        <div class="row mb-4">
-                          <div class="col-6">
+                        <div class="row mb-0 mb-sm-4  g-4">
+                          <div class="col-sm-6">
                             <div class="footer-top__menuItem">
                               <div class="footer-top__menuItem--title">НАш адрес</div>
                               <ul class="footer-top__menuItem--list">
@@ -1332,7 +1621,7 @@
                               </ul>
                             </div>
                           </div>
-                          <div class="col-6">
+                          <div class="col-sm-6">
                             <div class="footer-top__menuItem">
                               <div class="footer-top__menuItem--title">телефон</div>
                               <ul class="footer-top__menuItem--list">
@@ -1343,8 +1632,8 @@
                             </div>
                           </div>
                         </div>
-                        <div class="row mt-auto">
-                          <div class="col-6">
+                        <div class="row mt-auto g-4">
+                          <div class="col-sm-6">
                             <div class="footer-top__menuItem">
                               <div class="footer-top__menuItem--title">Email</div>
                               <ul class="footer-top__menuItem--list">
@@ -1354,7 +1643,7 @@
                               </ul>
                             </div>
                           </div>
-                          <div class="col-6">
+                          <div class="col-sm-6">
                             <div class="footer-top__menuItem">
                               <div class="footer-top__menuItem--title">График работы</div>
                               <ul class="footer-top__menuItem--list">
@@ -1411,8 +1700,8 @@
 
       <div class="footer-bottom">
         <div class="container">
-          <div class="row px-3">
-            <div class="col-6 d-flex">
+          <div class="row px-3 g-4">
+            <div class="col-md-6 d-flex flex-column flex-md-row">
               <div class="footer-bottom__copyright">
                 © smakovski 2022. All rights reserved
               </div>
@@ -1420,7 +1709,7 @@
                 <a href="#">Privacy Policy</a>
               </div>
             </div>
-            <div class="col">
+            <div class="col-md">
               <a href="#" target="_blank" class="footer-bottom__madeBy">
                 Made by
                 <div class="footer-bottom__madeBy--logo">
@@ -1810,7 +2099,7 @@
   </div>
 
   <div class="modal fade" id="modalGoOut" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
       <div class="modal-content modal-content--green">
         <div class="modal-header  mb-4">
           <div>
@@ -1835,7 +2124,7 @@
   </div>
 
   <div class="modal fade" id="modalDelete" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
       <div class="modal-content modal-content--green">
         <div class="modal-header mb-4">
           <div>
@@ -1860,7 +2149,7 @@
   </div>
 
   <div class="modal fade" id="modalReset" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
       <div class="modal-content modal-content--green">
         <div class="modal-header mb-4">
           <div>
@@ -2835,17 +3124,17 @@
           </button>
         </div>
         <div class="row">
-          <div class="col-lg-8">
+          <div class="col-xl-8">
             <h4 class="modal_title h4 mb-4">рассчитать дневную норму калорий исходя
               из ваших особенностей и цели</h4>
           </div>
         </div>
         <div class="modal-body">
-          <div class="row">
-            <div class="col-6">
+          <div class="row g-3">
+            <div class="col-xl-6">
               <div class="calculate">
                 <form action="#" id="calculateForm">
-                  <div class="row g-4">
+                  <div class="row g-3 g-sm-4">
                     <div class="col-lg-7">
                       <div class="calculate_title">Настройте калькулятор с учетом своих данных</div>
                     </div>
@@ -2975,11 +3264,11 @@
                     </div>
 
                     <div class="col-12">
-                      <div class="row d-flex justify-content-between align-items-center">
-                        <div class="col">
+                      <div class="row gy-1 d-flex justify-content-between align-items-center">
+                        <div class="col-sm">
                           <div class="calculate_info">Ваша дневная норма калорий для удержания веса</div>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-sm-auto">
                           <div class="calculate_total">
                             <span>1 554</span> кКал
                           </div>
@@ -2991,7 +3280,7 @@
               </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-xl-6">
               <div class="calculateResult">
                 <div class="row g-4">
                   <div class="col-lg-7">
@@ -3024,10 +3313,8 @@
                           <img src="images/programs/image-1.png" alt="">
                         </picture>
                       </div>
-
                     </div>
                   </div>
-
                   <div class="col-12">
                     <div class="program-item">
                       <div class="program-item_desc">
@@ -3058,9 +3345,7 @@
 
                     </div>
                   </div>
-
                 </div>
-
               </div>
             </div>
           </div>
@@ -3091,7 +3376,7 @@
           <div class="row g-4">
 
 
-            <div class="col-3">
+            <div class="col-sm-6 col-lg-4 col-xl-3">
               <div class="product-item">
                 <div class="product-item_img">
                   <picture>
@@ -3181,6 +3466,7 @@
                     </div>
                   </form>
 
+
                 </div>
               </div>
             </div>
@@ -3188,7 +3474,7 @@
 
 
 
-            <div class="col-3">
+            <div class="col-sm-6 col-lg-4 col-xl-3">
               <div class="product-item">
                 <div class="product-item_img">
                   <picture>
@@ -3278,6 +3564,7 @@
                     </div>
                   </form>
 
+
                 </div>
               </div>
             </div>
@@ -3285,7 +3572,7 @@
 
 
 
-            <div class="col-3">
+            <div class="col-sm-6 col-lg-4 col-xl-3">
               <div class="product-item">
                 <div class="product-item_img">
                   <picture>
@@ -3375,6 +3662,7 @@
                     </div>
                   </form>
 
+
                 </div>
               </div>
             </div>
@@ -3382,7 +3670,7 @@
 
 
 
-            <div class="col-3">
+            <div class="col-sm-6 col-lg-4 col-xl-3">
               <div class="product-item">
                 <div class="product-item_img">
                   <picture>
@@ -3472,6 +3760,7 @@
                     </div>
                   </form>
 
+
                 </div>
               </div>
             </div>
@@ -3479,7 +3768,7 @@
 
 
 
-            <div class="col-3">
+            <div class="col-sm-6 col-lg-4 col-xl-3">
               <div class="product-item">
                 <div class="product-item_img">
                   <picture>
@@ -3560,6 +3849,7 @@
                     </div>
                   </form>
 
+
                 </div>
               </div>
             </div>
@@ -3567,7 +3857,7 @@
 
 
 
-            <div class="col-3">
+            <div class="col-sm-6 col-lg-4 col-xl-3">
               <div class="product-item">
                 <div class="product-item_img">
                   <picture>
@@ -3657,6 +3947,7 @@
                     </div>
                   </form>
 
+
                 </div>
               </div>
             </div>
@@ -3668,9 +3959,6 @@
       </div>
     </div>
   </div>
-
-
-
 
   <div class="modal fade" id="modalChangeDish" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl">
@@ -3686,8 +3974,8 @@
           </button>
         </div>
         <div class="modal-body">
-          <div class="row">
-            <div class="col-7">
+          <div class="row gy-3">
+            <div class="col-lg-7">
               <div class="swiper productCard-slider">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -3754,13 +4042,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="slider-buttons">
+                <div class="slider-buttons productCard-slider-buttons">
                   <button type="button" class="productCard-slider-prev slider-button-prev click-animation"></button>
                   <button type="button" class="productCard-slider-next slider-button-next click-animation"></button>
                 </div>
               </div>
             </div>
-            <div class="col-5">
+            <div class="col-lg-5">
               <div class="productCard-desc">
                 <div class="product-item_header">
                   <div class="product-item_header--left">
@@ -3787,7 +4075,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="product-item_desc">
+                <div class="product-item_desc mb-0">
                   <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
                   <div class="product-item_weight">300/30 г</div>
                 </div>
@@ -3916,6 +4204,46 @@
               </div>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalReviewProgram" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content modal-content--green">
+        <div class="modal-header mb-4">
+          <div class="h6">Программа питания</div>
+          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="reviews-item--program">
+            <div class="reviews-item--program__title">Slim Balance</div>
+            <div class="reviews-item--program__subtitle">1000 ккал, 160 г</div>
+            <div class="reviews-item--program__bottom">
+              <div class="reviews-item--program__img">
+                <picture>
+                  <source srcset="images/programs/image-4.webp" type="image/webp">
+                  <img src="images/programs/image-4.jpg" alt="">
+                </picture>
+              </div>
+              <div class="reviews-item--program__footer">
+                <div class="reviews-item--program__footer--right">
+                  <div class="reviews-item--program__head">Длительность</div>
+                  <div class="reviews-item--program__time">20 дней</div>
+                </div>
+                <div class="reviews-item--program__btn">
+                  <form action="#">
+                    <button type="submit" class="btn-site-3 click-animation">Купить</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

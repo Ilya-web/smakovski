@@ -32,14 +32,95 @@
                     <div class="filter-row__title--count">2</div>
                     выбор блюд
                   </div>
-                  <div class="filter-radioBtns mb-3" data-col="11">
-
-                    @@loop('components/input-radio/index.html',
-                    'components/input-radio/bd.json')
-
+                  <div class="dropdown selectMobile mb-3">
+                    <button class="dropdown-toggle drop-btn d-flex d-xl-none justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="drop-btn_text">Все</span>
+                      <span class="drop-btn_subtitle">132 БЛЮДА</span>
+                      <span class="drop-btn_arrow"></span>
+                    </button>
+                    <div class="filter-radioBtns dropdown-menu dropdown-menu--mobile" data-col="11">
+                      @@loop('components/input-radio/index.html',
+                      'components/input-radio/bd.json')
+                    </div>
                   </div>
 
-                  <div class="filter-checkboxBtns" data-col="6">
+                  <div class="dropdown d-xl-none">
+                    <button class="dropdown-toggle drop-btn pe-3" type="button" data-bs-toggle="modal" data-bs-target="#modalFilter">
+                    <span class="drop-btn_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#filter"></use>
+                      </svg>
+                    </span>
+                      <span class="drop-btn_text">Фильтр</span>
+                      <span class="drop-btn_subtitle ms-auto">исключено: <span>3</span></span>
+                    </button>
+                  </div>
+
+                  <div class="modal fade" id="modalFilter" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-sm modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header mb-3">
+                          <div>
+                            <h4 class="modal_title h6 mb-1">Фильтр</h4>
+                            <div class="modal_subtitle">исключено: <span>3</span></div>
+                          </div>
+                          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#close"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="filter-box">
+                            <label class="input-checkbox">
+                              <input type="checkbox" name="composition" checked>
+                              <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                            </label>
+                            <label class="input-checkbox">
+                              <input type="checkbox" name="composition">
+                              <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                            </label>
+                            <label class="input-checkbox">
+                              <input type="checkbox" name="composition">
+                              <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                            </label>
+                            <label class="input-checkbox">
+                              <input type="checkbox" name="composition">
+                              <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                            </label>
+                            <label class="input-checkbox">
+                              <input type="checkbox" name="composition">
+                              <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                            </label>
+                            <label class="input-checkbox">
+                              <input type="checkbox" name="composition">
+                              <span class="input-checkbox_box">
+                        <span class="input-checkbox_icon"></span>
+                        <span class="input-checkbox_label">Без лактозы</span>
+                      </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter-checkboxBtns d-none d-xl-grid" data-col="6">
                     <label class="input-checkbox">
                       <input type="checkbox" name="composition" checked>
                       <span class="input-checkbox_box">
@@ -113,8 +194,8 @@
   </span>
 </button>
 
+@@include('components/fixed-box/index.html')
+
 @@include('components/modals/index.html')
-
-
 
 @@include('components/scripts/index.html')

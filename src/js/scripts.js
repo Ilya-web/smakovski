@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // },2000)
 
 
-  // const thanks = new Modal('#modalChangeDish');
+  // const thanks = new Modal('#modalReviewProgram');
   //
   // thanks.show()
 
@@ -155,7 +155,12 @@ document.addEventListener("DOMContentLoaded", () => {
   menuBtn.forEach(btn =>{
     btn.addEventListener('click', () => {
       menuDesktop.classList.toggle('show');
+
       wrapMenu.classList.toggle('show');
+
+      menuBtn.forEach(btn =>{
+        btn.classList.toggle('active');
+      })
     })
   })
 

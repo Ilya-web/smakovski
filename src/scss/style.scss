@@ -16,6 +16,12 @@
   --gap-24: 24px;
   --gap-16: 16px;
   --scroll-width: 0px;
+
+  @include media-breakpoint-down(lg) {
+    --gap-32: 24px;
+    --gap-24: 16px;
+    --gap-16: 8px;
+  }
 }
 
 html {
@@ -65,6 +71,10 @@ hr {
   font-size: 48px;
   line-height: 1.2;
   text-transform: uppercase;
+
+  @include media-breakpoint-down(md) {
+    font-size: 32px;
+  }
 }
 
 .h4 {
@@ -73,6 +83,10 @@ hr {
   font-size: 40px;
   line-height: 1.2;
   text-transform: uppercase;
+
+  @include media-breakpoint-down(md) {
+    font-size: 32px;
+  }
 }
 
 .h5 {
@@ -136,6 +150,11 @@ hr {
     padding-left: 48px;
     font-size: 36px;
     margin: 48px 0;
+
+    @include media-breakpoint-down(md) {
+      font-size: 24px;
+      padding-left: 24px;
+    }
   }
   img {
     width: 100%;
@@ -157,9 +176,11 @@ hr {
 .deleteBtn {
   width: 40px;
   height: 40px;
-  border-radius: 4px;
+  border-radius: 8px;
   background: rgba(166, 166, 166, 0.20);
   padding: 8px;
+  display: inline-flex;
+  justify-content: center;
   @include clickAnimationBg($color-text);
 
   svg {
@@ -183,12 +204,21 @@ hr {
   margin-bottom: 104px;
 
   &-images {
+    overflow: hidden;
     padding: 100px 0;
+  }
+  &-images-2 {
+    overflow: hidden;
+    padding: 16px 0 110px;
   }
 }
 
 .mb-32 {
   margin-bottom: 32px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 24px;
+  }
 }
 
 .pointer-events-none {
@@ -517,10 +547,12 @@ hr {
     border: 1px solid $color-text;
     border-radius: $border-radius-24;
     width: calc(100% / 6);
+    min-width: 150px;
     aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 
     &.active {
       background: $color-green;
@@ -531,6 +563,7 @@ hr {
   &-tabs {
     display: flex;
     gap: 16px;
+    overflow-x: auto;
 
   }
 
@@ -654,13 +687,27 @@ hr {
 
   &_label {
     font-size: 16px;
+    //text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+
     &--info {
       color: $color-orange;
     }
     &.column {
       display: flex;
-      flex-direction: column;
       align-items: center;
+
+      @include media-breakpoint-up(xl) {
+        flex-direction: column;
+      }
+
+      @include media-breakpoint-down(xl) {
+        justify-content: space-between;
+        width: 100%;
+      }
 
       #{$this}_label--info {
         font-size: 14px;
@@ -707,6 +754,10 @@ hr {
   cursor: pointer;
   display: flex;
   flex-direction: column;
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 30px;
+  }
 
   input {
     display: none;
@@ -893,14 +944,6 @@ hr {
   position: sticky;
   top: 0;
   z-index: 9999;
-  //position: fixed;
-  //top: 0;
-  //left: 0;
-  //right: var(--scroll-width);
-  //z-index: 9999;
-
-
-
 
   &-left {
     background: $color-white;
@@ -909,6 +952,13 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-breakpoint-down(lg) {
+      padding: 12px 16px;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
   }
 
   &-right {
@@ -927,6 +977,7 @@ hr {
       position: relative;
       cursor: pointer;
       text-transform: uppercase;
+      white-space: nowrap;
       @include arrowBtn($color-gray);
 
       &-icon {
@@ -1016,6 +1067,11 @@ hr {
     border-radius: $border-radius-12;
     text-transform: uppercase;
     padding: 8px;
+
+    @include media-breakpoint-down(lg) {
+      flex-grow: 1;
+    }
+
     &__icon {
       width: 24px;
       height: 24px;
@@ -1032,6 +1088,11 @@ hr {
     align-items: center;
     padding: 4px;
     border-radius: $border-radius-12;
+
+    @include media-breakpoint-down(lg) {
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
   }
 
   &-menuBtn {
@@ -1069,6 +1130,15 @@ hr {
         }
       }
     }
+  }
+}
+
+.logo {
+  @include media-breakpoint-up(lg) {
+    margin-right: 10px;
+  }
+  img {
+    max-width: 100%;
   }
 }
 
@@ -1143,12 +1213,16 @@ hr {
   border-radius: $border-radius-16;
   display: flex;
   gap: 16px;
-  position: absolute;
-  z-index: 2;
-  bottom: 16px;
-  right: 16px;
-  width: 60%;
-  min-width: 370px;
+
+
+  @include media-breakpoint-up(sm) {
+    position: absolute;
+    z-index: 2;
+    bottom: 16px;
+    right: 16px;
+    width: 60%;
+    min-width: 370px;
+  }
 
   &_desc {
     width: 50%;
@@ -1179,6 +1253,8 @@ hr {
     img {
       max-width: 100%;
       max-height: 100%;
+      margin: 0 0 0 auto;
+      width: auto !important;
     }
   }
 }
@@ -1189,48 +1265,86 @@ hr {
 /*****sales-slider*****/
 
 .sales-slider {
-  border-radius: $border-radius-24;
-  overflow: hidden;
-  height: 100%;
+
+  @include media-breakpoint-up(sm) {
+    border-radius: $border-radius-24;
+    overflow: hidden;
+    height: 100%;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 48px;
+  }
 
   &_item {
     img {
-      object-fit: cover;
       width: 100%;
-      height: 100%;
+
+      @include media-breakpoint-up(sm) {
+        object-fit: cover;
+        height: 100%;
+        border-radius: $border-radius-24;
+      }
     }
   }
   .sales-item {
-    opacity: 0;
-    transform: translateX(-30%);
-    @include transition();
+    @include media-breakpoint-up(sm) {
+      opacity: 0;
+      transform: translateX(-30%);
+      @include transition();
+    }
 
+    @include media-breakpoint-down(sm) {
+      margin-top: 16px;
+    }
   }
 
   .swiper-slide-active {
-    .sales-item {
-      transform: translateX(0);
-      opacity: 1;
+    @include media-breakpoint-up(sm) {
+      .sales-item {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   }
 
   &-pagination {
-    position: absolute;
-    bottom: 16px !important;
-    left: 16px !important;
+    position: static;
     z-index: 2;
+
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      bottom: 16px !important;
+      left: 16px !important;
+    }
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
   }
 
   &-prev, &-next {
     position: absolute;
     top: 50%;
     z-index: 2;
+
+    @include media-breakpoint-down(sm) {
+      top: 29%;
+    }
   }
+
   &-prev {
     left: 16px;
+     @include media-breakpoint-down(sm) {
+       left: 8px;
+    }
   }
   &-next {
     right: 16px;
+     @include media-breakpoint-down(sm) {
+       right: 8px;
+    }
   }
 }
 
@@ -1244,15 +1358,30 @@ hr {
   display: flex;
   gap: 16px;
 
+  @include media-breakpoint-down(lg) {
+    flex-wrap: wrap;
+  }
+
+
   &-item {
     background: $color-yellow;
-    padding: 24px;
+    padding: var(--gap-24);
     border-radius: $border-radius-24;
     width: 20%;
     display: flex;
     flex-direction: column;
 
-    &#{$this}-item-col {
+    @include media-breakpoint-down(lg) {
+      &:not(&#{$this}-item--col) {
+        width: calc((100% / 2) - 8px);
+        flex: 0 0 calc((100% / 2) - 8px);
+
+      }
+    }
+
+
+
+    &#{$this}-item--col {
       width: 100%;
       height: 100%;
     }
@@ -1262,19 +1391,42 @@ hr {
       background: transparent;
       align-items: center;
       justify-content: center;
+
+      @include media-breakpoint-down(lg) {
+          width: 100% !important;
+          flex: 0 0 100% !important;
+      }
       img {
         max-height: 192px;
         max-width: 100%;
       }
     }
 
+    &__header {
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     &__icon {
       width: 48px;
       height: 48px;
-      margin-bottom: 16px;
+
       svg {
         max-width: 100%;
         max-height: 100%;
+      }
+    }
+
+    &__info {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      svg {
+        max-height: 100%;
+        max-width: 100%;
+        fill: $color-orange;
       }
     }
 
@@ -1284,6 +1436,10 @@ hr {
       text-transform: uppercase;
       margin-bottom: 4px;
       //min-height: 60px;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 24px;
+      }
     }
 
     &__text {
@@ -1307,7 +1463,12 @@ hr {
           #{$this}-icon {
             background: $color-green_hover;
           }
-
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        .offers-item__link--text {
+          opacity: 0;
+          display: none;
         }
       }
 
@@ -1319,6 +1480,10 @@ hr {
         border-radius: $border-radius-8;
         padding: 8px;
         @include transition();
+
+        @include media-breakpoint-down(sm) {
+          margin-left: auto;
+        }
 
         svg {
           max-height: 100%;
@@ -1419,7 +1584,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    gap: 2px 8px;
 
     &__date {
       color: $color-green-2;
@@ -1531,12 +1696,15 @@ hr {
 /*****reviews-item*****/
 
 .reviews-item {
+  $this: &;
   --_border-reviews: 1px solid #181818;
   --_padding-reviews: 24px;
 
   display: flex;
   gap: 16px;
   width: 100%;
+
+
 
   &--author {
     background: $color-white;
@@ -1553,6 +1721,13 @@ hr {
       overflow: hidden;
       margin: 0 auto 24px;
       border: var(--_border-reviews);
+      width: 170px;
+      height: 170px;
+
+      @include media-breakpoint-down(sm) {
+        width: 120px;
+        height: 120px;
+      }
 
       img {
         max-width: 100%;
@@ -1574,6 +1749,25 @@ hr {
       color: $color-gray;
       text-transform: uppercase;
       text-align: center;
+    }
+
+    #{$this}--text {
+      margin: 0 24px 24px;
+      position: relative;
+      padding: 32px 24px;
+
+      &__icon {
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        top: -15px;
+        left: -23px;
+      }
+
+      &__quote {
+        padding: 0;
+        font-size: 14px;
+      }
     }
 
   }
@@ -1648,6 +1842,7 @@ hr {
       border-radius: 13px;
       img {
         max-width: 100%;
+        width: 100%;
       }
     }
 
@@ -1677,6 +1872,27 @@ hr {
       margin-top: auto;
     }
   }
+
+  &--programBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 4px;
+      svg {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    button {
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+  }
 }
 
 /*****reviews-item*****/
@@ -1697,6 +1913,13 @@ hr {
     border: 1px solid $color-text;
     position: relative;
 
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 24px;
+    }
+
     &__title {
       margin-bottom: 48px;
     }
@@ -1704,12 +1927,27 @@ hr {
     &__callBack {
       display: flex;
       gap: var(--gap-16);
+
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+
+      }
     }
 
     &__img {
       flex:0 0 20%;
+      @include media-breakpoint-down(md) {
+        flex:0 0 100%;
+      }
+
       img {
         max-width: 100%;
+        @include media-breakpoint-down(md) {
+          margin: auto;
+        }
+        @include media-breakpoint-down(sm) {
+          max-width: 140px;
+        }
       }
     }
   }
@@ -1725,21 +1963,43 @@ hr {
       top: 0;
       right: 20%;
       transform: translateY(-40%);
-      width: clamp(100px, 8.85vw, 170px);
+      width: clamp(120px, 8.85vw, 170px);
+
+      @include media-breakpoint-down(md) {
+        top: auto;
+        bottom: 100px;
+        left: -40px;
+        transform: translateY(0);
+      }
     }
 
     &.img-2 {
       bottom: 0;
       right: 29%;
       transform: translateY(50%);
-      width: clamp(90px, 7.29vw, 140px);
+      width: clamp(120px, 7.29vw, 140px);
+
+      @include media-breakpoint-down(md) {
+        bottom: -65px;
+        right: auto;
+        left: 0;
+        transform: translateY(0);
+      }
+
     }
 
     &.img-3 {
       bottom: -20px;
       right: 0;
       transform: translateX(50%);
-      width: clamp(80px, 7.82vw, 150px);
+      width: clamp(126px, 7.82vw, 150px);
+
+      @include media-breakpoint-down(md) {
+        bottom: 0;
+        right: -25px;
+        transform: translateY(0);
+      }
+
     }
   }
 }
@@ -1844,6 +2104,13 @@ hr {
 
   &.fixed-box-IsShow {
     padding-bottom: 81px;
+
+    @include media-breakpoint-down(xl) {
+      padding-bottom: 106px;
+    }
+    @include media-breakpoint-down(md) {
+      padding-bottom: 160px;
+    }
   }
 
   &.bodyBg-1 {
@@ -1852,6 +2119,11 @@ hr {
     .header {
       background: $color-light-2;
     }
+    @include media-breakpoint-down(lg) {
+      .menu {
+        background: $color-light-2;
+      }
+    }
   }
   &.bodyBg-2 {
     background: $color-blue-light;
@@ -1859,12 +2131,22 @@ hr {
     .header {
       background: $color-blue-light;
     }
+    @include media-breakpoint-down(lg) {
+      .menu {
+        background: $color-blue-light;
+      }
+    }
   }
   &.bodyBg-3 {
     background: #FFF9E5;
 
     .header {
       background: #FFF9E5;
+    }
+    @include media-breakpoint-down(lg) {
+      .menu {
+        background: #FFF9E5;
+      }
     }
   }
 }
@@ -1881,6 +2163,7 @@ hr {
       background: $color-green;
       border-radius: $border-radius-24;
       padding: 24px;
+      height: 100%;
     }
 
     &__img {
@@ -1948,8 +2231,12 @@ hr {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 24px;
+      gap: 8px 24px;
       height: 100%;
+
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+      }
 
       &--title {
         text-align: center;
@@ -2001,26 +2288,40 @@ hr {
 
   &-bottom {
     padding: 16px 0;
+    overflow: hidden;
+
+    &__copyright {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 8px;
+      }
+    }
 
     &__copyright,
     &__privacyPolicy {
       text-transform: uppercase;
+
+      @include media-breakpoint-down(md) {
+        text-align: center;
+      }
     }
 
     &__privacyPolicy {
       position: relative;
       padding-left: 20px;
-      &:before {
-        content: '';
-        position: absolute;
-        left: 8px;
-        top: 50%;
-        width: 4px;
-        height: 4px;
-        margin-top: -2px;
-        background: $color-text;
-        border-radius: 50%;
+      @include media-breakpoint-up(md) {
+        &:before {
+          content: '';
+          position: absolute;
+          left: 8px;
+          top: 50%;
+          width: 4px;
+          height: 4px;
+          margin-top: -2px;
+          background: $color-text;
+          border-radius: 50%;
+        }
       }
+
       a {
         text-decoration: underline;
         @media all and (hover: hover) {
@@ -2040,6 +2341,10 @@ hr {
       font-weight: bold;
       letter-spacing: 0.28px;
 
+      @include media-breakpoint-down(md) {
+        justify-content: center;
+      }
+
       &--logo {
         margin-left: 4px;
       }
@@ -2051,6 +2356,10 @@ hr {
     border-radius: $border-radius-24;
     padding: 43px 24px;
     height: 100%;
+
+    @include media-breakpoint-down(sm) {
+      padding: 24px;
+    }
   }
 
 }
@@ -2074,6 +2383,12 @@ hr {
     padding: 32px;
     border-radius: $border-radius-24;
     background: $color-white;
+
+    @include media-breakpoint-down(md) {
+      padding: 16px;
+      //margin: 0 -8px;
+    }
+
     &.green {
       background: $color-green;
     }
@@ -2142,6 +2457,7 @@ hr {
     border-radius: $border-radius-8;
     border: 1px solid $color-gray;
     display: grid;
+    background: transparent;
 
     @for $i from 2 through 11 {
       &[data-col="#{$i}"] {
@@ -2375,6 +2691,15 @@ hr {
 
 /***product-item***/
 
+#modalChangeDish {
+  .productCard-desc {
+    @include media-breakpoint-down(lg) {
+      border-top: 1px solid rgba(166, 166, 166, 0.5);
+      padding-top: 16px;
+    }
+  }
+}
+
 .product-item {
   $this: &;
   display: flex;
@@ -2399,10 +2724,17 @@ hr {
     flex-direction: row;
     gap: 16px;
 
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+
     #{$this}_img {
-      flex: 0 0 135px;
       border-radius: 8px;
       margin-bottom: 0;
+
+      @include media-breakpoint-up(sm) {
+        flex: 0 0 135px;
+      }
     }
 
     #{$this}_box {
@@ -2590,7 +2922,6 @@ hr {
     }
   }
 
-
   &_weight {
     color: $color-gray-2;
     white-space: nowrap;
@@ -2634,6 +2965,16 @@ hr {
   &_price {
     font-size: 24px;
     text-transform: uppercase;
+  }
+
+  .btn-site-3 {
+    padding: 10px 24px;
+  }
+
+  &_mobileBtn {
+    @media all and (hover: hover) {
+      display: none !important;
+    }
   }
 }
 
@@ -2682,6 +3023,11 @@ hr {
     transform: translateY(0);
   }
 
+  @include media-breakpoint-down(md) {
+    border-radius: 24px 24px 0 0;
+    padding: 8px;
+  }
+
   &_info {
     padding: 8px 16px;
     border: 1px solid $color-green_hover;
@@ -2689,7 +3035,16 @@ hr {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
+
+    @include media-breakpoint-up(xl) {
+      height: 100%;
+    }
+
+    @include media-breakpoint-down(xl) {
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
 
     &__desc {
       text-transform: uppercase;
@@ -2707,14 +3062,67 @@ hr {
 
     &--right {
       display: flex;
+
+      @include media-breakpoint-down(md) {
+        flex: 0 0 100%;
+      }
+    }
+
+    &__btn {
+      .btn-site-3 {
+        padding-left: 14px;
+        padding-right: 14px;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &_readMore {
+    color: $color-green-2;
+    text-transform: uppercase;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    @include arrowBtn( $color-text, $right: 8px);
+
+    &:not(.collapsed) {
+      &:after {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+
+  .collapse {
+    display: block;
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+    &.show {
+      display: block;
     }
   }
 
   .compound {
-    border-left: 1px solid $color-gray;
-    padding-left: 16px;
-    margin-left: 16px;
+    width: 100%;
+
+    &_title {
+      font-size: 12px;
+    }
+
+    &_count {
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include media-breakpoint-up(md) {
+      border-left: 1px solid $color-gray;
+      padding-left: 16px;
+      margin-left: 16px;
+    }
   }
+
 }
 
 .busket-small {
@@ -2722,7 +3130,21 @@ hr {
   border-radius: $border-radius-12;
   padding: 8px 16px;
   display: flex;
-  align-items: center;
+  height: 100%;
+
+  @include media-breakpoint-up(md) {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    gap: 8px;
+
+    .btn-site-3 {
+      width: 100%;
+    }
+  }
 
   &_price {
     border-right: 1px solid $color-gray;
@@ -2752,9 +3174,6 @@ hr {
       text-transform: uppercase;
       color: $color-gray;
     }
-    &--count {
-
-    }
   }
 }
 
@@ -2764,8 +3183,13 @@ hr {
 /***offer***/
 
 .offer {
-  padding: var(--gap-32);
+  padding: 32px;
   position: relative;
+
+  @include media-breakpoint-down(sm) {
+    padding: 16px 0 0;
+    background: #E7E8ED;
+  }
 
   &_text {
     font-size: 16px;
@@ -2774,10 +3198,14 @@ hr {
   }
 
   &_imgBg {
-    position: absolute;
-    inset: 0;
     border-radius: $border-radius-32;
     overflow: hidden;
+
+    @include media-breakpoint-up(sm) {
+      display: block;
+      position: absolute;
+      inset: 0;
+    }
 
     img {
       width: 100%;
@@ -2877,8 +3305,11 @@ hr {
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 1;
     transform: translate(24%, 70%);
+
+    @include media-breakpoint-up(lg) {
+      z-index: 1;
+    }
   }
 
   &_img-3 {
@@ -2901,19 +3332,29 @@ hr {
   border: 1px solid $color-text;
   height: 100%;
 
+  @include media-breakpoint-down(lg) {
+    padding: 24px;
+  }
+
   &-wrapImg {
     position: relative;
     background: $color-green;
 
     &_img {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      border-radius: 0 0 32px 32px;
-      overflow: hidden;
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 0 0 32px 32px;
+        overflow: hidden;
+      }
+
       img {
         width: 100%;
+        @include media-breakpoint-down(lg) {
+          display: none;
+        }
       }
     }
   }
@@ -2940,6 +3381,7 @@ hr {
         color: $color-white;
       }
     }
+
     &.disabled {
       #{$this}-link {
         pointer-events: none;
@@ -2958,6 +3400,10 @@ hr {
         position: relative;
         height: 100%;
         width: 72px;
+
+        @include media-breakpoint-down(sm) {
+          width: 45px;
+        }
 
         &:after {
           content: '';
@@ -3006,9 +3452,15 @@ hr {
 
   &-link {
     display: block;
-    padding: 12px 24px;
+    padding: 12px;
     border-radius: $border-radius-8;
     border: 1px solid $color-gray;
+    width: 62px;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      width: 45px;
+    }
 
     @media all and (hover: hover) {
       &:hover,
@@ -3103,6 +3555,11 @@ hr {
   background: $color-yellow;
   border-radius: $border-radius-32;
   padding: var(--gap-32);
+
+
+  &_text {
+    text-transform: uppercase;
+  }
 }
 
 .advantages-item {
@@ -3139,6 +3596,10 @@ hr {
   gap: 24px 32px;
   height: 100%;
 
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+  }
+
   &-box {
     &_desc {
       max-width: 475px;
@@ -3152,9 +3613,18 @@ hr {
 
   &-medals {
     display: flex;
-    flex-direction: column;
     gap: 24px 18px;
-    flex: 0 0 88px;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: column;
+      flex: 0 0 88px;
+    }
+
+    @include media-breakpoint-down(md) {
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     &_item {
       width: 88px;
@@ -3217,7 +3687,7 @@ hr {
 .about {
   background: $color-green;
   border-radius: $border-radius-32;
-  padding: var(--gap-16);
+  padding: 16px;
   display: flex;
 
   &-img {
@@ -3232,7 +3702,7 @@ hr {
   &-box {
     border-radius: $border-radius-24;
     border: 1px solid $color-green-2;
-    padding: var(--gap-16);
+    padding: 16px;
   }
 
   &_img {
@@ -3240,6 +3710,7 @@ hr {
     img {
       max-width: 100%;
       max-height: 100%;
+      margin: auto;
     }
   }
 
@@ -3286,19 +3757,31 @@ hr {
 .wrap-steps-item {
   $this: &;
   display: flex;
-  width: 52.7%;//650
   position: relative;
+
+  @include media-breakpoint-up(lg) {
+    width: 52.7%;//650
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 80px;
+    z-index: 1;
+  }
 
   &:nth-child(odd) {
     margin-left: auto;
     justify-content: flex-end;
     #{$this}_count {
-      left: 0;
+      @include media-breakpoint-up(lg) {
+        left: 0;
+      }
     }
   }
   &:nth-child(even) {
     #{$this}_count {
-      right: 0;
+      @include media-breakpoint-up(lg) {
+        right: 0;
+      }
     }
   }
 
@@ -3334,15 +3817,24 @@ hr {
     border: 1px solid $color-text;
     width: 64px;
     height: 48px;
-    margin-top: -24px;
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 50%;
     background: $color-light;
     z-index: 1;
+
+    @include media-breakpoint-up(lg) {
+      top: 50%;
+      margin-top: -24px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &_img {
@@ -3373,6 +3865,11 @@ hr {
       left: 50%;
       width: 1px;
       background: $color-text;
+
+      @include media-breakpoint-down(lg) {
+        top: 0;
+        z-index: 0;
+      }
     }
   }
 
@@ -3382,9 +3879,18 @@ hr {
     padding: 16px 16px 16px 32px;
     display: flex;
     gap: 24px;
-    width: 84%;
     position: relative;
     margin-bottom: 16px;
+
+    @include media-breakpoint-up(lg) {
+      width: 84%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      padding: 16px;
+      text-align: center;
+    }
 
     &_text {
       font-family: $font-Roboto-Condensed;
@@ -3394,10 +3900,21 @@ hr {
       max-width: 220px;
       border-radius: $border-radius-24;
       overflow: hidden;
-      flex: 0 0 44%;
+
+      @include media-breakpoint-up(sm) {
+        flex: 0 0 44%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        flex: 0 0 1;
+        max-width: 100%;
+      }
 
       img {
         max-width: 100%;
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
       }
     }
   }
@@ -3416,6 +3933,7 @@ hr {
   &-item {
     padding: var(--gap-16);
     border-radius: $border-radius-16;
+    border: 1px solid $color-text;
     background: $color-white;
     display: flex;
     flex-direction: column;
@@ -3445,13 +3963,10 @@ hr {
 
 /***form-box***/
 
-.section-images-2 {
-  overflow: hidden;
-  padding: 16px 0 110px;
-}
+
 
 .form-box {
-  padding: 75px 0;
+  padding: 75px 24px;
   background: $color-yellow;
   border-radius: $border-radius-32;
   position: relative;
@@ -3462,10 +3977,27 @@ hr {
     &--right {
       right: -7%;
       bottom: 0;
+      @include media-breakpoint-down(xl) {
+        right: -17%;
+      }
+      @include media-breakpoint-down(lg) {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: -80px;
+      }
     }
     &--left {
       left: -7%;
       top: 0;
+      @include media-breakpoint-down(xl) {
+        left: -17%;
+      }
+
+      @include media-breakpoint-down(lg) {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -45px;
+      }
     }
   }
 }
@@ -3494,6 +4026,7 @@ hr {
 
   &_text {
     font-size: 16px;
+    text-transform: uppercase;
   }
 }
 
@@ -3610,12 +4143,22 @@ hr {
   justify-content: space-between;
   .article-item {
     &:last-child {
-      .article-item_img {
-        order: 1;
+
+      @include media-breakpoint-down(lg) {
+        align-items: flex-end;
+      }
+
+      @include media-breakpoint-up(lg) {
+        .article-item_img {
+          order: 1;
+        }
+        .article-item_desc  {
+          order: 0;
+          text-align: right;
+        }
       }
       .article-item_desc  {
-        order: 0;
-        text-align: right ;
+        text-align: right;
       }
     }
   }
@@ -3626,19 +4169,31 @@ hr {
   gap: 16px;
   width: 450px;
 
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+
+  }
+
   &_img {
-    width: 41%;
-    flex: 0 0 41%;
     border-radius: $border-radius-24;
     overflow: hidden;
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      width: 41%;
+      flex: 0 0 41%;
+    }
+
     img {
       width: 100%;
     }
   }
 
   &_desc {
-    width: 59%;
-    flex: 0 0 59%;
+    @include media-breakpoint-up(md) {
+      width: 59%;
+      flex: 0 0 59%;
+    }
   }
 
   &_post {
@@ -3651,6 +4206,10 @@ hr {
   &_title {
     font-size: 32px;
     text-transform: uppercase;
+
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -3794,6 +4353,13 @@ hr {
     &:not(:last-child) {
       margin-bottom: 8px;
     }
+    &.active {
+      pointer-events: none;
+      a {
+        color: $color-gray;
+        opacity: 0.5;
+      }
+    }
 
     a {
       text-transform: uppercase;
@@ -3895,9 +4461,71 @@ hr {
   overflow: hidden;
   @include transition();
 
+  @include media-breakpoint-down(lg) {
+    top: 60px;
+    min-height: calc(100vh - 60px);
+  }
+
   &.show {
     width: 530px;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      top: 60px;
+    }
   }
+
+  .header-nutrition {
+    flex-grow: 0;
+    &__btn {
+      &:not(.collapsed) {
+        border-radius: 12px 12px 0 0;
+      }
+    }
+  }
+
+  .account-box {
+    background: $color-white;
+    padding: 4px;
+  }
+
+  .header-btns {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    border: 1px solid $color-text;
+    padding: 16px;
+    gap: 0;
+    &__item {
+      min-height: 24px;
+      &:not(.collapsed) {
+        &:after {
+          transform: rotateX(180deg);
+        }
+      }
+      &-icon {
+        margin-right: 16px;
+      }
+    }
+  }
+  .lang-list {
+    padding-top: 16px;
+  }
+
+  .drop-menu-contacts {
+    left: 0 !important;
+    right: 0 !important;
+    padding: 1px 0;
+    background: transparent;
+
+    .contact-item_text {
+      gap: 0 !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+  }
+
+
 }
 
 .menu {
@@ -3907,13 +4535,16 @@ hr {
   background: $color-white;
   padding: var(--gap-24);
   right: 0;
-  min-height: 100vh;
-  width: 530px;
+  width: 100%;
   border-radius: 24px 0 0 24px;
   transform: translateX(100%);
   visibility: hidden;
   opacity: 0;
   @include transition();
+
+  @include media-breakpoint-down(lg) {
+    background: $color-light;
+  }
 
   &.show {
     transform: translateX(0);
@@ -3964,6 +4595,27 @@ hr {
   }
 }
 
+.header-mobileMenu {
+  background: $color-white;
+  border-radius: 24px;
+  padding: 16px;
+
+  &_title {
+    text-transform: uppercase;
+    color: $color-gray-2;
+    margin-bottom: 16px;
+  }
+
+  .menu-list {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    li {
+      margin-bottom: 0;
+    }
+  }
+}
+
 /***drop-menu***/
 
 
@@ -3997,6 +4649,7 @@ hr {
 /***modal***/
 
 .modal-dialog-scrollable .modal-content {
+  height: 100%;
   min-height: 600px;
 }
 
@@ -4017,6 +4670,9 @@ hr {
     }
     &--light {
       background: $color-light;
+    }
+    &--yellow {
+      background: $color-yellow;
     }
   }
 
@@ -4069,6 +4725,12 @@ hr {
   }
 }
 
+@include media-breakpoint-down(xl) {
+  .modal-lg, .modal-xl {
+    --bs-modal-width: 98%;
+  }
+}
+
 .line {
   margin: 24px 0;
   text-transform: uppercase;
@@ -4118,6 +4780,14 @@ hr {
   display: grid;
   gap: 8px 16px;
   grid-template-columns: repeat(4, 1fr);
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media-breakpoint-down(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   li {
     a {
       text-transform: uppercase;
@@ -4251,20 +4921,42 @@ hr {
     display: flex;
     justify-content: space-between;
     gap: 16px;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
     &--desc {
       flex-grow: 1;
       padding-bottom: 20px;
+
+      @include media-breakpoint-down(md) {
+        padding-bottom: 0;
+        .btn-site-3 {
+          width: 100%;
+        }
+      }
     }
   }
 
 
+
+
   &_img {
     flex: 0 0 43%;
-    margin-top: -45px;
     display: flex;
     align-items: flex-end;
+
+    @include media-breakpoint-up(md) {
+      margin-top: -45px;
+    }
+
     img {
       max-width: 100%;
+      max-height: 100%;
+
+      @include media-breakpoint-down(md) {
+        flex-direction: column;
+      }
     }
   }
 
@@ -4702,9 +5394,12 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: $border-radius-24;
-  border: 1px solid $color-gray;
   height: 100%;
+
+  @include media-breakpoint-up(xl) {
+    border-radius: $border-radius-24;
+    border: 1px solid $color-gray;
+  }
 
   &_btn {
     border-radius: 8px;
@@ -4714,8 +5409,12 @@ hr {
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     color: $color-gray;
+    @include media-breakpoint-down(xl) {
+      width: 100%;
+    }
 
     &--icon {
       width: 24px;
@@ -4798,6 +5497,10 @@ hr {
     position: relative;
     width: 100%;
 
+    @include media-breakpoint-down(sm) {
+      gap: 4px;
+    }
+
     input {
       display: none;
       &:checked ~ label,
@@ -4840,6 +5543,12 @@ hr {
    border: 1px solid $color-gray;
    cursor: pointer;
    @include transition();
+
+    @include media-breakpoint-down(sm) {
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+    }
   }
 
   &-desc {
@@ -4860,7 +5569,7 @@ hr {
 /***rangeSlider***/
 
 .rangeSlider {
-  background: $color-gray;
+  background: rgba(166, 166, 166, 0.3);
   border-radius: 6px;
   box-shadow: none;
   &__fill {
@@ -4896,15 +5605,46 @@ hr {
   gap: 24px;
   align-items: center;
 
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
   &_title, &_count {
-    flex: 0 0 60px;
     text-transform: uppercase;
     font-size: 16px;
+
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 60px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 50%;
+    }
+  }
+  &_title {
+    @include media-breakpoint-down(sm) {
+      order: 0;
+    }
+  }
+  &_count {
+    @include media-breakpoint-down(sm) {
+      order: 1;
+      text-align: right;
+    }
   }
 
   &_input {
     position: relative;
-    width: calc(100% - 172px);
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      order: 2;
+      margin-top: 4px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      width: calc(100% - 172px);
+    }
     input {
       width: 100%;
     }
@@ -4921,6 +5661,10 @@ hr {
   background: $color-green;
   display: flex;
   justify-content: space-between;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
 
   &_desc {
     padding: var(--gap-24);
@@ -4957,6 +5701,10 @@ hr {
     align-items: flex-end;
     justify-content: flex-end;
 
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+    }
+
     img {
       max-width: 100%;
       margin-left: auto;
@@ -4979,9 +5727,17 @@ hr {
   width: 740px;
   z-index: 9999999;
   padding: 32px;
-  border-radius: 32px 0 0 32px;
   transform: translateX(100%);
   @include transition();
+
+  @include media-breakpoint-up(md) {
+    border-radius: 32px 0 0 32px;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    padding: 16px;
+  }
 
   &.open {
     transform: translateX(0);
@@ -5014,6 +5770,10 @@ hr {
     display: flex;
     gap: 24px;
     margin-bottom: 24px;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 
   &_item {
@@ -5021,25 +5781,52 @@ hr {
     gap: 24px;
     align-items: flex-start;
     margin-bottom: 24px;
+
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+       &:not(:last-child) {
+         padding-bottom: 24px;
+         border-bottom: 1px solid $color-gray-3;
+       }
+    }
   }
 
   &-info {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+    gap: 8px 24px;
     width: 100%;
+    @include media-breakpoint-up(md) {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+
   }
 
   &_col {
 
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
     #{$this}_title {
-      display: none;
+      margin-bottom: 8px;
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
     }
 
     &:first-child {
       flex: 0 0 48%;
       display: flex;
+
+      @include media-breakpoint-down(md) {
+        flex-direction: column;
+        flex: 0 0 100%;
+      }
     }
     &:nth-child(2),
     &:nth-child(3) {
@@ -5117,6 +5904,21 @@ hr {
     margin-bottom: 8px;
     border-radius: 16px;
     overflow: hidden;
+
+    &-buttons {
+      position: relative;
+
+      &:not(.last-slide):before {
+        content: "";
+        position: absolute;
+        z-index: 9;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        width: 50px;
+        background: linear-gradient(to left, rgb(241, 251, 199) 55%, rgba(241, 251, 199, 0));
+      }
+    }
     &_item {
       overflow: hidden;
       border-radius: $border-radius-16;
@@ -5218,8 +6020,14 @@ hr {
 
 .basket-box {
   border-radius: $border-radius-32;
-  padding: var(--gap-32);
+  padding: 32px;
   background: $color-white;
+  @include media-breakpoint-down(md) {
+    padding: 16px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin: 0 -8px;
+  }
 
   &_title {
     padding-bottom: 32px;
@@ -5228,8 +6036,11 @@ hr {
   &_item {
     border-radius: $border-radius-24;
     padding: 32px 32px 8px;
-
     margin-bottom: 32px;
+
+    @include media-breakpoint-down(md) {
+      padding: 16px 16px 8px;
+    }
 
     &.bg-1 {
       background: $color-light;
@@ -5291,6 +6102,10 @@ hr {
     border-top: 0;
     margin: 0 -24px;
 
+    @include media-breakpoint-down(md) {
+      margin: 0 -8px;
+    }
+
     &--title {
       @extend .basket-box_delivery--title;
     }
@@ -5327,8 +6142,8 @@ hr {
 
 .basket-items {
   margin-bottom: 24px;
-  .product-item {
 
+  .product-item {
     &_box {
       flex-grow: 1;
     }
@@ -5338,6 +6153,9 @@ hr {
       flex: 0 0 40px;
       gap: 8px;
       justify-content: space-between;
+      a, button {
+        width: 100%;
+      }
     }
   }
 }
@@ -5377,6 +6195,10 @@ hr {
       flex-grow: 1;
       display: flex;
       justify-content: space-between;
+
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+      }
     }
 
     &--title {
@@ -5409,11 +6231,22 @@ hr {
   display: flex;
   gap: 16px;
 
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
   &_img {
-    width: 147px;
-    flex: 0 0 147px;
+
+    @include media-breakpoint-up(sm) {
+      width: 147px;
+      flex: 0 0 147px;
+    }
+
     img {
       max-width: 100%;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
     }
   }
 
@@ -5448,29 +6281,36 @@ hr {
 }
 
 .basket-sticky {
-  position: sticky;
-  top: 72px;
-  height: fit-content;
+  @include media-breakpoint-up(lg) {
+    flex: 0 0 316px;
+    width: 316px;
+    position: sticky;
+    top: 72px;
+    height: fit-content;
+  }
 }
 
 .basket-total {
   background: $color-green;
   padding: 24px;
-  border-radius: 16px 16px 0 0;
+  border-radius: 16px;
   text-transform: uppercase;
   position: relative;
 
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 16px;
-    background: url("../../images/icons/circle.svg");
-    background-position-x: 3px;
+  @include media-breakpoint-up(lg) {
+    border-radius: 16px 16px 0 0;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 16px;
+      background: url("../../images/icons/circle.svg");
+      background-position-x: 3px;
+    }
   }
+
 
   hr {
     margin: 8px 0;
@@ -5485,18 +6325,30 @@ hr {
 
   &_img {
     position: absolute;
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
     img {
       max-width: 100%;
     }
     &.img-1 {
       top: -32px;
       right: -80px;
+      @media (max-width: 1450px){
+        width: 100px;
+        right: -20px;
+      }
     }
     &.img-2 {
       z-index: -1;
       max-width: 220px;
       bottom: -140px;
       right: -100px;
+      @media (max-width: 1450px){
+        width: 170px;
+        right: -20px;
+        bottom: -160px;
+      }
     }
   }
 
@@ -5612,9 +6464,17 @@ hr {
 
   &_header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 24px;
+
+    @include media-breakpoint-up(sm) {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      gap: 16px;
+    }
 
     &__title {
       text-transform: uppercase;
@@ -5639,6 +6499,10 @@ hr {
         padding: 4px;
         margin-left: 20px;
 
+        @include media-breakpoint-down(sm) {
+          margin-left: auto;
+        }
+
         svg {
           max-width: 100%;
           max-height: 100%;
@@ -5652,6 +6516,11 @@ hr {
     display: flex;
     justify-content: flex-end;
     gap: 16px;
+    @include media-breakpoint-down(sm) {
+      a {
+        flex-grow: 1;
+      }
+    }
   }
 }
 
@@ -5671,6 +6540,10 @@ hr {
 
   &_content {
     padding-left: 35px;
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 30px;
+    }
   }
 
   &_title {
@@ -5780,8 +6653,34 @@ hr {
   display: none;
 }
 
-
 /***choices***/
+
+
+/***filter-box***/
+
+.filter-box {
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid $color-gray;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 0;
+
+  .input-checkbox {
+    width: 50%;
+    padding-right: 15px;
+
+    &:after {
+      display: none;
+    }
+
+    &_box {
+      justify-content: flex-start;
+    }
+  }
+}
+
+/***filter-box***/
 
 
 

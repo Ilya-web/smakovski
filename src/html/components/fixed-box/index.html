@@ -2,61 +2,66 @@
 <!--если блок активный, добавить диву.wrapper класс fixed-box-IsShow-->
 <div class="fixed-box active">
   <div class="container">
-    <div class="row justify-content-between">
-      <div class="col">
-        <div class="fixed-box_info  @@if(context.compound){w-100}">
-          <div class="fixed-box_info__desc">
-            <div class="fixed-box_info__title">Доставка отдельных блюд</div>
-            <div class="fixed-box_info__subtitle">Ем все</div>
-          </div>
+    <div class="row justify-content-between gy-2">
+      <div class="col-xl">
+        <button type="button" class="fixed-box_readMore d-xl-none collapsed" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">детальнее</button>
 
-          <div class="fixed-box_info--right">
+        <div class="collapse" id="collapseExample">
+          <div class="fixed-box_info @@if(context.compound){w-100}" >
+          <div class="d-flex justify-content-between flex-grow-1">
+            <div class="fixed-box_info__desc">
+              <div class="fixed-box_info__title">Доставка отдельных блюд</div>
+              <div class="fixed-box_info__subtitle">Ем все</div>
+            </div>
             <div class="fixed-box_info__btn">
               <a href="#" class="btn-site-3 green-light click-animation">просмотреть набор</a>
             </div>
-
+          </div>
             @@if(context.compound){
-              <div class="compound">
-              <div class="compound_total">
-                <div class="compound_title">всего</div>
-                <div class="compound_count">378 ккал</div>
-              </div>
-              <div class="compound_items">
-                <div class="compound_col">
-                  <div class="compound_title">Белки</div>
-                  <div class="compound_count">15.90 гр</div>
+            <div class="fixed-box_info--right">
+                <div class="compound">
+                <div class="compound_total">
+                  <div class="compound_title">всего за день</div>
+                  <div class="compound_count">378 <span class="compound_title">ккал</span></div>
                 </div>
-                <div class="compound_col">
-                  <div class="compound_title">Жиры</div>
-                  <div class="compound_count">32.20 гр</div>
-                </div>
-                <div class="compound_col">
-                  <div class="compound_title">Углеводы</div>
-                  <div class="compound_count">35.80 гр</div>
+                <div class="compound_items">
+                  <div class="compound_col">
+                    <div class="compound_title">Белки</div>
+                    <div class="compound_count">15.90 <span class="compound_title">грам</span></div>
+                  </div>
+                  <div class="compound_col">
+                    <div class="compound_title">Жиры</div>
+                    <div class="compound_count">32.20 <span class="compound_title">грам</span></div>
+                  </div>
+                  <div class="compound_col">
+                    <div class="compound_title">Углеводы</div>
+                    <div class="compound_count">35.80 <span class="compound_title">грам</span></div>
+                  </div>
                 </div>
               </div>
             </div>
             }
-          </div>
         </div>
-
+        </div>
       </div>
-      <div class="col-auto">
+      <div class="col-xl-auto">
         <div class="busket-small">
-          <div class="busket-small_price">
-            <div class="busket-small_oldPrice">3 600 ₴</div>
-            <div class="busket-small_total">2 900.00 ₴</div>
-          </div>
-          <div class="busket-small_aboutOrder">
-            <div class="busket-small_aboutOrder--item">
-              <div class="busket-small_aboutOrder--title">Вы экономите</div>
-              <div class="busket-small_aboutOrder--count">45.00 ₴</div>
-            </div>
-            <div class="busket-small_aboutOrder--item">
-              <div class="busket-small_aboutOrder--title">цена в день</div>
-              <div class="busket-small_aboutOrder--count">125.00 ₴</div>
-            </div>
-          </div>
+         <div class="d-flex align-items-center justify-content-between">
+           <div class="busket-small_price">
+             <div class="busket-small_oldPrice">3 600 ₴</div>
+             <div class="busket-small_total">2 900.00 ₴</div>
+           </div>
+           <div class="busket-small_aboutOrder">
+             <div class="busket-small_aboutOrder--item">
+               <div class="busket-small_aboutOrder--title">Вы экономите</div>
+               <div class="busket-small_aboutOrder--count">45.00 ₴</div>
+             </div>
+             <div class="busket-small_aboutOrder--item">
+               <div class="busket-small_aboutOrder--title">цена в день</div>
+               <div class="busket-small_aboutOrder--count">125.00 ₴</div>
+             </div>
+           </div>
+         </div>
           <div>
             <a href="#" class="btn-site-3 click-animation">Заказать питание</a>
           </div>

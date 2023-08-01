@@ -10,7 +10,7 @@
     <section class="section">
       <div class="container">
         <div class="row g-3">
-          <div class="col-6">
+          <div class="col-lg-6">
             <div class="sales text-center">
               <div class="sales-icon">
                 <svg>
@@ -33,7 +33,7 @@
                 с утра на следующий день.</div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-lg-6">
             <div class="swiper sales-slider">
               <div class="swiper-wrapper">
 
@@ -62,11 +62,10 @@
 
     <section class="section">
       <div class="container">
-        <div class="row">
-          <div class="col-6">
+        <div class="row g-3">
+          <div class="col-lg-6">
             <div class="nutritionist">
               <h2 class="h2 nutritionist-title">Ваш шеф, <br>Ваш диетолог</h2>
-
               <nav>
                 <div class="nav nutritionist-tabs mb-4" id="nutritionistTab" role="tablist">
                   <button class="nutritionist-link active" id="nutritionist-tab-1" data-bs-toggle="tab" data-bs-target="#nutritionist-1" type="button" role="tab" aria-controls="nutritionist-1" aria-selected="true">01.</button>
@@ -83,7 +82,7 @@
 
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-lg-6">
             <div class="nutritionist-img">
               <img src="images/sales-slider/image-2.jpg" alt="">
             </div>
@@ -98,7 +97,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2 class="h1 mb-32 title-images d-none d-md-block">
+            <h2 class="h1 mb-32 title-images d-none d-lg-block">
               Узнайте все
               <div class="image"><img src="images/title-images/image-1.jpg" alt=""></div>
               <br>
@@ -111,7 +110,7 @@
               <div class="image"><img src="images/title-images/image-4.jpg" alt=""></div>
               Smakovski</h2>
 
-            <h2 class="h1 d-md-none">Узнайте все o здоровом питании вместе со Smakovski</h2>
+            <h2 class="h1 mb-32 d-lg-none">Узнайте все o здоровом питании вместе со Smakovski</h2>
           </div>
         </div>
         <div class="row">
@@ -120,6 +119,41 @@
               <div class="swiper-wrapper">
                 @@loop('components/reviews-item/index.html',
                 'components/reviews-item/bd.json')
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="programModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered">
+              <div class="modal-content modal-content--green">
+                <div class="modal-header mb-1 align-items-center">
+                  <h4 class="reviews-item--program__category">Программа питания</h4>
+
+                  <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="reviews-item--program__title">Slim Balance</div>
+                  <div class="reviews-item--program__subtitle">1000 ккал, 160 г</div>
+                  <div class="reviews-item--program__bottom">
+                    <div class="reviews-item--program__img">
+                      <img src="images/programs/image-4.jpg" alt="">
+                    </div>
+                    <div class="reviews-item--program__footer">
+                      <div class="reviews-item--program__footer--right">
+                        <div class="reviews-item--program__head">Длительность</div>
+                        <div class="reviews-item--program__time">20 дней</div>
+                      </div>
+                      <div class="reviews-item--program__btn">
+                        <form action="#">
+                          <button type="submit" class="btn-site-3 click-animation">Купить</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
