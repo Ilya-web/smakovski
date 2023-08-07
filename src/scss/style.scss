@@ -572,6 +572,10 @@ hr {
   &__body {
     padding: 4px 74px 0 0;
     font-family: $font-Roboto-Condensed;
+
+    @include media-breakpoint-down(sm) {
+      padding-right: 25px;
+    }
   }
 }
 
@@ -599,7 +603,7 @@ hr {
     display: flex;
     gap: 16px;
     overflow-x: auto;
-
+    padding-bottom: 5px;
   }
 
   &-title {

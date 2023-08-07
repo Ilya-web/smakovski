@@ -10501,6 +10501,7 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
+  color: inherit;
 }
 
 /* Firefox */
@@ -11249,6 +11250,11 @@ hr {
   padding: 4px 74px 0 0;
   font-family: "Roboto Condensed", sans-serif;
 }
+@media (max-width: 575.98px) {
+  .accordion-site__body {
+    padding-right: 25px;
+  }
+}
 
 .faq-link {
   padding: 16px;
@@ -11278,6 +11284,7 @@ hr {
   display: flex;
   gap: 16px;
   overflow-x: auto;
+  padding-bottom: 5px;
 }
 .faq-title {
   margin-bottom: 20px;
