@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // passwordBtn  ---------------------------------------------------
-  const passwordBtn = document.querySelectorAll('.input-site-password_icon');
+  const passwordBtn = document.querySelectorAll('.input-site-icon_icon');
   passwordBtn.forEach(btn => {
     btn.addEventListener('click', () => {
       const input = btn.parentElement.querySelector('input');
@@ -213,20 +213,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const parentInput = input.parentElement;
       if(input.value === '') {
         parentInput.classList.remove('active');
-      }
-      console.log(input.value === '')
-    })
-
-    input.addEventListener('input', () => {
-      const parentInput = input.parentElement.querySelector('.input-site-password_icon');
-
-      if(parentInput) {
-        if(input.value !== '') {
-          parentInput.classList.add('visible');
-        }
-        else {
-          parentInput.classList.remove('visible');
-        }
       }
     })
   });

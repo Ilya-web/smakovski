@@ -1,0 +1,442 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    @@include('components/breadcrumb/index.html',
+    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item"><a href="#">Аккаунт</a></li><li class="breadcrumb-site__item" aria-current="page">Мои заказы</li>'}
+    )
+
+    <section class="section section-account">
+      <div class="container">
+        <div class="row gy-3">
+          @@include('components/accountMenu/index.html')
+          <div class="col" id="content-account">
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="accountBg">
+                  <h1 class="h1 mb-2">История заказов</h1>
+
+                  <div class="dropdown selectMobile">
+                    <button class="dropdown-toggle drop-btn d-flex d-xl-none justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="drop-btn_text">Доставка отдельных блюд</span>
+                      <span class="drop-btn_arrow"></span>
+                    </button>
+                    <div class="filter-radioBtns dropdown-menu dropdown-menu--mobile" data-col="3">
+                      <a href="historyOrders.html" class="filter-link active">Доставка отдельных блюд</a>
+                      <a href="historyOrdersPP.html" class="filter-link">Программное питание</a>
+                      <a href="historyOrdersH&E.html" class="filter-link">Heat and eat</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="accountBg">
+                  <div class="order-item">
+                    <div class="row gy-3">
+                      <div class="col col-xl-3">
+                        <div class="order-item_head"># 72323 от 11.09.2022</div>
+                        <div class="order-item_title order-item_title--status order-item_title--status_done">В работе</div>
+                      </div>
+                      <div class="col-auto d-xl-none">
+                        <button type="button" class="order-item_btn collapsed" data-bs-toggle="collapse" data-bs-target="#deliveryCollapse-1" aria-expanded="false" aria-controls="deliveryCollapse-1"></button>
+                      </div>
+                      <div class="col-xl-5">
+                        <div class="row">
+                          <div class="col-7">
+                            <div class="order-item_head">Доставка отдельных блюд</div>
+                            <div class="order-item_title">Ем все</div>
+                          </div>
+                          <div class="col-5">
+                            <div class="order-item_head">Сумма заказа</div>
+                            <div class="order-item_title">2 900.00 ₴</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col d-flex justify-content-end gap-3">
+                        <a href="#" class="btn-site-3 w-100">Повторный заказ</a>
+                        <button type="button" class="order-item_btn d-none d-xl-block" data-bs-toggle="collapse" data-bs-target="#deliveryCollapse-1" aria-expanded="false" aria-controls="deliveryCollapse-1"></button>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="collapse show" id="deliveryCollapse-1">
+
+                        <div class="order-content">
+                          <div class="orderCard-items">
+                            <div class="product-item product-item--row">
+                              <div class="product-item_img">
+                                <picture>
+                                  <source srcset="images/product/image-7.webp" type="image/webp">
+                                  <img src="images/product/image-7.jpg" alt="">
+                                </picture>
+                              </div>
+                              <div class="d-flex flex-column flex-sm-row flex-grow-1 gap-3">
+                                <div class="product-item_box">
+                                  <div class="product-item_header">
+                                    <div class="product-item_header--left">
+                                      <div class="product-item_status product-item_status--updated">
+                                        <div class="product-item_status--icon">
+                                          <svg>
+                                            <use xlink:href="images/icons/sprite.svg#info"></use>
+                                          </svg>
+                                        </div>
+                                        <span>Обновлено</span>
+                                      </div>
+                                      <div class="product-item_category">Завтрак 1</div>
+                                    </div>
+                                    <div class="product-item_composition">
+
+                                      <div class="product-item_composition--item">
+                                        <svg>
+                                          <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                                        </svg>
+                                      </div>
+                                      <div class="product-item_composition--item">
+                                        <svg>
+                                          <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                                        </svg>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                  <div class="product-item_desc mb-2">
+                                    <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                                    <div class="product-item_weight">300/30 г</div>
+                                  </div>
+                                  <div class="product-item_counter">
+                                    <div class="product-item_counter--title">Количество: <span>4</span></div>
+                                    <div class="product-item_counter--status">нет в наличии</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="product-item product-item--row">
+                              <div class="product-item_img">
+                                <picture>
+                                  <source srcset="images/product/image-7.webp" type="image/webp">
+                                  <img src="images/product/image-7.jpg" alt="">
+                                </picture>
+                              </div>
+                              <div class="d-flex flex-column flex-sm-row flex-grow-1 gap-3">
+                                <div class="product-item_box">
+                                  <div class="product-item_header">
+                                    <div class="product-item_header--left">
+                                      <div class="product-item_status product-item_status--updated">
+                                        <div class="product-item_status--icon">
+                                          <svg>
+                                            <use xlink:href="images/icons/sprite.svg#info"></use>
+                                          </svg>
+                                        </div>
+                                        <span>Обновлено</span>
+                                      </div>
+                                      <div class="product-item_category">Завтрак 1</div>
+                                    </div>
+                                    <div class="product-item_composition">
+
+                                      <div class="product-item_composition--item">
+                                        <svg>
+                                          <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                                        </svg>
+                                      </div>
+                                      <div class="product-item_composition--item">
+                                        <svg>
+                                          <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                                        </svg>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                  <div class="product-item_desc mb-2">
+                                    <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                                    <div class="product-item_weight">300/30 г</div>
+                                  </div>
+                                  <div class="product-item_counter">
+                                    <div class="product-item_counter--title">Количество: <span>4</span></div>
+                                    <div class="product-item_counter--status">нет в наличии</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="product-item product-item--row">
+                              <div class="product-item_img">
+                                <picture>
+                                  <source srcset="images/product/image-7.webp" type="image/webp">
+                                  <img src="images/product/image-7.jpg" alt="">
+                                </picture>
+                              </div>
+                              <div class="d-flex flex-column flex-sm-row flex-grow-1 gap-3">
+                                <div class="product-item_box">
+                                  <div class="product-item_header">
+                                    <div class="product-item_header--left">
+                                      <div class="product-item_status product-item_status--sales">
+                                        <div class="product-item_status--icon">
+                                          <svg>
+                                            <use xlink:href="images/icons/sprite.svg#info"></use>
+                                          </svg>
+                                        </div>
+                                        <span>скидка</span>
+                                      </div>
+                                      <div class="product-item_category">Завтрак 1</div>
+                                    </div>
+                                    <div class="product-item_composition">
+
+                                      <div class="product-item_composition--item">
+                                        <svg>
+                                          <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                                        </svg>
+                                      </div>
+                                      <div class="product-item_composition--item">
+                                        <svg>
+                                          <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                                        </svg>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                  <div class="product-item_desc mb-2">
+                                    <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                                    <div class="product-item_weight">300/30 г</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="accountBg">
+                  <div class="order-item">
+
+                    <div class="row gy-3">
+                      <div class="col col-xl-3">
+                        <div class="order-item_head"># 72323 от 11.09.2022</div>
+                        <div class="order-item_title order-item_title--status order-item_title--status_done">Выполнено</div>
+                      </div>
+                      <div class="col-auto d-xl-none">
+                        <button type="button" class="order-item_btn collapsed" data-bs-toggle="collapse" data-bs-target="#deliveryCollapse-2" aria-expanded="false" aria-controls="deliveryCollapse-2"></button>
+                      </div>
+                      <div class="col-xl-5">
+                        <div class="row">
+                          <div class="col-7">
+                            <div class="order-item_head">Доставка отдельных блюд</div>
+                            <div class="order-item_title">Ем все</div>
+                          </div>
+                          <div class="col-5">
+                            <div class="order-item_head">Сумма заказа</div>
+                            <div class="order-item_title">2 900.00 ₴</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col d-flex justify-content-end gap-3">
+                        <a href="#" class="btn-site-3 w-100">Повторный заказ</a>
+                        <button type="button" class="order-item_btn collapsed d-none d-xl-block" data-bs-toggle="collapse"  data-bs-target="#deliveryCollapse-2" aria-expanded="false" aria-controls="deliveryCollapse-2"></button>
+                      </div>
+                    </div>
+                    
+                    <div class="row">
+                      <div class="collapse" id="deliveryCollapse-2">
+                        <div class="order-content">
+                          <div class="orderCard-items">
+                            <div class="product-item product-item--row">
+                              <div class="product-item_img">
+                                <picture>
+                                  <source srcset="images/product/image-7.webp" type="image/webp">
+                                  <img src="images/product/image-7.jpg" alt="">
+                                </picture>
+                              </div>
+                              <div class="d-flex flex-column flex-sm-row flex-grow-1 gap-3">
+                                <div class="product-item_box">
+                                  <div class="product-item_header">
+                                    <div class="product-item_header--left">
+                                      <div class="product-item_status product-item_status--updated">
+                                        <div class="product-item_status--icon">
+                                          <svg>
+                                            <use xlink:href="images/icons/sprite.svg#info"></use>
+                                          </svg>
+                                        </div>
+                                        <span>Обновлено</span>
+                                      </div>
+                                      <div class="product-item_category">Завтрак 1</div>
+                                    </div>
+                                    <div class="product-item_composition">
+
+                                      <div class="product-item_composition--item">
+                                        <svg>
+                                          <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                                        </svg>
+                                      </div>
+                                      <div class="product-item_composition--item">
+                                        <svg>
+                                          <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                                        </svg>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                  <div class="product-item_desc mb-2">
+                                    <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                                    <div class="product-item_weight">300/30 г</div>
+                                  </div>
+                                  <div class="product-item_counter">
+                                    <div class="product-item_counter--title">Количество: <span>4</span></div>
+                                    <div class="product-item_counter--status">нет в наличии</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="product-item product-item--row">
+                              <div class="product-item_img">
+                                <picture>
+                                  <source srcset="images/product/image-7.webp" type="image/webp">
+                                  <img src="images/product/image-7.jpg" alt="">
+                                </picture>
+                              </div>
+                              <div class="d-flex flex-column flex-sm-row flex-grow-1 gap-3">
+                                <div class="product-item_box">
+                                  <div class="product-item_header">
+                                    <div class="product-item_header--left">
+                                      <div class="product-item_status product-item_status--updated">
+                                        <div class="product-item_status--icon">
+                                          <svg>
+                                            <use xlink:href="images/icons/sprite.svg#info"></use>
+                                          </svg>
+                                        </div>
+                                        <span>Обновлено</span>
+                                      </div>
+                                      <div class="product-item_category">Завтрак 1</div>
+                                    </div>
+                                    <div class="product-item_composition">
+
+                                      <div class="product-item_composition--item">
+                                        <svg>
+                                          <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                                        </svg>
+                                      </div>
+                                      <div class="product-item_composition--item">
+                                        <svg>
+                                          <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                                        </svg>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                  <div class="product-item_desc mb-2">
+                                    <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                                    <div class="product-item_weight">300/30 г</div>
+                                  </div>
+                                  <div class="product-item_counter">
+                                    <div class="product-item_counter--title">Количество: <span>4</span></div>
+                                    <div class="product-item_counter--status">нет в наличии</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="product-item product-item--row">
+                              <div class="product-item_img">
+                                <picture>
+                                  <source srcset="images/product/image-7.webp" type="image/webp">
+                                  <img src="images/product/image-7.jpg" alt="">
+                                </picture>
+                              </div>
+                              <div class="d-flex flex-column flex-sm-row flex-grow-1 gap-3">
+                                <div class="product-item_box">
+                                  <div class="product-item_header">
+                                    <div class="product-item_header--left">
+                                      <div class="product-item_status product-item_status--sales">
+                                        <div class="product-item_status--icon">
+                                          <svg>
+                                            <use xlink:href="images/icons/sprite.svg#info"></use>
+                                          </svg>
+                                        </div>
+                                        <span>скидка</span>
+                                      </div>
+                                      <div class="product-item_category">Завтрак 1</div>
+                                    </div>
+                                    <div class="product-item_composition">
+
+                                      <div class="product-item_composition--item">
+                                        <svg>
+                                          <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                                        </svg>
+                                      </div>
+                                      <div class="product-item_composition--item">
+                                        <svg>
+                                          <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                                        </svg>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                  <div class="product-item_desc mb-2">
+                                    <h2 class="product-item_title">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                                    <div class="product-item_weight">300/30 г</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 d-lg-none">
+            <div class="account-info">
+              <div class="account-infoItem">
+                <div class="account-infoItem__icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#order"></use>
+                  </svg>
+                </div>
+                <div class="account-infoItem__title">Диета на завтра? Заказ до 10:00*</div>
+                <div class="account-infoItem__text">* За рабочий день до доставки.</div>
+              </div>
+              <div class="account-infoItem">
+                <div class="account-infoItem__icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#order"></use>
+                  </svg>
+                </div>
+                <div class="account-infoItem__title">Измените свой заказ, когда захотите*</div>
+                <div class="account-infoItem__text">*Вы можете изменить тип диеты, калорийность и адрес доставки после оформления заказа.
+                  Вы можете вносить любые изменения до 10:00 рабочего дня, предшествующего доставке.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('components/footer/index.html')
+
+</div>
+
+<button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+  <span class="callback_icon">
+     <svg>
+    <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+  </svg>
+  </span>
+</button>
+
+@@include('components/modals/index.html')
+
+
+
+@@include('components/scripts/index.html')

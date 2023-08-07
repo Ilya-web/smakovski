@@ -1,6 +1,6 @@
 <div class="swiper-slide">
   <label class="date">
-    <input type="checkbox" @@if(context.checked){checked}>
+    <input type="checkbox" @@if(context.checked){checked} @@if(context.disabled){disabled} >
     <span class="date_box">
     <span class="date_title">@@dateTitle</span>
     <span class="date_day @@if(context.lock){lock}">

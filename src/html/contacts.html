@@ -1,0 +1,110 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            <div class="contacts-box">
+              <h1 class="h1 mb-2">Контакты</h1>
+              <div class="text-uppercase mb-32">Обирай та рухайся до своєї мети. <br> Програми харчування від smakovski — ідеальний варіант для тих, хто </div>
+              <div class="dropdown selectMobile mb-32">
+                <button class="dropdown-toggle drop-btn d-flex d-xl-none justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="drop-btn_text">Ивано-Франковск</span>
+                  <span class="drop-btn_arrow"></span>
+                </button>
+                <div class="filter-radioBtns dropdown-menu dropdown-menu--mobile" data-col="3">
+                  <label class="input-radio">
+                    <input type="radio" name="contact" checked>
+                    <span class="input-radio_box">
+                      <span class="input-radio_label">
+                        <span class="input-radio_label--text">Ивано-Франковск</span>
+                      </span>
+                    </span>
+                  </label>
+                  <label class="input-radio">
+                    <input type="radio" name="contact">
+                    <span class="input-radio_box">
+                      <span class="input-radio_label">
+                        <span class="input-radio_label--text">Львов</span>
+                      </span>
+                    </span>
+                  </label>
+                  <label class="input-radio">
+                    <input type="radio" name="contact">
+                    <span class="input-radio_box">
+                      <span class="input-radio_label">
+                        <span class="input-radio_label--text">Киев</span>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="contacts_title">НАш адрес</div>
+                  <ul class="contacts_list">
+                    <li>м. Івано-Франківськ, <br> вул. Звязкова 6</li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <div class="contacts_title">телефон</div>
+                  <ul class="contacts_list">
+                    <li><a href="tel:+380675050510">+380(67) 505 05 10</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <div class="contacts_title">График работы</div>
+                  <ul class="contacts_list">
+                    <li>пн-пт - 08:00 - 20:00</li>
+                    <li>сб-нд - 09:00 - 20:00</li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <div class="contacts_title">Email</div>
+                  <ul class="contacts_list">
+                    <li><a href="mailto:emotion2goukraine@gmail.com">emotion2goukraine@gmail.com</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-7">
+            <div id="map">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  @@include('components/footer/index.html')
+
+</div>
+
+<button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+  <span class="callback_icon">
+     <svg>
+    <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+  </svg>
+  </span>
+</button>
+
+@@include('components/modals/index.html')
+
+
+
+
+@@include('components/scripts/index.html')

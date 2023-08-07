@@ -204,39 +204,47 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const datesSlider = '.dates-slider';
+  const datesSliderAll = document.querySelectorAll('.wrapper-dates-slider');
+
+
   if(document.querySelector(datesSlider)) {
-    new Swiper(datesSlider, {
-      slidesPerView: "auto",
-      spaceBetween: 8,
-      speed: 300,
-      simulateTouch: false,
-      modules: [Navigation],
-      navigation: {
-        nextEl: `${datesSlider}-next`,
-        prevEl: `${datesSlider}-prev`,
-      },
-      on: {
-        slideChange: function (i) {
-          const nav = document.querySelector(`${datesSlider}-buttons`);
-          if(i.isEnd) {
+    datesSliderAll.forEach(slider => {
+      new Swiper(slider.querySelector('.dates-slider'), {
+        slidesPerView: "auto",
+        spaceBetween: 8,
+        speed: 300,
+        simulateTouch: false,
+        modules: [Navigation],
+        navigation: {
+          nextEl: slider.querySelector(`${datesSlider}-next`),
+          prevEl: slider.querySelector(`${datesSlider}-prev`),
+        },
+        on: {
+          reachEnd: function () {
+            const nav = slider.querySelector(`${datesSlider}-buttons`);
             nav.classList.add('last-slide');
-          }
-          else {
-            nav.classList.remove('last-slide');
-          }
+          },
+          slideChange: function (i) {
+            const nav = slider.querySelector(`${datesSlider}-buttons`);
+            if(!i.isEnd) {
+              nav.classList.remove('last-slide');
+            }
+          },
+          resize: function (i) {
+            const nav = slider.querySelector(`${datesSlider}-buttons`);
+            if(i.isLocked) {
+              nav.classList.add('d-none');
+            }
+            else {
+              nav.classList.remove('d-none');
+            }
+          },
         },
-        resize: function (i) {
-          const nav = document.querySelector(`${datesSlider}-buttons`);
-          if(i.isLocked) {
-            nav.classList.add('d-none');
-          }
-          else {
-            nav.classList.remove('d-none');
-          }
-        },
-      },
-    });
+      });
+    })
   }
+
+
 
   const productCardSlider = '.productCard-slider';
   const productCardThumbs = '.productCard-thumbs-slider';

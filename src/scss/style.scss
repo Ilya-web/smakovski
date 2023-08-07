@@ -426,8 +426,8 @@ hr {
     }
   }
 
-  &-password {
-    padding-right: 50px;
+  &-icon{
+    padding-right: 50px !important;
     &_icon {
       width: 24px;
       height: 24px;
@@ -435,11 +435,6 @@ hr {
       top: 50%;
       right: 16px;
       margin-top: -12px;
-      opacity: 0;
-      @include transition();
-      &.visible {
-        opacity: 1;
-      }
 
       svg {
         max-height: 100%;
@@ -494,6 +489,46 @@ hr {
     white-space: nowrap;
   }
 
+}
+
+.wrap-input-site-2 {
+  display: flex;
+  align-items: center;
+  gap: 4px 16px;
+  @include media-breakpoint-down(xl) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  label {
+    font-weight: 400;
+    color: $color-gray;
+    text-transform: uppercase;
+  }
+
+  .label-row {
+    width: 170px;
+    flex: 0 0 170px;
+
+    @include media-breakpoint-down(xl) {
+      width: auto;
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.input-site-2 {
+  display: inline-flex;
+  border: 1px solid $color-gray;
+  border-radius: $border-radius-8;
+  padding: 12px 16px;
+  position: relative;
+  text-transform: uppercase;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .accordion-site {
@@ -1598,7 +1633,7 @@ hr {
   }
 }
 
-#filterDeliveryTab {
+.default-tabs {
   .delivery-link {
     font-size: 16px;
     &.active {
@@ -2457,7 +2492,6 @@ hr {
     border-radius: $border-radius-8;
     border: 1px solid $color-gray;
     display: grid;
-    background: transparent;
 
     @for $i from 2 through 11 {
       &[data-col="#{$i}"] {
@@ -2467,6 +2501,7 @@ hr {
     &.dropdown-menu {
       overflow: auto;
       max-height: 215px;
+      background: $color-white;
       @include scrollStyle($color-gray-2, rgba(166,166,166,0.5));
     }
   }
@@ -2476,6 +2511,47 @@ hr {
 
     .input-checkbox {
       padding: 0 20px;
+    }
+  }
+
+  &-link {
+    @extend .input-radio_box;
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      &.active {
+        background: $color-green;
+      }
+    }
+
+    @include media-breakpoint-down(xl) {
+      padding-right: 45px;
+      justify-content: flex-start;
+      &:after {
+        display: none;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background: url("../../images/icons/check.svg") no-repeat;
+        opacity: 0;
+        @include transition(0.1s);
+      }
+
+      &.active {
+        &:before {
+          opacity: 1;
+        }
+      }
     }
   }
 }
@@ -2976,6 +3052,23 @@ hr {
       display: none !important;
     }
   }
+
+  &_counter {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    &--title, &--prise {
+      color: $color-gray-2;
+      span {
+        color: $color-text;
+      }
+    }
+
+    &--status {
+      color: $color-red;
+    }
+  }
 }
 
 .compound {
@@ -2983,10 +3076,17 @@ hr {
   justify-content: space-between;
   gap: 24px;
 
+  @include media-breakpoint-down(sm) {
+    gap: 4px;
+  }
+
   &_items {
     display: flex;
     gap: 20px;
     text-transform: uppercase;
+    @include media-breakpoint-down(sm) {
+      gap: 8px;
+    }
   }
 
   &_total {
@@ -3000,6 +3100,9 @@ hr {
   &_count {
     font-size: 16px;
     white-space: nowrap;
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -4399,6 +4502,19 @@ hr {
   }
 }
 
+@mixin icon($color-yellow) {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  padding: 12px;
+  border-radius: 8px;
+  background: $color-yellow;
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
 .account {
   &-box {
     border-radius: $border-radius-16;
@@ -4420,16 +4536,16 @@ hr {
       margin-bottom: 8px;
     }
 
+    &.active {
+      background: $color-white;
+    }
+
     &_icon {
-      width: 48px;
-      height: 48px;
-      padding: 12px;
-      border-radius: 8px;
-      background: $color-yellow;
-      svg {
-        max-width: 100%;
-        max-height: 100%;
-      }
+      @include icon($color-yellow);
+    }
+
+    &_desc {
+      width: 70%;
     }
 
     &_icon-2 {
@@ -4447,6 +4563,9 @@ hr {
 
     &_subtitle {
       color: $color-gray-2;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
   }
 }
@@ -5198,6 +5317,12 @@ hr {
       }
     }
 
+    &.shadow-light {
+      &:after {
+        background: linear-gradient(to left, rgb(241, 251, 199) 55%, rgba(241, 251, 199, 0));
+      }
+    }
+
   }
   .slider-button-prev, .slider-button-next {
     width: 48px;
@@ -5214,7 +5339,7 @@ hr {
 
 .date {
   $this: &;
-  cursor: pointer;
+
 
   &_box {
     border-radius: 8px;
@@ -5223,6 +5348,7 @@ hr {
     flex-direction: column;
     align-items: center;
     padding: 4px;
+    cursor: pointer;
   }
 
   &_title {
@@ -5253,6 +5379,13 @@ hr {
         }
       }
 
+    }
+
+    &:disabled ~ {
+      #{$this}_box {
+        opacity: 0.3;
+        cursor: default;
+      }
     }
   }
 
@@ -5978,6 +6111,9 @@ hr {
       padding: 8px 16px;
       border-radius: 8px;
       background: $color-yellow;
+      @include media-breakpoint-down(sm) {
+        padding: 8px 10px;
+      }
     }
 
     .counter {
@@ -6140,7 +6276,8 @@ hr {
   }
 }
 
-.basket-items {
+.basket-items,
+.orderCard-items{
   margin-bottom: 24px;
 
   .product-item {
@@ -6156,9 +6293,14 @@ hr {
       a, button {
         width: 100%;
       }
+
+      @include media-breakpoint-down(sm) {
+        flex: 0 0 100%;
+      }
     }
   }
 }
+
 
 
 .addProducts {
@@ -6396,6 +6538,10 @@ hr {
   border-radius: 16px;
   border: 1px solid rgba(166, 166, 166, 0.50);
 
+  @include media-breakpoint-down(sm) {
+    padding: 10px;
+  }
+
   &_btn {
     display: flex;
     align-items: center;
@@ -6458,8 +6604,11 @@ hr {
 
   &_item {
     border-top: 1px solid rgba(166, 166, 166, 0.50);
-    border-bottom: 1px solid rgba(166, 166, 166, 0.50);
+
     padding: 24px 0;
+    &:last-of-type {
+      border-bottom: 1px solid rgba(166, 166, 166, 0.50);
+    }
   }
 
   &_header {
@@ -6517,7 +6666,7 @@ hr {
     justify-content: flex-end;
     gap: 16px;
     @include media-breakpoint-down(sm) {
-      a {
+      a, button {
         flex-grow: 1;
       }
     }
@@ -6589,6 +6738,10 @@ hr {
 /***deliveryForm***/
 
 /***choices***/
+
+.choices {
+  width: 100%;
+}
 
 .choices__inner{
   background: transparent;
@@ -6681,6 +6834,387 @@ hr {
 }
 
 /***filter-box***/
+
+/***section-account***/
+
+.section-account {
+  .account {
+    &-box {
+      background: $color-white;
+    }
+    &-item {
+      @include hoverBg($color-light);
+
+      &.active {
+        background: $color-light;
+      }
+
+    }
+  }
+}
+
+.account-info {
+  border-radius: $border-radius-32;
+  background: $color-white;
+  padding: 16px;
+
+  &Item {
+    &:not(:last-of-type) {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid $color-gray;
+    }
+    &__icon {
+      @include icon($color-green);
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      font-size: 32px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      color: $color-green-2;
+      text-transform: uppercase;
+    }
+  }
+}
+
+#accountMenu {
+  width: 316px;
+  flex: 0 0 316px;
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+.accountBg {
+  border-radius: $border-radius-32;
+  background: $color-white;
+  padding: 32px;
+
+  @include media-breakpoint-down(md) {
+    padding: 16px;
+  }
+}
+
+#content-account {
+  width: calc(100% - 316px);
+  flex: 0 0 calc(100% - 316px);
+
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+/***section-account***/
+
+
+/***order-item***/
+
+.order-item {
+  &_head {
+    text-transform: uppercase;
+    color: $color-gray-2;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  &_title {
+    text-transform: uppercase;
+    font-size: 16px;
+
+    &--status {
+      &_done {
+        color: $color-green-2;
+      }
+
+      &_progress {
+        color: $color-orange;
+      }
+    }
+  }
+
+  &_btn {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 6px;
+    border: 1px solid $color-gray;
+    position: relative;
+    @include arrowBtn($color-text,  $right: 50%);
+
+    &:not(.collapsed) {
+      transform: rotateX(180deg);
+    }
+
+    &:after {
+      margin-right: -4px;
+      transition: all ease 0.3s;
+    }
+  }
+}
+
+.order-content {
+  background: $color-light;
+  border-radius: 16px;
+  margin-top: 32px;
+  padding: 16px;
+
+  .compound {
+    border-radius: 8px;
+    background: $color-yellow;
+    padding: 8px 16px;
+    @include media-breakpoint-down(sm) {
+      padding: 8px 10px;
+    }
+  }
+}
+
+.orderCard-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+
+
+/***order-item***/
+
+
+/***orderProgram***/
+
+.orderProgram {
+  &-item {
+    padding: 24px;
+    border-radius: 16px;
+    @include media-breakpoint-down(sm) {
+      padding: 16px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 32px;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-bg1 {
+      background: $color-light;
+    }
+
+    &-bg2 {
+      background: #FFF9E5;
+    }
+
+    &-bg3 {
+      background: $color-light-2;
+    }
+
+    &__title {
+      font-size: 40px;
+      text-transform: uppercase;
+      @include media-breakpoint-down(sm) {
+        font-size: 36px;
+      }
+    }
+
+  }
+}
+
+/***orderProgram***/
+
+/***order-box***/
+
+.order-box {
+
+  &__header {
+    border-top: 1px solid rgba(166, 166, 166, 0.50);
+    padding-top: 16px;
+    margin-top: 16px;
+
+    &--title {
+      font-size: 32px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 24px;
+      }
+    }
+
+    &--programs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      span {
+        font-size: 20px;
+        text-transform: uppercase;
+        @include media-breakpoint-down(md) {
+          font-size: 16px;
+        }
+      }
+
+      &_calories {
+        border-radius: 6px;
+        background: $color-white;
+        padding: 4px 8px;
+        text-transform: uppercase;
+      }
+    }
+
+    &--time {
+      text-transform: uppercase;
+      font-size: 20px;
+      color: $color-gray-2;
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+      }
+
+      span {
+        color: $color-text;
+      }
+    }
+  }
+
+  &__counter {
+    text-transform: uppercase;
+    color: $color-gray-2;
+    font-size: 20px;
+
+    &--current {
+      color: $color-text;
+    }
+    &--all{
+      color: $color-green-2;
+    }
+
+  }
+
+  &__dates {
+    background: $color-white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__footer {
+    border-top: 1px solid rgba(166, 166, 166, 0.50);
+    padding-top: 24px;
+    margin-top: 24px;
+
+    .compound {
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: $color-yellow;
+      @include media-breakpoint-down(sm) {
+        padding: 8px 10px;
+      }
+    }
+  }
+}
+
+/***order-box***/
+
+
+/***accountSocials***/
+
+.accountSocials {
+  border-top: 1px solid rgba(166, 166, 166, 0.50);
+  padding-top: 24px;
+  margin-top: 24px;
+  &_title {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  &-item {
+    padding: 24px;
+    border-radius: 16px;
+    background: $color-light;
+    height: 100%;
+    @include media-breakpoint-down(md) {
+      padding: 16px;
+    }
+
+    &_head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+
+      &--icon {
+        width: 37px;
+        height: 37px;
+        flex: 0 0 37px;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+
+    &_title {
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    &_status {
+      color: $color-gray-2;
+      text-transform: uppercase;
+
+      &--done {
+        color: $color-green-2;
+      }
+    }
+  }
+}
+
+/***accountSocials***/
+
+
+/***contacts-box***/
+
+.contacts-box {
+  border-radius: $border-radius-32;
+  background: $color-yellow;
+  padding: 32px;
+
+  .input-radio_label {
+    font-size: 14px;
+  }
+  .filter-radioBtns.dropdown-menu {
+    @include media-breakpoint-up(xl) {
+      background: transparent;
+    }
+  }
+}
+
+
+.contacts {
+  &_title {
+    @extend .footer-top__menuItem--title;
+  }
+
+  &_list {
+    @extend .footer-top__menuItem--list;
+  }
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+/***contacts-box***/
 
 
 

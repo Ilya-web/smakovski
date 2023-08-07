@@ -1,0 +1,556 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    @@include('components/breadcrumb/index.html',
+    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item"><a href="#">Аккаунт</a></li><li class="breadcrumb-site__item" aria-current="page">Мои заказы</li>'}
+    )
+
+    <section class="section section-account">
+      <div class="container">
+
+        <div class="row gy-3">
+          @@include('components/accountMenu/index.html')
+          <div class="col" id="content-account">
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="accountBg">
+                  <h1 class="h1 mb-32">Личные данные</h1>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <form action="#">
+                        <div class="collapse-item">
+                          <div class="collapse-item_btn collapsed" data-bs-toggle="collapse" data-bs-target="#personal" aria-expanded="false" aria-controls="personal">
+                            <div class="collapse-item_icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#account"></use>
+                              </svg>
+                            </div>
+                            <div class="collapse-item_title">Личные данные</div>
+                            <div class="collapse-item_icon collapse-item_icon--arrow"></div>
+                          </div>
+                          <div class="collapse show" id="personal">
+                            <div class="collapse-box">
+                              <div>
+                                <div class="collapse-box_item">
+                                  <div class="row gy-3">
+                                    <div class="col-12">
+                                      <div class="wrap-input-site-2">
+                                        <label class="label-row">ФИО</label>
+                                        <input type="text" class="input-site-2 w-100" value="Борис Джонсон Буше">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="wrap-input-site-2">
+                                        <label class="label-row">Дата рождения</label>
+                                        <div class="input-site-2 input-site-password input-site-icon">
+                                          <input type="text" class="input-site__input w-100" value="08/12/2022">
+                                          <button type="button" class="input-site-icon_icon">
+                                            <svg>
+                                              <use xlink:href="images/icons/sprite.svg#calendar"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="wrap-input-site-2">
+                                        <label class="label-row">Пол</label>
+                                        <select class="js-choice-no-search w-100">
+                                          <option selected>Мужчина</option>
+                                          <option>Женщина</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="wrap-input-site-2">
+                                        <label class="label-row">Телефон</label>
+                                        <input type="tel" class="input-site-2 w-100" value="+380 (95) 344 23 44">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="wrap-input-site-2">
+                                        <label class="label-row">Почта</label>
+                                        <input type="email" class="input-site-2 w-100" value="sergeykobetc@gmail.com">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="wrap-input-site-2">
+                                        <label class="label-row">Доп. телефон</label>
+                                        <input type="tel" class="input-site-2 w-100" value="+380 (95) 344 23 44">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="wrap-input-site-2">
+                                        <label class="label-row">Почта</label>
+                                        <input type="email" class="input-site-2 w-100" value="sergeykobetc@gmail.com">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="collapse-box_footer">
+                                <button type="submit" class="btn-site-3 click-animation green">Сохранить</button>
+                                <button type="button" class="btn-site-3 click-animation noBg">Отменить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="col-12">
+                      <form action="#">
+                        <div class="collapse-item">
+                          <div class="collapse-item_btn collapsed" data-bs-toggle="collapse" data-bs-target="#deliveryAddress" aria-expanded="false" aria-controls="deliveryAddress">
+                            <div class="collapse-item_icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#delivery"></use>
+                              </svg>
+                            </div>
+                            <div class="collapse-item_title">Адрес доставки</div>
+                            <div class="collapse-item_icon collapse-item_icon--arrow"></div>
+                          </div>
+                          <div class="collapse" id="deliveryAddress">
+                            <div class="collapse-box">
+                              <div>
+                                <div class="collapse-box_item">
+                                  <div class="row g-3">
+                                    <div class="col-12">
+                                      <div class="form-label">Адрес доставки</div>
+                                    </div>
+                                    <div class="col-sm-6 col-xl-3">
+                                      <select class="js-choice">
+                                        <option selected disabled>Вибирите город</option>
+                                        <option>Киев</option>
+                                        <option>Харьков</option>
+                                        <option>Житомер</option>
+                                        <option>Тернопиль</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm-6 col-xl-4">
+                                      <select class="js-choice">
+                                        <option selected disabled>Вибирите улицу</option>
+                                        <option>ул. Богдана хмельницкого-черного,  132</option>
+                                        <option>ул. Багалея, 342</option>
+                                        <option>ул. Станиславского, 2434</option>
+                                        <option>ул. Круглоуниверситетская, 24</option>
+                                        <option>ул. Киевская, 778</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm">
+                                      <div class="wrap-input-site">
+                                        <label class="input-site w-100">
+                                          <span class="input-site__label">Дом</span>
+                                          <input type="text" class="input-site__input">
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm">
+                                      <div class="wrap-input-site">
+                                        <label class="input-site w-100">
+                                          <span class="input-site__label">Квартира</span>
+                                          <input type="text" class="input-site__input">
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm">
+                                      <div class="wrap-input-site">
+                                        <label class="input-site w-100">
+                                          <span class="input-site__label">Этаж</span>
+                                          <input type="text" class="input-site__input">
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="collapse-box_item">
+                                  <div class="row g-3">
+                                    <div class="col-12">
+                                      <div class="form-label">Адрес доставки</div>
+                                    </div>
+                                    <div class="col-sm-6 col-xl-3">
+                                      <select class="js-choice">
+                                        <option selected disabled>Вибирите город</option>
+                                        <option>Киев</option>
+                                        <option>Харьков</option>
+                                        <option>Житомер</option>
+                                        <option>Тернопиль</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm-6 col-xl-4">
+                                      <select class="js-choice">
+                                        <option selected disabled>Вибирите улицу</option>
+                                        <option>ул. Богдана хмельницкого-черного,  132</option>
+                                        <option>ул. Багалея, 342</option>
+                                        <option>ул. Станиславского, 2434</option>
+                                        <option>ул. Круглоуниверситетская, 24</option>
+                                        <option>ул. Киевская, 778</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm">
+                                      <div class="wrap-input-site">
+                                        <label class="input-site w-100">
+                                          <span class="input-site__label">Дом</span>
+                                          <input type="text" class="input-site__input">
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm">
+                                      <div class="wrap-input-site">
+                                        <label class="input-site w-100">
+                                          <span class="input-site__label">Квартира</span>
+                                          <input type="text" class="input-site__input">
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm">
+                                      <div class="wrap-input-site">
+                                        <label class="input-site w-100">
+                                          <span class="input-site__label">Этаж</span>
+                                          <input type="text" class="input-site__input">
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="collapse-box_footer">
+                                <button type="submit" class="btn-site-3 click-animation green">Сохранить</button>
+                                <button type="button" class="btn-site-3 click-animation noBg">Отменить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="col-12">
+                      <form action="#">
+                        <div class="collapse-item">
+                          <div class="collapse-item_btn collapsed" data-bs-toggle="collapse" data-bs-target="#loginPassword" aria-expanded="false" aria-controls="loginPassword">
+                            <div class="collapse-item_icon">
+                              <svg>
+                                <use xlink:href="images/icons/sprite.svg#lock"></use>
+                              </svg>
+                            </div>
+                            <div class="collapse-item_title">Логин и пароль</div>
+                            <div class="collapse-item_icon collapse-item_icon--arrow"></div>
+                          </div>
+                          <div class="collapse" id="loginPassword">
+                            <div class="collapse-box">
+                              <div>
+                                <div class="collapse-box_item">
+                                  <div class="row g-3">
+                                    <div class="col-xl-4">
+                                      <div class="wrap-input-site-2 flex-column align-items-start">
+                                        <label>Пароль</label>
+                                        <div class="input-site-2 input-site-password input-site-icon w-100">
+                                          <input type="password" class="input-site__input">
+                                          <button type="button" class="input-site-icon_icon">
+                                            <svg>
+                                              <use xlink:href="images/icons/sprite.svg#password"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xl-4">
+                                      <div class="wrap-input-site-2 flex-column align-items-start">
+                                        <label>Новый пароль</label>
+                                        <div class="input-site-2 input-site-password input-site-icon w-100">
+                                          <input type="password" class="input-site__input">
+                                          <button type="button" class="input-site-icon_icon">
+                                            <svg>
+                                              <use xlink:href="images/icons/sprite.svg#password"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xl-4">
+                                      <div class="wrap-input-site-2 flex-column align-items-start">
+                                        <label>Повторить новый пароль еще раз</label>
+                                        <div class="input-site-2 input-site-password input-site-icon w-100">
+                                          <input type="password" class="input-site__input">
+                                          <button type="button" class="input-site-icon_icon">
+                                            <svg>
+                                              <use xlink:href="images/icons/sprite.svg#password"></use>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-between">
+                                      <label class="input-checkbox-2 align-items-center">
+                                        <input type="checkbox">
+                                        <span class="input-checkbox-2_icon"></span>
+                                        <span class="input-checkbox-2__label text-uppercase">Запомнить меня</span>
+                                      </label>
+                                      <a href="#" class="text-uppercase">Забыли пароль?</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="collapse-box_footer">
+                                <button type="submit" class="btn-site-3 click-animation green">Сохранить</button>
+                                <button type="button" class="btn-site-3 click-animation noBg">Отменить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="collapse-item">
+                        <div class="collapse-item_btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-item-1" aria-expanded="false" aria-controls="collapse-item-1">
+                          <div class="collapse-item_icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#restaurant"></use>
+                            </svg>
+                          </div>
+                          <div class="collapse-item_title">Указать информацию об аллергии</div>
+                          <div class="collapse-item_icon collapse-item_icon--arrow"></div>
+                        </div>
+                        <div class="collapse" id="collapse-item-1">
+                          <div class="collapse-box">
+                            <div class="collapse-box_header">
+                              <div class="collapse-box_header__title h4">я не вживаю</div>
+                              <div class="collapse-box_header--count">
+                                Исключено: <span class="allergen-count">0</span>
+                                <button type="button" class="collapse-box_header--count-clear allergen-count-clear">
+                                  <svg>
+                                    <use xlink:href="images/icons/sprite.svg#close"></use>
+                                  </svg>
+                                </button>
+                              </div>
+
+                            </div>
+                            <div>
+                              <div class="collapse-box_item">
+                                <div class="row gy-4">
+                                  <div class="col-6 col-md-4 col-lg-3">
+                                    <label class="input-checkbox allergen-input ">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6 col-md-4 col-lg-3">
+                                    <label class="input-checkbox allergen-input ">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Грецкий орех</span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6 col-md-4 col-lg-3">
+                                    <label class="input-checkbox allergen-input ">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6 col-md-4 col-lg-3">
+                                    <label class="input-checkbox allergen-input ">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6 col-md-4 col-lg-3">
+                                    <label class="input-checkbox allergen-input ">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6 col-md-4 col-lg-3">
+                                    <label class="input-checkbox allergen-input ">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Грецкий орех</span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6 col-md-4 col-lg-3">
+                                    <label class="input-checkbox allergen-input ">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6 col-md-4 col-lg-3">
+                                    <label class="input-checkbox allergen-input ">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6 col-md-4 col-lg-3">
+                                    <label class="input-checkbox allergen-input ">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6 col-md-4 col-lg-3">
+                                    <label class="input-checkbox allergen-input ">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Грецкий орех</span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6 col-md-4 col-lg-3">
+                                    <label class="input-checkbox allergen-input ">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                  <div class="col-6 col-md-4 col-lg-3">
+                                    <label class="input-checkbox allergen-input ">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="collapse-box_footer">
+                              <button type="button" class="btn-site-3 green">Сохранить</button>
+                              <button type="button" class="btn-site-3 noBg">Отменить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="accountSocials">
+                        <div class="row g-3">
+                          <div class="col-12">
+                            <div class="accountSocials_title">Связать учетную запись c smakovski</div>
+                          </div>
+                          <div class="col-6">
+                            <div class="accountSocials-item">
+                              <div class="accountSocials-item_head">
+                                <div class="accountSocials-item_head--icon">
+                                  <img src="images/icons/facebook.png" alt="">
+                                </div>
+                                <label class="input-checkbox-2 align-items-center">
+                                  <input type="checkbox">
+                                  <span class="input-checkbox-2_icon mx-0"></span>
+                                </label>
+                              </div>
+                              <div class="accountSocials-item_title">Facebook</div>
+                              <div class="accountSocials-item_status">Связать с социальной сетью</div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="accountSocials-item">
+                              <div class="accountSocials-item_head">
+                                <div class="accountSocials-item_head--icon">
+                                  <img src="images/icons/google.png" alt="">
+                                </div>
+                                <label class="input-checkbox-2 align-items-center">
+                                  <input type="checkbox" checked>
+                                  <span class="input-checkbox-2_icon mx-0"></span>
+                                </label>
+                              </div>
+                              <div class="accountSocials-item_title">Google</div>
+                              <div class="accountSocials-item_status accountSocials-item_status--done">Связяно</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row mt-4">
+                          <div class="col-12">
+                            <button type="button" class="btn-site-3 noBg w-100">Выход</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 d-lg-none">
+            <div class="account-info">
+              <div class="account-infoItem">
+                <div class="account-infoItem__icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#order"></use>
+                  </svg>
+                </div>
+                <div class="account-infoItem__title">Диета на завтра? Заказ до 10:00*</div>
+                <div class="account-infoItem__text">* За рабочий день до доставки.</div>
+              </div>
+              <div class="account-infoItem">
+                <div class="account-infoItem__icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#order"></use>
+                  </svg>
+                </div>
+                <div class="account-infoItem__title">Измените свой заказ, когда захотите*</div>
+                <div class="account-infoItem__text">*Вы можете изменить тип диеты, калорийность и адрес доставки после оформления заказа.
+                  Вы можете вносить любые изменения до 10:00 рабочего дня, предшествующего доставке.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('components/footer/index.html')
+
+</div>
+
+<button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+  <span class="callback_icon">
+     <svg>
+    <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+  </svg>
+  </span>
+</button>
+
+@@include('components/modals/index.html')
+
+
+
+@@include('components/scripts/index.html')

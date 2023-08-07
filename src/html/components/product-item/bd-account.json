@@ -1,0 +1,61 @@
+[
+  {
+    "grid": true,
+    "imgUrl": "image-7.jpg",
+    "category": "Завтрак 1",
+    "updated": true,
+    "veganCircle": true,
+    "setMeal": true,
+    "title": "Гречана локшина Soba з курячим філе Sous Vide та грибами",
+    "weight": "300/30 г"
+  },
+  {
+    "grid":  true,
+    "imgUrl": "image-7.jpg",
+    "category": "Завтрак 1",
+    "hit": true,
+    "veganCircle": true,
+    "setMeal": true,
+    "title": "Гречана локшина Soba",
+    "weight": "300/30 г"
+  },
+  {
+    "grid":  true,
+    "imgUrl": "image-7.jpg",
+    "category": "Завтрак 1",
+    "new": true,
+    "drink": true,
+    "energy": true,
+    "title": "Гречана локшина Soba",
+    "weight": "300/30 г"
+  },
+  {
+    "grid":  true,
+    "imgUrl": "image-7.jpg",
+    "category": "Поkдник",
+    "sales": true,
+    "drink": true,
+    "energy": true,
+    "title": "Гречана локшина Soba з курячим філе Sous Vide та грибами",
+    "weight": "300/30 г"
+  },
+  {
+    "grid":  true,
+    "imgUrl": "image-7.jpg",
+    "category": "ужин",
+    "drink": true,
+    "energy": true,
+    "title": "Гречана локшина Soba з курячим філе Sous Vide та грибами",
+    "weight": "300/30 г"
+  },
+  {
+    "grid":  true,
+    "imgUrl": "image-7.jpg",
+    "category": "Поkдник",
+    "sales": true,
+    "drink": true,
+    "energy": true,
+    "title": "Гречана локшина Soba з курячим філе Sous Vide та грибами",
+    "weight": "300/30 г"
+  }
+]
