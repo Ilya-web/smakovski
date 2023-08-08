@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination, Thumbs } from "swiper";
+import Swiper, { Navigation, Pagination, Thumbs, EffectFade} from "swiper";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -71,8 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if(document.querySelector(reviewsSlider)) {
     new Swiper(reviewsSlider, {
       slidesPerView: 1,
-      speed: 800,
-      modules: [Navigation],
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      modules: [Navigation, EffectFade],
       navigation: {
         nextEl: `${reviewsSlider}-next`,
         prevEl: `${reviewsSlider}-prev`,

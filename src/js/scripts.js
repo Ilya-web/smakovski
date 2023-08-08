@@ -3,34 +3,50 @@ import { Tooltip, Modal } from "bootstrap";
 
 
 // loader-------------------------------------------------------------
-// const bar = document.querySelector(".loader-progress-bar_bar");
-// const loader = document.querySelector(".loader");
-// let startWidth = 0;
-// const endWidth = bar.dataset.size;
-// const interval = setInterval(frame, 40);
-//
-// function frame() {
-//   if (startWidth >= endWidth) {
-//     clearInterval(interval);
-//   } else {
-//     startWidth++;
-//     bar.style.width = `${endWidth}%`;
-//     document.querySelector('.loader-progress-bar_perс').innerText = `${startWidth}%`;
-//   }
-// }
+const bar = document.querySelector(".loader-progress-bar_bar");
+const loader = document.querySelector(".loader");
+let startWidth = 0;
+const endWidth = bar.dataset.size;
+const interval = setInterval(frame, 40);
+
+function frame() {
+  if (startWidth >= endWidth) {
+    clearInterval(interval);
+  } else {
+    startWidth++;
+    bar.style.width = `${endWidth}%`;
+    document.querySelector('.loader-progress-bar_perс').innerText = `${startWidth}%`;
+  }
+}
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  // setTimeout(() => {
-  //   loader.classList.add('loaded');
-  // },2000)
+  setTimeout(() => {
+    loader.classList.add('loaded');
+  },2000)
 
 
   // const thanks = new Modal('#modalReviewProgram');
   //
   // thanks.show()
+
+
+  //deliveryType--------------------------------------------------
+  const deliveryType = document.querySelectorAll('.deliveryType-js');
+  deliveryType.forEach(item => {
+    const input = item.querySelector('input[type="radio"]');
+
+    input.addEventListener('change', () => {
+      deliveryType.forEach(item => {
+        item.classList.remove('active')
+      });
+      if(input.checked) {
+        item.classList.add('active')
+      }
+    })
+  })
 
   //allergen-count------------------------------------------------
   const allergenInput = document.querySelectorAll('.allergen-input');
@@ -62,8 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-
-
   //addProducts----------------------------------------------------
   const addProducts = document.querySelectorAll('.addProducts');
 
@@ -80,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       })
     }
-
   })
 
 
@@ -126,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // counter  --------------------------------------------------------
   const counter = document.querySelectorAll('.counter');
-
   counter.forEach(c => {
    const plus = c.querySelector('.counter-plus');
    const minus = c.querySelector('.counter-minus');
@@ -167,16 +179,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // passwordBtn  ---------------------------------------------------
-  const passwordBtn = document.querySelectorAll('.input-site-icon_icon');
+  const passwordBtn = document.querySelectorAll('.passwordVisible');
   passwordBtn.forEach(btn => {
     btn.addEventListener('click', () => {
       const input = btn.parentElement.querySelector('input');
+      const iconPassword = btn.parentElement.querySelector('.passwordVisible svg use');
+      const iconPasswordUrl = iconPassword.getAttribute('xlink:href');
+      const res = iconPasswordUrl.split('#');
 
       if(input.getAttribute('type') === 'password') {
         input.setAttribute('type', 'text');
+        iconPassword.setAttribute('xlink:href', res[0]+ '#password-2');
       }
+
       else if(input.getAttribute('type') === 'text') {
         input.setAttribute('type', 'password');
+        iconPassword.setAttribute('xlink:href', res[0]+ '#password');
       }
     })
   })
@@ -207,54 +225,16 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener('focus', () =>{
       const parentInput = input.parentElement;
       parentInput.classList.add('active');
+      parentInput.classList.add('focus');
     })
 
     input.addEventListener('blur', () =>{
       const parentInput = input.parentElement;
+      parentInput.classList.remove('focus');
       if(input.value === '') {
         parentInput.classList.remove('active');
       }
     })
   });
-
-
-
-  //
-  // const openMenu = () => {
-  //   const btnsMenu = document.querySelectorAll('.btnOpenMenu');
-  //   btnsMenu.forEach(btn => {
-  //     btn.addEventListener('click', () => {
-  //       const btnDataId = btn.getAttribute('data-btn');
-  //       const dropMenu = document.getElementById(btnDataId);
-  //
-  //       if(dropMenu.classList.contains('active')) {
-  //         dropMenu.classList.remove('active');
-  //       }
-  //       else {
-  //         dropMenu.classList.add('active');
-  //       }
-  //     })
-  //   })
-  // }
-  // openMenu()
-  //
-  //
-  //
-  //
-  // const closeMenu = (menuId, btn) => {
-  //   document.addEventListener( 'click', (e) => {
-  //     const menu = e.composedPath().includes(menuId);
-  //     const btn = e.composedPath().includes(btn);
-  //
-  //     if (!menu) {
-  //       menuId.classList.remove('active')
-  //     }
-  //   })
-  // }
-  //
-  // closeMenu()
-
-
-
 
 });

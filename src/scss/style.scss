@@ -187,6 +187,17 @@ hr {
     max-width: 100%;
     max-height: 100%;
     fill: $color-gray;
+    @include transition();
+  }
+
+  @media all and (hover: hover) {
+    &:hover,
+    &:focus-visible {
+      svg {
+        fill: $color-text;
+      }
+
+    }
   }
 }
 
@@ -389,7 +400,7 @@ hr {
   width: 40px;
   height: 40px;
   border-radius: $border-radius-8;
-  padding: 8px;
+  padding: 12px;
   background: $color-orange;
 
   @include transition();
@@ -413,6 +424,10 @@ hr {
   border-radius: $border-radius-8;
   padding: 21px 16px 5px;
   position: relative;
+
+  &.focus {
+    border-color: $color-green-2;
+  }
 
   &-error {
     border-color: $color-red;
@@ -487,6 +502,7 @@ hr {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    text-transform: uppercase;
   }
 
 }
@@ -529,6 +545,10 @@ hr {
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
+
+  &.focus {
+    border-color: $color-green-2;
+  }
 }
 
 .accordion-site {
@@ -591,7 +611,17 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include transition();
 
+    &:not(.active) {
+      @media all and (hover: hover) {
+        &:hover,
+        &:focus-visible {
+          color: $color-gray;
+          border-color: $color-gray;
+        }
+      }
+    }
 
     &.active {
       background: $color-green;
@@ -694,6 +724,14 @@ hr {
         #{$this}_label--text {
           color: $color-gray;
         }
+      }
+    }
+
+    &:not(:checked) {
+      & ~ #{$this}_box {
+       &:hover {
+         color: $color-gray;
+       }
       }
     }
   }
@@ -903,11 +941,12 @@ hr {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 12px;
-      height: 9px;
+      width: 20px;
+      height: 20px;
       transform: translate(-50%, -50%);
-      mask: url("../../images/icons/check-2.svg");
+      mask: url("../../images/icons/check.svg");
       mask-repeat: no-repeat;
+      mask-size: 100%;
       background: $color-white;
       opacity: 0;
       @include transition(0.2s);
@@ -1005,6 +1044,8 @@ hr {
     gap: 4px;
   }
 
+
+
   &-btns {
     display: flex;
     gap: $gap;
@@ -1018,6 +1059,7 @@ hr {
       text-transform: uppercase;
       white-space: nowrap;
       @include arrowBtn($color-gray);
+      @include transition();
 
       &-icon {
         width: 24px;
@@ -1035,7 +1077,18 @@ hr {
         }
       }
     }
+
+    &__contacts-btn {
+      @media all and (hover: hover) {
+        &:hover,
+        &:focus-visible {
+          color: $color-green-2;
+        }
+      }
+    }
   }
+
+
 
   &-lang {
 
@@ -1065,6 +1118,14 @@ hr {
       padding: 12px 32px 12px 16px;
       border-radius: $border-radius-12;
       @include transition(0.2s);
+
+      @media all and (hover: hover) {
+        &:hover,
+        &:focus-visible {
+          background: $color-yellow_hover;
+        }
+      }
+
       &.show {
         border-radius: 12px 12px 0 0;
       }
@@ -1084,9 +1145,18 @@ hr {
   &-account {
     &__btn {
       background: $color-yellow;
-      border-radius: $border-radius-12;
+      border-radius: $border-radius-8;
       width: 40px;
       height: 40px;
+      @include transition();
+
+      @media all and (hover: hover) {
+        &:hover,
+        &:focus-visible {
+          background: $color-yellow_hover;
+        }
+      }
+
       &:after {
         display: none;
       }
@@ -1103,9 +1173,17 @@ hr {
     gap: 4px;
     align-items: center;
     background: $color-yellow;
-    border-radius: $border-radius-12;
+    border-radius: $border-radius-8;
     text-transform: uppercase;
     padding: 8px;
+    @include transition();
+
+    @media all and (hover: hover) {
+      &:hover,
+      &:focus-visible {
+        background: $color-yellow_hover;
+      }
+    }
 
     @include media-breakpoint-down(lg) {
       flex-grow: 1;
@@ -1569,10 +1647,21 @@ hr {
     padding: 12px;
     border-radius: $border-radius-8;
     flex: 1 0 0;
+    @include transition();
     &.active {
       background: $color-yellow;
       border-color: $color-yellow;
     }
+
+   &:not(.active) {
+     @media all and (hover: hover) {
+       &:hover,
+       &:focus-visible {
+         color: $color-gray;
+         border-color: $color-gray;
+       }
+     }
+   }
   }
 
   &-content {
@@ -1682,10 +1771,18 @@ hr {
     align-items: center;
     justify-content: center;
     width: 100%;
-    text-transform: uppercase;
-    font-size: 16px;
-    text-decoration: underline;
+    a {
+      text-transform: uppercase;
+      font-size: 16px;
+      text-decoration: underline;
 
+      @media all and (hover: hover) {
+        &:hover,
+        &:focus-visible {
+          color: $color-gray;
+        }
+      }
+    }
   }
 
   .compound {
@@ -1974,7 +2071,7 @@ hr {
     }
 
     &__img {
-      flex:0 0 20%;
+      flex:0 0 17%;
       @include media-breakpoint-down(md) {
         flex:0 0 100%;
       }
@@ -2268,6 +2365,7 @@ hr {
       padding: 24px;
       border: 1px solid $color-text;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 8px 24px;
@@ -2304,6 +2402,7 @@ hr {
       width: 100%;
       border-radius: $border-radius-8;
       border: 1px solid $color-text;
+      text-transform: uppercase;
       @include arrowBtn(16px);
 
       &.whiteBg {
@@ -2399,6 +2498,13 @@ hr {
     @include media-breakpoint-down(sm) {
       padding: 24px;
     }
+  }
+
+  .drop-menu-contacts {
+    top: auto !important;
+    bottom: calc(100% + 16px) !important;
+    left: 0 !important;
+    right: 0 !important;
   }
 
 }
@@ -2573,9 +2679,31 @@ hr {
   position: relative;
   font-size: 16px;
 
+
+  @media all and (hover: hover) {
+    &:hover,
+    &:focus-visible {
+      #{$this}_arrow {
+        background: $color-gray;
+      }
+    }
+  }
+
+  &.show {
+    #{$this}_arrow {
+      background: $color-gray;
+
+      &:after {
+        transform: rotateX(180deg) translateX(50%);
+      }
+    }
+  }
+
   &.noArrow {
     padding: 12px 16px;
   }
+
+
 
   &:after {
     display: none;
@@ -2652,6 +2780,7 @@ hr {
     right: 4px;
     bottom: 4px;
     @include arrowBtn( $color-text, $right: 50%);
+    @include transition();
     &:after {
       transform: translateX(50%);
     }
@@ -2664,10 +2793,6 @@ hr {
     display: block;
 
     &:not(&--border) {
-
-      //&:not(:last-child) {
-      //  border-bottom: 1px solid $color-gray-3;
-      //}
 
       input {
         &:checked {
@@ -2997,7 +3122,7 @@ hr {
     @media all and (hover: hover) {
       &:hover,
       &:focus-visible {
-        color: $color-green_hover;
+        color: $color-green-2;
       }
     }
   }
@@ -3080,7 +3205,7 @@ hr {
   justify-content: space-between;
   gap: 24px;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     gap: 4px;
   }
 
@@ -3088,7 +3213,7 @@ hr {
     display: flex;
     gap: 20px;
     text-transform: uppercase;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       gap: 8px;
     }
   }
@@ -3104,7 +3229,7 @@ hr {
   &_count {
     font-size: 16px;
     white-space: nowrap;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       font-size: 14px;
     }
   }
@@ -3221,6 +3346,9 @@ hr {
       font-size: 20px;
       display: flex;
       flex-direction: column;
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+      }
     }
 
     @include media-breakpoint-up(md) {
@@ -3264,6 +3392,7 @@ hr {
 
   &_total {
     font-size: 24px;
+    white-space: nowrap;
   }
 
   &_aboutOrder {
@@ -3280,6 +3409,10 @@ hr {
     &--title {
       text-transform: uppercase;
       color: $color-gray;
+    }
+
+    &--count {
+      white-space: nowrap;
     }
   }
 }
@@ -4146,6 +4279,12 @@ hr {
   border-radius: $border-radius-32;
   border: 1px solid $color-text;
   padding: var(--gap-32);
+
+  .filter-radioBtns.dropdown-menu {
+    @include media-breakpoint-up(xl) {
+      background: transparent;
+    }
+  }
 }
 
 /***blog-filter***/
@@ -4440,6 +4579,13 @@ hr {
       display: flex;
       gap: 16px;
       text-transform: uppercase;
+
+      @media all and (hover: hover) {
+        &:hover,
+        &:focus-visible {
+          color: $color-green-2;
+        }
+      }
     }
   }
 
@@ -4470,6 +4616,12 @@ hr {
 
     a {
       text-transform: uppercase;
+      @media all and (hover: hover) {
+        &:hover,
+        &:focus-visible {
+          color: $color-green-2;
+        }
+      }
     }
   }
 }
@@ -4478,6 +4630,12 @@ hr {
   display: flex;
   text-transform: uppercase;
   gap: 16px;
+  @media all and (hover: hover) {
+    &:hover,
+    &:focus-visible {
+      color: $color-green-2;
+    }
+  }
 
   &:not(:last-child) {
     margin-bottom: 16px;
@@ -4486,6 +4644,7 @@ hr {
   &_icon {
     width: 24px;
     height: 24px;
+    flex: 0 0 24px;
     svg {
       max-width: 100%;
       max-height: 100%;
@@ -4693,6 +4852,12 @@ hr {
       }
       a {
         text-transform: uppercase;
+        @media all and (hover: hover) {
+          &:hover,
+          &:focus-visible {
+            color: $color-green-2;
+          }
+        }
       }
     }
   }
@@ -4841,9 +5006,23 @@ hr {
     padding: 11px;
     border-radius: 8px;
     border: 1px solid $color-gray;
+    @include transition();
     svg {
+      @include transition();
       max-height: 100%;
       max-width: 100%;
+      fill: $color-gray;
+    }
+
+    @media all and (hover: hover) {
+      &:hover,
+      &:focus-visible {
+        border-color: $color-text;
+
+        svg {
+          fill: $color-text;
+        }
+      }
     }
   }
 }
@@ -4914,6 +5093,13 @@ hr {
   li {
     a {
       text-transform: uppercase;
+
+      @media all and (hover: hover) {
+        &:hover,
+        &:focus-visible {
+          color: $color-green-2;
+        }
+      }
     }
   }
 }
@@ -4997,26 +5183,31 @@ hr {
       transform: translate(-50%, -50%);
       width: 24px;
       height: 24px;
+      mask-repeat: no-repeat;
+      background: $color-gray-2;
+      @include transition();
+    }
 
+    @media all and (hover: hover) {
+      &:hover,
+      &:focus-visible {
+        &:after {
+          background: $color-text;
+        }
+      }
     }
   }
 
   &-minus {
     &:after {
       mask: url("../../images/icons/minus.svg");
-      mask-repeat: no-repeat;
-      background: $color-gray-2;
     }
-
   }
 
   &-plus {
     &:after {
       mask: url("../../images/icons/plus.svg");
-      mask-repeat: no-repeat;
-      background: $color-text;
     }
-
   }
 
   input {
@@ -5129,6 +5320,28 @@ hr {
     &--green {
       background: $color-green;
       padding: 16px;
+      .drop-btn {
+        border-color: $color-green_hover;
+
+        @media all and (hover: hover) {
+          &:hover,
+          &:focus-visible {
+            .drop-btn_arrow {
+              background: $color-green_hover;
+            }
+          }
+        }
+
+        &.show {
+          .drop-btn_arrow {
+            background: $color-green_hover;
+          }
+        }
+        &_arrow {
+          background: #AFCC00;
+        }
+
+      }
     }
   }
 
@@ -5322,7 +5535,7 @@ hr {
     }
 
     &.shadow-light {
-      &:after {
+      &:before {
         background: linear-gradient(to left, rgb(241, 251, 199) 55%, rgba(241, 251, 199, 0));
       }
     }
@@ -5353,6 +5566,9 @@ hr {
     align-items: center;
     padding: 4px;
     cursor: pointer;
+    @include transition();
+
+
   }
 
   &_title {
@@ -5389,6 +5605,14 @@ hr {
       #{$this}_box {
         opacity: 0.3;
         cursor: default;
+      }
+    }
+
+    &:not(:checked) {
+      & ~ #{$this}_box {
+        &:hover {
+          color: $color-gray;
+        }
       }
     }
   }
@@ -5533,9 +5757,10 @@ hr {
   align-items: center;
   height: 100%;
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(md) {
     border-radius: $border-radius-24;
     border: 1px solid $color-gray;
+    padding: 32px;
   }
 
   &_btn {
@@ -5549,8 +5774,16 @@ hr {
     justify-content: center;
     gap: 16px;
     color: $color-gray;
-    @include media-breakpoint-down(xl) {
+    @include transition();
+    @include media-breakpoint-down(md) {
       width: 100%;
+    }
+
+    @media all and (hover: hover) {
+      &:hover,
+      &:focus-visible {
+        color: $color-text;
+      }
     }
 
     &--icon {
@@ -6115,7 +6348,7 @@ hr {
       padding: 8px 16px;
       border-radius: 8px;
       background: $color-yellow;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         padding: 8px 10px;
       }
     }
@@ -6684,18 +6917,27 @@ hr {
 
 .deliveryForm {
   border-radius: 24px;
-  border: 1px solid $color-gray;
+  border: 1px solid transparent;
   padding: var(--gap-24);
 
-  &--noBorder {
-    border: 0;
+  &.active {
+    border-color: $color-gray;
+    .deliveryForm_content--hidden {
+      height: 100%;
+      overflow: visible;
+    }
   }
 
   &_content {
-    padding-left: 35px;
+    padding-left: 40px;
 
     @include media-breakpoint-down(sm) {
       padding-left: 30px;
+    }
+
+    &--hidden {
+      height: 0;
+      overflow: hidden;
     }
   }
 
@@ -6973,7 +7215,7 @@ hr {
     border-radius: 8px;
     background: $color-yellow;
     padding: 8px 16px;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding: 8px 10px;
     }
   }
@@ -7117,7 +7359,7 @@ hr {
       padding: 8px 16px;
       border-radius: 8px;
       background: $color-yellow;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         padding: 8px 10px;
       }
     }
@@ -7219,6 +7461,69 @@ hr {
   width: 100%;
 }
 /***contacts-box***/
+
+
+/***error***/
+
+.section-error {
+  margin-bottom: 80px;
+}
+.error {
+  text-align: center;
+  &__title {
+    font-size: clamp(200px, 31.6vw, 400px);
+    line-height: 1.1;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    @extend .h1;
+  }
+
+  &__text {
+    font-size: 24px;
+    color: $color-gray-2;
+    text-transform: uppercase;
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+    }
+  }
+
+  &-menu {
+    margin-top: 13vh;
+    text-align: left;
+    &__title {
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    &__list {
+      @include reset-ul();
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 32px;
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+      }
+      li {
+        a {
+          text-transform: uppercase;
+          color: $color-gray-2;
+          text-decoration: underline;
+          @media all and (hover: hover) {
+            &:hover,
+            &:focus-visible {
+              color: $color-text;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/***error***/
 
 
 

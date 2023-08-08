@@ -1,4 +1,5 @@
 @@include('components/head/index.html', {'title': 'Smakovski'})
+@@include('components/loader/index.html')
 
 <div class="wrapper">
 
@@ -257,14 +258,6 @@
                           </div>
                         </div>
                       </div>
-                      <div class="addProducts">
-                        <div class="addProducts_header">
-                          <div class="addProducts_header--desc">
-                            <div class="addProducts_header--title">Добавить к заказу</div>
-                            <div class="addProducts_header--subtitle">Добавлено: 0</div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
 
                     <div class="basket-item-row line-bottom">
@@ -321,16 +314,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="addProducts">
-                        <div class="addProducts_header">
-                          <div class="addProducts_header--desc">
-                            <div class="addProducts_header--title">Добавить к заказу</div>
-                            <div class="addProducts_header--subtitle">Добавлено: 0</div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-
                   </div>
 
                   <div>
@@ -453,7 +437,7 @@
                         <div class="addProducts_header">
                           <div class="addProducts_header--desc">
                             <div class="addProducts_header--title">Добавить к заказу</div>
-                            <div class="addProducts_header--subtitle">ДОБАВЛЕНО: 0</div>
+                            <div class="addProducts_header--subtitle">ДОБАВЛЕНО: 2</div>
                           </div>
                         </div>
                         <div class="collapse show">
@@ -546,14 +530,6 @@
                                 <div class="product-item_price">5 900.00 ₴</div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="addProducts">
-                        <div class="addProducts_header">
-                          <div class="addProducts_header--desc">
-                            <div class="addProducts_header--title">Добавить к заказу</div>
-                            <div class="addProducts_header--subtitle">Добавлено: 0</div>
                           </div>
                         </div>
                       </div>
@@ -696,7 +672,7 @@
                         </span>
                       </label>
 
-                      <label class="input-radio">
+                      <label type="button" class="input-radio active" data-bs-toggle="modal" data-bs-target="#modalLogin">
                         <input type="radio" name="client">
                         <span class="input-radio_box">
                           <span class="input-radio_label">
@@ -906,7 +882,7 @@
                       <div class="form-title_count">2</div>
                       Доставка
                     </div>
-                    <div class="deliveryForm deliveryForm--noBorder mb-3">
+                    <div class="deliveryForm deliveryType-js mb-3 active">
                       <div class="row">
                         <div class="col-12 d-flex justify-content-between">
                           <label class="input-radio-2">
@@ -920,8 +896,8 @@
 
                       </div>
                     </div>
-                    <div class="deliveryForm">
-                      <div class="row g-3">
+                    <div class="deliveryForm deliveryType-js">
+                      <div class="row">
                         <div class="col-12 d-flex justify-content-between">
                           <label class="input-radio-2">
                             <input type="radio" name="deliveryType">
@@ -932,64 +908,67 @@
                         </div>
                         <div class="col-12">
                           <div class="deliveryForm_content">
-                            <div class="form-label mb-2">Адрес доставки</div>
-                            <div class="row mb-3 g-3">
-                              <div class="col-sm-6 col-xl-3">
-                                <select class="js-choice">
-                                  <option selected disabled>Вибирите город</option>
-                                  <option>Киев</option>
-                                  <option>Харьков</option>
-                                  <option>Житомер</option>
-                                  <option>Тернопиль</option>
-                                </select>
-                              </div>
-                              <div class="col-sm-6 col-xl-4">
-                                <select class="js-choice">
-                                  <option selected disabled>Вибирите улицу</option>
-                                  <option>ул. Богдана хмельницкого-черного,  132</option>
-                                  <option>ул. Багалея, 342</option>
-                                  <option>ул. Станиславского, 2434</option>
-                                  <option>ул. Круглоуниверситетская, 24</option>
-                                  <option>ул. Киевская, 778</option>
-                                </select>
-                              </div>
-                              <div class="col-sm">
-                                <div class="wrap-input-site">
-                                  <label class="input-site w-100">
-                                    <span class="input-site__label">Дом</span>
-                                    <input type="text" class="input-site__input">
-                                  </label>
+
+                            <div class="deliveryForm_content--hidden">
+                              <div class="py-3">
+                                <div class="form-label mb-2">Адрес доставки</div>
+                                <div class="row mb-3 g-3">
+                                  <div class="col-sm-6 col-xl-3">
+                                    <select class="js-choice">
+                                      <option selected disabled>Вибирите город</option>
+                                      <option>Киев</option>
+                                      <option>Харьков</option>
+                                      <option>Житомер</option>
+                                      <option>Тернопиль</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-sm-6 col-xl-4">
+                                    <select class="js-choice">
+                                      <option selected disabled>Вибирите улицу</option>
+                                      <option>ул. Богдана хмельницкого-черного,  132</option>
+                                      <option>ул. Багалея, 342</option>
+                                      <option>ул. Станиславского, 2434</option>
+                                      <option>ул. Круглоуниверситетская, 24</option>
+                                      <option>ул. Киевская, 778</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-sm">
+                                    <div class="wrap-input-site">
+                                      <label class="input-site w-100">
+                                        <span class="input-site__label">Дом</span>
+                                        <input type="text" class="input-site__input">
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm">
+                                    <div class="wrap-input-site">
+                                      <label class="input-site w-100">
+                                        <span class="input-site__label">Квартира</span>
+                                        <input type="text" class="input-site__input">
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm">
+                                    <div class="wrap-input-site">
+                                      <label class="input-site w-100">
+                                        <span class="input-site__label">Этаж</span>
+                                        <input type="text" class="input-site__input">
+                                      </label>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="col-sm">
-                                <div class="wrap-input-site">
-                                  <label class="input-site w-100">
-                                    <span class="input-site__label">Квартира</span>
-                                    <input type="text" class="input-site__input">
-                                  </label>
-                                </div>
-                              </div>
-                              <div class="col-sm">
-                                <div class="wrap-input-site">
-                                  <label class="input-site w-100">
-                                    <span class="input-site__label">Этаж</span>
-                                    <input type="text" class="input-site__input">
-                                  </label>
+                                <div class="row g-3">
+                                  <div class="col-12">
+                                    <label class="input-checkbox-2 align-items-center">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox-2_icon"></span>
+                                      <span class="input-checkbox-2__label text-uppercase">Запомнить меня</span>
+                                    </label>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="row g-3">
-                              <div class="col-12">
-                                <label class="input-checkbox-2 align-items-center">
-                                  <input type="checkbox">
-                                  <span class="input-checkbox-2_icon"></span>
-                                  <span class="input-checkbox-2__label text-uppercase">Запомнить меня</span>
-                                </label>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-label">Доставка с 7 декабря с 10:00 до 13:00</div>
-                              </div>
-                            </div>
+                            <div class="form-label">Доставка с 7 декабря с 10:00 до 13:00</div>
                           </div>
                         </div>
 

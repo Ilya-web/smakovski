@@ -1,0 +1,41 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+@@include('components/loader/index.html')
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    @@include('components/breadcrumb/index.html',
+    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item" aria-current="page">404</li>'}
+    )
+
+    <section class="section-error">
+      <div class="container">
+        <div class="row">
+          <div class="offset-lg-2 offset-xl-3 col-lg-8 col-xl-6">
+            <div class="error">
+              <div class="error__title">404</div>
+              <div class="error__subtitle">Ooоps!</div>
+              <div class="error__text">Мы не можем найти страницу, которую вы ищете.</div>
+              
+              <div class="error-menu">
+                <div class="error-menu__title">Возможно вы искали</div>
+                <ul class="error-menu__list">
+                  <li><a href="#">Программное питание</a></li>
+                  <li><a href="#">Системы питания</a></li>
+                  <li><a href="#">Не хочу готовить</a></li>
+                  <li><a href="#">Одноразовые заказы</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+@@include('components/scripts/index.html')

@@ -1,6 +1,7 @@
 @@include('components/head/index.html', {'title': 'Smakovski'})
+@@include('components/loader/index.html')
 
-<div class="wrapper bodyBg-1 fixed-box-IsShow">
+<div class="wrapper fixed-box-IsShow">
 
   @@include('components/header/index.html')
 
@@ -704,7 +705,8 @@
           <div class="row g-3">
             @@loop('components/product-item/index.html',
             'components/product-item/bd-3.json')
-            <div class="col-xl-3">
+
+            <div class="col">
               <div class="addDish">
 
                 <button type="button" class="addDish_btn" data-bs-target="#modalAddDish" data-bs-toggle="modal">

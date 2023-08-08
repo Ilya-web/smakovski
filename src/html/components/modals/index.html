@@ -26,7 +26,7 @@
                 <label class="input-site input-site-password input-site-icon w-100">
                   <span class="input-site__label">Пароль</span>
                   <input type="password" class="input-site__input">
-                  <button type="button" class="input-site-icon_icon">
+                  <button type="button" class="input-site-icon_icon passwordVisible">
                     <svg>
                         <use xlink:href="images/icons/sprite.svg#password"></use>
                       </svg>
@@ -44,7 +44,7 @@
                   </label>
                 </div>
                 <div class="col-6 d-flex justify-content-end">
-                  <a href="#" class="text-uppercase">Забыли пароль?</a>
+                  <button type="button" class="text-uppercase" data-bs-toggle="modal" data-bs-target="#modalPasswordReset">Забыли пароль?</button>
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@
                 <label class="input-site input-site-password input-site-icon w-100">
                   <span class="input-site__label">Пароль</span>
                   <input type="password" class="input-site__input">
-                  <button type="button" class="input-site-icon_icon">
+                  <button type="button" class="input-site-icon_icon passwordVisible">
                     <svg>
                       <use xlink:href="images/icons/sprite.svg#password"></use>
                     </svg>
@@ -244,6 +244,58 @@
                       </svg>
                     </span>
 
+                    Заказать звонок
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 text-center">
+              <div class="politics-info">
+                Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalPasswordReset" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal_title h4">Форма</h4>
+        <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="#">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="wrap-input-site">
+                <label class="input-site w-100">
+                  <span class="input-site__label">email</span>
+                  <input type="email" class="input-site__input">
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="wrap-input-site">
+                <label class="input-site w-100">
+                  <span class="input-site__label">телефон</span>
+                  <input type="tel" class="input-site__input">
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row g-2">
+                <div class="col-12">
+                  <button type="submit" class="btn-site-3 yellow click-animation w-100">
                     Заказать звонок
                   </button>
                 </div>
@@ -755,9 +807,9 @@
   <div class="modal-dialog modal-xl">
     <div class="modal-content modal-content--light">
       <div class="modal-header">
-        <a href="#" class="btn-site-3 click-animation noBg fs-16">
+        <div class="btn-site-3 noBg fs-16 pointer-events-none">
           Добавки
-        </a>
+        </div>
         <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
           <svg>
             <use xlink:href="images/icons/sprite.svg#close"></use>
