@@ -2473,7 +2473,7 @@
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal_title h4">Форма</h4>
+          <h5 class="modal_title h5">Форма</h5>
           <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
             <svg>
               <use xlink:href="images/icons/sprite.svg#close"></use>
@@ -2531,7 +2531,7 @@
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal_title h4">Форма</h4>
+          <h4 class="modal_title h5">Забыли пароль?</h4>
           <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
             <svg>
               <use xlink:href="images/icons/sprite.svg#close"></use>
@@ -2539,6 +2539,8 @@
           </button>
         </div>
         <div class="modal-body">
+          <div class="text-uppercase mb-3">Введите адрес электронной почты, который вы использовали при регистрации.
+            Вам будет отправлено электронное письмо с инструкциями по сбросу пароля.</div>
           <form action="#">
             <div class="row g-3">
               <div class="col-12">
@@ -2550,30 +2552,40 @@
                 </div>
               </div>
               <div class="col-12">
-                <div class="wrap-input-site">
-                  <label class="input-site w-100">
-                    <span class="input-site__label">телефон</span>
-                    <input type="tel" class="input-site__input">
-                  </label>
-                </div>
-              </div>
-              <div class="col-12">
                 <div class="row g-2">
                   <div class="col-12">
-                    <button type="submit" class="btn-site-3 yellow click-animation w-100">
-                      Заказать звонок
+                    <button type="submit" class="btn-site-3 yellow click-animation w-100" data-bs-toggle="modal" data-bs-target="#modalPasswordResetInfo">
+                      Отправить письмо
                     </button>
                   </div>
                 </div>
               </div>
 
               <div class="col-12 text-center">
-                <div class="politics-info">
-                  Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
+                <div class="modal_info text-uppercase">У вас уже есть аккаунт? <button type="button" data-bs-toggle="modal" data-bs-target="#modalLogin">Войти</button>
                 </div>
               </div>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalPasswordResetInfo" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal_title h5">Забыли пароль?</h4>
+          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="text-uppercase mb-4">На ваш адрес электронной почты было отправлено письмо с инструкциями по сбросу пароля. Если вы не получили его в течение нескольких минут, убедитесь, что вы ввели адрес электронной почты для своей учетной записи myBranda, и повторите попытку или свяжитесь с нами для получения помощи.</div>
+          <button type="submit" class="btn-site-3 yellow click-animation w-100" data-bs-toggle="modal" data-bs-target="#modalLogin">Войти</button>
         </div>
       </div>
     </div>

@@ -15886,6 +15886,10 @@ hr {
     fill: #181818;
   }
 }
+.modal_info button {
+  text-transform: uppercase;
+  color: #708200;
+}
 
 @media (max-width: 1249.98px) {
   .modal-lg, .modal-xl {

@@ -5025,6 +5025,13 @@ hr {
       }
     }
   }
+
+  &_info {
+    button {
+      text-transform: uppercase;
+      color: $color-green-2;
+    }
+  }
 }
 
 @include media-breakpoint-down(xl) {
