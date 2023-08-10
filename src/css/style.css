@@ -11399,7 +11399,7 @@ hr {
   color: #A6A6A6;
 }
 .input-radio input:not(:checked) ~ .input-radio_box:hover, .input-radio input:not(:checked) ~ .filter-link:hover {
-  color: #A6A6A6;
+  color: #708200;
 }
 .input-radio_box, .filter-link {
   text-transform: uppercase;
@@ -11580,8 +11580,8 @@ hr {
   display: none;
 }
 .input-checkbox input:checked ~ .input-checkbox_box .input-checkbox_icon {
-  background: #C3E00D;
-  border-color: #C3E00D;
+  background: #708200;
+  border-color: #708200;
 }
 .input-checkbox input:checked ~ .input-checkbox_box .input-checkbox_icon:before {
   opacity: 1;
@@ -11595,6 +11595,11 @@ hr {
   justify-content: center;
   cursor: pointer;
   height: 100%;
+}
+@media all and (hover: hover) {
+  .input-checkbox_box:hover .input-checkbox_label, .input-checkbox_box:focus-visible .input-checkbox_label {
+    color: #708200;
+  }
 }
 .input-checkbox_icon {
   -webkit-box-flex: 0;
@@ -12354,8 +12359,8 @@ hr {
 }
 @media all and (hover: hover) {
   .nutritionist-link:not(.active):hover, .nutritionist-link:not(.active):focus-visible {
-    color: #A6A6A6;
-    border-color: #A6A6A6;
+    color: #708200;
+    border-color: #708200;
   }
 }
 .nutritionist-content__title {
@@ -13573,26 +13578,26 @@ hr {
   .dropdown-menu.dropdown-menu--mobile .input-radio {
     display: block;
   }
-  .dropdown-menu.dropdown-menu--mobile .input-radio:not(.dropdown-menu.dropdown-menu--mobile .input-radio--border) input:checked ~ .input-radio_box, .dropdown-menu.dropdown-menu--mobile .input-radio:not(.dropdown-menu.dropdown-menu--mobile .input-radio--border) input:checked ~ .filter-link {
+  .dropdown-menu.dropdown-menu--mobile .input-radio:not(.input-radio--border) input:checked ~ .input-radio_box, .dropdown-menu.dropdown-menu--mobile .input-radio:not(.input-radio--border) input:checked ~ .filter-link {
     background: transparent;
   }
-  .dropdown-menu.dropdown-menu--mobile .input-radio:not(.dropdown-menu.dropdown-menu--mobile .input-radio--border) input:checked ~ .input-radio_box:before, .dropdown-menu.dropdown-menu--mobile .input-radio:not(.dropdown-menu.dropdown-menu--mobile .input-radio--border) input:checked ~ .filter-link:before {
+  .dropdown-menu.dropdown-menu--mobile .input-radio:not(.input-radio--border) input:checked ~ .input-radio_box:before, .dropdown-menu.dropdown-menu--mobile .input-radio:not(.input-radio--border) input:checked ~ .filter-link:before {
     opacity: 1;
   }
-  .dropdown-menu.dropdown-menu--mobile .input-radio:not(.dropdown-menu.dropdown-menu--mobile .input-radio--border) input:checked ~ .input-radio_box .input-radio_label--info, .dropdown-menu.dropdown-menu--mobile .input-radio:not(.dropdown-menu.dropdown-menu--mobile .input-radio--border) input:checked ~ .filter-link .input-radio_label--info {
+  .dropdown-menu.dropdown-menu--mobile .input-radio:not(.input-radio--border) input:checked ~ .input-radio_box .input-radio_label--info, .dropdown-menu.dropdown-menu--mobile .input-radio:not(.input-radio--border) input:checked ~ .filter-link .input-radio_label--info {
     color: #181818;
   }
-  .dropdown-menu.dropdown-menu--mobile .input-radio:not(.dropdown-menu.dropdown-menu--mobile .input-radio--border) .input-radio_box, .dropdown-menu.dropdown-menu--mobile .input-radio:not(.dropdown-menu.dropdown-menu--mobile .input-radio--border) .filter-link {
+  .dropdown-menu.dropdown-menu--mobile .input-radio:not(.input-radio--border) .input-radio_box, .dropdown-menu.dropdown-menu--mobile .input-radio:not(.input-radio--border) .filter-link {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
     padding-right: 45px;
     padding-left: 14px;
   }
-  .dropdown-menu.dropdown-menu--mobile .input-radio:not(.dropdown-menu.dropdown-menu--mobile .input-radio--border) .input-radio_box:after, .dropdown-menu.dropdown-menu--mobile .input-radio:not(.dropdown-menu.dropdown-menu--mobile .input-radio--border) .filter-link:after {
+  .dropdown-menu.dropdown-menu--mobile .input-radio:not(.input-radio--border) .input-radio_box:after, .dropdown-menu.dropdown-menu--mobile .input-radio:not(.input-radio--border) .filter-link:after {
     display: none;
   }
-  .dropdown-menu.dropdown-menu--mobile .input-radio:not(.dropdown-menu.dropdown-menu--mobile .input-radio--border) .input-radio_box:before, .dropdown-menu.dropdown-menu--mobile .input-radio:not(.dropdown-menu.dropdown-menu--mobile .input-radio--border) .filter-link:before {
+  .dropdown-menu.dropdown-menu--mobile .input-radio:not(.input-radio--border) .input-radio_box:before, .dropdown-menu.dropdown-menu--mobile .input-radio:not(.input-radio--border) .filter-link:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -13610,6 +13615,7 @@ hr {
   .dropdown-menu.dropdown-menu--mobile .input-radio--border .input-radio_box, .dropdown-menu.dropdown-menu--mobile .input-radio--border .filter-link {
     border-radius: 8px;
     border: 1px solid #A6A6A6;
+    padding: 10px 8px !important;
   }
   .dropdown-menu.dropdown-menu--mobile .input-radio--border input:checked ~ .input-radio_box, .dropdown-menu.dropdown-menu--mobile .input-radio--border input:checked ~ .filter-link {
     border-color: #C3E00D;
@@ -13633,26 +13639,26 @@ hr {
 .dropdown-menu.dropdown-menu--desktop .input-radio {
   display: block;
 }
-.dropdown-menu.dropdown-menu--desktop .input-radio:not(.dropdown-menu.dropdown-menu--desktop .input-radio--border) input:checked ~ .input-radio_box, .dropdown-menu.dropdown-menu--desktop .input-radio:not(.dropdown-menu.dropdown-menu--desktop .input-radio--border) input:checked ~ .filter-link {
+.dropdown-menu.dropdown-menu--desktop .input-radio:not(.input-radio--border) input:checked ~ .input-radio_box, .dropdown-menu.dropdown-menu--desktop .input-radio:not(.input-radio--border) input:checked ~ .filter-link {
   background: transparent;
 }
-.dropdown-menu.dropdown-menu--desktop .input-radio:not(.dropdown-menu.dropdown-menu--desktop .input-radio--border) input:checked ~ .input-radio_box:before, .dropdown-menu.dropdown-menu--desktop .input-radio:not(.dropdown-menu.dropdown-menu--desktop .input-radio--border) input:checked ~ .filter-link:before {
+.dropdown-menu.dropdown-menu--desktop .input-radio:not(.input-radio--border) input:checked ~ .input-radio_box:before, .dropdown-menu.dropdown-menu--desktop .input-radio:not(.input-radio--border) input:checked ~ .filter-link:before {
   opacity: 1;
 }
-.dropdown-menu.dropdown-menu--desktop .input-radio:not(.dropdown-menu.dropdown-menu--desktop .input-radio--border) input:checked ~ .input-radio_box .input-radio_label--info, .dropdown-menu.dropdown-menu--desktop .input-radio:not(.dropdown-menu.dropdown-menu--desktop .input-radio--border) input:checked ~ .filter-link .input-radio_label--info {
+.dropdown-menu.dropdown-menu--desktop .input-radio:not(.input-radio--border) input:checked ~ .input-radio_box .input-radio_label--info, .dropdown-menu.dropdown-menu--desktop .input-radio:not(.input-radio--border) input:checked ~ .filter-link .input-radio_label--info {
   color: #181818;
 }
-.dropdown-menu.dropdown-menu--desktop .input-radio:not(.dropdown-menu.dropdown-menu--desktop .input-radio--border) .input-radio_box, .dropdown-menu.dropdown-menu--desktop .input-radio:not(.dropdown-menu.dropdown-menu--desktop .input-radio--border) .filter-link {
+.dropdown-menu.dropdown-menu--desktop .input-radio:not(.input-radio--border) .input-radio_box, .dropdown-menu.dropdown-menu--desktop .input-radio:not(.input-radio--border) .filter-link {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   padding-right: 45px;
   padding-left: 14px;
 }
-.dropdown-menu.dropdown-menu--desktop .input-radio:not(.dropdown-menu.dropdown-menu--desktop .input-radio--border) .input-radio_box:after, .dropdown-menu.dropdown-menu--desktop .input-radio:not(.dropdown-menu.dropdown-menu--desktop .input-radio--border) .filter-link:after {
+.dropdown-menu.dropdown-menu--desktop .input-radio:not(.input-radio--border) .input-radio_box:after, .dropdown-menu.dropdown-menu--desktop .input-radio:not(.input-radio--border) .filter-link:after {
   display: none;
 }
-.dropdown-menu.dropdown-menu--desktop .input-radio:not(.dropdown-menu.dropdown-menu--desktop .input-radio--border) .input-radio_box:before, .dropdown-menu.dropdown-menu--desktop .input-radio:not(.dropdown-menu.dropdown-menu--desktop .input-radio--border) .filter-link:before {
+.dropdown-menu.dropdown-menu--desktop .input-radio:not(.input-radio--border) .input-radio_box:before, .dropdown-menu.dropdown-menu--desktop .input-radio:not(.input-radio--border) .filter-link:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -13670,6 +13676,7 @@ hr {
 .dropdown-menu.dropdown-menu--desktop .input-radio--border .input-radio_box, .dropdown-menu.dropdown-menu--desktop .input-radio--border .filter-link {
   border-radius: 8px;
   border: 1px solid #A6A6A6;
+  padding: 10px 8px !important;
 }
 .dropdown-menu.dropdown-menu--desktop .input-radio--border input:checked ~ .input-radio_box, .dropdown-menu.dropdown-menu--desktop .input-radio--border input:checked ~ .filter-link {
   border-color: #C3E00D;
@@ -13976,10 +13983,6 @@ hr {
 .product-item_footer {
   margin-top: auto;
 }
-.product-item_price {
-  font-size: 24px;
-  text-transform: uppercase;
-}
 .product-item .btn-site-3 {
   padding: 10px 24px;
 }
@@ -14105,6 +14108,7 @@ hr {
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 8px;
+    width: 100%;
   }
 }
 .fixed-box_info__desc {
@@ -14114,6 +14118,9 @@ hr {
 .fixed-box_info__title {
   font-size: 12px;
   color: #708200;
+}
+.fixed-box_info__title span {
+  color: #181818;
 }
 .fixed-box_info__subtitle {
   font-size: 20px;
@@ -14135,6 +14142,12 @@ hr {
   padding-right: 14px;
   text-align: center;
   white-space: nowrap;
+}
+@media all and (hover: hover) {
+  .fixed-box_info__btn .btn-site-3:hover, .fixed-box_info__btn .btn-site-3:focus-visible {
+    background: #87A400;
+    border-color: #87A400;
+  }
 }
 .fixed-box_readMore {
   color: #708200;
@@ -14195,7 +14208,7 @@ hr {
 }
 @media (min-width: 768px) {
   .fixed-box .compound {
-    border-left: 1px solid #A6A6A6;
+    border-left: 1px solid #A5C20A;
     padding-left: 16px;
     margin-left: 16px;
   }
@@ -14603,8 +14616,16 @@ hr {
 .info-box_title {
   margin-bottom: 5px;
 }
-.info-box_link a {
+.info-box_link a, .info-box_link button {
+  text-transform: uppercase;
   color: #708200;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+@media all and (hover: hover) {
+  .info-box_link a:hover, .info-box_link a:focus-visible, .info-box_link button:hover, .info-box_link button:focus-visible {
+    color: #87A400;
+  }
 }
 
 /***info-box***/
@@ -15141,7 +15162,7 @@ hr {
   padding: 3px 8px;
   font-size: 12px;
   text-transform: uppercase;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 .blog-item_category--nutrition {
   background: #DF84E9;
@@ -15880,10 +15901,10 @@ hr {
 }
 @media all and (hover: hover) {
   .modal_close:hover, .activity-box_header--close:hover, .modal_close:focus-visible, .activity-box_header--close:focus-visible {
-    border-color: #181818;
+    border-color: #708200;
   }
   .modal_close:hover svg, .activity-box_header--close:hover svg, .modal_close:focus-visible svg, .activity-box_header--close:focus-visible svg {
-    fill: #181818;
+    fill: #708200;
   }
 }
 .modal_info button {
@@ -16024,6 +16045,7 @@ hr {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 24px;
+  padding-right: 4px;
 }
 
 /***modal***/
@@ -16383,7 +16405,6 @@ hr {
 }
 .wrapper-dates-slider .slider-buttons {
   margin: 0;
-  background: #ffffff;
   position: relative;
 }
 .wrapper-dates-slider .slider-buttons:not(.last-slide):before {
@@ -16456,7 +16477,7 @@ hr {
   cursor: default;
 }
 .date input:not(:checked) ~ .date_box:hover {
-  color: #A6A6A6;
+  color: #708200;
 }
 .date_day {
   display: -webkit-box;
@@ -17632,9 +17653,6 @@ hr {
     background-position-x: 3px;
   }
 }
-.basket-total hr {
-  margin: 8px 0;
-}
 .basket-total_title {
   color: #708200;
 }
@@ -18232,12 +18250,7 @@ hr {
   }
 }
 .orderProgram-item:not(:last-of-type) {
-  margin-bottom: 32px;
-}
-@media (max-width: 575.98px) {
-  .orderProgram-item:not(:last-of-type) {
-    margin-bottom: 16px;
-  }
+  margin-bottom: 16px;
 }
 .orderProgram-item-bg1 {
   background: #F1FBC7;

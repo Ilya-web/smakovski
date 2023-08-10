@@ -3,21 +3,26 @@ import { Tooltip, Modal } from "bootstrap";
 
 
 // loader-------------------------------------------------------------
-const bar = document.querySelector(".loader-progress-bar_bar");
-const loader = document.querySelector(".loader");
-let startWidth = 0;
-const endWidth = bar.dataset.size;
-const interval = setInterval(frame, 40);
 
-function frame() {
-  if (startWidth >= endWidth) {
-    clearInterval(interval);
-  } else {
-    startWidth++;
-    bar.style.width = `${endWidth}%`;
-    document.querySelector('.loader-progress-bar_perс').innerText = `${startWidth}%`;
+const loader = document.querySelector(".loader");
+if(loader) {
+  const bar = document.querySelector(".loader-progress-bar_bar");
+
+  let startWidth = 0;
+  const endWidth = bar.dataset.size;
+  const interval = setInterval(frame, 40);
+
+  function frame() {
+    if (startWidth >= endWidth) {
+      clearInterval(interval);
+    } else {
+      startWidth++;
+      bar.style.width = `${endWidth}%`;
+      document.querySelector('.loader-progress-bar_perс').innerText = `${startWidth}%`;
+    }
   }
 }
+
 
 
 

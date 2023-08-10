@@ -7,14 +7,26 @@
         <button type="button" class="fixed-box_readMore d-xl-none collapsed" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">детальнее</button>
 
         <div class="collapse" id="collapseExample">
-          <div class="fixed-box_info @@if(context.compound){w-100}" >
-          <div class="d-flex justify-content-between flex-grow-1">
+          <div class="fixed-box_info @@if(context.compound){w-100}">
+          <div class="d-flex align-items-center justify-content-between flex-grow-1">
             <div class="fixed-box_info__desc">
+             @@if(context.PP) {
+              <div class="fixed-box_info__title">Ваша программа</div>
+              <div class="fixed-box_info__subtitle">Худей для нее</div>
+              <div class="fixed-box_info__title">10 дней</div>
+              }
+              @@if(context.HE) {
+              <div class="fixed-box_info__title">Heat and eat</div>
+              <div class="fixed-box_info__subtitle">Ем все</div>
+              <div class="fixed-box_info__title"><span>6</span> / 6</div>
+              }
+              @@if(context.delivery) {
               <div class="fixed-box_info__title">Доставка отдельных блюд</div>
               <div class="fixed-box_info__subtitle">Ем все</div>
+              }
             </div>
             <div class="fixed-box_info__btn">
-              <a href="#" class="btn-site-3 green-light click-animation">просмотреть набор</a>
+              <a href="#" class="btn-site-3 green-light click-animation"  data-bs-toggle="modal" data-bs-target="#modalBusket">просмотреть набор</a>
             </div>
           </div>
             @@if(context.compound){

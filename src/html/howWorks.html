@@ -1,5 +1,5 @@
 @@include('components/head/index.html', {'title': 'Smakovski'})
-@@include('components/loader/index.html')
+
 
 <div class="wrapper">
   @@include('components/header/index.html')
@@ -30,7 +30,7 @@
                 <div class="info-box_desc">
                   <div class="info-box_title">Нужна помощь диетолога?</div>
                   <div class="info-box_link">
-                    <a href="#">Спроси специалиста</a>
+                    <button type="button" data-bs-target="#modalCallback" data-bs-toggle="modal">Спроси специалиста</button>
                   </div>
                 </div>
               </div>
@@ -41,7 +41,7 @@
                 <div class="info-box_desc">
                   <div class="info-box_title">какую программу выбрать?</div>
                   <div class="info-box_link">
-                    <a href="#">подобрать индивидуально</a>
+                    <button type="button" data-bs-target="#modalCalculate" data-bs-toggle="modal">подобрать индивидуально</button>
                   </div>
                 </div>
               </div>

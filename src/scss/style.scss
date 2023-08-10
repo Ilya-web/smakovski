@@ -728,9 +728,9 @@ hr {
     }
 
     &:not(:checked) {
-      & ~ #{$this}_box {
+      & ~ #{$this}_box{
        &:hover {
-         color: $color-gray;
+         color: $color-green-2;
        }
       }
     }
@@ -764,8 +764,6 @@ hr {
 
   &_label {
     font-size: 16px;
-    //text-align: center;
-
     @include media-breakpoint-down(sm) {
       font-size: 14px;
     }
@@ -791,6 +789,7 @@ hr {
         color: $color-gray;
       }
     }
+
     &--text {
       &.gray {
         color: $color-gray-2;
@@ -908,8 +907,8 @@ hr {
         #{$this}_box {
 
           #{$this}_icon {
-            background: $color-green;
-            border-color: $color-green;
+            background: $color-green-2;
+            border-color: $color-green-2;
             &:before {
               opacity: 1;
             }
@@ -924,6 +923,14 @@ hr {
     justify-content: center;
     cursor: pointer;
     height: 100%;
+    @media all and (hover: hover) {
+      &:hover,
+      &:focus-visible {
+        #{$this}_label {
+          color: $color-green-2;
+        }
+      }
+    }
 
   }
   &_icon {
@@ -1657,8 +1664,8 @@ hr {
      @media all and (hover: hover) {
        &:hover,
        &:focus-visible {
-         color: $color-gray;
-         border-color: $color-gray;
+         color: $color-green-2;
+         border-color: $color-green-2;
        }
      }
    }
@@ -2792,7 +2799,7 @@ hr {
     $this: &;
     display: block;
 
-    &:not(&--border) {
+    &:not(.input-radio--border) {
 
       input {
         &:checked {
@@ -2837,6 +2844,7 @@ hr {
       .input-radio_box {
         border-radius: 8px;
         border: 1px solid $color-gray;
+        padding: 10px 8px !important;
       }
 
       input {
@@ -2845,8 +2853,6 @@ hr {
             border-color: $color-green;
           }
         }
-
-
       }
     }
 
@@ -3167,11 +3173,6 @@ hr {
     margin-top: auto;
   }
 
-  &_price {
-    font-size: 24px;
-    text-transform: uppercase;
-  }
-
   .btn-site-3 {
     padding: 10px 24px;
   }
@@ -3276,6 +3277,7 @@ hr {
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 8px;
+      width: 100%;
     }
 
     &__desc {
@@ -3286,6 +3288,9 @@ hr {
     &__title {
       font-size: 12px;
       color: $color-green-2;
+      span {
+        color: $color-text;
+      }
     }
 
     &__subtitle {
@@ -3306,6 +3311,14 @@ hr {
         padding-right: 14px;
         text-align: center;
         white-space: nowrap;
+
+        @media all and (hover: hover) {
+          &:hover,
+          &:focus-visible {
+            background: #87A400;
+            border-color: #87A400;
+          }
+        }
       }
     }
   }
@@ -3352,7 +3365,7 @@ hr {
     }
 
     @include media-breakpoint-up(md) {
-      border-left: 1px solid $color-gray;
+      border-left: 1px solid $color-green_hover;
       padding-left: 16px;
       margin-left: 16px;
     }
@@ -3781,8 +3794,17 @@ hr {
   }
 
   &_link {
-    a {
+    a, button {
+      text-transform: uppercase;
       color: $color-green-2;
+      @include transition();
+
+      @media all and (hover: hover) {
+      &:hover,
+      &:focus-visible {
+        color: #87A400;
+      }
+    }
     }
   }
 }
@@ -4327,7 +4349,7 @@ hr {
     padding: 3px 8px;
     font-size: 12px;
     text-transform: uppercase;
-    border-radius: 8px;
+    border-radius: 6px;
 
     &--nutrition {
       background: $color-violet;
@@ -5017,10 +5039,10 @@ hr {
     @media all and (hover: hover) {
       &:hover,
       &:focus-visible {
-        border-color: $color-text;
+        border-color: $color-green-2;
 
         svg {
-          fill: $color-text;
+          fill: $color-green-2;
         }
       }
     }
@@ -5164,6 +5186,7 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding-right: 4px;
 }
 
 /***modal***/
@@ -5526,7 +5549,7 @@ hr {
 
   .slider-buttons {
     margin: 0;
-    background: $color-white;
+    //background: $color-white;
     position: relative;
     &:not(.last-slide){
       &:before {
@@ -5618,7 +5641,7 @@ hr {
     &:not(:checked) {
       & ~ #{$this}_box {
         &:hover {
-          color: $color-gray;
+          color: $color-green-2;
         }
       }
     }
@@ -6697,10 +6720,6 @@ hr {
     }
   }
 
-
-  hr {
-    margin: 8px 0;
-  }
   &_title {
     color: $color-green-2;
   }
@@ -7251,11 +7270,7 @@ hr {
     }
 
     &:not(:last-of-type) {
-      margin-bottom: 32px;
-
-      @include media-breakpoint-down(sm) {
-        margin-bottom: 16px;
-      }
+      margin-bottom: 16px;
     }
 
     &-bg1 {
