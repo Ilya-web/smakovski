@@ -17353,6 +17353,8 @@ hr {
 .basket-box_item {
   border-radius: 24px;
   padding: 32px 32px 8px;
+}
+.basket-box_item:not(:last-of-type) {
   margin-bottom: 32px;
 }
 @media (max-width: 767.98px) {
