@@ -1,4 +1,3 @@
-
 @import "bootstrap_variables";
 @import "reset";
 @import "variables";
@@ -156,6 +155,7 @@ hr {
       padding-left: 24px;
     }
   }
+
   img {
     width: 100%;
     border-radius: $border-radius-32;
@@ -165,8 +165,9 @@ hr {
   ul, ol {
     padding-left: 20px;
     margin: 24px 0;
+
     li {
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-bottom: 10px;
       }
     }
@@ -218,6 +219,7 @@ hr {
     overflow: hidden;
     padding: 100px 0;
   }
+
   &-images-2 {
     overflow: hidden;
     padding: 16px 0 110px;
@@ -336,13 +338,15 @@ hr {
     height: var(--_sizeIcon);
     flex: 0 0 var(--_sizeIcon);
     margin-right: 10px;
+
     &.size-24 {
       --_sizeIcon: 24px;
     }
+
     svg {
       max-width: 100%;
       max-height: 100%;
-      fill:$color-text;
+      fill: $color-text;
       @include transition();
     }
 
@@ -386,6 +390,7 @@ hr {
         background: $color-text;
         border-color: $color-text;
         color: $color-white;
+
         svg {
           fill: $color-white;
         }
@@ -431,18 +436,21 @@ hr {
 
   &-error {
     border-color: $color-red;
+
     &_text {
       font-size: 12px;
       color: $color-red;
       margin-top: 4px;
     }
+
     .input-site__label {
       color: $color-red;
     }
   }
 
-  &-icon{
+  &-icon {
     padding-right: 50px !important;
+
     &_icon {
       width: 24px;
       height: 24px;
@@ -474,6 +482,7 @@ hr {
         max-width: 100%;
       }
     }
+
     #{$this}__label {
       left: 44px;
     }
@@ -584,6 +593,7 @@ hr {
 
   &__item {
     padding: 24px;
+
     &:not(:last-of-type) {
       border-bottom: 1px solid $color-text;
     }
@@ -655,6 +665,7 @@ hr {
     overflow: hidden;
     height: clamp(60px, 5.2vw, 100px);
     width: clamp(60px, 5.2vw, 100px);
+
     img {
       max-width: 100%;
       max-height: 100%;
@@ -703,6 +714,7 @@ hr {
     &:checked {
       & ~ #{$this}_box {
         background: $color-green;
+
         #{$this}_label--info {
           color: $color-green-2;
         }
@@ -716,11 +728,13 @@ hr {
         #{$this}_icon {
           svg {
             fill: $color-gray;
+
             path {
               fill: red;
             }
           }
         }
+
         #{$this}_label--text {
           color: $color-gray;
         }
@@ -728,10 +742,10 @@ hr {
     }
 
     &:not(:checked) {
-      & ~ #{$this}_box{
-       &:hover {
-         color: $color-green-2;
-       }
+      & ~ #{$this}_box {
+        &:hover {
+          color: $color-green-2;
+        }
       }
     }
   }
@@ -749,7 +763,7 @@ hr {
     user-select: none;
     position: relative;
 
-    &:after{
+    &:after {
       content: '';
       position: absolute;
       top: 50%;
@@ -771,6 +785,7 @@ hr {
     &--info {
       color: $color-orange;
     }
+
     &.column {
       display: flex;
       align-items: center;
@@ -794,9 +809,11 @@ hr {
       &.gray {
         color: $color-gray-2;
       }
+
       span {
         color: $color-green-2;
       }
+
       .date {
         color: $color-gray-2;
         margin-left: 8px;
@@ -815,6 +832,7 @@ hr {
       fill: $color-text;
       max-width: 100%;
       max-height: 100%;
+
       path {
         fill: red;
       }
@@ -837,6 +855,7 @@ hr {
 
   input {
     display: none;
+
     &:checked ~ {
       #{$this}_icon:before {
         opacity: 1;
@@ -871,6 +890,7 @@ hr {
       @include transition();
     }
   }
+
   &_info {
     color: $color-gray-2;
     text-transform: uppercase;
@@ -882,7 +902,7 @@ hr {
   $this: &;
   position: relative;
 
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     top: 50%;
@@ -909,6 +929,7 @@ hr {
           #{$this}_icon {
             background: $color-green-2;
             border-color: $color-green-2;
+
             &:before {
               opacity: 1;
             }
@@ -933,6 +954,7 @@ hr {
     }
 
   }
+
   &_icon {
     flex: 0 0 20px;
     width: 20px;
@@ -1052,7 +1074,6 @@ hr {
   }
 
 
-
   &-btns {
     display: flex;
     gap: $gap;
@@ -1078,6 +1099,7 @@ hr {
           max-width: 100%;
         }
       }
+
       &.show {
         &:after {
           transform: rotateX(180deg);
@@ -1096,7 +1118,6 @@ hr {
   }
 
 
-
   &-lang {
 
     &__btn {
@@ -1105,6 +1126,7 @@ hr {
       border-radius: $border-radius-12;
       height: 100%;
       @include transition(0.2s);
+
       &.show {
         border-radius: 12px 12px 0 0;
       }
@@ -1199,6 +1221,7 @@ hr {
     &__icon {
       width: 24px;
       height: 24px;
+
       svg {
         max-width: 100%;
         max-height: 100%;
@@ -1261,6 +1284,7 @@ hr {
   @include media-breakpoint-up(lg) {
     margin-right: 10px;
   }
+
   img {
     max-width: 100%;
   }
@@ -1285,6 +1309,7 @@ hr {
     height: 40px;
     width: 50px;
     margin: 0 auto 16px;
+
     svg {
       max-height: 100%;
       max-width: 100%;
@@ -1299,6 +1324,7 @@ hr {
     font-family: $font-Roboto-Condensed;
     font-size: $font-size-16;
     margin-bottom: var(--_mbSales);
+
     p {
       &:not(:last-of-type) {
         margin-bottom: 10px;
@@ -1314,6 +1340,7 @@ hr {
     position: relative;
     display: inline-flex;
     padding-left: 28px;
+
     svg {
       width: 24px;
       height: 24px;
@@ -1352,6 +1379,7 @@ hr {
     width: 50%;
     display: flex;
     flex-direction: column;
+
     .btn-plus {
       margin-top: auto;
     }
@@ -1362,7 +1390,7 @@ hr {
     margin-bottom: 5px;
     text-transform: uppercase;
   }
-  
+
   &_subtitle {
     color: $color-green-2;
     text-transform: uppercase;
@@ -1374,6 +1402,7 @@ hr {
     width: 50%;
     border-radius: $border-radius-8;
     overflow: hidden;
+
     img {
       max-width: 100%;
       max-height: 100%;
@@ -1410,6 +1439,7 @@ hr {
       }
     }
   }
+
   .sales-item {
     @include media-breakpoint-up(sm) {
       opacity: 0;
@@ -1460,14 +1490,15 @@ hr {
 
   &-prev {
     left: 16px;
-     @include media-breakpoint-down(sm) {
-       left: 8px;
+    @include media-breakpoint-down(sm) {
+      left: 8px;
     }
   }
+
   &-next {
     right: 16px;
-     @include media-breakpoint-down(sm) {
-       right: 8px;
+    @include media-breakpoint-down(sm) {
+      right: 8px;
     }
   }
 }
@@ -1504,7 +1535,6 @@ hr {
     }
 
 
-
     &#{$this}-item--col {
       width: 100%;
       height: 100%;
@@ -1517,9 +1547,10 @@ hr {
       justify-content: center;
 
       @include media-breakpoint-down(lg) {
-          width: 100% !important;
-          flex: 0 0 100% !important;
+        width: 100% !important;
+        flex: 0 0 100% !important;
       }
+
       img {
         max-height: 192px;
         max-width: 100%;
@@ -1547,6 +1578,7 @@ hr {
       width: 24px;
       height: 24px;
       flex: 0 0 24px;
+
       svg {
         max-height: 100%;
         max-width: 100%;
@@ -1631,6 +1663,7 @@ hr {
 
   &#{$this}-green {
     background: $color-green;
+
     #{$this}-link {
       &.active {
         background: $color-text;
@@ -1655,20 +1688,21 @@ hr {
     border-radius: $border-radius-8;
     flex: 1 0 0;
     @include transition();
+
     &.active {
       background: $color-yellow;
       border-color: $color-yellow;
     }
 
-   &:not(.active) {
-     @media all and (hover: hover) {
-       &:hover,
-       &:focus-visible {
-         color: $color-green-2;
-         border-color: $color-green-2;
-       }
-     }
-   }
+    &:not(.active) {
+      @media all and (hover: hover) {
+        &:hover,
+        &:focus-visible {
+          color: $color-green-2;
+          border-color: $color-green-2;
+        }
+      }
+    }
   }
 
   &-content {
@@ -1736,6 +1770,7 @@ hr {
 .default-tabs {
   .delivery-link {
     font-size: 16px;
+
     &.active {
       background: $color-green;
       color: $color-text;
@@ -1750,7 +1785,6 @@ hr {
 }
 
 /*****delivery-tabs*****/
-
 
 
 /*****programs-item*****/
@@ -1773,11 +1807,13 @@ hr {
   &:not(#{$this}-more) {
     background: $color-white;
   }
+
   &-more {
     border: 1px solid $color-text;
     align-items: center;
     justify-content: center;
     width: 100%;
+
     a {
       text-transform: uppercase;
       font-size: 16px;
@@ -1794,6 +1830,7 @@ hr {
 
   .compound {
     margin-bottom: 24px;
+
     &_count {
       font-size: 20px;
     }
@@ -1818,10 +1855,12 @@ hr {
 
   &__img {
     position: relative;
+
     img {
       width: 100%;
       max-width: 100%;
     }
+
     .btn-plus {
       position: absolute;
       bottom: 8px;
@@ -1833,6 +1872,7 @@ hr {
     margin-top: auto;
   }
 }
+
 /*****programs-item*****/
 
 
@@ -1846,7 +1886,6 @@ hr {
   display: flex;
   gap: 16px;
   width: 100%;
-
 
 
   &--author {
@@ -1921,6 +1960,7 @@ hr {
 
   &__count {
     color: $color-gray;
+
     span {
       color: $color-text;
     }
@@ -1983,6 +2023,7 @@ hr {
       margin-bottom: 35px;
       overflow: hidden;
       border-radius: 13px;
+
       img {
         max-width: 100%;
         width: 100%;
@@ -2006,6 +2047,7 @@ hr {
 
     &__btn {
       width: 50%;
+
       .btn-site-3 {
         width: 100%;
       }
@@ -2026,11 +2068,13 @@ hr {
       width: 24px;
       height: 24px;
       margin-bottom: 4px;
+
       svg {
         max-width: 100%;
         max-height: 100%;
       }
     }
+
     button {
       text-decoration: underline;
       text-transform: uppercase;
@@ -2078,9 +2122,9 @@ hr {
     }
 
     &__img {
-      flex:0 0 17%;
+      flex: 0 0 17%;
       @include media-breakpoint-down(md) {
-        flex:0 0 100%;
+        flex: 0 0 100%;
       }
 
       img {
@@ -2154,6 +2198,7 @@ hr {
 
 .promo-slider {
   padding: 0 3px;
+
   .swiper-slide {
     display: flex;
     height: auto;
@@ -2208,6 +2253,7 @@ hr {
 
   &__logo {
     max-height: 27px;
+
     img {
       max-height: 100%;
     }
@@ -2262,30 +2308,35 @@ hr {
     .header {
       background: $color-light-2;
     }
+
     @include media-breakpoint-down(lg) {
       .menu {
         background: $color-light-2;
       }
     }
   }
+
   &.bodyBg-2 {
     background: $color-blue-light;
 
     .header {
       background: $color-blue-light;
     }
+
     @include media-breakpoint-down(lg) {
       .menu {
         background: $color-blue-light;
       }
     }
   }
+
   &.bodyBg-3 {
     background: #FFF9E5;
 
     .header {
       background: #FFF9E5;
     }
+
     @include media-breakpoint-down(lg) {
       .menu {
         background: #FFF9E5;
@@ -2340,14 +2391,18 @@ hr {
           text-transform: uppercase;
           margin-bottom: 8px;
         }
+
         &--list {
           @include reset-ul();
+
           li {
             text-transform: uppercase;
             color: $color-gray-2;
+
             &:not(:last-child) {
               margin-bottom: 4px;
             }
+
             a {
               @media all and (hover: hover) {
                 &:hover,
@@ -2384,6 +2439,7 @@ hr {
 
       &--title {
         text-align: center;
+
         a {
           @media all and (hover: hover) {
             &:hover,
@@ -2401,6 +2457,7 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 16px;
+
     &__item {
       display: flex;
       align-items: center;
@@ -2571,7 +2628,7 @@ hr {
       text-transform: uppercase;
     }
 
-    &__info{
+    &__info {
       display: flex;
       gap: 8px;
       text-transform: uppercase;
@@ -2615,11 +2672,12 @@ hr {
         grid-template-columns: repeat(#{$i}, 1fr);
       }
     }
+
     &.dropdown-menu {
       overflow: auto;
       max-height: 215px;
       background: $color-white;
-      @include scrollStyle($color-gray-2, rgba(166,166,166,0.5));
+      @include scrollStyle($color-gray-2, rgba(166, 166, 166, 0.5));
     }
   }
 
@@ -2633,11 +2691,13 @@ hr {
 
   &-link {
     @extend .input-radio_box;
+
     &:last-of-type {
       &:after {
         display: none;
       }
     }
+
     @include media-breakpoint-up(xl) {
       &.active {
         background: $color-green;
@@ -2711,13 +2771,13 @@ hr {
   }
 
 
-
   &:after {
     display: none;
   }
 
   &_subtitle {
     color: $color-gray-2;
+
     span {
       color: $color-green-2;
     }
@@ -2748,8 +2808,8 @@ hr {
       margin-right: 16px;
     }
 
-    &.show ,
-    &.active{
+    &.show,
+    &.active {
       #{$this}_label {
         font-size: 10px;
         top: 5px;
@@ -2765,6 +2825,7 @@ hr {
     height: 24px;
     flex: 0 0 24px;
     margin-right: 4px;
+
     svg {
       max-height: 100%;
       max-width: 100%;
@@ -2786,8 +2847,9 @@ hr {
     top: 4px;
     right: 4px;
     bottom: 4px;
-    @include arrowBtn( $color-text, $right: 50%);
+    @include arrowBtn($color-text, $right: 50%);
     @include transition();
+
     &:after {
       transform: translateX(50%);
     }
@@ -2805,9 +2867,11 @@ hr {
         &:checked {
           & ~ .input-radio_box {
             background: transparent;
+
             &:before {
               opacity: 1;
             }
+
             .input-radio_label--info {
               color: $color-text;
             }
@@ -2821,9 +2885,11 @@ hr {
         justify-content: flex-start;
         padding-right: 45px;
         padding-left: 14px;
+
         &:after {
           display: none;
         }
+
         &:before {
           content: '';
           position: absolute;
@@ -2860,9 +2926,11 @@ hr {
       &.gray {
         color: $color-green-2;
       }
+
       span {
         color: $color-green-2;
       }
+
       .date {
         color: $color-gray-2;
         margin-left: 8px;
@@ -2917,6 +2985,7 @@ hr {
   flex-direction: column;
   height: 100%;
   position: relative;
+
   &.cursor {
     cursor: pointer;
   }
@@ -2964,6 +3033,7 @@ hr {
     border-radius: $border-radius-24;
     margin-bottom: 8px;
     position: relative;
+
     img {
       width: 100%;
     }
@@ -2973,7 +3043,7 @@ hr {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: rgba(24,24,24,0.2);
+    background: rgba(24, 24, 24, 0.2);
     opacity: 0;
     visibility: hidden;
     @include transition();
@@ -3021,6 +3091,7 @@ hr {
     &--delete {
       padding: 12px;
       background: $color-red;
+
       svg {
         width: 16px;
         height: 16px;
@@ -3057,6 +3128,7 @@ hr {
       width: 16px;
       height: 16px;
       margin-right: 4px;
+
       svg {
         max-width: 100%;
         max-height: 100%;
@@ -3085,6 +3157,7 @@ hr {
     display: flex;
     justify-content: space-between;
     gap: 24px;
+
     &--left {
       display: flex;
       align-items: center;
@@ -3106,6 +3179,7 @@ hr {
     &--item {
       width: 24px;
       height: 24px;
+
       svg {
         max-width: 100%;
         max-height: 100%;
@@ -3188,8 +3262,10 @@ hr {
     display: flex;
     justify-content: space-between;
     gap: 8px;
+
     &--title, &--prise {
       color: $color-gray-2;
+
       span {
         color: $color-text;
       }
@@ -3227,6 +3303,7 @@ hr {
     color: $color-gray-2;
     margin-bottom: 5px;
   }
+
   &_count {
     font-size: 16px;
     white-space: nowrap;
@@ -3288,6 +3365,7 @@ hr {
     &__title {
       font-size: 12px;
       color: $color-green-2;
+
       span {
         color: $color-text;
       }
@@ -3329,7 +3407,7 @@ hr {
     position: relative;
     width: 100%;
     text-align: left;
-    @include arrowBtn( $color-text, $right: 8px);
+    @include arrowBtn($color-text, $right: 8px);
 
     &:not(.collapsed) {
       &:after {
@@ -3343,6 +3421,7 @@ hr {
     @include media-breakpoint-down(xl) {
       display: none;
     }
+
     &.show {
       display: block;
     }
@@ -3410,13 +3489,15 @@ hr {
 
   &_aboutOrder {
     padding: 0 16px;
+
     &--item {
       display: flex;
       justify-content: space-between;
       gap: 8px;
-       &:not(:last-child) {
-         margin-bottom: 4px;
-       }
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
     }
 
     &--title {
@@ -3506,6 +3587,7 @@ hr {
   &_img {
     overflow: hidden;
     border-radius: $border-radius-16;
+
     img {
       width: 100%;
     }
@@ -3535,6 +3617,7 @@ hr {
 
 .imageBg {
   position: relative;
+
   &_img {
     position: absolute;
     top: 210px;
@@ -3546,13 +3629,15 @@ hr {
     max-width: 100%;
     width: 100%;
   }
+
   &_img-1 {
     width: 170px;
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-60%,-60%);
+    transform: translate(-60%, -60%);
   }
+
   &_img-2 {
     width: 155px;
     position: absolute;
@@ -3688,12 +3773,14 @@ hr {
       &.disabled {
         #{$this}-link {
           background: transparent;
+
           &:after {
             background: $color-text;
           }
         }
       }
     }
+
     &-next {
       #{$this}-link {
         &:after {
@@ -3750,6 +3837,7 @@ hr {
 .imgFullWidth {
   border-radius: $border-radius-32;
   overflow: hidden;
+
   img {
     width: 100%;
   }
@@ -3769,6 +3857,7 @@ hr {
   &_item {
     display: flex;
     gap: 16px;
+
     &:not(:last-child) {
       margin-bottom: 16px;
     }
@@ -3780,6 +3869,7 @@ hr {
     width: 48px;
     height: 48px;
     flex: 0 0 48px;
+
     img {
       max-width: 100%;
     }
@@ -3800,11 +3890,11 @@ hr {
       @include transition();
 
       @media all and (hover: hover) {
-      &:hover,
-      &:focus-visible {
-        color: #87A400;
+        &:hover,
+        &:focus-visible {
+          color: #87A400;
+        }
       }
-    }
     }
   }
 }
@@ -3834,6 +3924,7 @@ hr {
     width: 48px;
     height: 48px;
     margin: 0 auto 25px;
+
     svg {
       max-width: 100%;
       max-height: 100%;
@@ -3890,6 +3981,7 @@ hr {
 
     &_item {
       width: 88px;
+
       img {
         max-width: 100%;
         margin: 0 auto;
@@ -3899,7 +3991,6 @@ hr {
 }
 
 /***quality***/
-
 
 
 /***quality-slider***/
@@ -3918,6 +4009,7 @@ hr {
 
   &-pagination {
     color: $color-gray;
+
     .swiper-pagination-current {
       color: $color-text;
     }
@@ -3938,7 +4030,6 @@ hr {
     }
   }
 }
-
 
 
 /***quality-slider***/
@@ -3969,6 +4060,7 @@ hr {
 
   &_img {
     padding: var(--gap-32);
+
     img {
       max-width: 100%;
       max-height: 100%;
@@ -3996,6 +4088,7 @@ hr {
     overflow: hidden;
     border-radius: $border-radius-32;
     margin-bottom: 16px;
+
     img {
       width: 100%;
     }
@@ -4022,7 +4115,7 @@ hr {
   position: relative;
 
   @include media-breakpoint-up(lg) {
-    width: 52.7%;//650
+    width: 52.7%; //650
   }
 
   @include media-breakpoint-down(lg) {
@@ -4033,12 +4126,14 @@ hr {
   &:nth-child(odd) {
     margin-left: auto;
     justify-content: flex-end;
+
     #{$this}_count {
       @include media-breakpoint-up(lg) {
         left: 0;
       }
     }
   }
+
   &:nth-child(even) {
     #{$this}_count {
       @include media-breakpoint-up(lg) {
@@ -4052,21 +4147,25 @@ hr {
       background: $color-light-2;
     }
   }
+
   &:nth-child(2) {
     .steps-item {
       background: $color-white;
     }
   }
+
   &:nth-child(3) {
     .steps-item {
       background: $color-green;
     }
   }
+
   &:nth-child(4) {
     .steps-item {
       background: $color-yellow;
     }
   }
+
   &:nth-child(5) {
     .steps-item {
       background: $color-blue-light;
@@ -4117,8 +4216,10 @@ hr {
   &_head {
     padding: 24px;
   }
+
   &-box {
     position: relative;
+
     &:after {
       content: '';
       position: absolute;
@@ -4213,6 +4314,7 @@ hr {
         max-height: 100%;
       }
     }
+
     &_brand {
       font-size: 24px;
       text-transform: uppercase;
@@ -4224,7 +4326,6 @@ hr {
 
 
 /***form-box***/
-
 
 
 .form-box {
@@ -4248,6 +4349,7 @@ hr {
         bottom: -80px;
       }
     }
+
     &--left {
       left: -7%;
       top: 0;
@@ -4270,6 +4372,7 @@ hr {
     text-transform: uppercase;
     margin-bottom: 4px;
   }
+
   &_total {
     font-size: 32px;
     text-transform: uppercase;
@@ -4301,7 +4404,9 @@ hr {
   border-radius: $border-radius-32;
   border: 1px solid $color-text;
   padding: var(--gap-32);
+}
 
+.howWorks-box, .blog-filter {
   .filter-radioBtns.dropdown-menu {
     @include media-breakpoint-up(xl) {
       background: transparent;
@@ -4318,10 +4423,12 @@ hr {
   display: flex;
   flex-direction: column;
   height: 100%;
+
   &_img {
     overflow: hidden;
     border-radius: $border-radius-32;
     margin-bottom: 16px;
+
     img {
       width: 100%;
       max-width: 100%;
@@ -4376,7 +4483,6 @@ hr {
 /***blog-item***/
 
 
-
 /***share***/
 
 .share {
@@ -4400,7 +4506,6 @@ hr {
 /***share***/
 
 
-
 /***article-footer***/
 
 .article-footer {
@@ -4409,6 +4514,7 @@ hr {
   display: flex;
   gap: 24px;
   justify-content: space-between;
+
   .article-item {
     &:last-child {
 
@@ -4420,12 +4526,13 @@ hr {
         .article-item_img {
           order: 1;
         }
-        .article-item_desc  {
+        .article-item_desc {
           order: 0;
           text-align: right;
         }
       }
-      .article-item_desc  {
+
+      .article-item_desc {
         text-align: right;
       }
     }
@@ -4495,8 +4602,9 @@ hr {
   &_img {
     overflow: hidden;
     border-radius: $border-radius-24;
+
     img {
-      width: 100% ;
+      width: 100%;
     }
   }
 
@@ -4513,6 +4621,7 @@ hr {
     padding: 10px 26px;
     text-transform: uppercase;
   }
+
   &_date {
     color: $color-green-2;
   }
@@ -4615,6 +4724,7 @@ hr {
     width: 24px;
     height: 24px;
     flex: 0 0 24px;
+
     svg {
       max-width: 100%;
       max-height: 100%;
@@ -4624,12 +4734,15 @@ hr {
 
 .lang-list {
   @include reset-ul();
+
   li {
     &:not(:last-child) {
       margin-bottom: 8px;
     }
+
     &.active {
       pointer-events: none;
+
       a {
         color: $color-gray;
         opacity: 0.5;
@@ -4667,6 +4780,7 @@ hr {
     width: 24px;
     height: 24px;
     flex: 0 0 24px;
+
     svg {
       max-width: 100%;
       max-height: 100%;
@@ -4707,6 +4821,7 @@ hr {
     background: $color-light;
 
   }
+
   &-item {
     display: flex;
     align-items: center;
@@ -4740,6 +4855,7 @@ hr {
       right: 16px;
       top: 50%;
       transform: translateY(-50%);
+
       svg {
         max-width: 100%;
         max-height: 100%;
@@ -4781,6 +4897,7 @@ hr {
 
   .header-nutrition {
     flex-grow: 0;
+
     &__btn {
       &:not(.collapsed) {
         border-radius: 12px 12px 0 0;
@@ -4800,18 +4917,22 @@ hr {
     border: 1px solid $color-text;
     padding: 16px;
     gap: 0;
+
     &__item {
       min-height: 24px;
+
       &:not(.collapsed) {
         &:after {
           transform: rotateX(180deg);
         }
       }
+
       &-icon {
         margin-right: 16px;
       }
     }
   }
+
   .lang-list {
     padding-top: 16px;
   }
@@ -4868,10 +4989,12 @@ hr {
 
   &-list {
     @include reset-ul();
+
     li {
       &:not(:last-child) {
         margin-bottom: 16px;
       }
+
       a {
         text-transform: uppercase;
         @media all and (hover: hover) {
@@ -4889,7 +5012,7 @@ hr {
     flex-direction: column;
     height: 100%;
     overflow: auto;
-    @include scrollStyle($color-gray-2, rgba(166,166,166,0.5));
+    @include scrollStyle($color-gray-2, rgba(166, 166, 166, 0.5));
   }
 
   .drop-menu-contacts {
@@ -4920,6 +5043,7 @@ hr {
     display: grid;
     gap: 8px;
     grid-template-columns: repeat(2, 1fr);
+
     li {
       margin-bottom: 0;
     }
@@ -4942,9 +5066,11 @@ hr {
   border: 1px solid $color-text;
   width: 56px;
   height: 56px;
+
   &_icon {
     width: 24px;
     height: 24px;
+
     svg {
       max-width: 100%;
       max-height: 100%;
@@ -4953,7 +5079,6 @@ hr {
 }
 
 /***callback***/
-
 
 
 /***modal***/
@@ -4969,18 +5094,22 @@ hr {
 
 .modal {
   z-index: 99999;
+
   &-content {
     background: $color-white;
     padding: var(--gap-24);
     border-radius: $border-radius-24;
     pointer-events: auto;
     border: 0;
+
     &--green {
       background: $color-green;
     }
+
     &--light {
       background: $color-light;
     }
+
     &--yellow {
       background: $color-yellow;
     }
@@ -5005,12 +5134,13 @@ hr {
 
   &-body {
     padding: 0;
-    @include scrollStyle($color-gray-2, rgba(166,166,166,0.5));
+    @include scrollStyle($color-gray-2, rgba(166, 166, 166, 0.5));
   }
 
   &-footer {
     border: 0;
     padding: 0;
+
     & > * {
       margin: 0;
     }
@@ -5029,6 +5159,7 @@ hr {
     border-radius: 8px;
     border: 1px solid $color-gray;
     @include transition();
+
     svg {
       @include transition();
       max-height: 100%;
@@ -5077,6 +5208,7 @@ hr {
     height: 1px;
     background: $color-gray;
   }
+
   span {
     background: $color-white;
     padding: 0 16px;
@@ -5166,10 +5298,11 @@ hr {
         gap: 24px;
         width: 100%;
       }
-      
+
       &__subtitle {
         color: $color-green-2;
       }
+
       &__count {
         color: $color-green-2;
         @extend .h6;
@@ -5196,6 +5329,7 @@ hr {
 
 .counter {
   display: flex;
+
   &-btn {
     width: 40px;
     height: 40px;
@@ -5252,7 +5386,6 @@ hr {
 /***counter***/
 
 
-
 /***program-info***/
 
 .program-info {
@@ -5269,6 +5402,7 @@ hr {
     @include media-breakpoint-down(md) {
       flex-direction: column;
     }
+
     &--desc {
       flex-grow: 1;
       padding-bottom: 20px;
@@ -5281,8 +5415,6 @@ hr {
       }
     }
   }
-
-
 
 
   &_img {
@@ -5321,6 +5453,7 @@ hr {
     width: 40px;
     height: 40px;
     margin-bottom: 8px;
+
     svg {
       max-width: 100%;
       max-height: 100%;
@@ -5350,6 +5483,7 @@ hr {
     &--green {
       background: $color-green;
       padding: 16px;
+
       .drop-btn {
         border-color: $color-green_hover;
 
@@ -5367,6 +5501,7 @@ hr {
             background: $color-green_hover;
           }
         }
+
         &_arrow {
           background: #AFCC00;
         }
@@ -5381,13 +5516,14 @@ hr {
     font-size: 16px;
     margin-top: 8px;
     gap: 4px;
+
     &__title {
       color: $color-green-2;
     }
   }
 }
-/***orderDays***/
 
+/***orderDays***/
 
 
 /***saleDays***/
@@ -5437,6 +5573,7 @@ hr {
       position: relative;
       z-index: 1;
       color: $color-green-2;
+
       &.active {
         color: $color-white;
       }
@@ -5469,11 +5606,13 @@ hr {
       position: relative;
       display: flex;
       justify-content: center;
+
       &:first-child {
         &:before {
           border-right: 0;
         }
       }
+
       &:last-child {
         &:before {
           border-left: 0;
@@ -5495,6 +5634,7 @@ hr {
         &:before {
           border-color: $color-green-2;
         }
+
         span {
           background: $color-green-2;
           color: $color-white;
@@ -5551,7 +5691,8 @@ hr {
     margin: 0;
     //background: $color-white;
     position: relative;
-    &:not(.last-slide){
+
+    &:not(.last-slide) {
       &:before {
         content: '';
         position: absolute;
@@ -5560,7 +5701,7 @@ hr {
         bottom: 0;
         right: 100%;
         width: 50px;
-        background: linear-gradient(to left, rgba(255,255,255, 1) 20%, rgba(255,255,255, 0));
+        background: linear-gradient(to left, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0));
       }
     }
 
@@ -5571,6 +5712,7 @@ hr {
     }
 
   }
+
   .slider-button-prev, .slider-button-next {
     width: 48px;
     height: 100%;
@@ -5579,6 +5721,7 @@ hr {
 
 .dates-slider {
   margin: 0;
+
   .swiper-slide {
     width: 68px;
   }
@@ -5617,10 +5760,11 @@ hr {
         border-color: $color-green;
 
         #{$this}_day {
-         &.lock {
-           color: $color-light;
-           background: $color-green-2;
-         }
+          &.lock {
+            color: $color-light;
+            background: $color-green-2;
+          }
+
           &--icon {
             svg {
               fill: $color-light;
@@ -5662,6 +5806,7 @@ hr {
     &--icon {
       width: 17px;
       height: 17px;
+
       svg {
         max-width: 100%;
         max-height: 100%;
@@ -5719,6 +5864,7 @@ hr {
     text-align: left;
     padding: 13px;
     font-family: $font-Oswald;
+
     span {
       color: $color-text;
     }
@@ -5903,46 +6049,52 @@ hr {
 
     input {
       display: none;
+
       &:checked ~ label,
-      &:checked ~ label ~ label{
+      &:checked ~ label ~ label {
         background: $color-green;
         border-color: $color-green;
       }
 
       &:not(:checked) ~ label:hover,
-      &:not(:checked) ~ label:hover ~ label{
+      &:not(:checked) ~ label:hover ~ label {
         background: $color-green_hover;
       }
-      &#activity-1:checked ~ .activity-desc:before  {
+
+      &#activity-1:checked ~ .activity-desc:before {
         content: attr(data-activity-1);
       }
-      &#activity-2:checked ~ .activity-desc:before  {
+
+      &#activity-2:checked ~ .activity-desc:before {
         content: attr(data-activity-2);
       }
-      &#activity-3:checked ~ .activity-desc:before  {
+
+      &#activity-3:checked ~ .activity-desc:before {
         content: attr(data-activity-3);
       }
-      &#activity-4:checked ~ .activity-desc:before  {
+
+      &#activity-4:checked ~ .activity-desc:before {
         content: attr(data-activity-4);
       }
-      &#activity-5:checked ~ .activity-desc:before  {
+
+      &#activity-5:checked ~ .activity-desc:before {
         content: attr(data-activity-5);
       }
     }
   }
 
   &-level {
-   width: 48px;
-   height: 48px;
-   flex: 0 0 48px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 10px;
-   border-radius: 6px;
-   border: 1px solid $color-gray;
-   cursor: pointer;
-   @include transition();
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid $color-gray;
+    cursor: pointer;
+    @include transition();
 
     @include media-breakpoint-down(sm) {
       width: 36px;
@@ -5956,6 +6108,7 @@ hr {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+
     &:before {
       font-size: 16px;
       text-transform: uppercase;
@@ -5972,6 +6125,7 @@ hr {
   background: rgba(166, 166, 166, 0.3);
   border-radius: 6px;
   box-shadow: none;
+
   &__fill {
     opacity: 0;
   }
@@ -5979,6 +6133,7 @@ hr {
   &__horizontal {
     height: 40px;
   }
+
   &__handle {
     top: 2px;
     bottom: 1px;
@@ -6021,11 +6176,13 @@ hr {
       width: 50%;
     }
   }
+
   &_title {
     @include media-breakpoint-down(sm) {
       order: 0;
     }
   }
+
   &_count {
     @include media-breakpoint-down(sm) {
       order: 1;
@@ -6045,6 +6202,7 @@ hr {
     @include media-breakpoint-up(sm) {
       width: calc(100% - 172px);
     }
+
     input {
       width: 100%;
     }
@@ -6070,7 +6228,7 @@ hr {
     padding: var(--gap-24);
     display: flex;
     flex-direction: column;
-    flex:0 0 51%;
+    flex: 0 0 51%;
   }
 
   &_title {
@@ -6146,7 +6304,7 @@ hr {
   &-overlay {
     overflow: auto;
     height: 100%;
-    @include scrollStyle($color-gray-2, rgba(166,166,166,0.5));
+    @include scrollStyle($color-gray-2, rgba(166, 166, 166, 0.5));
   }
 
   &_header {
@@ -6184,10 +6342,10 @@ hr {
 
     @include media-breakpoint-down(md) {
       flex-wrap: wrap;
-       &:not(:last-child) {
-         padding-bottom: 24px;
-         border-bottom: 1px solid $color-gray-3;
-       }
+      &:not(:last-child) {
+        padding-bottom: 24px;
+        border-bottom: 1px solid $color-gray-3;
+      }
     }
   }
 
@@ -6228,6 +6386,7 @@ hr {
         flex: 0 0 100%;
       }
     }
+
     &:nth-child(2),
     &:nth-child(3) {
       flex: 1 0 0;
@@ -6268,9 +6427,10 @@ hr {
     &:first-child {
       flex: 0 0 48%;
     }
+
     &:nth-child(2),
     &:nth-child(3) {
-     flex: 1 0 0;
+      flex: 1 0 0;
     }
   }
 }
@@ -6288,6 +6448,7 @@ hr {
     visibility: visible;
   }
 }
+
 .modal-backdrop.show,
 .backdrop {
   background: $color-text;
@@ -6319,9 +6480,11 @@ hr {
         background: linear-gradient(to left, rgb(241, 251, 199) 55%, rgba(241, 251, 199, 0));
       }
     }
+
     &_item {
       overflow: hidden;
       border-radius: $border-radius-16;
+
       img {
         width: 100%;
         max-height: 100%;
@@ -6334,6 +6497,7 @@ hr {
     gap: 24px;
     align-items: center;
     justify-content: space-between;
+
     .slider-buttons {
       margin: 0;
     }
@@ -6341,15 +6505,16 @@ hr {
 
   &-thumbs {
 
-   &-slider {
-     margin: 0;
+    &-slider {
+      margin: 0;
 
-     .swiper-slide {
-       width: 56px;
-       height: 56px;
+      .swiper-slide {
+        width: 56px;
+        height: 56px;
 
-     }
-   }
+      }
+    }
+
     &_item {
       padding: 4px;
       border-radius: $border-radius-12;
@@ -6439,6 +6604,7 @@ hr {
   &_item {
     border-radius: $border-radius-24;
     padding: 32px 32px 8px;
+
     &:not(:last-of-type) {
       margin-bottom: 32px;
     }
@@ -6456,7 +6622,7 @@ hr {
     }
 
     &.bg-3 {
-     background: $color-light-2;
+      background: $color-light-2;
     }
 
     &--header {
@@ -6472,6 +6638,7 @@ hr {
     &--subtitle {
       text-transform: uppercase;
       font-size: 20px;
+
       span {
         color: $color-green-2;
       }
@@ -6483,6 +6650,7 @@ hr {
     text-transform: uppercase;
     font-size: 16px;
     margin-bottom: 24px;
+
     &:not(:first-child) {
       &:not(.basket-box_total) {
         padding-top: 16px;
@@ -6490,6 +6658,7 @@ hr {
         border-top: 1px solid rgba(166, 166, 166, 0.50);
       }
     }
+
     &--title {
       color: $color-gray-2;
     }
@@ -6514,9 +6683,11 @@ hr {
     &--title {
       @extend .basket-box_delivery--title;
     }
+
     &--total {
       font-size: 24px;
     }
+
     &--count {
       @extend .basket-box_delivery--count;
     }
@@ -6526,6 +6697,7 @@ hr {
 .basket-item-row {
   padding-bottom: 24px;
   border-bottom: 1px solid rgba(166, 166, 166, 0.50);
+
   &:not(:first-child) {
     padding-top: 24px;
   }
@@ -6533,6 +6705,7 @@ hr {
   &.line-bottom {
     position: relative;
     border: 0 !important;
+
     &:after {
       content: '';
       position: absolute;
@@ -6546,19 +6719,21 @@ hr {
 }
 
 .basket-items,
-.orderCard-items{
+.orderCard-items {
   margin-bottom: 24px;
 
   .product-item {
     &_box {
       flex-grow: 1;
     }
+
     &_btns {
       display: flex;
       flex-direction: column;
       flex: 0 0 40px;
       gap: 8px;
       justify-content: space-between;
+
       a, button {
         width: 100%;
       }
@@ -6569,7 +6744,6 @@ hr {
     }
   }
 }
-
 
 
 .addProducts {
@@ -6598,6 +6772,7 @@ hr {
   &_content {
     padding-top: 24px;
   }
+
   &_row {
     display: flex;
     gap: 16px;
@@ -6681,10 +6856,12 @@ hr {
   &_desc {
     flex-grow: 1;
     text-transform: uppercase;
+
     &--title {
       font-size: 24px;
       margin-bottom: 8px;
     }
+
     &--subtitle {
       color: $color-gray-2;
     }
@@ -6735,23 +6912,26 @@ hr {
     @include media-breakpoint-down(xl) {
       display: none;
     }
+
     img {
       max-width: 100%;
     }
+
     &.img-1 {
       top: -32px;
       right: -80px;
-      @media (max-width: 1450px){
+      @media (max-width: 1450px) {
         width: 100px;
         right: -20px;
       }
     }
+
     &.img-2 {
       z-index: -1;
       max-width: 220px;
       bottom: -140px;
       right: -100px;
-      @media (max-width: 1450px){
+      @media (max-width: 1450px) {
         width: 170px;
         right: -20px;
         bottom: -160px;
@@ -6764,6 +6944,7 @@ hr {
     font-size: 12px;
     font-family: $font-Roboto-Condensed;
     text-transform: initial;
+
     a {
       text-decoration: underline;
       @media all and (hover: hover) {
@@ -6775,14 +6956,15 @@ hr {
     }
   }
 }
-/***basket-box***/
 
+/***basket-box***/
 
 
 /***form***/
 
 .form-title {
   @extend .filter-row__title;
+
   &_count {
     @extend .filter-row__title--count;
   }
@@ -6847,6 +7029,7 @@ hr {
       top: 50%;
       right: 0;
       transform: translateY(-50%);
+
       &:after {
         content: '';
         position: absolute;
@@ -6871,6 +7054,7 @@ hr {
     border-top: 1px solid rgba(166, 166, 166, 0.50);
 
     padding: 24px 0;
+
     &:last-of-type {
       border-bottom: 1px solid rgba(166, 166, 166, 0.50);
     }
@@ -6902,6 +7086,7 @@ hr {
       text-transform: uppercase;
       display: flex;
       align-items: center;
+
       span {
         color: $color-text;
         margin-left: 5px;
@@ -6950,6 +7135,7 @@ hr {
 
   &.active {
     border-color: $color-gray;
+
     .deliveryForm_content--hidden {
       height: 100%;
       overflow: visible;
@@ -6978,15 +7164,16 @@ hr {
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
+
     &:not(:last-child) {
       margin-bottom: 8px;
     }
+
     &--title {
       color: $color-gray-2;
     }
   }
 }
-
 
 
 .pay-title {
@@ -7017,7 +7204,7 @@ hr {
   width: 100%;
 }
 
-.choices__inner{
+.choices__inner {
   background: transparent;
   border: 1px solid $color-gray;
   border-radius: 8px;
@@ -7025,6 +7212,7 @@ hr {
   text-transform: uppercase;
 
 }
+
 .choices__list--single .choices__item {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -7034,7 +7222,7 @@ hr {
 
 .is-flipped.is-open .choices__inner,
 .is-open .choices__inner,
-.choices__list--dropdown, .choices__list[aria-expanded]{
+.choices__list--dropdown, .choices__list[aria-expanded] {
   border-radius: 8px;
 }
 
@@ -7042,12 +7230,14 @@ hr {
   top: calc(100% + 8px);
 }
 
-.is-flipped  .choices__list--dropdown,
-.is-flipped .choices__list[aria-expanded]{
+.is-flipped .choices__list--dropdown,
+.is-flipped .choices__list[aria-expanded] {
   bottom: calc(100% + 8px);
 }
+
 .choices__list--dropdown .choices__item--selectable.is-selected {
   color: $color-gray-2;
+
   &::after {
     width: 24px;
     height: 24px;
@@ -7074,8 +7264,9 @@ hr {
 .choices__list--dropdown .choices__list,
 .choices__list[aria-expanded] .choices__list {
   max-height: 200px;
-  @include scrollStyle($color-gray-2, rgba(166,166,166,0.5));
+  @include scrollStyle($color-gray-2, rgba(166, 166, 166, 0.5));
 }
+
 .choices__item--disabled {
   display: none;
 }
@@ -7116,6 +7307,7 @@ hr {
     &-box {
       background: $color-white;
     }
+
     &-item {
       @include hoverBg($color-light);
 
@@ -7138,6 +7330,7 @@ hr {
       margin-bottom: 32px;
       border-bottom: 1px solid $color-gray;
     }
+
     &__icon {
       @include icon($color-green);
       margin-bottom: 16px;
@@ -7220,7 +7413,7 @@ hr {
     border-radius: 6px;
     border: 1px solid $color-gray;
     position: relative;
-    @include arrowBtn($color-text,  $right: 50%);
+    @include arrowBtn($color-text, $right: 50%);
 
     &:not(.collapsed) {
       transform: rotateX(180deg);
@@ -7255,7 +7448,6 @@ hr {
   gap: 16px;
   margin-bottom: 0;
 }
-
 
 
 /***order-item***/
@@ -7323,6 +7515,7 @@ hr {
       display: flex;
       align-items: center;
       gap: 8px;
+
       span {
         font-size: 20px;
         text-transform: uppercase;
@@ -7361,7 +7554,8 @@ hr {
     &--current {
       color: $color-text;
     }
-    &--all{
+
+    &--all {
       color: $color-green-2;
     }
 
@@ -7399,6 +7593,7 @@ hr {
   border-top: 1px solid rgba(166, 166, 166, 0.50);
   padding-top: 24px;
   margin-top: 24px;
+
   &_title {
     font-size: 20px;
     text-transform: uppercase;
@@ -7462,6 +7657,7 @@ hr {
   .input-radio_label {
     font-size: 14px;
   }
+
   .filter-radioBtns.dropdown-menu {
     @include media-breakpoint-up(xl) {
       background: transparent;
@@ -7484,6 +7680,7 @@ hr {
   height: 100%;
   width: 100%;
 }
+
 /***contacts-box***/
 
 
@@ -7492,8 +7689,10 @@ hr {
 .section-error {
   margin-bottom: 80px;
 }
+
 .error {
   text-align: center;
+
   &__title {
     font-size: clamp(200px, 31.6vw, 400px);
     line-height: 1.1;
@@ -7516,6 +7715,7 @@ hr {
   &-menu {
     margin-top: 13vh;
     text-align: left;
+
     &__title {
       font-size: 20px;
       text-transform: uppercase;
@@ -7530,6 +7730,7 @@ hr {
       @include media-breakpoint-down(sm) {
         flex-direction: column;
       }
+
       li {
         a {
           text-transform: uppercase;
@@ -7548,6 +7749,212 @@ hr {
 }
 
 /***error***/
+
+
+/***howWorks-box***/
+
+.howWorks {
+  &-box {
+    padding: var(--gap-24);
+    border-radius: 32px;
+    border: 1px solid $color-text;
+  }
+
+  &-content {
+    border-radius: 24px;
+    background: $color-white;
+    padding: 48px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 24px;
+    }
+  }
+
+  &-tabContent {
+    display: flex;
+
+    &__img {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    &__desc {
+      @include media-breakpoint-up(lg) {
+        width: 335px;
+        flex: 0 0 335px;
+      }
+      @include media-breakpoint-down(lg) {
+        max-width: 350px;
+        text-align: center;
+        margin: auto;
+      }
+    }
+  }
+}
+
+.howWorksAccordion {
+  $this: &;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 33px;
+      bottom: 0;
+      width: 1px;
+      background: $color-gray-2;
+      @include transition(0.2s);
+    }
+  }
+
+  &-item {
+    position: relative;
+    padding-bottom: 50px;
+    z-index: 1;
+    @include transition(0.3s);
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 24px;
+       &:not(:last-of-type) {
+         &:after {
+           content: '';
+           position: absolute;
+           left: 50%;
+           bottom: 0;
+           width: 1px;
+           height: 32px;
+           background: $color-gray;
+         }
+       }
+    }
+
+   @include media-breakpoint-up(lg) {
+     &:not(.active) {
+       #{$this}-header__title {
+         color: $color-gray-2;
+       }
+
+       #{$this}-header__count {
+         color: $color-gray-2;
+         border-color: $color-gray-2;
+       }
+     }
+   }
+
+    &.active {
+      @include media-breakpoint-up(lg) {
+        flex-grow: 1;
+        pointer-events: none;
+        color: $color-text;
+      }
+      @include media-breakpoint-down(lg) {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+      background: $color-white;
+      flex-grow: 0;
+      margin:  auto 0 0;
+    }
+  }
+
+  &-header {
+
+    &__wrapCounter {
+      flex: 0 0 66px;
+    }
+
+    &__count {
+      display: block;
+      border-radius: 8px;
+      border: 1px solid $color-text;
+      color: $color-text;
+      padding: 12px;
+      width: 66px;
+      height: 47px;
+      text-align: center;
+      flex: 0 0 66px;
+      font-size: 16px;
+      @include transition(0.2s);
+      position: relative;
+
+      @include media-breakpoint-down(lg) {
+        border-color: $color-gray;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -3px;
+        bottom: -3px;
+        background: $color-white;
+        z-index: -1;
+      }
+    }
+
+    &__button {
+      display: flex;
+      gap: 0 32px;
+      align-items: center;
+      @include transition(0.2s);
+
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+      text-transform: uppercase;
+      text-align: left;
+    }
+  }
+
+  &-body {
+    padding-top: 8px;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 98px;
+    }
+
+    &__text {
+      color: $color-gray-2;
+      font-family: $font-Roboto-Condensed;
+    }
+
+    &__img {
+      margin-top: 32px;
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+
+      img {
+        max-width: 100%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+
+/***howWorks-box***/
 
 
 

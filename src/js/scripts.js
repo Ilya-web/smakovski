@@ -29,13 +29,50 @@ if(loader) {
 document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(() => {
-    loader.classList.add('loaded');
+    if(loader) {
+      loader.classList.add('loaded');
+    }
   },2000)
 
 
   // const thanks = new Modal('#modalReviewProgram');
   //
   // thanks.show()
+
+
+  const howWorksAccordion = document.querySelectorAll('.howWorksAccordion');
+  howWorksAccordion.forEach(accord => {
+    const items = accord.querySelectorAll('.howWorksAccordion-item');
+    items.forEach(i => {
+      const btn = i.querySelector('.howWorksAccordion-header__button');
+      btn.addEventListener('click', () => {
+        if(i.classList.contains('active')) {
+          i.classList.remove('active')
+        } else {
+          items.forEach(item => {
+            item.classList.remove('active');
+          })
+          i.classList.add('active')
+        }
+      })
+    })
+  })
+
+  //smooth scroll for active item accordion-----------------------
+  if(window.innerWidth < 992) {
+    const accordionItems = document.querySelectorAll('.accordion-collapse');
+    accordionItems.forEach((el)=>{
+      el.addEventListener('shown.bs.collapse',(e)=>{
+
+        window.scroll({
+          top: window.pageYOffset + el.getBoundingClientRect().y - 180,
+          left: 0,
+          behavior: 'smooth'
+        })
+      })
+    })
+  }
+
 
 
   //deliveryType--------------------------------------------------
