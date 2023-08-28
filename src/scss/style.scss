@@ -7878,7 +7878,6 @@ hr {
     }
 
     &__count {
-      display: block;
       border-radius: 8px;
       border: 1px solid $color-text;
       color: $color-text;
@@ -7957,6 +7956,74 @@ hr {
 
 
 /***howWorks-box***/
+
+
+/***notification***/
+
+.notification {
+  $this: &;
+  background: $color-white;
+  border-radius: 16px;
+  font-size: 16px;
+  padding: var(--gap-24);
+  text-transform: uppercase;
+
+  align-items: center;
+  gap: 8px;
+  display: none;
+
+
+  &-box {
+    position: fixed;
+    top: 80px;
+    right: 12px;
+    z-index: 9999;
+    @include transition();
+    transform: translateX(110%);
+
+    &.active {
+      transform: translateX(0);
+      #{$this}{
+        display: flex;
+      }
+    }
+  }
+
+  &--error {
+    background: $color-red;
+    color: $color-white;
+
+    #{$this}_icon {
+      svg {
+        fill: #AB2813;
+      }
+    }
+  }
+
+  &--successfully {
+    background: $color-green;
+    #{$this}_icon {
+      svg {
+        fill: $color-green-2;
+      }
+    }
+  }
+
+
+
+  &_icon {
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+/***notification***/
 
 
 

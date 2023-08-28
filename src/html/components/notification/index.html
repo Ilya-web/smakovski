@@ -1,0 +1,17 @@
+
+<div class="notification-box active">
+  <div class="notification
+  @@if(context.error){notification--error}
+  @@if(context.successfully){notification--successfully}
+">
+    <div class="notification_icon">
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#@@if(context.error){info}@@if(context.successfully){check}"></use>
+      </svg>
+    </div>
+    <div class="notification_text">
+      @@if(context.error){Ошибка!}
+      @@if(context.successfully){Успешно!}
+    </div>
+  </div>
+</div>

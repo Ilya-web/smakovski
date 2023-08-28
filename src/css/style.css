@@ -18640,7 +18640,6 @@ hr {
   flex: 0 0 66px;
 }
 .howWorksAccordion-header__count {
-  display: block;
   border-radius: 8px;
   border: 1px solid #181818;
   color: #181818;
@@ -18733,4 +18732,64 @@ hr {
 }
 
 /***howWorks-box***/
+/***notification***/
+.notification {
+  background: #ffffff;
+  border-radius: 16px;
+  font-size: 16px;
+  padding: var(--gap-24);
+  text-transform: uppercase;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  display: none;
+}
+.notification-box {
+  position: fixed;
+  top: 80px;
+  right: 12px;
+  z-index: 9999;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  -webkit-transform: translateX(110%);
+  -ms-transform: translateX(110%);
+  transform: translateX(110%);
+}
+.notification-box.active {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+.notification-box.active .notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.notification--error {
+  background: #E7644F;
+  color: #ffffff;
+}
+.notification--error .notification_icon svg {
+  fill: #AB2813;
+}
+.notification--successfully {
+  background: #C3E00D;
+}
+.notification--successfully .notification_icon svg {
+  fill: #708200;
+}
+.notification_icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+}
+.notification_icon svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/***notification***/
 /*# sourceMappingURL=maps/style.css.map */
