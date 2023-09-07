@@ -12317,9 +12317,9 @@ hr {
   }
 }
 .offers-item__link-icon {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 40px;
   height: 40px;
   background: #C3E00D;

@@ -1647,7 +1647,7 @@ hr {
       }
 
       &-icon {
-        display: inline-flex;
+        display: flex;
         width: 40px;
         height: 40px;
         background: $color-green;
