@@ -202,6 +202,24 @@ hr {
   }
 }
 
+.btn-arrow {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background: $color-green;
+  border-radius: 8px;
+  padding: 8px;
+  @include transition();
+  @include clickAnimationBg($color-green);
+
+  @media all and (hover: hover) {
+    &:hover,
+    &:focus-visible {
+      background: $color-green_hover;
+    }
+  }
+}
+
 //a, button {
 //  @include hover(red, green);
 //  background: transparent;
@@ -1861,7 +1879,7 @@ hr {
       max-width: 100%;
     }
 
-    .btn-plus {
+    .btn-arrow {
       position: absolute;
       bottom: 8px;
       right: 8px;
@@ -1914,6 +1932,7 @@ hr {
       img {
         max-width: 100%;
         max-height: 100%;
+        width: 100%;
       }
     }
 
@@ -7777,6 +7796,9 @@ hr {
       display: flex;
       justify-content: center;
       flex-grow: 1;
+       img {
+         max-width: 245px;
+       }
       @include media-breakpoint-down(lg) {
         display: none;
       }
@@ -7967,11 +7989,10 @@ hr {
   font-size: 16px;
   padding: var(--gap-24);
   text-transform: uppercase;
-
   align-items: center;
   gap: 8px;
   display: none;
-
+  border: 1px solid $color-text;
 
   &-box {
     position: fixed;
@@ -7979,7 +8000,7 @@ hr {
     right: 12px;
     z-index: 9999;
     @include transition();
-    transform: translateX(110%);
+    //transform: translateX(110%);
 
     &.active {
       transform: translateX(0);

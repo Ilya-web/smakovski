@@ -30,7 +30,7 @@ function imageMin() {
       src("src/images/**/*"),
       imagemin([
         imagemin.mozjpeg({ progressive: true, max: 100, min: 95 }),
-        imagemin.optipng({ quality: "90" }),
+        imagemin.optipng({ quality: "100" }),
         imagemin.svgo({
           plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
         }),
