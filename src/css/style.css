@@ -10939,6 +10939,10 @@ hr {
 .btn-site > .ripple {
   background-color: #C3E00D;
 }
+.btn-site:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
 
 .btn-site-2 {
   display: -webkit-inline-box;
@@ -10957,6 +10961,10 @@ hr {
     color: #7E7E7E;
     text-decoration: underline;
   }
+}
+.btn-site-2:disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .btn-site-3 {
@@ -11077,6 +11085,10 @@ hr {
 .btn-site-3.noBg > .ripple {
   background-color: #7E7E7E;
 }
+.btn-site-3:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
 
 .btn-plus {
   display: -webkit-inline-box;
@@ -11102,6 +11114,10 @@ hr {
 .btn-plus svg {
   max-width: 100%;
   max-height: 100%;
+}
+.btn-plus:disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .politics-info {

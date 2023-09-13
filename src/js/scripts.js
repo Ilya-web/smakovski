@@ -5,7 +5,7 @@ import { Tooltip, Modal } from "bootstrap";
 // loader-------------------------------------------------------------
 
 const loader = document.querySelector(".loader");
-if(loader) {
+if (loader) {
   const bar = document.querySelector(".loader-progress-bar_bar");
 
   let startWidth = 0;
@@ -24,15 +24,13 @@ if(loader) {
 }
 
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(() => {
-    if(loader) {
+    if (loader) {
       loader.classList.add('loaded');
     }
-  },2000)
+  }, 2000)
 
 
   // const thanks = new Modal('#modalReviewProgram');
@@ -46,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     items.forEach(i => {
       const btn = i.querySelector('.howWorksAccordion-header__button');
       btn.addEventListener('click', () => {
-        if(i.classList.contains('active')) {
+        if (i.classList.contains('active')) {
           i.classList.remove('active')
         } else {
           items.forEach(item => {
@@ -59,10 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   //smooth scroll for active item accordion-----------------------
-  if(window.innerWidth < 992) {
+  if (window.innerWidth < 992) {
     const accordionItems = document.querySelectorAll('.accordion-collapse');
-    accordionItems.forEach((el)=>{
-      el.addEventListener('shown.bs.collapse',(e)=>{
+    accordionItems.forEach((el) => {
+      el.addEventListener('shown.bs.collapse', (e) => {
 
         window.scroll({
           top: window.pageYOffset + el.getBoundingClientRect().y - 180,
@@ -74,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-
   //deliveryType--------------------------------------------------
   const deliveryType = document.querySelectorAll('.deliveryType-js');
   deliveryType.forEach(item => {
@@ -84,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       deliveryType.forEach(item => {
         item.classList.remove('active')
       });
-      if(input.checked) {
+      if (input.checked) {
         item.classList.add('active')
       }
     })
@@ -101,15 +98,15 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener('change', () => {
       let countInput = 0;
       allergenInput.forEach(item => {
-       if(item.querySelector('input').checked) {
-         countInput++;
-       }
-     })
+        if (item.querySelector('input').checked) {
+          countInput++;
+        }
+      })
       allergenCount.innerText = countInput
     })
   })
 
-  if(allergenCountClear) {
+  if (allergenCountClear) {
     allergenCountClear.addEventListener('click', () => {
       allergenInput.forEach(item => {
         const input = item.querySelector('input');
@@ -123,13 +120,13 @@ document.addEventListener("DOMContentLoaded", () => {
   //addProducts----------------------------------------------------
   const addProducts = document.querySelectorAll('.addProducts');
 
-  addProducts.forEach( addProduct => {
+  addProducts.forEach(addProduct => {
     const checkbox = addProduct.querySelector('input[type="checkbox"]');
     const contentInputs = addProduct.querySelectorAll('.addProducts_content input[type="checkbox"]')
 
-    if(checkbox) {
-      checkbox.addEventListener('input',() => {
-        if(!checkbox.checked) {
+    if (checkbox) {
+      checkbox.addEventListener('input', () => {
+        if (!checkbox.checked) {
           contentInputs.forEach(input => {
             input.checked = false
           })
@@ -172,52 +169,48 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
 
-
-
   // tooltip  --------------------------------------------------------
   document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((button) => {
     new Tooltip(button);
   });
 
   // counter  --------------------------------------------------------
-  const counter = document.querySelectorAll('.counter');
-  counter.forEach(c => {
-   const plus = c.querySelector('.counter-plus');
-   const minus = c.querySelector('.counter-minus');
-   const input = c.querySelector('input');
-   let count = Number(input.value);
-
-    minus.addEventListener("click", () => {
-      if(count !== 1) {
-        count -= 1;
-        input.value = count;
-      }
-    });
-
-    plus.addEventListener("click", () => {
-      count += 1;
-      input.value = count;
-    });
-
-  })
+  // const counter = document.querySelectorAll('.counter');
+  // counter.forEach(c => {
+  //  const plus = c.querySelector('.counter-plus');
+  //  const minus = c.querySelector('.counter-minus');
+  //  const input = c.querySelector('input');
+  //  let count = Number(input.value);
+  //
+  //   minus.addEventListener("click", () => {
+  //     if(count !== 1) {
+  //       count -= 1;
+  //       input.value = count;
+  //     }
+  //   });
+  //
+  //   plus.addEventListener("click", () => {
+  //     count += 1;
+  //     input.value = count;
+  //   });
+  // })
 
 
   // menu desktop  ---------------------------------------------------
   const menuBtn = document.querySelectorAll('.menuBtn');
   const menuDesktop = document.querySelector('#menuDesktop');
   const wrapMenu = document.querySelector('.wrap-menu');
-  menuBtn.forEach(btn =>{
+  menuBtn.forEach(btn => {
     btn.addEventListener('click', () => {
       menuDesktop.classList.toggle('show');
 
       wrapMenu.classList.toggle('show');
 
-      menuBtn.forEach(btn =>{
+      menuBtn.forEach(btn => {
         btn.classList.toggle('active');
       })
     })
   })
-
 
 
   // passwordBtn  ---------------------------------------------------
@@ -229,54 +222,58 @@ document.addEventListener("DOMContentLoaded", () => {
       const iconPasswordUrl = iconPassword.getAttribute('xlink:href');
       const res = iconPasswordUrl.split('#');
 
-      if(input.getAttribute('type') === 'password') {
+      if (input.getAttribute('type') === 'password') {
         input.setAttribute('type', 'text');
-        iconPassword.setAttribute('xlink:href', res[0]+ '#password-2');
-      }
-
-      else if(input.getAttribute('type') === 'text') {
+        iconPassword.setAttribute('xlink:href', res[0] + '#password-2');
+      } else if (input.getAttribute('type') === 'text') {
         input.setAttribute('type', 'password');
-        iconPassword.setAttribute('xlink:href', res[0]+ '#password');
+        iconPassword.setAttribute('xlink:href', res[0] + '#password');
       }
     })
   })
 
 
-  // input tel mask --------------------------------------------------
-  const inputTel = document.querySelectorAll('[type="tel"]');
+  const inputMaskInit = () => {
+    // input tel mask --------------------------------------------------
+    const inputTel = document.querySelectorAll('[type="tel"]');
 
-  inputTel.forEach(input => {
-    const tel = IMask(input, {
-      mask: '+{38}(000)000-00-00'
+    inputTel.forEach(input => {
+      const tel = IMask(input, {
+        mask: '+{38}(000)000-00-00'
+      });
+      // clear input tel -----------------------------------------------
+      input.addEventListener('blur', function () {
+        if (tel.value.length !== 17) {
+          tel.value = '';
+        }
+      });
     });
-    // clear input tel -----------------------------------------------
-    input.addEventListener('blur', function() {
-      if (tel.value.length !== 17) {
-        tel.value = '';
-      }
-    });
-  });
+  }
+  inputMaskInit();
 
-  // label animate ---------------------------------------------------
-  const inputs = document.querySelectorAll('.input-site__input');
-  inputs.forEach((input) => {
-    if(input.value !== '') {
-      input.parentElement.classList.add('active');
-    }
+ const inputLabelInit = () => {
+   // label animate ---------------------------------------------------
+   const inputs = document.querySelectorAll('.input-site__input');
+   inputs.forEach((input) => {
+     if (input.value !== '') {
+       input.parentElement.classList.add('active');
+     }
 
-    input.addEventListener('focus', () =>{
-      const parentInput = input.parentElement;
-      parentInput.classList.add('active');
-      parentInput.classList.add('focus');
-    })
+     input.addEventListener('focus', () => {
+       const parentInput = input.parentElement;
+       parentInput.classList.add('active');
+       parentInput.classList.add('focus');
+     })
 
-    input.addEventListener('blur', () =>{
-      const parentInput = input.parentElement;
-      parentInput.classList.remove('focus');
-      if(input.value === '') {
-        parentInput.classList.remove('active');
-      }
-    })
-  });
+     input.addEventListener('blur', () => {
+       const parentInput = input.parentElement;
+       parentInput.classList.remove('focus');
+       if (input.value === '') {
+         parentInput.classList.remove('active');
+       }
+     })
+   });
+ }
+  inputLabelInit();
 
 });

@@ -206,46 +206,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const datesSlider = '.dates-slider';
-  const datesSliderAll = document.querySelectorAll('.wrapper-dates-slider');
 
+  const datesSliderInit = () => {
+    const datesSlider = '.dates-slider';
+    const datesSliderAll = document.querySelectorAll('.wrapper-dates-slider');
 
-  if(document.querySelector(datesSlider)) {
-    datesSliderAll.forEach(slider => {
-      new Swiper(slider.querySelector('.dates-slider'), {
-        slidesPerView: "auto",
-        spaceBetween: 8,
-        speed: 300,
-        simulateTouch: false,
-        modules: [Navigation],
-        navigation: {
-          nextEl: slider.querySelector(`${datesSlider}-next`),
-          prevEl: slider.querySelector(`${datesSlider}-prev`),
-        },
-        on: {
-          reachEnd: function () {
-            const nav = slider.querySelector(`${datesSlider}-buttons`);
-            nav.classList.add('last-slide');
+    if(document.querySelector(datesSlider)) {
+      datesSliderAll.forEach(slider => {
+        new Swiper(slider.querySelector('.dates-slider'), {
+          slidesPerView: "auto",
+          spaceBetween: 8,
+          speed: 300,
+          simulateTouch: false,
+          modules: [Navigation],
+          navigation: {
+            nextEl: slider.querySelector(`${datesSlider}-next`),
+            prevEl: slider.querySelector(`${datesSlider}-prev`),
           },
-          slideChange: function (i) {
-            const nav = slider.querySelector(`${datesSlider}-buttons`);
-            if(!i.isEnd) {
-              nav.classList.remove('last-slide');
-            }
+          on: {
+            reachEnd: function () {
+              const nav = slider.querySelector(`${datesSlider}-buttons`);
+              nav.classList.add('last-slide');
+            },
+            slideChange: function (i) {
+              const nav = slider.querySelector(`${datesSlider}-buttons`);
+              if(!i.isEnd) {
+                nav.classList.remove('last-slide');
+              }
+            },
+            resize: function (i) {
+              const nav = slider.querySelector(`${datesSlider}-buttons`);
+              if(i.isLocked) {
+                nav.classList.add('d-none');
+              }
+              else {
+                nav.classList.remove('d-none');
+              }
+            },
           },
-          resize: function (i) {
-            const nav = slider.querySelector(`${datesSlider}-buttons`);
-            if(i.isLocked) {
-              nav.classList.add('d-none');
-            }
-            else {
-              nav.classList.remove('d-none');
-            }
-          },
-        },
-      });
-    })
+        });
+      })
+    }
   }
+
+  datesSliderInit();
 
 
 

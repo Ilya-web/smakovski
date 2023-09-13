@@ -197,7 +197,6 @@ hr {
       svg {
         fill: $color-text;
       }
-
     }
   }
 }
@@ -313,6 +312,11 @@ hr {
 
   @include hoverBg($color-green_hover);
   @include clickAnimationBg($color-green);
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
 
 .btn-site-2 {
@@ -331,6 +335,10 @@ hr {
       color: $color-gray-2;
       text-decoration: underline;
     }
+  }
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
   }
 }
 
@@ -416,6 +424,11 @@ hr {
     }
     @include clickAnimationBg($color-gray-2);
   }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
 
 .btn-plus {
@@ -433,6 +446,11 @@ hr {
   svg {
     max-width: 100%;
     max-height: 100%;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
   }
 }
 
