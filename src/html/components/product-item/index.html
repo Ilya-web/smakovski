@@ -2,7 +2,7 @@
 @@if(!context.grid){
 <div class="col-sm-6 col-lg-4 col-xl-3">
   <div class="product-item">
-    <div class="product-item_img">
+    <div class="product-item_img @@if(context.noImg){noImg}">
       <img src="images/product/@@imgUrl" alt="">
       @@if(context.backdrop) {
       <div class="product-item_backdrop">
@@ -21,6 +21,7 @@
         <div class="product-item_allergens--item">Арахис</div>
       </div>
       }
+
     </div>
     @@if(context.lock) {
     <button class="product-item_lock tooltip" type="button"
@@ -143,13 +144,19 @@
         <form action="#">
           <div class="product-item_form">
             <div class="product-item_price">+ 30.00 ₴</div>
-            <button type="submit" class="btn-plus click-animation">
+            <button type="submit" class="btn-plus click-animation @@if(context.added){added}">
               <svg>
+                @@if(!context.added){
                 <use xlink:href="images/icons/sprite.svg#plus"></use>
+                }
+                @@if(context.added){
+                  <use xlink:href="images/icons/sprite.svg#check"></use>
+                }
               </svg>
             </button>
           </div>
         </form>
+
       }
       @@if(context.backdrop) {
         <div class="product-item_mobileBtn mt-2 d-flex gap-2">

@@ -1,0 +1,42 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    @@include('components/breadcrumb/index.html',
+    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item" aria-current="page">спасибо за заказ</li>'}
+    )
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3 text-center">
+            <div class="thanks__img">
+              <img src="../images/thanks-img.svg" alt="">
+            </div>
+            <div class="thanks__title h1 mb-4">Спасибо!</div>
+            <div class="thanks__text mb-4">Ваш заказ умспешно оформлен. <br>
+              Мы свяжемся с вами в ближайшее время.</div>
+            <div class="thanks__order">Номер вашего заказа <span class="thanks__order-number">#23223</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+  <span class="callback_icon">
+     <svg>
+    <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+  </svg>
+  </span>
+</button>
+
+
+
+
+@@include('components/scripts/index.html')
