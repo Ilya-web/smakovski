@@ -23,7 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
       this.appendChild(ripple);
 
       setTimeout(() => {
-        document.querySelector(".ripple").remove();
+        const span = document.querySelector(".ripple");
+        if(span) {
+          document.querySelector(".ripple").remove();
+        }
       }, 400);
     }
   }

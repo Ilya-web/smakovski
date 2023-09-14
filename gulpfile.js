@@ -85,7 +85,7 @@ function BrowserSync() {
   browserSync.init({
     server: { baseDir: "./" },
     notify: false,
-    // tunnel: //'write-site-name'
+    // tunnel: 'smakovski'
   });
 }
 
