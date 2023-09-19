@@ -31,4 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   btnAnimation();
+
+  window.addEventListener("btnAnimation", () => {
+    btnAnimation();
+  });
 });

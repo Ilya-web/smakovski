@@ -248,8 +248,12 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     }
   }
-
   datesSliderInit();
+
+  window.addEventListener("datesSliderInit", () => {
+    datesSliderInit();
+  });
+
 
 
 
@@ -293,5 +297,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   productCardSliderInit()
+
+  window.addEventListener("productCardSliderInit", () => {
+    productCardSliderInit();
+  });
 
 });

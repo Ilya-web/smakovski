@@ -251,6 +251,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   inputMaskInit();
 
+  window.addEventListener("inputMaskInit", () => {
+    inputMaskInit();
+  });
+
  const inputLabelInit = () => {
    // label animate ---------------------------------------------------
    const inputs = document.querySelectorAll('.input-site__input');
@@ -275,5 +279,9 @@ document.addEventListener("DOMContentLoaded", () => {
    });
  }
   inputLabelInit();
+
+  window.addEventListener("inputLabelInit", () => {
+    inputLabelInit();
+  });
 
 });
