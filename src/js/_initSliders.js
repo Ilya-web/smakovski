@@ -253,41 +253,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  const productCardSlider = '.productCard-slider';
-  const productCardThumbs = '.productCard-thumbs-slider';
+  const productCardSliderInit = () => {
+    const productCardSlider = '.productCard-slider';
+    const productCardThumbs = '.productCard-thumbs-slider';
 
-  if(document.querySelector(productCardSlider) && document.querySelector(productCardThumbs)) {
+    if(document.querySelector(productCardSlider) && document.querySelector(productCardThumbs)) {
 
-    const productCardThumbsSlider = new Swiper(productCardThumbs, {
-      spaceBetween: 4,
-      slidesPerView: "auto",
-      freeMode: true,
-      watchSlidesProgress: true,
-    });
+      const productCardThumbsSlider = new Swiper(productCardThumbs, {
+        spaceBetween: 4,
+        slidesPerView: "auto",
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
 
-    new Swiper(productCardSlider, {
-      spaceBetween: 10,
-      modules: [Navigation, Thumbs],
-      navigation: {
-        nextEl: `${productCardSlider}-next`,
-        prevEl: `${productCardSlider}-prev`,
-      },
-      thumbs: {
-        swiper: productCardThumbsSlider,
-      },
-      on: {
-        slideChange: function (i) {
-          const nav = document.querySelector(`${productCardSlider}-buttons`);
-          console.log(i.isEnd)
-          if(i.isEnd) {
-            nav.classList.add('last-slide');
-          }
-          else {
-            nav.classList.remove('last-slide');
-          }
+      new Swiper(productCardSlider, {
+        spaceBetween: 10,
+        modules: [Navigation, Thumbs],
+        navigation: {
+          nextEl: `${productCardSlider}-next`,
+          prevEl: `${productCardSlider}-prev`,
         },
-      },
-    });
+        thumbs: {
+          swiper: productCardThumbsSlider,
+        },
+        on: {
+          slideChange: function (i) {
+            const nav = document.querySelector(`${productCardSlider}-buttons`);
+            console.log(i.isEnd)
+            if(i.isEnd) {
+              nav.classList.add('last-slide');
+            }
+            else {
+              nav.classList.remove('last-slide');
+            }
+          },
+        },
+      });
+    }
+
   }
+
+  productCardSliderInit()
 
 });
