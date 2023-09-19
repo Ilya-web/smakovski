@@ -460,7 +460,6 @@ hr {
 
   &.added {
     background: $color-green;
-    pointer-events: none;
   }
 }
 
@@ -3059,6 +3058,7 @@ hr {
     #{$this}_img {
       border-radius: 8px;
       margin-bottom: 0;
+      height: fit-content;
 
       @include media-breakpoint-up(sm) {
         flex: 0 0 135px;
@@ -5372,6 +5372,10 @@ hr {
   flex-direction: column;
   gap: 24px;
   padding-right: 4px;
+  .basket-item-row.line-bottom:after {
+    left: 0;
+    right: 0;
+  }
 }
 
 /***modal***/
@@ -6517,6 +6521,7 @@ hr {
     margin-bottom: 8px;
     border-radius: 16px;
     overflow: hidden;
+    height: fit-content;
 
     &-buttons {
       position: relative;

@@ -11128,7 +11128,6 @@ hr {
 }
 .btn-plus.added {
   background: #C3E00D;
-  pointer-events: none;
 }
 
 .politics-info {
@@ -13791,6 +13790,9 @@ hr {
 .product-item--row .product-item_img {
   border-radius: 8px;
   margin-bottom: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media (min-width: 576px) {
   .product-item--row .product-item_img {
@@ -16103,6 +16105,10 @@ hr {
   gap: 24px;
   padding-right: 4px;
 }
+.modal-product-list .basket-item-row.line-bottom:after {
+  left: 0;
+  right: 0;
+}
 
 /***modal***/
 /***counter***/
@@ -17271,6 +17277,9 @@ hr {
   margin-bottom: 8px;
   border-radius: 16px;
   overflow: hidden;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .productCard-slider-buttons {
   position: relative;
