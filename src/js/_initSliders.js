@@ -279,7 +279,6 @@ document.addEventListener("DOMContentLoaded", () => {
         on: {
           slideChange: function (i) {
             const nav = document.querySelector(`${productCardSlider}-buttons`);
-            console.log(i.isEnd)
             if(i.isEnd) {
               nav.classList.add('last-slide');
             }
