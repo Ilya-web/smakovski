@@ -66,7 +66,6 @@ hr {
 
 .h3 {
   font-weight: 400;
-  //font-size: clamp(32px, 2.5vw, 48px);
   font-size: 48px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -78,7 +77,6 @@ hr {
 
 .h4 {
   font-weight: 400;
-  //font-size: clamp(32px, 2.5vw, 40px);
   font-size: 40px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -90,7 +88,6 @@ hr {
 
 .h5 {
   font-weight: 400;
-  //font-size: clamp(32px, 2.88vw, 36px);
   font-size: 36px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -1720,6 +1717,15 @@ hr {
 
   &-title {
     margin-bottom: 55px;
+    font-size: 64px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 48px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 32px;
+    }
   }
 
   &-tabs {
@@ -1765,10 +1771,10 @@ hr {
   &-img {
     overflow: hidden;
     border-radius: $border-radius-24;
-    height: 735px;
-    
+    height: 640px;
+
     @media screen and (max-width: 1400px)  {
-      height: 650px;
+      height: 660px;
     }
 
     @include media-breakpoint-down(lg) {
