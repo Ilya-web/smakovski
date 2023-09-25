@@ -284,4 +284,14 @@ document.addEventListener("DOMContentLoaded", () => {
     inputLabelInit();
   });
 
+
+  // event open modal for backend---------------------------------------
+  window.addEventListener("openModal", (e) => {
+    const modal = new Modal(e.detail);
+    modal.show()
+  });
+
 });
+
+
+window.dispatchEvent(new CustomEvent("openModal", {detail: '#modalLogin' }));
