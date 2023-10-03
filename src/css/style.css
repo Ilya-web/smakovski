@@ -13438,6 +13438,9 @@ hr {
   overflow: auto;
   max-height: 215px;
   background: #ffffff;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 .filter-radioBtns.dropdown-menu::-webkit-scrollbar-track, .filter-checkboxBtns.dropdown-menu::-webkit-scrollbar-track {
   border-radius: 10px;
@@ -14413,6 +14416,7 @@ hr {
   background: #F39C8E;
   border-radius: 24px;
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
