@@ -214,6 +214,7 @@ hr {
       background: $color-green_hover;
     }
   }
+
   svg {
     max-width: 100%;
     max-height: 100%;
@@ -338,6 +339,7 @@ hr {
       text-decoration: underline;
     }
   }
+
   &:disabled {
     opacity: 0.5;
     pointer-events: none;
@@ -1773,7 +1775,7 @@ hr {
     border-radius: $border-radius-24;
     height: 640px;
 
-    @media screen and (max-width: 1400px)  {
+    @media screen and (max-width: 1400px) {
       height: 660px;
     }
 
@@ -5388,6 +5390,7 @@ hr {
   flex-direction: column;
   gap: 24px;
   padding-right: 4px;
+
   .basket-item-row.line-bottom:after {
     left: 0;
     right: 0;
@@ -7850,9 +7853,11 @@ hr {
       display: flex;
       justify-content: center;
       flex-grow: 1;
-       img {
-         max-width: 245px;
-       }
+
+      img {
+        max-width: 245px;
+      }
+
       @include media-breakpoint-down(lg) {
         display: none;
       }
@@ -7900,31 +7905,31 @@ hr {
 
     @include media-breakpoint-down(lg) {
       margin-bottom: 24px;
-       &:not(:last-of-type) {
-         &:after {
-           content: '';
-           position: absolute;
-           left: 50%;
-           bottom: 0;
-           width: 1px;
-           height: 32px;
-           background: $color-gray;
-         }
-       }
+      &:not(:last-of-type) {
+        &:after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          width: 1px;
+          height: 32px;
+          background: $color-gray;
+        }
+      }
     }
 
-   @include media-breakpoint-up(lg) {
-     &:not(.active) {
-       #{$this}-header__title {
-         color: $color-gray-2;
-       }
+    @include media-breakpoint-up(lg) {
+      &:not(.active) {
+        #{$this}-header__title {
+          color: $color-gray-2;
+        }
 
-       #{$this}-header__count {
-         color: $color-gray-2;
-         border-color: $color-gray-2;
-       }
-     }
-   }
+        #{$this}-header__count {
+          color: $color-gray-2;
+          border-color: $color-gray-2;
+        }
+      }
+    }
 
     &.active {
       @include media-breakpoint-up(lg) {
@@ -7943,7 +7948,7 @@ hr {
       padding-bottom: 0;
       background: $color-white;
       flex-grow: 0;
-      margin:  auto 0 0;
+      margin: auto 0 0;
     }
   }
 
@@ -8058,7 +8063,8 @@ hr {
 
     &.active {
       transform: translateX(0);
-      #{$this}{
+
+      #{$this} {
         display: flex;
       }
     }
@@ -8077,13 +8083,13 @@ hr {
 
   &--successfully {
     background: $color-green;
+
     #{$this}_icon {
       svg {
         fill: $color-green-2;
       }
     }
   }
-
 
 
   &_icon {
@@ -8099,7 +8105,6 @@ hr {
 }
 
 /***notification***/
-
 
 
 /***thanks***/

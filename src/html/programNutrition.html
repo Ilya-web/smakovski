@@ -6,9 +6,7 @@
 
   <main id="main">
 
-    @@include('components/breadcrumb/index.html',
-    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item"><a href="#">Программное питание</a></li><li class="breadcrumb-site__item"><a href="#">Худей</a></li><li class="breadcrumb-site__item" aria-current="page">для нее</li>'}
-    )
+    @@include('components/breadcrumb/index.html', {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item"><a href="#">Программное питание</a></li><li class="breadcrumb-site__item"><a href="#">Худей</a></li><li class="breadcrumb-site__item" aria-current="page">для нее</li>'} )
 
 
     <section class="section">
@@ -572,8 +570,7 @@
                 <div class="wrapper-dates-slider mb-3">
                   <div class="swiper dates-slider">
                     <div class="swiper-wrapper">
-                      @@loop('components/dates-slider-item/index.html',
-                      'components/dates-slider-item/bd.json')
+                      @@loop('components/dates-slider-item/index.html','components/dates-slider-item/bd.json')
                     </div>
                   </div>
                   <div class="slider-buttons dates-slider-buttons">
@@ -708,8 +705,7 @@
           </div>
 
           <div class="row g-3">
-            @@loop('components/product-item/index.html',
-            'components/product-item/bd-3.json')
+            @@loop('components/product-item/index.html','components/product-item/bd-3.json')
 
             <div class="col">
               <div class="addDish">

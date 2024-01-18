@@ -6,9 +6,7 @@
 
   <main id="main">
 
-    @@include('components/breadcrumb/index.html',
-    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item" aria-current="page">Диетолог</li>'}
-    )
+    @@include('components/breadcrumb/index.html',{'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item" aria-current="page">Диетолог</li>'})
 
     <section class="mb-32">
       <div class="container">
@@ -45,8 +43,7 @@
                 </div>
               </nav>
               <div class="tab-content nutritionist-content" id="nutritionist-tabContent">
-                @@loop('components/nutritionist-tab/index.html',
-                'components/nutritionist-tab/bd-2.json')
+                @@loop('components/nutritionist-tab/index.html','components/nutritionist-tab/bd-2.json')
               </div>
 
             </div>
@@ -154,8 +151,7 @@
           <div class="col-12">
             <div class="swiper reviews-slider">
               <div class="swiper-wrapper">
-                @@loop('components/reviews-item/index.html',
-                'components/reviews-item/bd.json')
+                @@loop('components/reviews-item/index.html','components/reviews-item/bd.json')
               </div>
             </div>
           </div>

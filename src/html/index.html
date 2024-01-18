@@ -1,12 +1,10 @@
 @@include('components/head/index.html', {'title': 'Smakovski'})
 <!--@@include('components/loader/index.html')-->
 
-
 <div class="wrapper">
   @@include('components/header/index.html')
 
   <main id="main">
-
     <section class="section">
       <div class="container">
         <div class="row g-3">
@@ -17,7 +15,10 @@
                   <use xlink:href="images/icons/sprite.svg#moto"></use>
                 </svg>
               </div>
-              <h2 class="h2 text-uppercase sales-title">всего <br> за 49 грн!</h2>
+              <h2 class="h2 text-uppercase sales-title">
+                всего <br />
+                за 49 грн!
+              </h2>
               <div class="sales-desc">
                 <p>Доставка в черте города всего 49 грн!</p>
                 <p class="sales-time">
@@ -28,34 +29,39 @@
                 </p>
               </div>
               <div class="sales-btn">
-                <a class="btn-site click-animation" href="#"><span>Подробнее</span></a>
+                <a class="btn-site click-animation" href="#"
+                  ><span>Подробнее</span></a
+                >
               </div>
-              <div class="sales-footnote font-Roboto-Condensed">*Все заявки после 19:00 будут проработаны
-                с утра на следующий день.
+              <div class="sales-footnote font-Roboto-Condensed">
+                *Все заявки после 19:00 будут проработаны с утра на следующий
+                день.
               </div>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="swiper sales-slider">
               <div class="swiper-wrapper">
-
-                @@loop('components/sales-slider_item/index.html',
-                'components/sales-slider_item/bd.json')
-
+                components/sales-slider_item/index.html','components/sales-slider_item/bd.json')
               </div>
 
               <div class="sales-slider-pagination slider-pagination"></div>
-              <button class="sales-slider-prev slider-button-prev whiteBtn click-animation" type="button"></button>
-              <button class="sales-slider-next slider-button-next whiteBtn click-animation" type="button"></button>
+              <button
+                class="sales-slider-prev slider-button-prev whiteBtn click-animation"
+                type="button"
+              ></button>
+              <button
+                class="sales-slider-next slider-button-next whiteBtn click-animation"
+                type="button"
+              ></button>
             </div>
           </div>
           <div class="col-12">
             <div class="offers">
               <div class="offers-item offers-item-img">
-                <img alt="" src="images/offer-img.svg">
+                <img alt="" src="images/offer-img.svg" />
               </div>
-              @@loop('components/offer-item/index.html',
-              'components/offer-item/offer-bd.json')
+              @@loop('components/offer-item/index.html','components/offer-item/offer-bd.json')
             </div>
           </div>
         </div>
@@ -67,41 +73,86 @@
         <div class="row g-3">
           <div class="col-lg-6">
             <div class="nutritionist">
-              <h2 class="h2 nutritionist-title">Ваш шеф, <br>Ваш диетолог</h2>
+              <h2 class="h2 nutritionist-title">Ваш шеф, <br />Ваш диетолог</h2>
               <nav>
-                <div class="nav nutritionist-tabs mb-4" id="nutritionistTab" role="tablist">
-                  <button aria-controls="nutritionist-1" aria-selected="true" class="nutritionist-link active"
-                          data-bs-target="#nutritionist-1" data-bs-toggle="tab" id="nutritionist-tab-1" role="tab"
-                          type="button">01.
+                <div
+                  class="nav nutritionist-tabs mb-4"
+                  id="nutritionistTab"
+                  role="tablist"
+                >
+                  <button
+                    aria-controls="nutritionist-1"
+                    aria-selected="true"
+                    class="nutritionist-link active"
+                    data-bs-target="#nutritionist-1"
+                    data-bs-toggle="tab"
+                    id="nutritionist-tab-1"
+                    role="tab"
+                    type="button"
+                  >
+                    01.
                   </button>
-                  <button aria-controls="nutritionist-2" aria-selected="false" class="nutritionist-link"
-                          data-bs-target="#nutritionist-2" data-bs-toggle="tab" id="nutritionist-tab-2" role="tab"
-                          type="button">02.
+                  <button
+                    aria-controls="nutritionist-2"
+                    aria-selected="false"
+                    class="nutritionist-link"
+                    data-bs-target="#nutritionist-2"
+                    data-bs-toggle="tab"
+                    id="nutritionist-tab-2"
+                    role="tab"
+                    type="button"
+                  >
+                    02.
                   </button>
-                  <button aria-controls="nutritionist-3" aria-selected="false" class="nutritionist-link"
-                          data-bs-target="#nutritionist-3" data-bs-toggle="tab" id="nutritionist-tab-3" role="tab"
-                          type="button">03.
+                  <button
+                    aria-controls="nutritionist-3"
+                    aria-selected="false"
+                    class="nutritionist-link"
+                    data-bs-target="#nutritionist-3"
+                    data-bs-toggle="tab"
+                    id="nutritionist-tab-3"
+                    role="tab"
+                    type="button"
+                  >
+                    03.
                   </button>
-                  <button aria-controls="nutritionist-4" aria-selected="false" class="nutritionist-link"
-                          data-bs-target="#nutritionist-4" data-bs-toggle="tab" id="nutritionist-tab-4" role="tab"
-                          type="button">04.
+                  <button
+                    aria-controls="nutritionist-4"
+                    aria-selected="false"
+                    class="nutritionist-link"
+                    data-bs-target="#nutritionist-4"
+                    data-bs-toggle="tab"
+                    id="nutritionist-tab-4"
+                    role="tab"
+                    type="button"
+                  >
+                    04.
                   </button>
-                  <button aria-controls="nutritionist-5" aria-selected="false" class="nutritionist-link"
-                          data-bs-target="#nutritionist-5" data-bs-toggle="tab" id="nutritionist-tab-5" role="tab"
-                          type="button">05.
+                  <button
+                    aria-controls="nutritionist-5"
+                    aria-selected="false"
+                    class="nutritionist-link"
+                    data-bs-target="#nutritionist-5"
+                    data-bs-toggle="tab"
+                    id="nutritionist-tab-5"
+                    role="tab"
+                    type="button"
+                  >
+                    05.
                   </button>
                 </div>
               </nav>
-              <div class="tab-content nutritionist-content" id="nutritionist-tabContent">
-                @@loop('components/nutritionist-tab/index.html',
-                'components/nutritionist-tab/bd.json')
+              <div
+                class="tab-content nutritionist-content"
+                id="nutritionist-tabContent"
+              >
+                @@loop('components/nutritionist-tab/index.html','components/nutritionist-tab/bd.json')
               </div>
-
             </div>
           </div>
           <div class="col-lg-6">
             <div class="nutritionist-img">
-              <img alt="" src="images/sales-slider/image-2.jpg">
+              <img alt="" src="images/sales-slider/image-2.jpg" />
             </div>
           </div>
         </div>
@@ -109,7 +160,6 @@
     </section>
 
     @@include('components/section-programs/index.html')
-
     @@include('components/section-howWorks/index.html')
 
     <section class="section">
@@ -118,37 +168,58 @@
           <div class="col-12">
             <h2 class="h1 mb-32 title-images d-none d-lg-block">
               Узнайте все
-              <span class="image"><img alt="" src="images/title-images/image-1.jpg"></span>
-              <br>
+              <span class="image"
+                ><img alt="" src="images/title-images/image-1.jpg"
+              /></span>
+              <br />
               o
-              <span class="image"><img alt="" src="images/title-images/image-2.jpg"></span>
+              <span class="image"
+                ><img alt="" src="images/title-images/image-2.jpg"
+              /></span>
               здоровом питании
-              <br>
-              <span class="image"><img alt="" src="images/title-images/image-3.jpg"></span>
+              <br />
+              <span class="image"
+                ><img alt="" src="images/title-images/image-3.jpg"
+              /></span>
               вместе со
-              <span class="image"><img alt="" src="images/title-images/image-4.jpg"></span>
+              <span class="image"
+                ><img alt="" src="images/title-images/image-4.jpg"
+              /></span>
               Smakovski
             </h2>
 
-            <h2 class="h1 mb-32 d-lg-none">Узнайте все o здоровом питании вместе со Smakovski</h2>
+            <h2 class="h1 mb-32 d-lg-none">
+              Узнайте все o здоровом питании вместе со Smakovski
+            </h2>
           </div>
         </div>
         <div class="row">
           <div class="col-12">
             <div class="swiper reviews-slider">
               <div class="swiper-wrapper">
-                @@loop('components/reviews-item/index.html',
-                'components/reviews-item/bd.json')
+                @@loop('components/reviews-item/index.html','components/reviews-item/bd.json')
               </div>
             </div>
           </div>
-          <div aria-hidden="true" class="modal fade" id="programModal" tabindex="-1">
+          <div
+            aria-hidden="true"
+            class="modal fade"
+            id="programModal"
+            tabindex="-1"
+          >
             <div class="modal-dialog modal-sm modal-dialog-centered">
               <div class="modal-content modal-content--green">
                 <div class="modal-header mb-1 align-items-center">
-                  <h4 class="reviews-item--program__category">Программа питания</h4>
+                  <h4 class="reviews-item--program__category">
+                    Программа питания
+                  </h4>
 
-                  <button aria-label="Close" class="modal_close" data-bs-dismiss="modal" type="button">
+                  <button
+                    aria-label="Close"
+                    class="modal_close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  >
                     <svg>
                       <use xlink:href="images/icons/sprite.svg#close"></use>
                     </svg>
@@ -156,19 +227,28 @@
                 </div>
                 <div class="modal-body">
                   <div class="reviews-item--program__title">Slim Balance</div>
-                  <div class="reviews-item--program__subtitle">1000 ккал, 160 г</div>
+                  <div class="reviews-item--program__subtitle">
+                    1000 ккал, 160 г
+                  </div>
                   <div class="reviews-item--program__bottom">
                     <div class="reviews-item--program__img">
-                      <img alt="" src="images/programs/image-4.jpg">
+                      <img alt="" src="images/programs/image-4.jpg" />
                     </div>
                     <div class="reviews-item--program__footer">
                       <div class="reviews-item--program__footer--right">
-                        <div class="reviews-item--program__head">Длительность</div>
+                        <div class="reviews-item--program__head">
+                          Длительность
+                        </div>
                         <div class="reviews-item--program__time">20 дней</div>
                       </div>
                       <div class="reviews-item--program__btn">
                         <form action="#">
-                          <button class="btn-site-3 click-animation" type="submit">Купить</button>
+                          <button
+                            class="btn-site-3 click-animation"
+                            type="submit"
+                          >
+                            Купить
+                          </button>
                         </form>
                       </div>
                     </div>
@@ -187,31 +267,38 @@
           <div class="col-12">
             <div class="section-info--content">
               <div class="section-info--content__left">
-                <h2 class="h1 section-info--content__title">Не знаешь какую
-                  программу выбрать?</h2>
+                <h2 class="h1 section-info--content__title">
+                  Не знаешь какую программу выбрать?
+                </h2>
                 <form action="#">
                   <div class="section-info--content__callBack">
                     <label class="input-site">
                       <span class="input-site__label">Номер телефона</span>
-                      <input class="input-site__input" type="tel" value="+380 (95) 344 23 44">
+                      <input
+                        class="input-site__input"
+                        type="tel"
+                        value="+380 (95) 344 23 44"
+                      />
                     </label>
                     <div>
-                      <a class="btn-site-3 click-animation green h-100" href="#">Подробнее</a>
+                      <a class="btn-site-3 click-animation green h-100" href="#"
+                        >Подробнее</a
+                      >
                     </div>
                   </div>
                 </form>
               </div>
               <div class="section-info--content__img">
-                <img alt="" src="images/info-img.svg">
+                <img alt="" src="images/info-img.svg" />
               </div>
               <div class="section-info__img img-1">
-                <img alt="" src="images/bg/image-1.png">
+                <img alt="" src="images/bg/image-1.png" />
               </div>
               <div class="section-info__img img-2">
-                <img alt="" src="images/bg/image-2.png">
+                <img alt="" src="images/bg/image-2.png" />
               </div>
               <div class="section-info__img img-3">
-                <img alt="" src="images/bg/image-3.png">
+                <img alt="" src="images/bg/image-3.png" />
               </div>
             </div>
           </div>
@@ -220,27 +307,26 @@
     </section>
 
     @@include('components/section-sales/index.html')
-
     @@include('components/section-faq/index.html')
-
   </main>
 
   @@include('components/footer/index.html')
-
 </div>
 
-<button class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal" type="button">
+<button
+  class="callback"
+  data-bs-target="#modalCallback"
+  data-bs-toggle="modal"
+  type="button"
+>
   <span class="callback_icon">
-     <svg>
-    <use xlink:href="images/icons/sprite.svg#phone-2"></use>
-  </svg>
+    <svg>
+      <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+    </svg>
   </span>
 </button>
 
 @@include('components/modals/index.html')
-
 @@include('components/notification/index.html', {'successfully': true})
-
 @@include('components/notification/index.html', {'error': true})
-
 @@include('components/scripts/index.html')

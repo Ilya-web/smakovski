@@ -1,4 +1,4 @@
-const developmentBuild = false;
+const developmentBuild = true;
 const bundleCssFileName = "styles.min.css";
 
 const { src, dest, parallel, series, watch } = require("gulp");
@@ -91,49 +91,51 @@ function BrowserSync() {
 
 //Build HTML
 function BuildHtml() {
-  return src(["src/html/*.html", "!components/**/*.html"])
-    .pipe(
-      fileinclude({
-        prefix: "@@",
-        basepath: "@file",
-      })
-    )
-    .pipe(replace("../", ""))
-    .pipe(
-      gulpif(
-        !developmentBuild,
-        replace('<link rel="stylesheet" href="src/css/plugins.css">', "")
+  return (
+    src(["src/html/*.html", "!components/**/*.html"])
+      .pipe(
+        fileinclude({
+          prefix: "@@",
+          basepath: "@file",
+        })
       )
-    )
-    .pipe(
-      gulpif(
-        !developmentBuild,
-        replace(
-          '<link rel="stylesheet" href="src/css/style.css">',
-          `<link rel="stylesheet" href="css/${bundleCssFileName}">`
+      .pipe(replace("../", ""))
+      .pipe(
+        gulpif(
+          !developmentBuild,
+          replace('<link rel="stylesheet" href="src/css/plugins.css">', "")
         )
       )
-    )
-    // .pipe(
-    //   gulpif(
-    //     !developmentBuild,
-    //     version({
-    //       value: "%DT%",
-    //       append: {
-    //         key: "_v",
-    //         cover: 0,
-    //         to: ["css", "js"],
-    //       },
-    //       output: {
-    //         file: "version.json",
-    //       },
-    //     })
-    //   )
-    // )
-    .pipe(webpHtml())
-    .pipe(formatHtml({}))
-    .pipe(dest("./"))
-    .pipe(browserSync.stream());
+      .pipe(
+        gulpif(
+          !developmentBuild,
+          replace(
+            '<link rel="stylesheet" href="src/css/style.css">',
+            `<link rel="stylesheet" href="css/${bundleCssFileName}">`
+          )
+        )
+      )
+      // .pipe(
+      //   gulpif(
+      //     !developmentBuild,
+      //     version({
+      //       value: "%DT%",
+      //       append: {
+      //         key: "_v",
+      //         cover: 0,
+      //         to: ["css", "js"],
+      //       },
+      //       output: {
+      //         file: "version.json",
+      //       },
+      //     })
+      //   )
+      // )
+      .pipe(webpHtml())
+      .pipe(formatHtml({}))
+      .pipe(dest("./"))
+      .pipe(browserSync.stream())
+  );
 }
 
 //Scripts

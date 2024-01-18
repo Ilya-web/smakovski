@@ -1,14 +1,13 @@
 @@include('components/head/index.html', {'title': 'Smakovski'})
 
-
 <div class="wrapper bodyBg-2">
   @@include('components/header/index.html')
 
   <main id="main">
-
-    @@include('components/breadcrumb/index.html',
-    {'items': ' <li class="breadcrumb-site__item"><a href="#">Главная</a></li><li class="breadcrumb-site__item" aria-current="page">системы питания</li>'}
-    )
+    @@include('components/breadcrumb/index.html', {'items': '
+    <li class="breadcrumb-site__item"><a href="#">Главная</a></li>
+    <li class="breadcrumb-site__item" aria-current="page">системы питания</li>
+    '} )
     <section class="section">
       <div class="container">
         <div class="row mb-3">
@@ -18,17 +17,18 @@
                 <div class="col-sm-6">
                   <h1 class="h1 mb-32">что мы предлагаем</h1>
                   <div class="offer_text">
-                    Четырехразовое меню на ~1 400 ккал/день для тех, кто не занимается спортом, но заботится о своем ежедневном рационе
+                    Четырехразовое меню на ~1 400 ккал/день для тех, кто не
+                    занимается спортом, но заботится о своем ежедневном рационе
                   </div>
                 </div>
               </div>
 
               <div class="offer_imgBg">
-                <img src="images/bg/image-4.jpg" alt="">
+                <img src="images/bg/image-4.jpg" alt="" />
               </div>
 
               <div class="offer_img d-none d-sm-block">
-                <img src="images/bg/image-1.png" alt="">
+                <img src="images/bg/image-1.png" alt="" />
               </div>
             </div>
           </div>
@@ -38,32 +38,47 @@
           <div class="col-12">
             <div class="imageBg">
               <div class="imageBg_img">
-                <img src="images/bg/image-2.png" alt="">
+                <img src="images/bg/image-2.png" alt="" />
               </div>
 
               <div class="filter-row position-relative z-1">
                 <h2 class="h1 mb-3">Следуйте своей диете</h2>
-                <div class="filter-row__text mb-5">Smakovsky предлагает полноценное питание не зависимо веган ты или мясоед</div>
+                <div class="filter-row__text mb-5">
+                  Smakovsky предлагает полноценное питание не зависимо веган ты
+                  или мясоед
+                </div>
                 <div class="mb-3">
                   <form action="#">
                     @@include('components/filter-radioBtns/index.html', {'selectMobile': true})
                   </form>
                 </div>
-                <h4 class="h4 mb-4">Для тех кто ест все, выбери услугу, которая Вам по душе</h4>
+                <h4 class="h4 mb-4">
+                  Для тех кто ест все, выбери услугу, которая Вам по душе
+                </h4>
 
                 <div class="row g-3">
                   <div class="col-md-6 col-xl-4 d-flex">
                     <div class="service-item">
                       <div class="service-item_img">
-                        <img src="images/service-item/image-1.jpg" alt="">
+                        <img src="images/service-item/image-1.jpg" alt="" />
                       </div>
                       <div class="service-item_desc">
-                        <h5 class="service-item_title h5">Доставка отдельных блюд</h5>
+                        <h5 class="service-item_title h5">
+                          Доставка отдельных блюд
+                        </h5>
 
-                        <div class="service-item_text">Четырехразовое меню на ~1 400 ккал/день для тех, кто не занимается спортом, но заботится о своем ежедневном рационе</div>
+                        <div class="service-item_text">
+                          Четырехразовое меню на ~1 400 ккал/день для тех, кто
+                          не занимается спортом, но заботится о своем ежедневном
+                          рационе
+                        </div>
 
                         <div class="service-item_footer">
-                          <a href="#" class="btn-site-3 green click-animation w-100 mt-3">Выбрать</a>
+                          <a
+                            href="#"
+                            class="btn-site-3 green click-animation w-100 mt-3"
+                            >Выбрать</a
+                          >
                         </div>
                       </div>
                     </div>
@@ -72,74 +87,96 @@
                     <form action="#">
                       <div class="service-item bgGreen">
                         <div class="service-item_img">
-                          <img src="images/service-item/image-2.jpg" alt="">
+                          <img src="images/service-item/image-2.jpg" alt="" />
                         </div>
                         <div class="service-item_desc">
-                          <h5 class="service-item_title h5">Программное питание</h5>
+                          <h5 class="service-item_title h5">
+                            Программное питание
+                          </h5>
 
                           <div class="dropdown selectDesktop">
-                            <button class="dropdown-toggle drop-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button
+                              class="dropdown-toggle drop-btn"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
                               <span class="drop-btn_text">Худей</span>
                               <span class="drop-btn_arrow"></span>
                             </button>
 
-                            <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop" >
-
+                            <div
+                              class="filter-radioBtns dropdown-menu dropdown-menu--desktop"
+                            >
                               <label class="input-radio">
-                                <input type="radio" name="program" checked>
+                                <input type="radio" name="program" checked />
                                 <span class="input-radio_box">
-                          <span class="input-radio_label">
-                            <span class="input-radio_label--text">Худей</span>
-                          </span>
-                        </span>
+                                  <span class="input-radio_label">
+                                    <span class="input-radio_label--text"
+                                      >Худей</span
+                                    >
+                                  </span>
+                                </span>
                               </label>
                               <label class="input-radio">
-                                <input type="radio" name="program">
+                                <input type="radio" name="program" />
                                 <span class="input-radio_box">
-                          <span class="input-radio_label">
-                            <span class="input-radio_label--text">Сохрани вес</span>
-                          </span>
-                        </span>
+                                  <span class="input-radio_label">
+                                    <span class="input-radio_label--text"
+                                      >Сохрани вес</span
+                                    >
+                                  </span>
+                                </span>
                               </label>
                               <label class="input-radio">
-                                <input type="radio" name="program">
+                                <input type="radio" name="program" />
                                 <span class="input-radio_box">
-                          <span class="input-radio_label">
-                            <span class="input-radio_label--text">набирай</span>
-                          </span>
-                        </span>
+                                  <span class="input-radio_label">
+                                    <span class="input-radio_label--text"
+                                      >набирай</span
+                                    >
+                                  </span>
+                                </span>
                               </label>
-
                             </div>
                           </div>
 
-
-                          <div class="service-item_text">Четырехразовое меню на ~1 400 ккал/день для тех, кто не занимается спортом, но заботится </div>
+                          <div class="service-item_text">
+                            Четырехразовое меню на ~1 400 ккал/день для тех, кто
+                            не занимается спортом, но заботится
+                          </div>
 
                           <div class="filter-radioBtns" data-col="2">
-
                             <label class="input-radio">
-                              <input type="radio" name="systems" checked>
+                              <input type="radio" name="systems" checked />
                               <span class="input-radio_box">
                                 <span class="input-radio_label">
-                                  <span class="input-radio_label--text">Для нее</span>
+                                  <span class="input-radio_label--text"
+                                    >Для нее</span
+                                  >
                                 </span>
                               </span>
                             </label>
 
                             <label class="input-radio">
-                              <input type="radio" name="systems">
+                              <input type="radio" name="systems" />
                               <span class="input-radio_box">
                                 <span class="input-radio_label">
-                                  <span class="input-radio_label--text">Для него</span>
+                                  <span class="input-radio_label--text"
+                                    >Для него</span
+                                  >
                                 </span>
                               </span>
                             </label>
-
                           </div>
 
                           <div class="service-item_footer">
-                            <button type="submit" class="btn-site-3 click-animation green w-100 mt-3">Выбрать</button>
+                            <button
+                              type="submit"
+                              class="btn-site-3 click-animation green w-100 mt-3"
+                            >
+                              Выбрать
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -148,15 +185,23 @@
                   <div class="col-md-6 col-xl-4 d-flex">
                     <div class="service-item bgYellow">
                       <div class="service-item_img">
-                        <img src="images/service-item/image-3.jpg" alt="">
+                        <img src="images/service-item/image-3.jpg" alt="" />
                       </div>
                       <div class="service-item_desc">
                         <h5 class="service-item_title h5">Heat & Eat</h5>
 
-                        <div class="service-item_text">Четырехразовое меню на ~1 400 ккал/день для тех, кто не занимается спортом, но заботится о своем ежедневном рационе</div>
+                        <div class="service-item_text">
+                          Четырехразовое меню на ~1 400 ккал/день для тех, кто
+                          не занимается спортом, но заботится о своем ежедневном
+                          рационе
+                        </div>
 
                         <div class="service-item_footer">
-                          <a href="#" class="btn-site-3 green  click-animation w-100 mt-3">Выбрать</a>
+                          <a
+                            href="#"
+                            class="btn-site-3 green click-animation w-100 mt-3"
+                            >Выбрать</a
+                          >
                         </div>
                       </div>
                     </div>
@@ -164,7 +209,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -178,8 +222,7 @@
           <div class="col-12">
             <div class="swiper reviews-slider">
               <div class="swiper-wrapper">
-                @@loop('components/reviews-item/index.html',
-                'components/reviews-item/bd.json')
+                @@loop('components/reviews-item/index.html','components/reviews-item/bd.json')
               </div>
             </div>
           </div>
@@ -188,23 +231,23 @@
     </section>
 
     @@include('components/section-faq/index.html')
-
   </main>
 
   @@include('components/footer/index.html')
-
 </div>
 
-<button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+<button
+  type="button"
+  class="callback"
+  data-bs-target="#modalCallback"
+  data-bs-toggle="modal"
+>
   <span class="callback_icon">
-     <svg>
-    <use xlink:href="images/icons/sprite.svg#phone-2"></use>
-  </svg>
+    <svg>
+      <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+    </svg>
   </span>
 </button>
 
 @@include('components/modals/index.html')
-
-
-
 @@include('components/scripts/index.html')
