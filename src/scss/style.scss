@@ -1478,7 +1478,7 @@ hr {
 
       @include media-breakpoint-up(sm) {
         object-fit: cover;
-        height: 100%;
+        //height: 100%;
         border-radius: $border-radius-24;
       }
     }
@@ -4407,22 +4407,40 @@ hr {
   &_bg {
     position: absolute;
 
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+
     &--right {
       right: -7%;
       bottom: 0;
+
+      @include media-breakpoint-up(lg) {
+        top: -15px;
+      }
+
       @include media-breakpoint-down(xl) {
         right: -17%;
       }
+
       @include media-breakpoint-down(lg) {
         right: 50%;
         transform: translateX(50%);
         bottom: -80px;
+        width: 444px;
       }
     }
 
     &--left {
       left: -7%;
       top: 0;
+
+      @include media-breakpoint-up(lg) {
+        bottom: -107px;
+      }
+
       @include media-breakpoint-down(xl) {
         left: -17%;
       }
@@ -4431,6 +4449,7 @@ hr {
         left: 50%;
         transform: translateX(-50%);
         top: -45px;
+        width: 444px;
       }
     }
   }
