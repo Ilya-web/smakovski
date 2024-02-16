@@ -1,5 +1,5 @@
-import IMask from 'imask';
 import { Tooltip, Modal } from "bootstrap";
+import IMask from "imask";
 
 
 // loader-------------------------------------------------------------
@@ -136,6 +136,62 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
 
+  const inputLabelInit = () => {
+    // label animate ---------------------------------------------------
+    const inputs = document.querySelectorAll('.input-site__input');
+    inputs.forEach((input) => {
+      if (input.value !== '') {
+        input.parentElement.classList.add('active');
+      }
+
+      input.addEventListener('focus', () => {
+        const parentInput = input.parentElement;
+        parentInput.classList.add('active');
+        parentInput.classList.add('focus');
+      })
+
+      input.addEventListener('blur', () => {
+        const parentInput = input.parentElement;
+        parentInput.classList.remove('focus');
+        if (input.value === '') {
+          parentInput.classList.remove('active');
+        }
+      })
+    });
+  }
+  inputLabelInit();
+
+  window.addEventListener("inputLabelInit", () => {
+    inputLabelInit();
+  });
+
+
+
+  const inputMaskInit = () => {
+    // input tel mask --------------------------------------------------
+    const inputTel = document.querySelectorAll('[type="tel"]');
+
+    inputTel.forEach(input => {
+      const tel = IMask(input, {
+        mask: '+{38}(000)000-00-00'
+      });
+      // clear input tel -----------------------------------------------
+      input.addEventListener('blur', function () {
+        if (tel.value.length !== 17) {
+          tel.value = '';
+        }
+      });
+    });
+  }
+  inputMaskInit();
+
+  window.addEventListener("inputMaskInit", () => {
+    inputMaskInit();
+  });
+
+
+
+
   //open activityBox-----------------------------------------------
 
   const btnInfo = document.querySelectorAll('.btnInfo');
@@ -233,56 +289,6 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
 
-  const inputMaskInit = () => {
-    // input tel mask --------------------------------------------------
-    const inputTel = document.querySelectorAll('[type="tel"]');
-
-    inputTel.forEach(input => {
-      const tel = IMask(input, {
-        mask: '+{38}(000)000-00-00'
-      });
-      // clear input tel -----------------------------------------------
-      input.addEventListener('blur', function () {
-        if (tel.value.length !== 17) {
-          tel.value = '';
-        }
-      });
-    });
-  }
-  inputMaskInit();
-
-  window.addEventListener("inputMaskInit", () => {
-    inputMaskInit();
-  });
-
- const inputLabelInit = () => {
-   // label animate ---------------------------------------------------
-   const inputs = document.querySelectorAll('.input-site__input');
-   inputs.forEach((input) => {
-     if (input.value !== '') {
-       input.parentElement.classList.add('active');
-     }
-
-     input.addEventListener('focus', () => {
-       const parentInput = input.parentElement;
-       parentInput.classList.add('active');
-       parentInput.classList.add('focus');
-     })
-
-     input.addEventListener('blur', () => {
-       const parentInput = input.parentElement;
-       parentInput.classList.remove('focus');
-       if (input.value === '') {
-         parentInput.classList.remove('active');
-       }
-     })
-   });
- }
-  inputLabelInit();
-
-  window.addEventListener("inputLabelInit", () => {
-    inputLabelInit();
-  });
 
 
   // event open modal for backend---------------------------------------
