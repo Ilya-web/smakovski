@@ -11954,6 +11954,9 @@ hr {
   }
 }
 .header-menuBtn {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 18px;
+  flex: 0 0 18px;
   width: 18px;
   height: 27px;
   border: 0;
@@ -15139,6 +15142,7 @@ hr {
 @media (min-width: 992px) {
   .form-box_bg--right {
     top: -15px;
+    max-width: 385px;
   }
 }
 @media (max-width: 1249.98px) {
@@ -15163,6 +15167,7 @@ hr {
 @media (min-width: 992px) {
   .form-box_bg--left {
     bottom: -107px;
+    max-width: 515px;
   }
 }
 @media (max-width: 1249.98px) {

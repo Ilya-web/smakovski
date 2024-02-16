@@ -1287,6 +1287,7 @@ hr {
   }
 
   &-menuBtn {
+    flex: 0 0 18px;
     width: 18px;
     height: 27px;
     border: 0;
@@ -4419,6 +4420,7 @@ hr {
 
       @include media-breakpoint-up(lg) {
         top: -15px;
+        max-width: 385px;
       }
 
       @include media-breakpoint-down(xl) {
@@ -4439,6 +4441,7 @@ hr {
 
       @include media-breakpoint-up(lg) {
         bottom: -107px;
+        max-width: 515px;
       }
 
       @include media-breakpoint-down(xl) {
