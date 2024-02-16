@@ -8072,14 +8072,15 @@ hr {
   text-transform: uppercase;
   align-items: center;
   gap: 8px;
-  display: none;
+  //display: none;
   border: 1px solid $color-text;
 
   &-box {
     position: fixed;
-    top: 80px;
+    top: 50%;
     right: 12px;
     z-index: 9999;
+    translate: 0 -50%;
     @include transition();
     //transform: translateX(110%);
 

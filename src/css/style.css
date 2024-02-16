@@ -18855,14 +18855,14 @@ hr {
   -ms-flex-align: center;
   align-items: center;
   gap: 8px;
-  display: none;
   border: 1px solid #181818;
 }
 .notification-box {
   position: fixed;
-  top: 80px;
+  top: 50%;
   right: 12px;
   z-index: 9999;
+  translate: 0 -50%;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
 }
