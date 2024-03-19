@@ -26,6 +26,15 @@ if (loader) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  //notification closeBtn-----------------------------------------
+  const notification_closeBtn = document.querySelectorAll('.notification_closeBtn');
+
+  notification_closeBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.notification-box').classList.remove('active');
+    })
+  })
+
   setTimeout(() => {
     if (loader) {
       loader.classList.add('loaded');
@@ -193,7 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   //open activityBox-----------------------------------------------
-
   const btnInfo = document.querySelectorAll('.btnInfo');
   const activityBox = document.querySelector('.activity-box');
   const backdrop = document.querySelector('.backdrop');

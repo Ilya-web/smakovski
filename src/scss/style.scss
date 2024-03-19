@@ -8068,29 +8068,36 @@ hr {
   background: $color-white;
   border-radius: 16px;
   font-size: 16px;
-  padding: var(--gap-24);
+  padding: 16px 24px;
   text-transform: uppercase;
   align-items: center;
-  gap: 8px;
-  //display: none;
-  border: 1px solid $color-text;
+  gap: 16px;
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    padding: 16px;
+  }
 
   &-box {
     position: fixed;
     top: 50%;
-    right: 12px;
+    left: 50%;
     z-index: 9999;
-    translate: 0 -50%;
+    translate: -50%;
+    width: 100%;
+    max-width: 406px;
     @include transition();
-    //transform: translateX(110%);
 
     &.active {
-      transform: translateX(0);
 
       #{$this} {
         display: flex;
       }
     }
+  }
+
+  &-content {
+    padding: 0 15px;
   }
 
   &--error {
@@ -8114,8 +8121,24 @@ hr {
     }
   }
 
+  &_text {
+    flex-grow: 1;
+    position: relative;
+    padding-right: 16px;
 
-  &_icon {
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: -5px;
+      bottom: -5px;
+      width: 1px;
+      background:  rgba(255,255,255,0.3);
+    }
+  }
+
+  &_icon,
+  &_closeBtn {
     flex: 0 0 24px;
     width: 24px;
     height: 24px;
@@ -8125,6 +8148,20 @@ hr {
       max-height: 100%;
     }
   }
+
+  &_closeBtn {
+    margin-left: auto;
+    opacity: 0.5;
+    @include transition();
+
+    @media all and (hover: hover) {
+      &:hover,
+      &:focus-visible {
+        opacity: 1;
+      }
+    }
+  }
+
 }
 
 /***notification***/
