@@ -13600,6 +13600,8 @@ hr {
 .drop-btn_icon svg {
   max-height: 100%;
   max-width: 100%;
+  width: 24px;
+  height: 24px;
 }
 .drop-btn_text {
   overflow: hidden;
