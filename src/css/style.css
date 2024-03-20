@@ -12060,60 +12060,6 @@ hr {
   margin: auto auto 0;
 }
 
-.sales-item {
-  padding: 16px;
-  background: #ffffff;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-}
-@media (min-width: 576px) {
-  .sales-item {
-    position: absolute;
-    z-index: 2;
-    bottom: 16px;
-    right: 16px;
-    width: 60%;
-    min-width: 370px;
-  }
-}
-.sales-item_desc {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-.sales-item_desc .btn-plus {
-  margin-top: auto;
-}
-.sales-item_title {
-  font-size: 20px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
-.sales-item_subtitle {
-  color: #708200;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-.sales-item_img {
-  width: 50%;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.sales-item_img img {
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0 0 0 auto;
-  width: auto !important;
-}
-
 /*****sales*****/
 /*****sales-slider*****/
 @media (min-width: 576px) {
@@ -12135,6 +12081,7 @@ hr {
   .sales-slider_item img {
     -o-object-fit: cover;
     object-fit: cover;
+    height: 100%;
     border-radius: 24px;
   }
 }
@@ -12208,6 +12155,61 @@ hr {
   .sales-slider-next {
     right: 8px;
   }
+}
+
+.sales-item {
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+@media (min-width: 576px) {
+  .sales-item {
+    position: absolute;
+    z-index: 2;
+    bottom: 16px;
+    right: 16px;
+    width: 60%;
+    min-width: 370px;
+  }
+}
+.sales-item_desc {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.sales-item_desc .btn-plus {
+  margin-top: auto;
+}
+.sales-item_title {
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.sales-item_subtitle {
+  color: #708200;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.sales-item_img {
+  width: 50%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sales-item_img img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  margin: 0 0 0 auto;
+  width: auto;
 }
 
 /*****sales-slider*****/
