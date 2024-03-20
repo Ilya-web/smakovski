@@ -27,13 +27,13 @@ if (loader) {
 document.addEventListener("DOMContentLoaded", () => {
 
   //notification closeBtn-----------------------------------------
-  const notification_closeBtn = document.querySelectorAll('.notification_closeBtn');
-
-  notification_closeBtn.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.closest('.notification-box').classList.remove('active');
-    })
-  })
+  // const notification_closeBtn = document.querySelectorAll('.notification_closeBtn');
+  //
+  // notification_closeBtn.forEach(btn => {
+  //   btn.addEventListener('click', () => {
+  //     btn.closest('.notification-box').classList.remove('active');
+  //   })
+  // })
 
   setTimeout(() => {
     if (loader) {
