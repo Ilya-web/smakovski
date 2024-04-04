@@ -305,7 +305,8 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.show()
   });
 
+
+
 });
 
-
-window.dispatchEvent(new CustomEvent("openModal", {detail: '#modalLogin' }));
+// window.dispatchEvent(new CustomEvent("openModal", {detail: '#modalLogin' }));

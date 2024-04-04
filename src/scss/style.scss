@@ -6545,7 +6545,7 @@ hr {
 
   &.active {
     opacity: 0.2;
-    z-index: 999999;
+    z-index: 99999;
     visibility: visible;
   }
 }
@@ -8086,7 +8086,7 @@ hr {
     position: fixed;
     top: 50%;
     left: 50%;
-    z-index: 9999;
+    z-index: 999999;
     translate: -50%;
     width: 100%;
     max-width: 406px;
