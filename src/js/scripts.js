@@ -298,15 +298,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+  const modalDom = document.querySelectorAll('.modal');
+
+  const modalsArr = [...modalDom].map(item => {
+    return item.getAttribute('id')
+  })
+
+  const modalObj = modalsArr.reduce((acc,item) => {
+    return  {...acc, [item]:  new Modal(`#${item}`)}
+  },{})
 
   // event open modal for backend---------------------------------------
   window.addEventListener("openModal", (e) => {
-    const modal = new Modal(e.detail);
-    modal.show()
+    const id = e.detail.replace('#', '')
+    modalObj[id].show()
   });
+
+  // event close modal for backend---------------------------------------
+  window.addEventListener("closeModal", (e) => {
+    const id = e.detail.replace('#', '')
+    modalObj[id].hide()
+  });
+
+
+
+
+  let isShowProducts = false;
+  const products = document.getElementById('products');
+  if(products) {
+
+    window.addEventListener('scroll', function() {
+
+      const productsPosition = products.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      const position = 250;
+      const visibleProductsTop = (Math.floor(productsPosition.top) - windowHeight) + position;
+      const visibleProductsBottom = (Math.floor(productsPosition.bottom) - windowHeight) + position;
+
+      if((visibleProductsTop <= 100 && visibleProductsBottom >= -100) && !isShowProducts) {
+        window.dispatchEvent(new CustomEvent("openModal", {detail: '#modalHelp' }));
+        isShowProducts = true;
+      }
+
+    });
+  }
+
+
+// window.dispatchEvent(new CustomEvent("openModal", {detail: '#modalThanks' }));
+//
+//   setTimeout(()=>{
+//
+//  window.dispatchEvent(new CustomEvent("closeModal", {detail: '#modalThanks' }));
+//
+//   },1000)
 
 
 
 });
 
-// window.dispatchEvent(new CustomEvent("openModal", {detail: '#modalLogin' }));

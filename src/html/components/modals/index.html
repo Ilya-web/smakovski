@@ -1097,3 +1097,99 @@
     </div>
   </div>
 </div>
+
+<!--когда форма отправлена
+закрывать текущий попап - window.dispatchEvent(new CustomEvent("closeModal", {detail: id }))
+открывать следующий попап - window.dispatchEvent(new CustomEvent("openModal", {detail: id }));-->
+<div class="modal fade modalHelp" id="modalHelp" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="row gx-0">
+        <div class="col-sm-5">
+          <div class="modalHelp-box">
+            <img src="images/help-img.svg" class="modalHelp-box__img-1" alt="">
+            <img src="images/bg/image-9.png" class="modalHelp-box__img-2" alt="">
+            <div class="modalHelp-box__title">Привіт, <br>
+              Допомогти Вам обрати програму харчування?
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-7">
+          <div class="modalHelp-form">
+            <div class="modal-header">
+              <h5 class="modal_title h5"></h5>
+              <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                <svg>
+                  <use xlink:href="images/icons/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="#">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <div class="wrap-input-site">
+                      <label class="input-site w-100">
+                        <span class="input-site__label">ФИО</span>
+                        <input type="text" class="input-site__input">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="wrap-input-site">
+                      <label class="input-site w-100">
+                        <span class="input-site__label">телефон</span>
+                        <input type="tel" class="input-site__input">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="row g-2">
+                      <div class="col-12">
+                        <button type="submit" class="btn-site-3 yellow click-animation w-100">
+                    <span class="btn-site-3_icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+                      </svg>
+                    </span>
+
+                          Заказать звонок
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <div class="politics-info">
+                      Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modalThanks" id="modalThanks" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+        <div class="modal-header__icon">
+          <img src="images/icons/check-2.svg" alt="">
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="fs-16 text-center text-uppercase" id="test">Дякуємо, наш адміністратор скоро з Вами зв'яжеться!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

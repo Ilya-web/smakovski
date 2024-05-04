@@ -12,14 +12,29 @@
     <section class="section">
       <form action="#">
         <div class="container">
-          <div class="row">
-            <div class="col-12">
+          <div class="row mb-32">
+            <div class="col-md-5 col-lg-7">
               <h1 class="h2 mb-32">Программное питание</h1>
+            </div>
+            <div class="col-md-7 col-lg-5">
+              <div class="helpBox ms-auto">
+                <div class="helpBox__content">
+                  <div class="helpBox__icon">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+                    </svg>
+                  </div>
+                  <div class="helpBox__text fs-16">Наш адміністратор може Вам пояснити, як замовити послугу і обрати смачні страви</div>
+                </div>
+                <div class="helpBox__btn">
+                  <button type="button" class="btn-site-3 click-animation">Зв’язатись</button>
+                </div>
+              </div>
             </div>
           </div>
           <div class="row g-3 mb-3">
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 order-1 order-lg-0">
               <div class="filter-row h-100 d-flex flex-column">
                 <div class="mb-32">
                   <div class="filter-row__title mb-2">
@@ -153,7 +168,7 @@
               </div>
             </div>
 
-            <div class="col-lg-8">
+            <div class="col-lg-8 order-0 order-lg-1">
               <div class="program-info h-100">
                 <div class="program-info_header">
                   <div class="program-info_header--desc">
@@ -704,7 +719,7 @@
             </div>
           </div>
 
-          <div class="row g-3">
+          <div class="row g-3" id="products">
             @@loop('components/product-item/index.html','components/product-item/bd-3.json')
 
             <div class="col">

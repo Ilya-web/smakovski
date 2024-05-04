@@ -16019,6 +16019,66 @@ hr {
   color: #708200;
 }
 
+.modalThanks .modal-content {
+  background: #F1FBC7;
+  padding: 32px 24px;
+}
+
+.modalHelp .modal-content {
+  padding: 0;
+  overflow: hidden;
+}
+.modalHelp .modal-dialog {
+  max-width: 615px;
+}
+@media (max-width: 575.98px) {
+  .modalHelp .modal-header {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .modalHelp .modal_close, .modalHelp .activity-box_header--close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+}
+.modalHelp-box {
+  position: relative;
+  height: 100%;
+  background: #FFE676;
+  overflow: hidden;
+  padding: 24px;
+}
+.modalHelp-box__title {
+  font-size: 20px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  isolation: isolate;
+}
+.modalHelp-box__img-1 {
+  margin-bottom: 15px;
+}
+.modalHelp-box__img-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+  max-width: 175px;
+}
+@media (max-width: 575.98px) {
+  .modalHelp-box__img-2 {
+    top: auto;
+    bottom: 0;
+    max-width: 150px;
+  }
+}
+.modalHelp-form {
+  padding: 24px;
+}
+
 @media (max-width: 1249.98px) {
   .modal-lg, .modal-xl {
     --bs-modal-width: 98%;
@@ -18975,4 +19035,67 @@ hr {
 }
 
 /***thanks***/
+/***helpBox***/
+.helpBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: var(--gap-24);
+}
+@media (min-width: 768px) {
+  .helpBox {
+    max-width: 465px;
+  }
+}
+@media (max-width: 767.98px) {
+  .helpBox {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+.helpBox__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+}
+.helpBox__icon {
+  width: 56px;
+  height: 56px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 56px;
+  flex: 0 0 56px;
+  border-radius: 50%;
+  padding: 16px;
+  background: #FFE676;
+  border: 1px solid #181818;
+}
+.helpBox__icon svg {
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 767.98px) {
+  .helpBox__btn {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .helpBox__btn .btn-site-3 {
+    width: 100%;
+  }
+}
+.helpBox__btn .btn-site-3 {
+  padding: 16px;
+}
+
+/***helpBox***/
 /*# sourceMappingURL=maps/style.css.map */
