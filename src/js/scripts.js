@@ -322,26 +322,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+  const initProductsModal = () => {
+    let isShowProducts = false;
+    const products = document.getElementById('products');
+    if(products) {
+      window.addEventListener('scroll', function() {
+        const productsPosition = products.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        const position = 250;
+        const visibleProductsTop = (Math.floor(productsPosition.top) - windowHeight) + position;
+        const visibleProductsBottom = (Math.floor(productsPosition.bottom) - windowHeight) + position;
 
-  let isShowProducts = false;
-  const products = document.getElementById('products');
-  if(products) {
-
-    window.addEventListener('scroll', function() {
-
-      const productsPosition = products.getBoundingClientRect();
-      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-      const position = 250;
-      const visibleProductsTop = (Math.floor(productsPosition.top) - windowHeight) + position;
-      const visibleProductsBottom = (Math.floor(productsPosition.bottom) - windowHeight) + position;
-
-      if((visibleProductsTop <= 100 && visibleProductsBottom >= -100) && !isShowProducts) {
-        window.dispatchEvent(new CustomEvent("openModal", {detail: '#modalHelp' }));
-        isShowProducts = true;
-      }
-
-    });
+        if((visibleProductsTop <= 100 && visibleProductsBottom >= -100) && !isShowProducts) {
+          window.dispatchEvent(new CustomEvent("openModal", {detail: '#modalHelp' }));
+          isShowProducts = true;
+        }
+      });
+    }
   }
+  initProductsModal();
+
+  window.addEventListener("initProductsModalEvent", () => {
+    initProductsModal();
+  });
+
+
 
 
 // window.dispatchEvent(new CustomEvent("openModal", {detail: '#modalThanks' }));
