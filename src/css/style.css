@@ -16283,6 +16283,61 @@ hr {
   padding: var(--gap-24);
   overflow: hidden;
 }
+.program-info .swiper-slide {
+  background: #FFE676;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+}
+.program-info-slider-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+  z-index: 9;
+}
+@media (max-width: 767.98px) {
+  .program-info-slider-nav {
+    bottom: 41vw;
+    left: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+.program-info-slider-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+}
+@media (min-width: 768px) {
+  .program-info-slider-pagination {
+    position: absolute;
+    right: 0;
+    top: 0 !important;
+    left: auto !important;
+    bottom: auto !important;
+    z-index: 9;
+    width: auto !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .program-info-slider-pagination {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 16px;
+  }
+}
 .program-info_header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16291,6 +16346,10 @@ hr {
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 16px;
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 @media (max-width: 767.98px) {
   .program-info_header {
@@ -16314,6 +16373,21 @@ hr {
     width: 100%;
   }
 }
+.program-info_btns {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 575.98px) {
+  .program-info_btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 .program-info_img {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 43%;
@@ -16324,11 +16398,6 @@ hr {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-}
-@media (min-width: 768px) {
-  .program-info_img {
-    margin-top: -45px;
-  }
 }
 .program-info_img img {
   max-width: 100%;
@@ -16346,6 +16415,11 @@ hr {
   border-radius: 16px;
   background: #ffffff;
   padding: var(--gap-24);
+  margin-top: auto;
+}
+.program-info_desc__text {
+  color: #708200;
+  font-size: 18px;
 }
 
 .info-item_icon {

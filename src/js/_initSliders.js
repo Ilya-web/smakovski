@@ -2,21 +2,6 @@ import Swiper, { Navigation, Pagination, Thumbs, EffectFade} from "swiper";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const breakpointsThreeSliders = {
-    300: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 16,
-    },
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 16,
-    }
-  }
-
   const salesSlider = '.sales-slider'
   if(document.querySelector(salesSlider)) {
     new Swiper(salesSlider, {
@@ -37,6 +22,37 @@ document.addEventListener("DOMContentLoaded", () => {
         300: {
           slidesPerView: 1,
           spaceBetween: 20,
+        }
+      },
+    });
+  }
+
+  const programInfoSlider = '.program-info-slider'
+  if(document.querySelector(programInfoSlider)) {
+    new Swiper(programInfoSlider, {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      effect: "fade",
+      loop: true,
+      fadeEffect: { crossFade: true },
+      speed: 300,
+      modules: [EffectFade,Navigation, Pagination],
+      pagination: {
+        el: `${programInfoSlider}-pagination`,
+        clickable: true,
+      },
+      navigation: {
+        nextEl: `${programInfoSlider}-next`,
+        prevEl: `${programInfoSlider}-prev`,
+      },
+      breakpoints: {
+        300: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          autoHeight: true
+        },
+        768: {
+          autoHeight: false
         }
       },
     });
