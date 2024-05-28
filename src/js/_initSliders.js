@@ -27,36 +27,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const programInfoSlider = '.program-info-slider'
-  if(document.querySelector(programInfoSlider)) {
-    new Swiper(programInfoSlider, {
-      slidesPerView: 1,
-      spaceBetween: 40,
-      effect: "fade",
-      loop: true,
-      fadeEffect: { crossFade: true },
-      speed: 300,
-      modules: [EffectFade,Navigation, Pagination],
-      pagination: {
-        el: `${programInfoSlider}-pagination`,
-        clickable: true,
-      },
-      navigation: {
-        nextEl: `${programInfoSlider}-next`,
-        prevEl: `${programInfoSlider}-prev`,
-      },
-      breakpoints: {
-        300: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-          autoHeight: true
+  const programInfoSliderInit = () => {
+    const programInfoSlider = '.program-info-slider'
+    if(document.querySelector(programInfoSlider)) {
+      new Swiper(programInfoSlider, {
+        slidesPerView: 1,
+        spaceBetween: 40,
+        effect: "fade",
+        loop: true,
+        fadeEffect: { crossFade: true },
+        speed: 300,
+        modules: [EffectFade,Navigation, Pagination],
+        pagination: {
+          el: `${programInfoSlider}-pagination`,
+          clickable: true,
         },
-        768: {
-          autoHeight: false
-        }
-      },
-    });
+        navigation: {
+          nextEl: `${programInfoSlider}-next`,
+          prevEl: `${programInfoSlider}-prev`,
+        },
+        breakpoints: {
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoHeight: true
+          },
+          768: {
+            autoHeight: false
+          }
+        },
+      });
+    }
   }
+  programInfoSliderInit();
+
+  window.addEventListener("programInfoSliderInit", () => {
+    programInfoSliderInit();
+  });
 
   const programsSlider = '.programs-slider';
   if(document.querySelector(programsSlider)) {
