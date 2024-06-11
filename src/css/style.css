@@ -11119,6 +11119,7 @@ hr {
   background-color: #FF922E;
 }
 .btn-plus svg {
+  width: 100%;
   max-width: 100%;
   max-height: 100%;
 }

@@ -448,6 +448,7 @@ hr {
   @include clickAnimationBg($color-orange);
 
   svg {
+    width: 100%;
     max-width: 100%;
     max-height: 100%;
   }
