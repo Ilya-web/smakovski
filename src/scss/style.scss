@@ -5568,7 +5568,6 @@ hr {
   $this: &;
   border-radius: $border-radius-24;
   background: $color-yellow;
-
   overflow: hidden;
 
   .swiper-slide {
@@ -5578,8 +5577,18 @@ hr {
     height: auto;
   }
 
-  &-slider {
+  &:is(.program-info--withSlider) {
+    #{$this}-slider {
+      padding: var(--gap-24);
+    }
+  }
+
+  &:not(.program-info--withSlider) {
     padding: var(--gap-24);
+  }
+
+  &-slider {
+
      &-nav {
        display: flex;
        gap: 8px;

@@ -16294,7 +16294,10 @@ hr {
   flex-direction: column;
   height: auto;
 }
-.program-info-slider {
+.program-info:is(.program-info--withSlider) .program-info-slider {
+  padding: var(--gap-24);
+}
+.program-info:not(.program-info--withSlider) {
   padding: var(--gap-24);
 }
 .program-info-slider-nav {
