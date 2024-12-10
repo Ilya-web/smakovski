@@ -1,0 +1,171 @@
+<div class="swiper-slide">
+  <div class="product-item">
+    <div class="product-item_img @@if(context.noImg){noImg}">
+      <img src="images/product/@@imgUrl" alt="">
+      @@if(context.backdrop) {
+      <div class="product-item_backdrop">
+        <div class="product-item_changeBox">
+          <button type="button" class="product-item_changeBox--change btn-site-3 click-animation green" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>
+          <button type="button" class="product-item_changeBox--delete deleteBtn click-animation" data-bs-target="#modalDelete" data-bs-toggle="modal">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#delete"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      }
+      @@if(context.allergen) {
+      <div class="product-item_allergens">
+        <div class="product-item_allergens--item">Арахис</div>
+      </div>
+      }
+
+    </div>
+    @@if(context.lock) {
+    <button class="product-item_lock tooltip" type="button"
+            data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-html="true"
+            data-bs-title="<span>Не возможно</span> заменить блюдо в первых 3-х днях, если доставка завтра или блюдо без аллергенов">
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#lock"></use>
+      </svg>
+    </button>
+    }
+    <div class="product-item_header">
+      <div class="product-item_header--left">
+
+        @@if(context.updated){
+        <div class="product-item_status product-item_status--updated">
+          <div class="product-item_status--icon">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#info"></use>
+            </svg>
+          </div>
+          <span>Обновлено</span>
+        </div>
+        }
+        @@if(context.new){
+        <div class="product-item_status product-item_status--new">
+          <div class="product-item_status--icon">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#info"></use>
+            </svg>
+          </div>
+          <span>Новинка</span>
+        </div>
+        }
+
+        @@if(context.sales){
+        <div class="product-item_status product-item_status--sales">
+          <div class="product-item_status--icon">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#info"></use>
+            </svg>
+          </div>
+          <span>скидка</span>
+        </div>
+        }
+
+        @@if(context.hit){
+        <div class="product-item_status product-item_status--hit">
+          <div class="product-item_status--icon">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#info"></use>
+            </svg>
+          </div>
+          <span>хит</span>
+        </div>
+        }
+
+        <div class="product-item_category">@@category</div>
+      </div>
+      <div class="product-item_composition">
+
+        @@if(context.drink){
+        <div class="product-item_composition--item">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#drink"></use>
+          </svg>
+        </div>
+        }
+        @@if(context.energy){
+        <div class="product-item_composition--item">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#energy"></use>
+          </svg>
+        </div>
+        }
+        @@if(context.veganCircle){
+        <div class="product-item_composition--item">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+          </svg>
+        </div>
+        }
+        @@if(context.setMeal){
+        <div class="product-item_composition--item">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+          </svg>
+        </div>
+        }
+
+      </div>
+    </div>
+    <div class="product-item_desc">
+      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">@@title</h2>
+      <div class="product-item_weight">@@weight</div>
+    </div>
+    <div class="product-item_footer">
+      <div class="compound">
+        <div class="compound_total">
+          <div class="compound_title">всего</div>
+          <div class="compound_count">378 ккал</div>
+        </div>
+        <div class="compound_items">
+          <div class="compound_col">
+            <div class="compound_title">Белки</div>
+            <div class="compound_count">15.90 г</div>
+          </div>
+          <div class="compound_col">
+            <div class="compound_title">Жиры</div>
+            <div class="compound_count">32.20 г</div>
+          </div>
+          <div class="compound_col">
+            <div class="compound_title">Углеводы</div>
+            <div class="compound_count">35.80 г</div>
+          </div>
+        </div>
+      </div>
+      @@if(context.footerIsVisible) {
+      <form action="#">
+        <div class="product-item_form">
+          <div class="product-item_price">+ 30.00 ₴</div>
+          <button type="submit" class="btn-plus click-animation @@if(context.added){added}">
+            <svg>
+              @@if(!context.added){
+              <use xlink:href="images/icons/sprite.svg#plus"></use>
+              }
+              @@if(context.added){
+              <use xlink:href="images/icons/sprite.svg#check"></use>
+              }
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      }
+      @@if(context.backdrop) {
+      <div class="product-item_mobileBtn mt-2 d-flex gap-2">
+        <button type="button" class="btn-site-3 green click-animation h-100 flex-grow-1" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>
+        <button type="button" class="product-item_changeBox--delete deleteBtn click-animation h-100" data-bs-target="#modalDelete" data-bs-toggle="modal">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#delete"></use>
+          </svg>
+        </button>
+      </div>
+      }
+    </div>
+  </div>
+</div>

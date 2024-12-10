@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination, Thumbs, EffectFade} from "swiper";
+import Swiper, { Navigation, Pagination, Thumbs, EffectFade, Grid } from "swiper";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -133,6 +133,33 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         1200: {
           slidesPerView: 3,
+          spaceBetween: 16,
+        }
+      }
+    });
+  }
+
+  const programSlide = '.programSlide';
+  if(document.querySelector(programSlide)) {
+    new Swiper(programSlide, {
+      slidesPerView: 1,
+      speed: 400,
+      modules: [Navigation],
+      navigation: {
+        nextEl: `${programSlide}-next`,
+        prevEl: `${programSlide}-prev`,
+      },
+      breakpoints: {
+        300: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        1200: {
+          slidesPerView: 2,
           spaceBetween: 16,
         }
       }
@@ -278,8 +305,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-
-
   const productCardSliderInit = () => {
     const productCardSlider = '.productCard-slider';
     const productCardThumbs = '.productCard-thumbs-slider';
@@ -324,5 +349,104 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("productCardSliderInit", () => {
     productCardSliderInit();
   });
+
+
+
+  const programsSliderV2Init = () => {
+    const programsSliderV2 = '.programsSliderV2';
+
+    if(document.querySelector(programsSliderV2)) {
+
+      new Swiper(programsSliderV2, {
+        spaceBetween: 10,
+        modules: [Navigation, Thumbs],
+        navigation: {
+          nextEl: `${programsSliderV2}-next`,
+          prevEl: `${programsSliderV2}-prev`,
+        },
+        breakpoints: {
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          }
+        }
+      });
+    }
+  }
+
+  programsSliderV2Init()
+
+
+  const productsItemSliderInit = () => {
+    const productsItemSlider = '.productsItemSlider';
+
+    if(document.querySelector(productsItemSlider)) {
+
+      new Swiper(productsItemSlider, {
+        spaceBetween: 16,
+        modules: [Navigation, Thumbs],
+        navigation: {
+          nextEl: `${productsItemSlider}-next`,
+          prevEl: `${productsItemSlider}-prev`,
+        },
+        breakpoints: {
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          },
+          575: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          }
+        }
+      });
+    }
+  }
+
+  productsItemSliderInit()
+
+
+
+  const advantagesSliderInit = () => {
+    const advantagesSlider = '.advantagesSlider';
+
+    if(document.querySelector(advantagesSlider)) {
+
+      new Swiper(advantagesSlider, {
+        modules: [Navigation],
+        spaceBetween: 16,
+        navigation: {
+          nextEl: `${advantagesSlider}-next`,
+          prevEl: `${advantagesSlider}-prev`,
+        },
+        breakpoints: {
+          300: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1200: {
+            slidesPerView: 3,
+          }
+        }
+      });
+    }
+  }
+
+  advantagesSliderInit()
+
+
 
 });
