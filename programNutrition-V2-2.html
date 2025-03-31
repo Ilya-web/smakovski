@@ -17,8 +17,8 @@
 <body>
 
 
-
   <div class="wrapper">
+
 
 
     <header class="header">
@@ -545,195 +545,913 @@
 
     <main id="main">
 
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <nav aria-label="breadcrumb">
-                <ul class="breadcrumb-site">
-                  <li class="breadcrumb-site__item">
-                    <a href="#">Главная</a>
-                  </li>
-                  <li class="breadcrumb-site__item" aria-current="page">Диетолог</li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="mb-32">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="info-box-2">
-                <h2 class="h2 mb-3">Худей легко.
-                  <br> Худей со вкусом.
-                </h2>
-                <div class="info-box-2_text mb-32">Четырехразовое меню на ~1 400 ккал/день для тех,
-                  кто не занимается спортом, но заботится о своем ежедневном рационе.</div>
-                <div>
-                  <a href="#" class="btn-site-3 green click-animation">Оставить заявку</a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="section">
         <div class="container">
           <div class="row g-3">
+            <div class="col-lg-7 col-xl-6">
+              <form action="#">
+                <div class="chooseDiet">
+                  <div class="chooseDiet__title h3">Вибрати раціон</div>
 
-            <div class="col-lg-6">
-              <div class="nutritionist nutritionist-green">
-                <h2 class="h2 nutritionist-title">Что входит
-                  <br> в работу с диетологом!
-                </h2>
-                <nav>
-                  <div class="nav nutritionist-tabs mb-4" id="nutritionistTab" role="tablist">
-                    <button class="nutritionist-link active" id="nutritionist-tab-1" data-bs-toggle="tab" data-bs-target="#nutritionist-1" type="button" role="tab" aria-controls="nutritionist-1" aria-selected="true">01.</button>
-                    <button class="nutritionist-link" id="nutritionist-tab-2" data-bs-toggle="tab" data-bs-target="#nutritionist-2" type="button" role="tab" aria-controls="nutritionist-2" aria-selected="false">02.</button>
-                    <button class="nutritionist-link" id="nutritionist-tab-3" data-bs-toggle="tab" data-bs-target="#nutritionist-3" type="button" role="tab" aria-controls="nutritionist-3" aria-selected="false">03.</button>
-                    <button class="nutritionist-link" id="nutritionist-tab-4" data-bs-toggle="tab" data-bs-target="#nutritionist-4" type="button" role="tab" aria-controls="nutritionist-4" aria-selected="false">04.</button>
-                    <button class="nutritionist-link" id="nutritionist-tab-5" data-bs-toggle="tab" data-bs-target="#nutritionist-5" type="button" role="tab" aria-controls="nutritionist-5" aria-selected="false">05.</button>
-                  </div>
-                </nav>
-                <div class="tab-content nutritionist-content" id="nutritionist-tabContent">
-                  <div class="tab-pane fade show active" id="nutritionist-1" role="tabpanel" aria-labelledby="nutritionist-tab-1">
-                    <h3 class="h4 nutritionist-content__title">Спортивный нутрициолог</h3>
-                    <div class="nutritionist-content__desc">Еще одна сфера работы нутрициолога – спортивная нутрициология. Такие специалисты занимаются разрабатыванием систем питания для разных видов спорта для достижения</div>
-                  </div>
-                  <div class="tab-pane fade " id="nutritionist-2" role="tabpanel" aria-labelledby="nutritionist-tab-2">
-                    <h3 class="h4 nutritionist-content__title">Спортивный нутрициолог 2</h3>
-                    <div class="nutritionist-content__desc">Еще одна сфера работы нутрициолога – спортивная нутрициология. Такие специалисты занимаются разрабатыванием систем питания для разных видов спорта для достижения</div>
-                  </div>
-                  <div class="tab-pane fade " id="nutritionist-3" role="tabpanel" aria-labelledby="nutritionist-tab-3">
-                    <h3 class="h4 nutritionist-content__title">Спортивный нутрициолог 3</h3>
-                    <div class="nutritionist-content__desc">Еще одна сфера работы нутрициолога – спортивная нутрициология. Такие специалисты занимаются разрабатыванием систем питания для разных видов спорта для достижения</div>
-                  </div>
-                  <div class="tab-pane fade " id="nutritionist-4" role="tabpanel" aria-labelledby="nutritionist-tab-4">
-                    <h3 class="h4 nutritionist-content__title">Спортивный нутрициолог 4</h3>
-                    <div class="nutritionist-content__desc">Еще одна сфера работы нутрициолога – спортивная нутрициология. Такие специалисты занимаются разрабатыванием систем питания для разных видов спорта для достижения</div>
-                  </div>
-                  <div class="tab-pane fade " id="nutritionist-5" role="tabpanel" aria-labelledby="nutritionist-tab-5">
-                    <h3 class="h4 nutritionist-content__title">Спортивный нутрициолог 5</h3>
-                    <div class="nutritionist-content__desc">Еще одна сфера работы нутрициолога – спортивная нутрициология. Такие специалисты занимаются разрабатыванием систем питания для разных видов спорта для достижения</div>
+                  <div class="chooseDiet__tabs">
+                    <div class="chooseDiet__tabs--header">
+                      <input type="radio" id="tab1" name="tab" checked>
+                      <label for="tab1" class="chooseDiet__tabs--item">1200 ккал</label>
+                      <input type="radio" id="tab2" name="tab">
+                      <label for="tab2" class="chooseDiet__tabs--item">1350 ккал</label>
+                      <input type="radio" id="tab3" name="tab">
+                      <label for="tab3" class="chooseDiet__tabs--item">1500 ккал</label>
+                      <input type="radio" id="tab4" name="tab">
+                      <label for="tab4" class="chooseDiet__tabs--item">1800 ккал</label>
+                      <input type="radio" id="tab5" name="tab">
+                      <label for="tab5" class="chooseDiet__tabs--item">2000 ккал</label>
+                      <input type="radio" id="tab6" name="tab">
+                      <label for="tab6" class="chooseDiet__tabs--item">2200 ккал</label>
+                    </div>
+
+                    <div class="chooseDiet__content">
+                      <div class="chooseDiet__content--tab active">
+                        <div class="chooseDiet__content--title">1 прийомів їжі на день</div>
+                        <div class="chooseDiet__content--types">
+                          <div class="chooseDiet__content--type">1-й сніданок</div>
+                          <div class="chooseDiet__content--type">2-й сніданок</div>
+                          <div class="chooseDiet__content--type">обід</div>
+                          <div class="chooseDiet__content--type">перекус</div>
+                          <div class="chooseDiet__content--type">вечеря</div>
+                        </div>
+                        <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                      </div>
+                      <div class="chooseDiet__content--tab">
+                        <div class="chooseDiet__content--title">2 прийомів їжі на день</div>
+                        <div class="chooseDiet__content--types">
+                          <div class="chooseDiet__content--type">1-й сніданок</div>
+                          <div class="chooseDiet__content--type">2-й сніданок</div>
+                          <div class="chooseDiet__content--type">обід</div>
+                          <div class="chooseDiet__content--type">перекус</div>
+                          <div class="chooseDiet__content--type">вечеря</div>
+                        </div>
+                        <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                      </div>
+                      <div class="chooseDiet__content--tab">
+                        <div class="chooseDiet__content--title">3 прийомів їжі на день</div>
+                        <div class="chooseDiet__content--types">
+                          <div class="chooseDiet__content--type">1-й сніданок</div>
+                          <div class="chooseDiet__content--type">2-й сніданок</div>
+                          <div class="chooseDiet__content--type">обід</div>
+                          <div class="chooseDiet__content--type">перекус</div>
+                          <div class="chooseDiet__content--type">вечеря</div>
+                        </div>
+                        <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                      </div>
+                      <div class="chooseDiet__content--tab">
+                        <div class="chooseDiet__content--title">4 прийомів їжі на день</div>
+                        <div class="chooseDiet__content--types">
+                          <div class="chooseDiet__content--type">1-й сніданок</div>
+                          <div class="chooseDiet__content--type">2-й сніданок</div>
+                          <div class="chooseDiet__content--type">обід</div>
+                          <div class="chooseDiet__content--type">перекус</div>
+                          <div class="chooseDiet__content--type">вечеря</div>
+                        </div>
+                        <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                      </div>
+                      <div class="chooseDiet__content--tab">
+                        <div class="chooseDiet__content--title">5 прийомів їжі на день</div>
+                        <div class="chooseDiet__content--types">
+                          <div class="chooseDiet__content--type">1-й сніданок</div>
+                          <div class="chooseDiet__content--type">2-й сніданок</div>
+                          <div class="chooseDiet__content--type">обід</div>
+                          <div class="chooseDiet__content--type">перекус</div>
+                          <div class="chooseDiet__content--type">вечеря</div>
+                        </div>
+                        <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                      </div>
+                      <div class="chooseDiet__content--tab">
+                        <div class="chooseDiet__content--title">6 прийомів їжі на день</div>
+                        <div class="chooseDiet__content--types">
+                          <div class="chooseDiet__content--type">1-й сніданок</div>
+                          <div class="chooseDiet__content--type">2-й сніданок</div>
+                          <div class="chooseDiet__content--type">обід</div>
+                          <div class="chooseDiet__content--type">перекус</div>
+                          <div class="chooseDiet__content--type">вечеря</div>
+                        </div>
+                        <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                      </div>
+                    </div>
                   </div>
 
+                  <div class="chooseDiet__calcDays">
+                    <div class="chooseDiet__scale">
+                      <div class="chooseDiet__scale--col">
+                        <div class="chooseDiet__scale--item">пробний</div>
+                        <div class="chooseDiet__scale--item">1 день</div>
+                      </div>
+                      <div class="chooseDiet__scale--col">
+                        <div class="chooseDiet__scale--item">5 днів</div>
+                        <div class="chooseDiet__scale--item">10 днів</div>
+                      </div>
+                      <div class="chooseDiet__scale--col">
+                        <div class="chooseDiet__scale--item">20 днів</div>
+                        <div class="chooseDiet__scale--item">30 днів</div>
+                      </div>
+                    </div>
+                    <div class="chooseDiet__prices">
+                      <div class="chooseDiet__prices--col">
+                        <div class="chooseDiet__price">
+                          <div class="chooseDiet__price--total">460 ₴</div>
+                          <div class="chooseDiet__price--day">460 ₴/день</div>
+                        </div>
+                        <div class="chooseDiet__price">
+                          <div class="chooseDiet__price--total">525 ₴</div>
+                          <div class="chooseDiet__price--day">525 ₴/день</div>
+                        </div>
+                      </div>
+                      <div class="chooseDiet__prices--col">
+                        <div class="chooseDiet__price">
+                          <div class="chooseDiet__price--percent">-4%</div>
+                          <div class="chooseDiet__price--total">2525 ₴</div>
+                          <div class="chooseDiet__price--day">505 ₴/день</div>
+                        </div>
+                        <div class="chooseDiet__price">
+                          <div class="chooseDiet__price--percent">-12%</div>
+                          <div class="chooseDiet__price--total">4600 ₴</div>
+                          <div class="chooseDiet__price--day">460 ₴/день</div>
+                        </div>
+                      </div>
+                      <div class="chooseDiet__prices--col">
+                        <div class="chooseDiet__price">
+                          <div class="chooseDiet__price--percent">-15%</div>
+                          <div class="chooseDiet__price--total">8900 ₴</div>
+                          <div class="chooseDiet__price--day">445 ₴/день</div>
+                        </div>
+                        <div class="chooseDiet__price">
+                          <div class="chooseDiet__price--percent">-21%</div>
+                          <div class="chooseDiet__price--total">12 450 ₴</div>
+                          <div class="chooseDiet__price--day">415 ₴/день</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="chooseDiet__footer">
+                    <div class="row g-3">
+                      <div class="col-12">
+                        <div class="dropdown selectDesktop">
+                          <button class="dropdown-toggle drop-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="drop-btn_text">10 днів</span>
+                            <span class="drop-btn_arrow"></span>
+                          </button>
+
+                          <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop">
+
+                            <label class="input-radio">
+                              <input type="radio" name="period">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">пробний день</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="period">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">1 день</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="period">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">5 днів</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="period" checked>
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">10 днів</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="period">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">15 днів</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="period">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">20 днів</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="period">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">30 днів</span>
+                                </span>
+                              </span>
+                            </label>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="row g-3">
+                          <div class="col-md-8">
+                            <div class="chooseDiet__totalBox">
+                              <div class="chooseDiet__totalBox--price">4600.00 ₴</div>
+                              <div class="chooseDiet__totalBox--right">
+                                <ul class="chooseDiet__totalBox--info">
+                                  <li>
+                                    <span>економія:</span>
+                                    <span>12%</span>
+                                  </li>
+                                  <li>
+                                    <span>ціна на день:</span>
+                                    <span>460.00 ₴</span>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <button type="submit" class="btn-site-3 click-animation">Замовити</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </form>
+            </div>
 
+            <div class="col-lg-5 col-xl-6">
+              <div class="chooseDiet__img">
+                <picture>
+                  <source srcset="images/sales-slider/image-6.webp" type="image/webp">
+                  <img src="images/sales-slider/image-6.jpg" alt="">
+                </picture>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="nutritionist-img">
-                <picture>
-                  <source srcset="images/sales-slider/image-4.webp" type="image/webp">
-                  <img src="images/sales-slider/image-4.jpg" alt="">
-                </picture>
+
+            <div class="col-12">
+              <div class="workSteps">
+                <div class="h3 mb-4">як це працює?</div>
+                <div class="row g-3">
+                  <div class="col-6 col-md-3">
+                    <div class="info-item">
+                      <div class="info-item_icon">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18.666 2.66602H2.66602V18.666H5.33268V5.33268H18.666V2.66602ZM23.9993 7.99935H7.99935V23.9993H10.666V10.666H23.9993V7.99935ZM29.3327 13.3327H13.3327V29.3327H29.3327V13.3327Z" fill="black" />
+                        </svg>
+                      </div>
+                      <div class="info-item_title">Обери програму</div>
+                      <div class="info-item_text">Обери мету яка підходить по калорійності. В нашому меню 12 програм харчування для різних цілей і 150 страв. Оберіть програму самостійно або дозвольте це зробити нам.</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="info-item">
+                      <div class="info-item_icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M28.0001 20.6133L20.9734 19.8L17.6134 23.16C13.8286 21.2346 10.7522 18.1581 8.82678 14.3733L12.2001 11L11.3868 4H4.04011C3.26678 17.5733 14.4268 28.7333 28.0001 27.96V20.6133Z" fill="black" />
+                        </svg>
+                      </div>
+                      <div class="info-item_title">обери тривалість</div>
+                      <div class="info-item_text">Обери тривалість програми. Чим довша тривалість, тим більша знижка.</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="info-item">
+                      <div class="info-item_icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M29.3327 2.66602H2.67935L2.66602 29.3327L7.99935 23.9993H29.3327V2.66602ZM10.666 18.666H7.99935V15.9993H10.666V18.666ZM10.666 14.666H7.99935V11.9993H10.666V14.666ZM10.666 10.666H7.99935V7.99935H10.666V10.666ZM19.9993 18.666H13.3327V15.9993H19.9993V18.666ZM23.9993 14.666H13.3327V11.9993H23.9993V14.666ZM23.9993 10.666H13.3327V7.99935H23.9993V10.666Z" fill="black" />
+                        </svg>
+                      </div>
+                      <div class="info-item_title">доставка</div>
+                      <div class="info-item_text">Обери зручний час доставки — вранці або ввечері</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="info-item">
+                      <div class="info-item_icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2.66602 22.666H29.3327V25.3327H2.66602V22.666ZM18.4527 10.386C18.6251 9.97998 18.6944 9.5376 18.6544 9.09829C18.6144 8.65898 18.4664 8.23638 18.2236 7.86813C17.9807 7.49988 17.6505 7.19741 17.2625 6.98767C16.8744 6.77793 16.4405 6.66743 15.9993 6.66602C15.5582 6.66743 15.1243 6.77793 14.7362 6.98767C14.3482 7.19741 14.018 7.49988 13.7751 7.86813C13.5323 8.23638 13.3843 8.65898 13.3443 9.09829C13.3043 9.5376 13.3736 9.97998 13.546 10.386C8.33268 11.466 4.35935 15.906 3.99935 21.3327H27.9993C27.6393 15.906 23.666 11.466 18.4527 10.386Z" fill="black" />
+                        </svg>
+                      </div>
+                      <div class="info-item_title">оплата</div>
+                      <div class="info-item_text">Здійснюй оплату, досягай мети, став нову і повертайся до нас! </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section section-images-2">
+
+      <section class="section">
         <div class="container">
-          <div class="row mb-5">
+          <div class="row">
             <div class="col-12">
-              <h2 class="h1 mb-32 title-images d-none d-md-block">
-                Кому
-                <span class="image">
-                  <picture>
-                    <source srcset="images/title-images/image-1.webp" type="image/webp">
-                    <img src="images/title-images/image-1.jpg" alt="">
-                  </picture>
-                </span>
-                нужна
-                <br>
-                <span class="image">
-                  <picture>
-                    <source srcset="images/title-images/image-3.webp" type="image/webp">
-                    <img src="images/title-images/image-3.jpg" alt="">
-                  </picture>
-                </span>
-                консультация?
-                <span class="image">
-                  <picture>
-                    <source srcset="images/title-images/image-4.webp" type="image/webp">
-                    <img src="images/title-images/image-4.jpg" alt="">
-                  </picture>
-                </span>
-              </h2>
-              <h2 class="h1 d-md-none">Кому нужна консультация?</h2>
-              <div class="row">
-                <div class="col-9">
-                  <div>У вас завжди є можливість поділитися власною думкою про замовлення у нашій компанії, поставити запитання, порадитись стосовно вибору раціону — це важливо для нас, адже ми постійно прагнемо ставати ще кращими для наших клієнтів.</div>
+              <div class="mb-32 d-flex justify-content-between align-items-end gap-3">
+                <h3 class="h3">Приклади наших страв</h3>
+                <div class="slider-buttons dates-slider-buttons">
+                  <button type="button" class="productsItemSlider-prev slider-button-prev slider-button-prev--vertical click-animation swiper-button-disabled" disabled=""></button>
+                  <button type="button" class="productsItemSlider-next slider-button-next slider-button-next--vertical click-animation"></button>
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-12">
-              <div class="form-box">
-                <div class="form-box_bg form-box_bg--left">
-                  <picture>
-                    <source srcset="images/formBg.webp" media="(min-width: 992px)" type="image/webp">
-                    <img src="images/formBg-mobile.png" alt="">
-                  </picture>
-                </div>
-                <div class="form-box_bg form-box_bg--right">
-                  <picture>
-                    <source srcset="images/formBg-2.webp" media="(min-width: 992px)" type="image/webp">
-                    <img src="images/formBg-2-mobile.png" alt="">
-                  </picture>
-                </div>
-                <div class="row position-relative z-1">
-                  <div class="col-md-6 offset-md-3">
-                    <form action="#">
-                      <div class="row gap-3">
-                        <div class="col-12">
-                          <label class="input-site w-100">
-                            <span class="input-site__label">ФИО</span>
-                            <input type="text" class="input-site__input">
-                          </label>
-                        </div>
-                        <div class="col-12">
-                          <label class="input-site w-100">
-                            <span class="input-site__label">Номер телефона</span>
-                            <input type="tel" class="input-site__input">
-                          </label>
-                        </div>
-                        <div class="col-12">
-                          <label class="input-site w-100">
-                            <span class="input-site__label">Відгук</span>
-                            <textarea class="input-site__input" rows="5"></textarea>
-                          </label>
-                        </div>
-                        <div class="col-12">
-                          <label class="input-checkbox-2 w-100">
-                            <input type="checkbox" checked>
-                            <span class="input-checkbox-2_icon"></span>
-                            <span class="input-checkbox-2__label">Соглашаюсь с условиями положения о сборе и защите персональных данных и пользовательским соглашением</span>
-                          </label>
-                        </div>
-                        <div class="col-12">
-                          <div class="row mt-3 align-items-center g-3">
-                            <div class="col-sm-6">
-                              <div class="priceConsultation">
-                                <div class="priceConsultation_title">стоимость консультации</div>
-                                <div class="priceConsultation_total">120.00 UAH</div>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <button type="submit" class="btn-site-3 click-animation green w-100">запросить</button>
-                            </div>
+            <div class="swiper productsItemSlider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <div class="product-item_img ">
+                      <picture>
+                        <source srcset="images/product/image-1.webp" type="image/webp">
+                        <img src="images/product/image-1.jpg" alt="">
+                      </picture>
+
+
+                      <div class="product-item_allergens">
+                        <div class="product-item_allergens--item">Арахис</div>
+                      </div>
+
+
+                    </div>
+
+                    <button class="product-item_lock tooltip" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-html="true" data-bs-title="<span>Не возможно</span> заменить блюдо в первых 3-х днях, если доставка завтра или блюдо без аллергенов">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#lock"></use>
+                      </svg>
+                    </button>
+
+                    <div class="product-item_header">
+                      <div class="product-item_header--left">
+
+
+                        <div class="product-item_status product-item_status--updated">
+                          <div class="product-item_status--icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#info"></use>
+                            </svg>
                           </div>
+                          <span>Обновлено</span>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="product-item_category">Завтрак 1</div>
+                      </div>
+                      <div class="product-item_composition">
+
+
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                          </svg>
+                        </div>
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                          </svg>
+                        </div>
+
+
+                      </div>
+                    </div>
+                    <div class="product-item_desc">
+                      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                      <div class="product-item_weight">300/30 г</div>
+                    </div>
+                    <!--    <div class="product-item_footer">-->
+                    <!--      <div class="compound">-->
+                    <!--        <div class="compound_total">-->
+                    <!--          <div class="compound_title">всего</div>-->
+                    <!--          <div class="compound_count">378 ккал</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="compound_items">-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Белки</div>-->
+                    <!--            <div class="compound_count">15.90 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Жиры</div>-->
+                    <!--            <div class="compound_count">32.20 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Углеводы</div>-->
+                    <!--            <div class="compound_count">35.80 г</div>-->
+                    <!--          </div>-->
+                    <!--        </div>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--      -->
+                    <!--    </div>-->
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <div class="product-item_img ">
+                      <picture>
+                        <source srcset="images/product/image-2.webp" type="image/webp">
+                        <img src="images/product/image-2.jpg" alt="">
+                      </picture>
+
+
+
+                    </div>
+
+                    <button class="product-item_lock tooltip" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-html="true" data-bs-title="<span>Не возможно</span> заменить блюдо в первых 3-х днях, если доставка завтра или блюдо без аллергенов">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#lock"></use>
+                      </svg>
+                    </button>
+
+                    <div class="product-item_header">
+                      <div class="product-item_header--left">
+
+
+
+
+
+
+
+                        <div class="product-item_status product-item_status--hit">
+                          <div class="product-item_status--icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#info"></use>
+                            </svg>
+                          </div>
+                          <span>хит</span>
+                        </div>
+
+
+                        <div class="product-item_category">Завтрак 1</div>
+                      </div>
+                      <div class="product-item_composition">
+
+
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                          </svg>
+                        </div>
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                          </svg>
+                        </div>
+
+
+                      </div>
+                    </div>
+                    <div class="product-item_desc">
+                      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba</h2>
+                      <div class="product-item_weight">300/30 г</div>
+                    </div>
+                    <!--    <div class="product-item_footer">-->
+                    <!--      <div class="compound">-->
+                    <!--        <div class="compound_total">-->
+                    <!--          <div class="compound_title">всего</div>-->
+                    <!--          <div class="compound_count">378 ккал</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="compound_items">-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Белки</div>-->
+                    <!--            <div class="compound_count">15.90 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Жиры</div>-->
+                    <!--            <div class="compound_count">32.20 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Углеводы</div>-->
+                    <!--            <div class="compound_count">35.80 г</div>-->
+                    <!--          </div>-->
+                    <!--        </div>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--      -->
+                    <!--    </div>-->
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <div class="product-item_img ">
+                      <picture>
+                        <source srcset="images/product/image-3.webp" type="image/webp">
+                        <img src="images/product/image-3.jpg" alt="">
+                      </picture>
+
+
+
+                    </div>
+
+                    <button class="product-item_lock tooltip" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-html="true" data-bs-title="<span>Не возможно</span> заменить блюдо в первых 3-х днях, если доставка завтра или блюдо без аллергенов">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#lock"></use>
+                      </svg>
+                    </button>
+
+                    <div class="product-item_header">
+                      <div class="product-item_header--left">
+
+
+
+                        <div class="product-item_status product-item_status--new">
+                          <div class="product-item_status--icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#info"></use>
+                            </svg>
+                          </div>
+                          <span>Новинка</span>
+                        </div>
+
+
+
+
+
+
+                        <div class="product-item_category">Завтрак 1</div>
+                      </div>
+                      <div class="product-item_composition">
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#drink"></use>
+                          </svg>
+                        </div>
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#energy"></use>
+                          </svg>
+                        </div>
+
+
+
+
+                      </div>
+                    </div>
+                    <div class="product-item_desc">
+                      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba</h2>
+                      <div class="product-item_weight">300/30 г</div>
+                    </div>
+                    <!--    <div class="product-item_footer">-->
+                    <!--      <div class="compound">-->
+                    <!--        <div class="compound_total">-->
+                    <!--          <div class="compound_title">всего</div>-->
+                    <!--          <div class="compound_count">378 ккал</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="compound_items">-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Белки</div>-->
+                    <!--            <div class="compound_count">15.90 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Жиры</div>-->
+                    <!--            <div class="compound_count">32.20 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Углеводы</div>-->
+                    <!--            <div class="compound_count">35.80 г</div>-->
+                    <!--          </div>-->
+                    <!--        </div>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--      -->
+                    <!--    </div>-->
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <div class="product-item_img ">
+                      <picture>
+                        <source srcset="images/product/image-4.webp" type="image/webp">
+                        <img src="images/product/image-4.jpg" alt="">
+                      </picture>
+
+                      <div class="product-item_backdrop">
+                        <div class="product-item_changeBox">
+                          <button type="button" class="product-item_changeBox--change btn-site-3 click-animation green" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>
+                          <button type="button" class="product-item_changeBox--delete deleteBtn click-animation" data-bs-target="#modalDelete" data-bs-toggle="modal">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
                         </div>
                       </div>
-                    </form>
 
+
+                      <div class="product-item_allergens">
+                        <div class="product-item_allergens--item">Арахис</div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="product-item_header">
+                      <div class="product-item_header--left">
+
+
+
+
+
+                        <div class="product-item_status product-item_status--sales">
+                          <div class="product-item_status--icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#info"></use>
+                            </svg>
+                          </div>
+                          <span>скидка</span>
+                        </div>
+
+
+
+
+                        <div class="product-item_category">Поkдник</div>
+                      </div>
+                      <div class="product-item_composition">
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#drink"></use>
+                          </svg>
+                        </div>
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#energy"></use>
+                          </svg>
+                        </div>
+
+
+
+
+                      </div>
+                    </div>
+                    <div class="product-item_desc">
+                      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                      <div class="product-item_weight">300/30 г</div>
+                    </div>
+                    <!--    <div class="product-item_footer">-->
+                    <!--      <div class="compound">-->
+                    <!--        <div class="compound_total">-->
+                    <!--          <div class="compound_title">всего</div>-->
+                    <!--          <div class="compound_count">378 ккал</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="compound_items">-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Белки</div>-->
+                    <!--            <div class="compound_count">15.90 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Жиры</div>-->
+                    <!--            <div class="compound_count">32.20 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Углеводы</div>-->
+                    <!--            <div class="compound_count">35.80 г</div>-->
+                    <!--          </div>-->
+                    <!--        </div>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--      -->
+                    <!--      <div class="product-item_mobileBtn mt-2 d-flex gap-2">-->
+                    <!--        <button type="button" class="btn-site-3 green click-animation h-100 flex-grow-1" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>-->
+                    <!--        <button type="button" class="product-item_changeBox&#45;&#45;delete deleteBtn click-animation h-100" data-bs-target="#modalDelete" data-bs-toggle="modal">-->
+                    <!--          <svg>-->
+                    <!--            <use xlink:href="images/icons/sprite.svg#delete"></use>-->
+                    <!--          </svg>-->
+                    <!--        </button>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--    </div>-->
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <div class="product-item_img ">
+                      <picture>
+                        <source srcset="images/product/image-5.webp" type="image/webp">
+                        <img src="images/product/image-5.jpg" alt="">
+                      </picture>
+
+                      <div class="product-item_backdrop">
+                        <div class="product-item_changeBox">
+                          <button type="button" class="product-item_changeBox--change btn-site-3 click-animation green" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>
+                          <button type="button" class="product-item_changeBox--delete deleteBtn click-animation" data-bs-target="#modalDelete" data-bs-toggle="modal">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="product-item_header">
+                      <div class="product-item_header--left">
+
+
+
+
+
+
+
+
+                        <div class="product-item_category">ужин</div>
+                      </div>
+                      <div class="product-item_composition">
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#drink"></use>
+                          </svg>
+                        </div>
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#energy"></use>
+                          </svg>
+                        </div>
+
+
+
+
+                      </div>
+                    </div>
+                    <div class="product-item_desc">
+                      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                      <div class="product-item_weight">300/30 г</div>
+                    </div>
+                    <!--    <div class="product-item_footer">-->
+                    <!--      <div class="compound">-->
+                    <!--        <div class="compound_total">-->
+                    <!--          <div class="compound_title">всего</div>-->
+                    <!--          <div class="compound_count">378 ккал</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="compound_items">-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Белки</div>-->
+                    <!--            <div class="compound_count">15.90 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Жиры</div>-->
+                    <!--            <div class="compound_count">32.20 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Углеводы</div>-->
+                    <!--            <div class="compound_count">35.80 г</div>-->
+                    <!--          </div>-->
+                    <!--        </div>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--      -->
+                    <!--      <div class="product-item_mobileBtn mt-2 d-flex gap-2">-->
+                    <!--        <button type="button" class="btn-site-3 green click-animation h-100 flex-grow-1" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>-->
+                    <!--        <button type="button" class="product-item_changeBox&#45;&#45;delete deleteBtn click-animation h-100" data-bs-target="#modalDelete" data-bs-toggle="modal">-->
+                    <!--          <svg>-->
+                    <!--            <use xlink:href="images/icons/sprite.svg#delete"></use>-->
+                    <!--          </svg>-->
+                    <!--        </button>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--    </div>-->
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <div class="product-item_img ">
+                      <picture>
+                        <source srcset="images/product/image-6.webp" type="image/webp">
+                        <img src="images/product/image-6.jpg" alt="">
+                      </picture>
+
+                      <div class="product-item_backdrop">
+                        <div class="product-item_changeBox">
+                          <button type="button" class="product-item_changeBox--change btn-site-3 click-animation green" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>
+                          <button type="button" class="product-item_changeBox--delete deleteBtn click-animation" data-bs-target="#modalDelete" data-bs-toggle="modal">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="product-item_header">
+                      <div class="product-item_header--left">
+
+
+
+
+
+                        <div class="product-item_status product-item_status--sales">
+                          <div class="product-item_status--icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#info"></use>
+                            </svg>
+                          </div>
+                          <span>скидка</span>
+                        </div>
+
+
+
+
+                        <div class="product-item_category">Поkдник</div>
+                      </div>
+                      <div class="product-item_composition">
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#drink"></use>
+                          </svg>
+                        </div>
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#energy"></use>
+                          </svg>
+                        </div>
+
+
+
+
+                      </div>
+                    </div>
+                    <div class="product-item_desc">
+                      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                      <div class="product-item_weight">300/30 г</div>
+                    </div>
+                    <!--    <div class="product-item_footer">-->
+                    <!--      <div class="compound">-->
+                    <!--        <div class="compound_total">-->
+                    <!--          <div class="compound_title">всего</div>-->
+                    <!--          <div class="compound_count">378 ккал</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="compound_items">-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Белки</div>-->
+                    <!--            <div class="compound_count">15.90 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Жиры</div>-->
+                    <!--            <div class="compound_count">32.20 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Углеводы</div>-->
+                    <!--            <div class="compound_count">35.80 г</div>-->
+                    <!--          </div>-->
+                    <!--        </div>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--      -->
+                    <!--      <div class="product-item_mobileBtn mt-2 d-flex gap-2">-->
+                    <!--        <button type="button" class="btn-site-3 green click-animation h-100 flex-grow-1" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>-->
+                    <!--        <button type="button" class="product-item_changeBox&#45;&#45;delete deleteBtn click-animation h-100" data-bs-target="#modalDelete" data-bs-toggle="modal">-->
+                    <!--          <svg>-->
+                    <!--            <use xlink:href="images/icons/sprite.svg#delete"></use>-->
+                    <!--          </svg>-->
+                    <!--        </button>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--    </div>-->
                   </div>
                 </div>
               </div>
@@ -746,369 +1464,195 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <div class="swiper reviews-slider">
+              <div class="mb-32 d-flex justify-content-between align-items-end gap-3">
+                <h3 class="h3">переваги компанії</h3>
+                <div class="slider-buttons dates-slider-buttons">
+                  <button type="button" class="advantagesSlider-prev slider-button-prev click-animation swiper-button-disabled" disabled=""></button>
+                  <button type="button" class="advantagesSlider-next slider-button-next click-animation"></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="swiper advantagesSlider">
                 <div class="swiper-wrapper">
-
-                  <div class="reviews-item swiper-slide">
-                    <div class="reviews-item--author flex-grow-1 flex-lg-grow-0">
-                      <div class="reviews-item__count">
-                        <span>01</span> / 04
-                      </div>
-                      <div class="reviews-item--author__img">
-                        <picture>
-                          <source srcset="images/reviews/image-1.webp" type="image/webp">
-                          <img src="images/reviews/image-1.jpg" alt="">
-                        </picture>
-                      </div>
-                      <div class="reviews-item--author__about">
-                        <div class="reviews-item--author__name">Алина Вачовски</div>
-                        <div class="reviews-item--author__old">23 года</div>
-                      </div>
-
-                      <div class="reviews-item--text d-lg-none">
-                        <div class="reviews-item--text__quote">
-                          <div class="reviews-item--text__icon">
-                            <svg>
-                              <use xlink:href="images/icons/sprite.svg#quote"></use>
-                            </svg>
-                          </div>
-                          <p>Мне очень нравится ваша еда! У меня никогда не было каких-либо очень привередливых вкусов в еде, плюс когда я решила встать на «путь истинный» похудения, я понимала, что, мне не так важно, насколько это будет вкусно, как насколько это будет эффективно! Чтобы я не была голодной и при этом худела»</p>
-                        </div>
-                      </div>
-                      <div class="reviews-item--programBtn d-lg-none">
-                        <div class="reviews-item--programBtn__icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#restaurant"></use>
-                          </svg>
-                        </div>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProgram">посмотреть программу питания</button>
-                      </div>
-
-
-                      <div class="slider-buttons">
-                        <button type="button" class="reviews-slider-prev slider-button-prev click-animation"></button>
-                        <button type="button" class="reviews-slider-next slider-button-next click-animation"></button>
-                      </div>
-
+                  <div class="swiper-slide">
+                    <div class="advantagesSlider--item">
+                      <div class="advantagesSlider--item__title">120 страв</div>
+                      <div class="advantagesSlider--item__text">120 позицій у меню, щоб кожного дня ви мали новий раціон зі смачних та оригінальних страв</div>
                     </div>
-
-                    <div class="reviews-item--text d-none d-lg-flex">
-                      <div class="reviews-item--text__quote">
-                        <div class="reviews-item--text__icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#quote"></use>
-                          </svg>
-                        </div>
-                        <p>Мне очень нравится ваша еда! У меня никогда не было каких-либо очень привередливых вкусов в еде, плюс когда я решила встать на «путь истинный» похудения, я понимала, что, мне не так важно, насколько это будет вкусно, как насколько это будет эффективно! Чтобы я не была голодной и при этом худела»</p>
-                      </div>
+                    <div class="advantagesSlider--item">
+                      <div class="advantagesSlider--item__title">Розробляється дієтологом</div>
+                      <div class="advantagesSlider--item__text">Наше меню розробляється дієтологом та нутриціологом, щоб у кожній страві були ідеально підібрані калорійність, вміст білків, жирів та вуглеводів</div>
                     </div>
-
-                    <div class="reviews-item--program d-none d-lg-block">
-                      <div class="reviews-item--program__img">
-                        <picture>
-                          <source srcset="images/programs/image-4.webp" type="image/webp">
-                          <img src="images/programs/image-4.jpg" alt="">
-                        </picture>
-                      </div>
-
-                      <div class="reviews-item--program__bottom">
-                        <div class="reviews-item--program__row">
-                          <div class="reviews-item--program__category">раціон харчування</div>
-                          <div class="reviews-item--program__title">1350 ккал</div>
-                        </div>
-                        <div class="reviews-item--program__row">
-                          <div class="reviews-item--program__footer--right">
-                            <div class="reviews-item--program__head">Длительность</div>
-                            <div class="reviews-item--program__time">20 дней</div>
-                          </div>
-                        </div>
-                        <div class="reviews-item--program__row">
-                          <div class="reviews-item--program__btn">
-                            <form action="#">
-                              <button type="submit" class="btn-site-3 click-animation">Купить</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
                   </div>
-
-
-
-
-
-
-                  <div class="reviews-item swiper-slide">
-                    <div class="reviews-item--author flex-grow-1 flex-lg-grow-0">
-                      <div class="reviews-item__count">
-                        <span>02</span> / 04
-                      </div>
-                      <div class="reviews-item--author__img">
-                        <picture>
-                          <source srcset="images/reviews/image-1.webp" type="image/webp">
-                          <img src="images/reviews/image-1.jpg" alt="">
-                        </picture>
-                      </div>
-                      <div class="reviews-item--author__about">
-                        <div class="reviews-item--author__name">Алина Вачовски</div>
-                        <div class="reviews-item--author__old">23 года</div>
-                      </div>
-
-                      <div class="reviews-item--text d-lg-none">
-                        <div class="reviews-item--text__quote">
-                          <div class="reviews-item--text__icon">
-                            <svg>
-                              <use xlink:href="images/icons/sprite.svg#quote"></use>
-                            </svg>
-                          </div>
-                          <p>Мне очень нравится ваша еда! У меня никогда не было каких-либо очень привередливых вкусов в еде, плюс когда я решила встать на «путь истинный» похудения, я понимала, что, мне не так важно, насколько это будет вкусно, как насколько это будет эффективно! Чтобы я не была голодной и при этом худела»</p>
-                        </div>
-                      </div>
-                      <div class="reviews-item--programBtn d-lg-none">
-                        <div class="reviews-item--programBtn__icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#restaurant"></use>
-                          </svg>
-                        </div>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProgram">посмотреть программу питания</button>
-                      </div>
-
-
-                      <div class="slider-buttons">
-                        <button type="button" class="reviews-slider-prev slider-button-prev click-animation"></button>
-                        <button type="button" class="reviews-slider-next slider-button-next click-animation"></button>
-                      </div>
-
+                  <div class="swiper-slide">
+                    <div class="advantagesSlider--item">
+                      <div class="advantagesSlider--item__title">свіжі натуральні продукти</div>
+                      <div class="advantagesSlider--item__text">Використовуємо лише свіжі натуральні продукти та ретельно відбираємо постачальників</div>
                     </div>
-
-                    <div class="reviews-item--text d-none d-lg-flex">
-                      <div class="reviews-item--text__quote">
-                        <div class="reviews-item--text__icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#quote"></use>
-                          </svg>
-                        </div>
-                        <p>Мне очень нравится ваша еда! У меня никогда не было каких-либо очень привередливых вкусов в еде, плюс когда я решила встать на «путь истинный» похудения, я понимала, что, мне не так важно, насколько это будет вкусно, как насколько это будет эффективно! Чтобы я не была голодной и при этом худела»</p>
-                      </div>
+                    <div class="advantagesSlider--item">
+                      <div class="advantagesSlider--item__title">під керівництвом шеф-кухаря</div>
+                      <div class="advantagesSlider--item__text">Всі страви готуються під керівництвом шеф-кухаря безпосередньо перед відправкою, тому ви завжди можете бути впевненими у їхньому неперевершеному смаку та свіжості</div>
                     </div>
-
-                    <div class="reviews-item--program d-none d-lg-block">
-                      <div class="reviews-item--program__img">
-                        <picture>
-                          <source srcset="images/programs/image-4.webp" type="image/webp">
-                          <img src="images/programs/image-4.jpg" alt="">
-                        </picture>
-                      </div>
-
-                      <div class="reviews-item--program__bottom">
-                        <div class="reviews-item--program__row">
-                          <div class="reviews-item--program__category">раціон харчування</div>
-                          <div class="reviews-item--program__title">1350 ккал</div>
-                        </div>
-                        <div class="reviews-item--program__row">
-                          <div class="reviews-item--program__footer--right">
-                            <div class="reviews-item--program__head">Длительность</div>
-                            <div class="reviews-item--program__time">20 дней</div>
-                          </div>
-                        </div>
-                        <div class="reviews-item--program__row">
-                          <div class="reviews-item--program__btn">
-                            <form action="#">
-                              <button type="submit" class="btn-site-3 click-animation">Купить</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
                   </div>
-
-
-
-
-
-
-                  <div class="reviews-item swiper-slide">
-                    <div class="reviews-item--author flex-grow-1 flex-lg-grow-0">
-                      <div class="reviews-item__count">
-                        <span>03</span> / 04
-                      </div>
-                      <div class="reviews-item--author__img">
-                        <picture>
-                          <source srcset="images/reviews/image-1.webp" type="image/webp">
-                          <img src="images/reviews/image-1.jpg" alt="">
-                        </picture>
-                      </div>
-                      <div class="reviews-item--author__about">
-                        <div class="reviews-item--author__name">Алина Вачовски</div>
-                        <div class="reviews-item--author__old">23 года</div>
-                      </div>
-
-                      <div class="reviews-item--text d-lg-none">
-                        <div class="reviews-item--text__quote">
-                          <div class="reviews-item--text__icon">
-                            <svg>
-                              <use xlink:href="images/icons/sprite.svg#quote"></use>
-                            </svg>
-                          </div>
-                          <p>Мне очень нравится ваша еда! У меня никогда не было каких-либо очень привередливых вкусов в еде, плюс когда я решила встать на «путь истинный» похудения, я понимала, что, мне не так важно, насколько это будет вкусно, как насколько это будет эффективно! Чтобы я не была голодной и при этом худела»</p>
-                        </div>
-                      </div>
-                      <div class="reviews-item--programBtn d-lg-none">
-                        <div class="reviews-item--programBtn__icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#restaurant"></use>
-                          </svg>
-                        </div>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProgram">посмотреть программу питания</button>
-                      </div>
-
-
-                      <div class="slider-buttons">
-                        <button type="button" class="reviews-slider-prev slider-button-prev click-animation"></button>
-                        <button type="button" class="reviews-slider-next slider-button-next click-animation"></button>
-                      </div>
-
+                  <div class="swiper-slide">
+                    <div class="advantagesSlider--item">
+                      <div class="advantagesSlider--item__title">Доставка за роскладом</div>
+                      <div class="advantagesSlider--item__text">Щовечора — з 18:00 до 21:30
+                        Ви самі можете обрати найбільш зручний варіант</div>
                     </div>
-
-                    <div class="reviews-item--text d-none d-lg-flex">
-                      <div class="reviews-item--text__quote">
-                        <div class="reviews-item--text__icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#quote"></use>
-                          </svg>
-                        </div>
-                        <p>Мне очень нравится ваша еда! У меня никогда не было каких-либо очень привередливых вкусов в еде, плюс когда я решила встать на «путь истинный» похудения, я понимала, что, мне не так важно, насколько это будет вкусно, как насколько это будет эффективно! Чтобы я не была голодной и при этом худела»</p>
-                      </div>
+                    <div class="advantagesSlider--item">
+                      <div class="advantagesSlider--item__title">спеціальне упакування</div>
+                      <div class="advantagesSlider--item__text"> Вся їжа доставляється у спеціальних упаковках, які дозволяють продуктам довше залишатися свіжими та не псуватися</div>
                     </div>
-
-                    <div class="reviews-item--program d-none d-lg-block">
-                      <div class="reviews-item--program__img">
-                        <picture>
-                          <source srcset="images/programs/image-4.webp" type="image/webp">
-                          <img src="images/programs/image-4.jpg" alt="">
-                        </picture>
-                      </div>
-
-                      <div class="reviews-item--program__bottom">
-                        <div class="reviews-item--program__row">
-                          <div class="reviews-item--program__category">раціон харчування</div>
-                          <div class="reviews-item--program__title">1350 ккал</div>
-                        </div>
-                        <div class="reviews-item--program__row">
-                          <div class="reviews-item--program__footer--right">
-                            <div class="reviews-item--program__head">Длительность</div>
-                            <div class="reviews-item--program__time">20 дней</div>
-                          </div>
-                        </div>
-                        <div class="reviews-item--program__row">
-                          <div class="reviews-item--program__btn">
-                            <form action="#">
-                              <button type="submit" class="btn-site-3 click-animation">Купить</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
                   </div>
-
-
-
-
-
-
-                  <div class="reviews-item swiper-slide">
-                    <div class="reviews-item--author flex-grow-1 flex-lg-grow-0">
-                      <div class="reviews-item__count">
-                        <span>04</span> / 04
-                      </div>
-                      <div class="reviews-item--author__img">
-                        <picture>
-                          <source srcset="images/reviews/image-1.webp" type="image/webp">
-                          <img src="images/reviews/image-1.jpg" alt="">
-                        </picture>
-                      </div>
-                      <div class="reviews-item--author__about">
-                        <div class="reviews-item--author__name">Алина Вачовски</div>
-                        <div class="reviews-item--author__old">23 года</div>
-                      </div>
-
-                      <div class="reviews-item--text d-lg-none">
-                        <div class="reviews-item--text__quote">
-                          <div class="reviews-item--text__icon">
-                            <svg>
-                              <use xlink:href="images/icons/sprite.svg#quote"></use>
-                            </svg>
-                          </div>
-                          <p>Мне очень нравится ваша еда! У меня никогда не было каких-либо очень привередливых вкусов в еде, плюс когда я решила встать на «путь истинный» похудения, я понимала, что, мне не так важно, насколько это будет вкусно, как насколько это будет эффективно! Чтобы я не была голодной и при этом худела»</p>
-                        </div>
-                      </div>
-                      <div class="reviews-item--programBtn d-lg-none">
-                        <div class="reviews-item--programBtn__icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#restaurant"></use>
-                          </svg>
-                        </div>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#modalReviewProgram">посмотреть программу питания</button>
-                      </div>
-
-
-                      <div class="slider-buttons">
-                        <button type="button" class="reviews-slider-prev slider-button-prev click-animation"></button>
-                        <button type="button" class="reviews-slider-next slider-button-next click-animation"></button>
-                      </div>
-
+                  <div class="swiper-slide">
+                    <div class="advantagesSlider--item">
+                      <div class="advantagesSlider--item__title">Доставка за роскладом</div>
+                      <div class="advantagesSlider--item__text">Щовечора — з 18:00 до 21:30
+                        Ви самі можете обрати найбільш зручний варіант</div>
                     </div>
-
-                    <div class="reviews-item--text d-none d-lg-flex">
-                      <div class="reviews-item--text__quote">
-                        <div class="reviews-item--text__icon">
-                          <svg>
-                            <use xlink:href="images/icons/sprite.svg#quote"></use>
-                          </svg>
-                        </div>
-                        <p>Мне очень нравится ваша еда! У меня никогда не было каких-либо очень привередливых вкусов в еде, плюс когда я решила встать на «путь истинный» похудения, я понимала, что, мне не так важно, насколько это будет вкусно, как насколько это будет эффективно! Чтобы я не была голодной и при этом худела»</p>
-                      </div>
+                    <div class="advantagesSlider--item">
+                      <div class="advantagesSlider--item__title">спеціальне упакування</div>
+                      <div class="advantagesSlider--item__text"> Вся їжа доставляється у спеціальних упаковках, які дозволяють продуктам довше залишатися свіжими та не псуватися</div>
                     </div>
-
-                    <div class="reviews-item--program d-none d-lg-block">
-                      <div class="reviews-item--program__img">
-                        <picture>
-                          <source srcset="images/programs/image-4.webp" type="image/webp">
-                          <img src="images/programs/image-4.jpg" alt="">
-                        </picture>
-                      </div>
-
-                      <div class="reviews-item--program__bottom">
-                        <div class="reviews-item--program__row">
-                          <div class="reviews-item--program__category">раціон харчування</div>
-                          <div class="reviews-item--program__title">1350 ккал</div>
-                        </div>
-                        <div class="reviews-item--program__row">
-                          <div class="reviews-item--program__footer--right">
-                            <div class="reviews-item--program__head">Длительность</div>
-                            <div class="reviews-item--program__time">20 дней</div>
-                          </div>
-                        </div>
-                        <div class="reviews-item--program__row">
-                          <div class="reviews-item--program__btn">
-                            <form action="#">
-                              <button type="submit" class="btn-site-3 click-animation">Купить</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="section">
+        <div class="container">
+          <div class="calculateBox">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="h2 mb-1">калькулятор калорій</h2>
+                <h2 class="h5 mb-32">Розрахуйте свій ідеальний раціон</h2>
+              </div>
+            </div>
+            <form action="#" id="calculateFormV2">
+              <div class="row gy-3">
+                <div class="col-lg-7">
+                  <div class="calculate h-100">
+                    <div class="row g-3 g-sm-4">
+                      <div class="col-12">
+                        <div class="d-flex justify-content-between gap-3 mb-2">
+                          <div class="text-uppercase fs-24">Уровень активности</div>
+                          <button type="button" class="calculate_btnInfo btnInfo">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#info-2"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="activity">
+                          <div class="activity-levels">
+                            <input type="radio" name="activity" id="activity-5">
+                            <label for="activity-5" class="activity-level">дуже низький</label>
 
+                            <input type="radio" name="activity" id="activity-4">
+                            <label for="activity-4" class="activity-level">низький</label>
 
+                            <input type="radio" name="activity" id="activity-3">
+                            <label for="activity-3" class="activity-level">середній</label>
 
+                            <input type="radio" name="activity" id="activity-2">
+                            <label for="activity-2" class="activity-level">високий</label>
 
+                            <input type="radio" name="activity" id="activity-1" checked>
+                            <label for="activity-1" class="activity-level">дуже високий</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex flex-column gap-2">
+                        <div class="d-flex justify-content-between gap-3 mb-2">
+                          <div class="text-uppercase fs-24">Система</div>
+                        </div>
+                        <div class="range-item">
+                          <div class="range-item_title">вік</div>
+                          <div class="range-item_input">
+                            <input type="range" min="14" max="80" step="1" value="20" />
+                          </div>
+                          <div class="range-item_count">
+                            <span>35</span> років
+                          </div>
+                        </div>
 
+                        <div class="range-item">
+                          <div class="range-item_title">вага</div>
+                          <div class="range-item_input">
+                            <input type="range" min="40" max="170" step="1" value="90" />
+                          </div>
+                          <div class="range-item_count">
+                            <span></span> кг
+                          </div>
+                        </div>
+
+                        <div class="range-item">
+                          <div class="range-item_title">зріст</div>
+                          <div class="range-item_input">
+                            <input type="range" min="140" max="220" step="1" value="175" />
+                          </div>
+                          <div class="range-item_count">
+                            <span></span> см
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <div class="resultItem">
+                    <div class="resultItem__img">
+                      <picture>
+                        <source srcset="images/product/img-8.webp" type="image/webp">
+                        <img src="images/product/img-8.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="resultItem__footer">
+                      <div class="resultItem__footer--links">
+                        <div class="resultItem__footer--title">ваша денна норма калорій</div>
+                        <div class="resultItem__footer--count">
+                          <span>1350</span> ккал
+                        </div>
+                      </div>
+                      <div class="resultItem__footer--btn">
+                        <button type="submit" class="btn-site-3 click-animation h-100">Замовити</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-info">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-info--content">
+                <div class="section-info--content__left">
+                  <h2 class="h1 section-info--content__title">
+                    Не знаешь какую программу выбрать?
+                  </h2>
+                  <form action="#">
+                    <div class="section-info--content__callBack">
+                      <label class="input-site">
+                        <span class="input-site__label">Номер телефона</span>
+                        <input class="input-site__input" type="tel" value="+380 (95) 344 23 44" />
+                      </label>
+                      <div>
+                        <a class="btn-site-3 click-animation h-100" href="#">звʼязатись зі мною</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="section-info--content__img">
+                  <img alt="" src="images/info-img-2.svg" />
                 </div>
               </div>
             </div>
@@ -1798,6 +2342,7 @@
 
   </div>
 
+
   <button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
     <span class="callback_icon">
       <svg>
@@ -1805,6 +2350,114 @@
       </svg>
     </span>
   </button>
+
+  <div class="activity-box">
+    <div class="activity-box-overlay">
+      <div class="activity-box_header">
+        <div class="activity-box_header--title">Как узнать уровень своей активности</div>
+        <button type="button" class="activity-box_header--close btnInfo">
+          <svg>
+            <use xlink:href="images/icons/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="activity-box_head">
+        <div class="activity-box_title">АКТИВНОСТЬ</div>
+        <div class="activity-box_title">РАБОТА</div>
+        <div class="activity-box_title">ТРЕНИРОВКИ</div>
+      </div>
+      <div class="activity-box_body">
+        <div class="activity-box_item">
+          <div class="activity-box_col">
+            <div class="activity-box_title">АКТИВНОСТЬ</div>
+            <div class="activity-box-info">
+              <div class="activity-box_text">Минимальная</div>
+            </div>
+          </div>
+          <div class="activity-box_col">
+            <div class="activity-box_title">РАБОТА</div>
+            <div class="activity-box_text">Сидячая, в офисе или за рулём. Ходите мало и/или недалеко.</div>
+          </div>
+          <div class="activity-box_col">
+            <div class="activity-box_title">ТРЕНИРОВКИ</div>
+            <div class="activity-box_text">Физической нагрузки нет.</div>
+          </div>
+        </div>
+
+        <div class="activity-box_item">
+          <div class="activity-box_col">
+            <div class="activity-box_title">АКТИВНОСТЬ</div>
+            <div class="activity-box-info">
+              <div class="activity-box_text">Низкая</div>
+            </div>
+          </div>
+          <div class="activity-box_col">
+            <div class="activity-box_title">РАБОТА</div>
+            <div class="activity-box_text">Небольшой физический труд или долгие пешие прогулки: например, сборка мебели, работа курьером.</div>
+          </div>
+          <div class="activity-box_col">
+            <div class="activity-box_title">ТРЕНИРОВКИ</div>
+            <div class="activity-box_text">Интенсивные, от 20 минут 1–3 раза в неделю: плавание, катание на коньках или велосипеде, бег трусцой.</div>
+          </div>
+        </div>
+
+        <div class="activity-box_item">
+          <div class="activity-box_col">
+            <div class="activity-box_title">АКТИВНОСТЬ</div>
+            <div class="activity-box-info">
+              <div class="activity-box_text">Средняя</div>
+            </div>
+          </div>
+          <div class="activity-box_col">
+            <div class="activity-box_title">РАБОТА</div>
+            <div class="activity-box_text">Физическая: занимаетесь погрузкой-разгрузкой, нетяжелой работой на стройке.</div>
+          </div>
+          <div class="activity-box_col">
+            <div class="activity-box_title">ТРЕНИРОВКИ</div>
+            <div class="activity-box_text">Интенсивные, 30 минут до 3–4 раза в неделю.</div>
+          </div>
+        </div>
+
+        <div class="activity-box_item">
+          <div class="activity-box_col">
+            <div class="activity-box_title">АКТИВНОСТЬ</div>
+            <div class="activity-box-info">
+              <div class="activity-box_text">Высокая</div>
+            </div>
+          </div>
+          <div class="activity-box_col">
+            <div class="activity-box_title">РАБОТА</div>
+            <div class="activity-box_text">Тяжёлая и длительная: часто таскаете тяжёлые предметы, строите, работаете с землей или по хозяйству.</div>
+          </div>
+          <div class="activity-box_col">
+            <div class="activity-box_title">ТРЕНИРОВКИ</div>
+            <div class="activity-box_text">Интенсивные силовые упражнения 60–80 минут 4 и более раз в неделю: тяжелая атлетика, борьба.</div>
+          </div>
+        </div>
+
+        <div class="activity-box_item">
+          <div class="activity-box_col">
+            <div class="activity-box_title">АКТИВНОСТЬ</div>
+            <div class="activity-box-info">
+              <div class="activity-box_text">Предельная</div>
+            </div>
+          </div>
+          <div class="activity-box_col">
+            <div class="activity-box_title">РАБОТА</div>
+            <div class="activity-box_text">Тяжёлая и длительная: часто погружаете-разгружаете тяжёлые предметы, строите, работаете с землей или по хозяйству.</div>
+          </div>
+          <div class="activity-box_col">
+            <div class="activity-box_title">ТРЕНИРОВКИ</div>
+            <div class="activity-box_text">Интенсивные силовые упражнения от 60 минут 5–7 раз в неделю: тяжелая атлетика, борьба.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="backdrop"></div>
 
   <!-- Modals -->
   <div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="true">
@@ -4511,8 +5164,6 @@
       </div>
     </div>
   </div>
-
-
 
 
 

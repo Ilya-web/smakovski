@@ -543,40 +543,346 @@
 
     </header>
 
+
     <main id="main">
-
-      <section>
+      <section class="section">
         <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <nav aria-label="breadcrumb">
-                <ul class="breadcrumb-site">
-                  <li class="breadcrumb-site__item">
-                    <a href="#">Главная</a>
-                  </li>
-                  <li class="breadcrumb-site__item" aria-current="page">Диетолог</li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="mb-32">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="info-box-2">
-                <h2 class="h2 mb-3">Худей легко.
-                  <br> Худей со вкусом.
+          <div class="row g-3">
+            <div class="col-lg-6">
+              <div class="sales text-center">
+                <div class="sales-icon">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#moto"></use>
+                  </svg>
+                </div>
+                <h2 class="text-uppercase sales-title">
+                  смачні раціони на кожен день від 205 ₴
                 </h2>
-                <div class="info-box-2_text mb-32">Четырехразовое меню на ~1 400 ккал/день для тех,
-                  кто не занимается спортом, но заботится о своем ежедневном рационе.</div>
-                <div>
-                  <a href="#" class="btn-site-3 green click-animation">Оставить заявку</a>
+                <div class="sales-desc">
+                  <p>Якщо не хочеш готувати, але хочеш харчуватися смачно та правильно!</p>
+                  <p class="sales-time">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#clock"></use>
+                    </svg>
+                    Раціони на 1, 5, 10, 20, 30 днів.
+                  </p>
+                </div>
+                <div class="sales-btn">
+                  <a class="btn-site-3 click-animation" href="#">
+                    <span>замовити</span>
+                  </a>
                 </div>
               </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="swiper sales-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide sales-slider_item">
+                    <picture>
+                      <source srcset="images/sales-slider/image-1.webp" type="image/webp">
+                      <img src="images/sales-slider/image-1.jpg" alt="">
+                    </picture>
+                    <div class="sales-item">
+                      <div class="sales-item_desc">
+                        <div class="sales-item_title">Похудеть для нее</div>
+                        <div class="sales-item_subtitle">1000 Ккал, 160 г</div>
 
+                        <a href="#" class="btn-plus click-animation">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#arrowRight"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="sales-item_img">
+                        <picture>
+                          <source srcset="images/sales-slider/image-1.webp" type="image/webp">
+                          <img src="images/sales-slider/image-1.jpg" alt="">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide sales-slider_item">
+                    <picture>
+                      <source srcset="images/sales-slider/image-1.webp" type="image/webp">
+                      <img src="images/sales-slider/image-1.jpg" alt="">
+                    </picture>
+                    <div class="sales-item">
+                      <div class="sales-item_desc">
+                        <div class="sales-item_title">Похудеть для нее</div>
+                        <div class="sales-item_subtitle">1000 Ккал, 160 г</div>
+
+                        <a href="#" class="btn-plus click-animation">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#arrowRight"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="sales-item_img">
+                        <picture>
+                          <source srcset="images/sales-slider/image-1.webp" type="image/webp">
+                          <img src="images/sales-slider/image-1.jpg" alt="">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide sales-slider_item">
+                    <picture>
+                      <source srcset="images/sales-slider/image-1.webp" type="image/webp">
+                      <img src="images/sales-slider/image-1.jpg" alt="">
+                    </picture>
+                    <div class="sales-item">
+                      <div class="sales-item_desc">
+                        <div class="sales-item_title">Похудеть для нее</div>
+                        <div class="sales-item_subtitle">1000 Ккал, 160 г</div>
+
+                        <a href="#" class="btn-plus click-animation">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#arrowRight"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="sales-item_img">
+                        <picture>
+                          <source srcset="images/sales-slider/image-1.webp" type="image/webp">
+                          <img src="images/sales-slider/image-1.jpg" alt="">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sales-slider-pagination slider-pagination"></div>
+                <button class="sales-slider-prev slider-button-prev whiteBtn click-animation" type="button"></button>
+                <button class="sales-slider-next slider-button-next whiteBtn click-animation" type="button"></button>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="aboutHomePage__img">
+                <picture>
+                  <source srcset="images/sales-slider/image-5.webp" type="image/webp">
+                  <img src="images/sales-slider/image-5.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="aboutHomePage__desc">
+                <div class="aboutHomePage__desc--logo">
+                  <img src="images/logo.svg" alt="">
+                </div>
+                <h2 class="aboutHomePage__desc--title text-uppercase">Smakovski</h2>
+                <div class="aboutHomePage__desc--text text-center">Новий проект від E2GO та SERVIZIO (since 2013), відомого в Івано-Франківську сервіса доставки здорового харчування та кейтерингу.</div>
+                <div class="aboutHomePage__desc--btn">
+                  <a href="#" class="btn-site">Про нас</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="offers">
+                <div class="offers-item offers-item-img">
+                  <img alt="" src="images/offer-img.svg" />
+                </div>
+
+                <div class="offers-item">
+                  <div class="offers-item__header">
+                    <div class="offers-item__icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#leafOutline"></use>
+                      </svg>
+                    </div>
+                    <button type="button" class="offers-item__info d-sm-none" data-bs-toggle="modal" data-bs-target="#takeout-item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#info"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="offers-item__title">Якісні та свіжі інгредієнти</div>
+                  <div class="offers-item__text d-none d-sm-block">Усі продукти відбираємо виключно у перевірених постачальників, а фрукти та овочі – від надійних фермерів.</div>
+                  <a href="#" class="offers-item__link">
+                    <span class="offers-item__link--text">дізнатись більше</span>
+                    <span class="offers-item__link-icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#arrowRight"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="modal fade" id="takeout-item" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                      <div class="modal-content modal-content--yellow">
+                        <div class="modal-header mb-1">
+                          <div class="offers-item__icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#leafOutline"></use>
+                            </svg>
+                          </div>
+                          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#close"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="offers-item__title">Якісні та свіжі інгредієнти</div>
+                          <div class="offers-item__text mb-0">Усі продукти відбираємо виключно у перевірених постачальників, а фрукти та овочі – від надійних фермерів.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                <div class="offers-item">
+                  <div class="offers-item__header">
+                    <div class="offers-item__icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#calendar"></use>
+                      </svg>
+                    </div>
+                    <button type="button" class="offers-item__info d-sm-none" data-bs-toggle="modal" data-bs-target="#lab-item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#info"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="offers-item__title">Ви знаєте меню на тиждень</div>
+                  <div class="offers-item__text d-none d-sm-block">Завчасне планування дозволяє вам чітко бачити, що входитиме до щоденного меню.</div>
+                  <a href="#" class="offers-item__link">
+                    <span class="offers-item__link--text">дізнатись більше</span>
+                    <span class="offers-item__link-icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#arrowRight"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="modal fade" id="lab-item" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                      <div class="modal-content modal-content--yellow">
+                        <div class="modal-header mb-1">
+                          <div class="offers-item__icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#calendar"></use>
+                            </svg>
+                          </div>
+                          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#close"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="offers-item__title">Ви знаєте меню на тиждень</div>
+                          <div class="offers-item__text mb-0">Завчасне планування дозволяє вам чітко бачити, що входитиме до щоденного меню.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                <div class="offers-item">
+                  <div class="offers-item__header">
+                    <div class="offers-item__icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#dinner"></use>
+                      </svg>
+                    </div>
+                    <button type="button" class="offers-item__info d-sm-none" data-bs-toggle="modal" data-bs-target="#heatEat-item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#info"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="offers-item__title">Різноманіття страв</div>
+                  <div class="offers-item__text d-none d-sm-block">Кожен день меню відрізняється, тому ви точно не занудьгуєте і завжди матимете змогу скуштувати щось нове.</div>
+                  <a href="#" class="offers-item__link">
+                    <span class="offers-item__link--text">дізнатись більше</span>
+                    <span class="offers-item__link-icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#arrowRight"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="modal fade" id="heatEat-item" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                      <div class="modal-content modal-content--yellow">
+                        <div class="modal-header mb-1">
+                          <div class="offers-item__icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#dinner"></use>
+                            </svg>
+                          </div>
+                          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#close"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="offers-item__title">Різноманіття страв</div>
+                          <div class="offers-item__text mb-0">Кожен день меню відрізняється, тому ви точно не занудьгуєте і завжди матимете змогу скуштувати щось нове.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                <div class="offers-item">
+                  <div class="offers-item__header">
+                    <div class="offers-item__icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#license"></use>
+                      </svg>
+                    </div>
+                    <button type="button" class="offers-item__info d-sm-none" data-bs-toggle="modal" data-bs-target="#nutrition-item">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#info"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="offers-item__title">Стандарти якості кухні</div>
+                  <div class="offers-item__text d-none d-sm-block">Маємо сертифікат HACCP. Кухня оснащена сучасним обладнанням. Вся команда кухарів працює за міжнародними стандартами.</div>
+                  <a href="#" class="offers-item__link">
+                    <span class="offers-item__link--text">дізнатись більше</span>
+                    <span class="offers-item__link-icon">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#arrowRight"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="modal fade" id="nutrition-item" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                      <div class="modal-content modal-content--yellow">
+                        <div class="modal-header mb-1">
+                          <div class="offers-item__icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#license"></use>
+                            </svg>
+                          </div>
+                          <button type="button" class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#close"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="offers-item__title">Стандарти якості кухні</div>
+                          <div class="offers-item__text mb-0">Маємо сертифікат HACCP. Кухня оснащена сучасним обладнанням. Вся команда кухарів працює за міжнародними стандартами.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+              </div>
             </div>
           </div>
         </div>
@@ -585,156 +891,890 @@
       <section class="section">
         <div class="container">
           <div class="row g-3">
+            <div class="col-lg-7 col-xl-6">
+              <form action="#">
+                <div class="chooseDiet">
+                  <div class="chooseDiet__title h3">Вибрати раціон</div>
 
-            <div class="col-lg-6">
-              <div class="nutritionist nutritionist-green">
-                <h2 class="h2 nutritionist-title">Что входит
-                  <br> в работу с диетологом!
-                </h2>
-                <nav>
-                  <div class="nav nutritionist-tabs mb-4" id="nutritionistTab" role="tablist">
-                    <button class="nutritionist-link active" id="nutritionist-tab-1" data-bs-toggle="tab" data-bs-target="#nutritionist-1" type="button" role="tab" aria-controls="nutritionist-1" aria-selected="true">01.</button>
-                    <button class="nutritionist-link" id="nutritionist-tab-2" data-bs-toggle="tab" data-bs-target="#nutritionist-2" type="button" role="tab" aria-controls="nutritionist-2" aria-selected="false">02.</button>
-                    <button class="nutritionist-link" id="nutritionist-tab-3" data-bs-toggle="tab" data-bs-target="#nutritionist-3" type="button" role="tab" aria-controls="nutritionist-3" aria-selected="false">03.</button>
-                    <button class="nutritionist-link" id="nutritionist-tab-4" data-bs-toggle="tab" data-bs-target="#nutritionist-4" type="button" role="tab" aria-controls="nutritionist-4" aria-selected="false">04.</button>
-                    <button class="nutritionist-link" id="nutritionist-tab-5" data-bs-toggle="tab" data-bs-target="#nutritionist-5" type="button" role="tab" aria-controls="nutritionist-5" aria-selected="false">05.</button>
-                  </div>
-                </nav>
-                <div class="tab-content nutritionist-content" id="nutritionist-tabContent">
-                  <div class="tab-pane fade show active" id="nutritionist-1" role="tabpanel" aria-labelledby="nutritionist-tab-1">
-                    <h3 class="h4 nutritionist-content__title">Спортивный нутрициолог</h3>
-                    <div class="nutritionist-content__desc">Еще одна сфера работы нутрициолога – спортивная нутрициология. Такие специалисты занимаются разрабатыванием систем питания для разных видов спорта для достижения</div>
-                  </div>
-                  <div class="tab-pane fade " id="nutritionist-2" role="tabpanel" aria-labelledby="nutritionist-tab-2">
-                    <h3 class="h4 nutritionist-content__title">Спортивный нутрициолог 2</h3>
-                    <div class="nutritionist-content__desc">Еще одна сфера работы нутрициолога – спортивная нутрициология. Такие специалисты занимаются разрабатыванием систем питания для разных видов спорта для достижения</div>
-                  </div>
-                  <div class="tab-pane fade " id="nutritionist-3" role="tabpanel" aria-labelledby="nutritionist-tab-3">
-                    <h3 class="h4 nutritionist-content__title">Спортивный нутрициолог 3</h3>
-                    <div class="nutritionist-content__desc">Еще одна сфера работы нутрициолога – спортивная нутрициология. Такие специалисты занимаются разрабатыванием систем питания для разных видов спорта для достижения</div>
-                  </div>
-                  <div class="tab-pane fade " id="nutritionist-4" role="tabpanel" aria-labelledby="nutritionist-tab-4">
-                    <h3 class="h4 nutritionist-content__title">Спортивный нутрициолог 4</h3>
-                    <div class="nutritionist-content__desc">Еще одна сфера работы нутрициолога – спортивная нутрициология. Такие специалисты занимаются разрабатыванием систем питания для разных видов спорта для достижения</div>
-                  </div>
-                  <div class="tab-pane fade " id="nutritionist-5" role="tabpanel" aria-labelledby="nutritionist-tab-5">
-                    <h3 class="h4 nutritionist-content__title">Спортивный нутрициолог 5</h3>
-                    <div class="nutritionist-content__desc">Еще одна сфера работы нутрициолога – спортивная нутрициология. Такие специалисты занимаются разрабатыванием систем питания для разных видов спорта для достижения</div>
+                  <div class="chooseDiet__tabs">
+                    <div class="chooseDiet__tabs--header">
+                      <input type="radio" id="tab1" name="tab" checked>
+                      <label for="tab1" class="chooseDiet__tabs--item">1200 ккал</label>
+                      <input type="radio" id="tab2" name="tab">
+                      <label for="tab2" class="chooseDiet__tabs--item">1350 ккал</label>
+                      <input type="radio" id="tab3" name="tab">
+                      <label for="tab3" class="chooseDiet__tabs--item">1500 ккал</label>
+                      <input type="radio" id="tab4" name="tab">
+                      <label for="tab4" class="chooseDiet__tabs--item">1800 ккал</label>
+                      <input type="radio" id="tab5" name="tab">
+                      <label for="tab5" class="chooseDiet__tabs--item">2000 ккал</label>
+                      <input type="radio" id="tab6" name="tab">
+                      <label for="tab6" class="chooseDiet__tabs--item">2200 ккал</label>
+                    </div>
+
+                    <div class="chooseDiet__content">
+                      <div class="chooseDiet__content--tab active">
+                        <div class="chooseDiet__content--title">1 прийомів їжі на день</div>
+                        <div class="chooseDiet__content--types">
+                          <div class="chooseDiet__content--type">1-й сніданок</div>
+                          <div class="chooseDiet__content--type">2-й сніданок</div>
+                          <div class="chooseDiet__content--type">обід</div>
+                          <div class="chooseDiet__content--type">перекус</div>
+                          <div class="chooseDiet__content--type">вечеря</div>
+                        </div>
+                        <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                      </div>
+                      <div class="chooseDiet__content--tab">
+                        <div class="chooseDiet__content--title">2 прийомів їжі на день</div>
+                        <div class="chooseDiet__content--types">
+                          <div class="chooseDiet__content--type">1-й сніданок</div>
+                          <div class="chooseDiet__content--type">2-й сніданок</div>
+                          <div class="chooseDiet__content--type">обід</div>
+                          <div class="chooseDiet__content--type">перекус</div>
+                          <div class="chooseDiet__content--type">вечеря</div>
+                        </div>
+                        <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                      </div>
+                      <div class="chooseDiet__content--tab">
+                        <div class="chooseDiet__content--title">3 прийомів їжі на день</div>
+                        <div class="chooseDiet__content--types">
+                          <div class="chooseDiet__content--type">1-й сніданок</div>
+                          <div class="chooseDiet__content--type">2-й сніданок</div>
+                          <div class="chooseDiet__content--type">обід</div>
+                          <div class="chooseDiet__content--type">перекус</div>
+                          <div class="chooseDiet__content--type">вечеря</div>
+                        </div>
+                        <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                      </div>
+                      <div class="chooseDiet__content--tab">
+                        <div class="chooseDiet__content--title">4 прийомів їжі на день</div>
+                        <div class="chooseDiet__content--types">
+                          <div class="chooseDiet__content--type">1-й сніданок</div>
+                          <div class="chooseDiet__content--type">2-й сніданок</div>
+                          <div class="chooseDiet__content--type">обід</div>
+                          <div class="chooseDiet__content--type">перекус</div>
+                          <div class="chooseDiet__content--type">вечеря</div>
+                        </div>
+                        <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                      </div>
+                      <div class="chooseDiet__content--tab">
+                        <div class="chooseDiet__content--title">5 прийомів їжі на день</div>
+                        <div class="chooseDiet__content--types">
+                          <div class="chooseDiet__content--type">1-й сніданок</div>
+                          <div class="chooseDiet__content--type">2-й сніданок</div>
+                          <div class="chooseDiet__content--type">обід</div>
+                          <div class="chooseDiet__content--type">перекус</div>
+                          <div class="chooseDiet__content--type">вечеря</div>
+                        </div>
+                        <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                      </div>
+                      <div class="chooseDiet__content--tab">
+                        <div class="chooseDiet__content--title">6 прийомів їжі на день</div>
+                        <div class="chooseDiet__content--types">
+                          <div class="chooseDiet__content--type">1-й сніданок</div>
+                          <div class="chooseDiet__content--type">2-й сніданок</div>
+                          <div class="chooseDiet__content--type">обід</div>
+                          <div class="chooseDiet__content--type">перекус</div>
+                          <div class="chooseDiet__content--type">вечеря</div>
+                        </div>
+                        <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                      </div>
+                    </div>
                   </div>
 
+                  <div class="chooseDiet__calcDays">
+                    <div class="chooseDiet__scale">
+                      <div class="chooseDiet__scale--col">
+                        <div class="chooseDiet__scale--item">пробний</div>
+                        <div class="chooseDiet__scale--item">1 день</div>
+                      </div>
+                      <div class="chooseDiet__scale--col">
+                        <div class="chooseDiet__scale--item">5 днів</div>
+                        <div class="chooseDiet__scale--item">10 днів</div>
+                      </div>
+                      <div class="chooseDiet__scale--col">
+                        <div class="chooseDiet__scale--item">20 днів</div>
+                        <div class="chooseDiet__scale--item">30 днів</div>
+                      </div>
+                    </div>
+                    <div class="chooseDiet__prices">
+                      <div class="chooseDiet__prices--col">
+                        <div class="chooseDiet__price">
+                          <div class="chooseDiet__price--total">460 ₴</div>
+                          <div class="chooseDiet__price--day">460 ₴/день</div>
+                        </div>
+                        <div class="chooseDiet__price">
+                          <div class="chooseDiet__price--total">525 ₴</div>
+                          <div class="chooseDiet__price--day">525 ₴/день</div>
+                        </div>
+                      </div>
+                      <div class="chooseDiet__prices--col">
+                        <div class="chooseDiet__price">
+                          <div class="chooseDiet__price--percent">-4%</div>
+                          <div class="chooseDiet__price--total">2525 ₴</div>
+                          <div class="chooseDiet__price--day">505 ₴/день</div>
+                        </div>
+                        <div class="chooseDiet__price">
+                          <div class="chooseDiet__price--percent">-12%</div>
+                          <div class="chooseDiet__price--total">4600 ₴</div>
+                          <div class="chooseDiet__price--day">460 ₴/день</div>
+                        </div>
+                      </div>
+                      <div class="chooseDiet__prices--col">
+                        <div class="chooseDiet__price">
+                          <div class="chooseDiet__price--percent">-15%</div>
+                          <div class="chooseDiet__price--total">8900 ₴</div>
+                          <div class="chooseDiet__price--day">445 ₴/день</div>
+                        </div>
+                        <div class="chooseDiet__price">
+                          <div class="chooseDiet__price--percent">-21%</div>
+                          <div class="chooseDiet__price--total">12 450 ₴</div>
+                          <div class="chooseDiet__price--day">415 ₴/день</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="chooseDiet__footer">
+                    <div class="row g-3">
+                      <div class="col-12">
+                        <div class="dropdown selectDesktop">
+                          <button class="dropdown-toggle drop-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="drop-btn_text">10 днів</span>
+                            <span class="drop-btn_arrow"></span>
+                          </button>
+
+                          <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop">
+
+                            <label class="input-radio">
+                              <input type="radio" name="period">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">пробний день</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="period">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">1 день</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="period">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">5 днів</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="period" checked>
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">10 днів</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="period">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">15 днів</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="period">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">20 днів</span>
+                                </span>
+                              </span>
+                            </label>
+                            <label class="input-radio">
+                              <input type="radio" name="period">
+                              <span class="input-radio_box">
+                                <span class="input-radio_label">
+                                  <span class="input-radio_label--text">30 днів</span>
+                                </span>
+                              </span>
+                            </label>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="row g-3">
+                          <div class="col-md-8">
+                            <div class="chooseDiet__totalBox">
+                              <div class="chooseDiet__totalBox--price">4600.00 ₴</div>
+                              <div class="chooseDiet__totalBox--right">
+                                <ul class="chooseDiet__totalBox--info">
+                                  <li>
+                                    <span>економія:</span>
+                                    <span>12%</span>
+                                  </li>
+                                  <li>
+                                    <span>ціна на день:</span>
+                                    <span>460.00 ₴</span>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <button type="submit" class="btn-site-3 click-animation">Замовити</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </form>
+            </div>
 
+            <div class="col-lg-5 col-xl-6">
+              <div class="chooseDiet__img">
+                <picture>
+                  <source srcset="images/sales-slider/image-6.webp" type="image/webp">
+                  <img src="images/sales-slider/image-6.jpg" alt="">
+                </picture>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="nutritionist-img">
-                <picture>
-                  <source srcset="images/sales-slider/image-4.webp" type="image/webp">
-                  <img src="images/sales-slider/image-4.jpg" alt="">
-                </picture>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="mb-32 d-flex justify-content-between align-items-end gap-3">
+                <h3 class="h3">Приклади наших страв</h3>
+                <div class="slider-buttons dates-slider-buttons">
+                  <button type="button" class="productsItemSlider-prev slider-button-prev slider-button-prev--vertical click-animation swiper-button-disabled" disabled=""></button>
+                  <button type="button" class="productsItemSlider-next slider-button-next slider-button-next--vertical click-animation"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="swiper productsItemSlider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <div class="product-item_img ">
+                      <picture>
+                        <source srcset="images/product/image-1.webp" type="image/webp">
+                        <img src="images/product/image-1.jpg" alt="">
+                      </picture>
+
+
+                      <div class="product-item_allergens">
+                        <div class="product-item_allergens--item">Арахис</div>
+                      </div>
+
+
+                    </div>
+
+                    <button class="product-item_lock tooltip" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-html="true" data-bs-title="<span>Не возможно</span> заменить блюдо в первых 3-х днях, если доставка завтра или блюдо без аллергенов">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#lock"></use>
+                      </svg>
+                    </button>
+
+                    <div class="product-item_header">
+                      <div class="product-item_header--left">
+
+
+                        <div class="product-item_status product-item_status--updated">
+                          <div class="product-item_status--icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#info"></use>
+                            </svg>
+                          </div>
+                          <span>Обновлено</span>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="product-item_category">Завтрак 1</div>
+                      </div>
+                      <div class="product-item_composition">
+
+
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                          </svg>
+                        </div>
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                          </svg>
+                        </div>
+
+
+                      </div>
+                    </div>
+                    <div class="product-item_desc">
+                      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                      <div class="product-item_weight">300/30 г</div>
+                    </div>
+                    <!--    <div class="product-item_footer">-->
+                    <!--      <div class="compound">-->
+                    <!--        <div class="compound_total">-->
+                    <!--          <div class="compound_title">всего</div>-->
+                    <!--          <div class="compound_count">378 ккал</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="compound_items">-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Белки</div>-->
+                    <!--            <div class="compound_count">15.90 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Жиры</div>-->
+                    <!--            <div class="compound_count">32.20 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Углеводы</div>-->
+                    <!--            <div class="compound_count">35.80 г</div>-->
+                    <!--          </div>-->
+                    <!--        </div>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--      -->
+                    <!--    </div>-->
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <div class="product-item_img ">
+                      <picture>
+                        <source srcset="images/product/image-2.webp" type="image/webp">
+                        <img src="images/product/image-2.jpg" alt="">
+                      </picture>
+
+
+
+                    </div>
+
+                    <button class="product-item_lock tooltip" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-html="true" data-bs-title="<span>Не возможно</span> заменить блюдо в первых 3-х днях, если доставка завтра или блюдо без аллергенов">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#lock"></use>
+                      </svg>
+                    </button>
+
+                    <div class="product-item_header">
+                      <div class="product-item_header--left">
+
+
+
+
+
+
+
+                        <div class="product-item_status product-item_status--hit">
+                          <div class="product-item_status--icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#info"></use>
+                            </svg>
+                          </div>
+                          <span>хит</span>
+                        </div>
+
+
+                        <div class="product-item_category">Завтрак 1</div>
+                      </div>
+                      <div class="product-item_composition">
+
+
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#veganCircle"></use>
+                          </svg>
+                        </div>
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#set-meal"></use>
+                          </svg>
+                        </div>
+
+
+                      </div>
+                    </div>
+                    <div class="product-item_desc">
+                      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba</h2>
+                      <div class="product-item_weight">300/30 г</div>
+                    </div>
+                    <!--    <div class="product-item_footer">-->
+                    <!--      <div class="compound">-->
+                    <!--        <div class="compound_total">-->
+                    <!--          <div class="compound_title">всего</div>-->
+                    <!--          <div class="compound_count">378 ккал</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="compound_items">-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Белки</div>-->
+                    <!--            <div class="compound_count">15.90 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Жиры</div>-->
+                    <!--            <div class="compound_count">32.20 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Углеводы</div>-->
+                    <!--            <div class="compound_count">35.80 г</div>-->
+                    <!--          </div>-->
+                    <!--        </div>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--      -->
+                    <!--    </div>-->
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <div class="product-item_img ">
+                      <picture>
+                        <source srcset="images/product/image-3.webp" type="image/webp">
+                        <img src="images/product/image-3.jpg" alt="">
+                      </picture>
+
+
+
+                    </div>
+
+                    <button class="product-item_lock tooltip" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-html="true" data-bs-title="<span>Не возможно</span> заменить блюдо в первых 3-х днях, если доставка завтра или блюдо без аллергенов">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#lock"></use>
+                      </svg>
+                    </button>
+
+                    <div class="product-item_header">
+                      <div class="product-item_header--left">
+
+
+
+                        <div class="product-item_status product-item_status--new">
+                          <div class="product-item_status--icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#info"></use>
+                            </svg>
+                          </div>
+                          <span>Новинка</span>
+                        </div>
+
+
+
+
+
+
+                        <div class="product-item_category">Завтрак 1</div>
+                      </div>
+                      <div class="product-item_composition">
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#drink"></use>
+                          </svg>
+                        </div>
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#energy"></use>
+                          </svg>
+                        </div>
+
+
+
+
+                      </div>
+                    </div>
+                    <div class="product-item_desc">
+                      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba</h2>
+                      <div class="product-item_weight">300/30 г</div>
+                    </div>
+                    <!--    <div class="product-item_footer">-->
+                    <!--      <div class="compound">-->
+                    <!--        <div class="compound_total">-->
+                    <!--          <div class="compound_title">всего</div>-->
+                    <!--          <div class="compound_count">378 ккал</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="compound_items">-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Белки</div>-->
+                    <!--            <div class="compound_count">15.90 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Жиры</div>-->
+                    <!--            <div class="compound_count">32.20 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Углеводы</div>-->
+                    <!--            <div class="compound_count">35.80 г</div>-->
+                    <!--          </div>-->
+                    <!--        </div>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--      -->
+                    <!--    </div>-->
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <div class="product-item_img ">
+                      <picture>
+                        <source srcset="images/product/image-4.webp" type="image/webp">
+                        <img src="images/product/image-4.jpg" alt="">
+                      </picture>
+
+                      <div class="product-item_backdrop">
+                        <div class="product-item_changeBox">
+                          <button type="button" class="product-item_changeBox--change btn-site-3 click-animation green" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>
+                          <button type="button" class="product-item_changeBox--delete deleteBtn click-animation" data-bs-target="#modalDelete" data-bs-toggle="modal">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+
+                      <div class="product-item_allergens">
+                        <div class="product-item_allergens--item">Арахис</div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="product-item_header">
+                      <div class="product-item_header--left">
+
+
+
+
+
+                        <div class="product-item_status product-item_status--sales">
+                          <div class="product-item_status--icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#info"></use>
+                            </svg>
+                          </div>
+                          <span>скидка</span>
+                        </div>
+
+
+
+
+                        <div class="product-item_category">Поkдник</div>
+                      </div>
+                      <div class="product-item_composition">
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#drink"></use>
+                          </svg>
+                        </div>
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#energy"></use>
+                          </svg>
+                        </div>
+
+
+
+
+                      </div>
+                    </div>
+                    <div class="product-item_desc">
+                      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                      <div class="product-item_weight">300/30 г</div>
+                    </div>
+                    <!--    <div class="product-item_footer">-->
+                    <!--      <div class="compound">-->
+                    <!--        <div class="compound_total">-->
+                    <!--          <div class="compound_title">всего</div>-->
+                    <!--          <div class="compound_count">378 ккал</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="compound_items">-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Белки</div>-->
+                    <!--            <div class="compound_count">15.90 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Жиры</div>-->
+                    <!--            <div class="compound_count">32.20 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Углеводы</div>-->
+                    <!--            <div class="compound_count">35.80 г</div>-->
+                    <!--          </div>-->
+                    <!--        </div>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--      -->
+                    <!--      <div class="product-item_mobileBtn mt-2 d-flex gap-2">-->
+                    <!--        <button type="button" class="btn-site-3 green click-animation h-100 flex-grow-1" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>-->
+                    <!--        <button type="button" class="product-item_changeBox&#45;&#45;delete deleteBtn click-animation h-100" data-bs-target="#modalDelete" data-bs-toggle="modal">-->
+                    <!--          <svg>-->
+                    <!--            <use xlink:href="images/icons/sprite.svg#delete"></use>-->
+                    <!--          </svg>-->
+                    <!--        </button>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--    </div>-->
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <div class="product-item_img ">
+                      <picture>
+                        <source srcset="images/product/image-5.webp" type="image/webp">
+                        <img src="images/product/image-5.jpg" alt="">
+                      </picture>
+
+                      <div class="product-item_backdrop">
+                        <div class="product-item_changeBox">
+                          <button type="button" class="product-item_changeBox--change btn-site-3 click-animation green" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>
+                          <button type="button" class="product-item_changeBox--delete deleteBtn click-animation" data-bs-target="#modalDelete" data-bs-toggle="modal">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="product-item_header">
+                      <div class="product-item_header--left">
+
+
+
+
+
+
+
+
+                        <div class="product-item_category">ужин</div>
+                      </div>
+                      <div class="product-item_composition">
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#drink"></use>
+                          </svg>
+                        </div>
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#energy"></use>
+                          </svg>
+                        </div>
+
+
+
+
+                      </div>
+                    </div>
+                    <div class="product-item_desc">
+                      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                      <div class="product-item_weight">300/30 г</div>
+                    </div>
+                    <!--    <div class="product-item_footer">-->
+                    <!--      <div class="compound">-->
+                    <!--        <div class="compound_total">-->
+                    <!--          <div class="compound_title">всего</div>-->
+                    <!--          <div class="compound_count">378 ккал</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="compound_items">-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Белки</div>-->
+                    <!--            <div class="compound_count">15.90 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Жиры</div>-->
+                    <!--            <div class="compound_count">32.20 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Углеводы</div>-->
+                    <!--            <div class="compound_count">35.80 г</div>-->
+                    <!--          </div>-->
+                    <!--        </div>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--      -->
+                    <!--      <div class="product-item_mobileBtn mt-2 d-flex gap-2">-->
+                    <!--        <button type="button" class="btn-site-3 green click-animation h-100 flex-grow-1" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>-->
+                    <!--        <button type="button" class="product-item_changeBox&#45;&#45;delete deleteBtn click-animation h-100" data-bs-target="#modalDelete" data-bs-toggle="modal">-->
+                    <!--          <svg>-->
+                    <!--            <use xlink:href="images/icons/sprite.svg#delete"></use>-->
+                    <!--          </svg>-->
+                    <!--        </button>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--    </div>-->
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <div class="product-item_img ">
+                      <picture>
+                        <source srcset="images/product/image-6.webp" type="image/webp">
+                        <img src="images/product/image-6.jpg" alt="">
+                      </picture>
+
+                      <div class="product-item_backdrop">
+                        <div class="product-item_changeBox">
+                          <button type="button" class="product-item_changeBox--change btn-site-3 click-animation green" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>
+                          <button type="button" class="product-item_changeBox--delete deleteBtn click-animation" data-bs-target="#modalDelete" data-bs-toggle="modal">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="product-item_header">
+                      <div class="product-item_header--left">
+
+
+
+
+
+                        <div class="product-item_status product-item_status--sales">
+                          <div class="product-item_status--icon">
+                            <svg>
+                              <use xlink:href="images/icons/sprite.svg#info"></use>
+                            </svg>
+                          </div>
+                          <span>скидка</span>
+                        </div>
+
+
+
+
+                        <div class="product-item_category">Поkдник</div>
+                      </div>
+                      <div class="product-item_composition">
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#drink"></use>
+                          </svg>
+                        </div>
+
+
+                        <div class="product-item_composition--item">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#energy"></use>
+                          </svg>
+                        </div>
+
+
+
+
+                      </div>
+                    </div>
+                    <div class="product-item_desc">
+                      <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Гречана локшина Soba з курячим філе Sous Vide та грибами</h2>
+                      <div class="product-item_weight">300/30 г</div>
+                    </div>
+                    <!--    <div class="product-item_footer">-->
+                    <!--      <div class="compound">-->
+                    <!--        <div class="compound_total">-->
+                    <!--          <div class="compound_title">всего</div>-->
+                    <!--          <div class="compound_count">378 ккал</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="compound_items">-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Белки</div>-->
+                    <!--            <div class="compound_count">15.90 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Жиры</div>-->
+                    <!--            <div class="compound_count">32.20 г</div>-->
+                    <!--          </div>-->
+                    <!--          <div class="compound_col">-->
+                    <!--            <div class="compound_title">Углеводы</div>-->
+                    <!--            <div class="compound_count">35.80 г</div>-->
+                    <!--          </div>-->
+                    <!--        </div>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--      -->
+                    <!--      <div class="product-item_mobileBtn mt-2 d-flex gap-2">-->
+                    <!--        <button type="button" class="btn-site-3 green click-animation h-100 flex-grow-1" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>-->
+                    <!--        <button type="button" class="product-item_changeBox&#45;&#45;delete deleteBtn click-animation h-100" data-bs-target="#modalDelete" data-bs-toggle="modal">-->
+                    <!--          <svg>-->
+                    <!--            <use xlink:href="images/icons/sprite.svg#delete"></use>-->
+                    <!--          </svg>-->
+                    <!--        </button>-->
+                    <!--      </div>-->
+                    <!--      -->
+                    <!--    </div>-->
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section section-images-2">
+      <section class="section section-info">
         <div class="container">
-          <div class="row mb-5">
-            <div class="col-12">
-              <h2 class="h1 mb-32 title-images d-none d-md-block">
-                Кому
-                <span class="image">
-                  <picture>
-                    <source srcset="images/title-images/image-1.webp" type="image/webp">
-                    <img src="images/title-images/image-1.jpg" alt="">
-                  </picture>
-                </span>
-                нужна
-                <br>
-                <span class="image">
-                  <picture>
-                    <source srcset="images/title-images/image-3.webp" type="image/webp">
-                    <img src="images/title-images/image-3.jpg" alt="">
-                  </picture>
-                </span>
-                консультация?
-                <span class="image">
-                  <picture>
-                    <source srcset="images/title-images/image-4.webp" type="image/webp">
-                    <img src="images/title-images/image-4.jpg" alt="">
-                  </picture>
-                </span>
-              </h2>
-              <h2 class="h1 d-md-none">Кому нужна консультация?</h2>
-              <div class="row">
-                <div class="col-9">
-                  <div>У вас завжди є можливість поділитися власною думкою про замовлення у нашій компанії, поставити запитання, порадитись стосовно вибору раціону — це важливо для нас, адже ми постійно прагнемо ставати ще кращими для наших клієнтів.</div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="row">
             <div class="col-12">
-              <div class="form-box">
-                <div class="form-box_bg form-box_bg--left">
-                  <picture>
-                    <source srcset="images/formBg.webp" media="(min-width: 992px)" type="image/webp">
-                    <img src="images/formBg-mobile.png" alt="">
-                  </picture>
-                </div>
-                <div class="form-box_bg form-box_bg--right">
-                  <picture>
-                    <source srcset="images/formBg-2.webp" media="(min-width: 992px)" type="image/webp">
-                    <img src="images/formBg-2-mobile.png" alt="">
-                  </picture>
-                </div>
-                <div class="row position-relative z-1">
-                  <div class="col-md-6 offset-md-3">
-                    <form action="#">
-                      <div class="row gap-3">
-                        <div class="col-12">
-                          <label class="input-site w-100">
-                            <span class="input-site__label">ФИО</span>
-                            <input type="text" class="input-site__input">
-                          </label>
-                        </div>
-                        <div class="col-12">
-                          <label class="input-site w-100">
-                            <span class="input-site__label">Номер телефона</span>
-                            <input type="tel" class="input-site__input">
-                          </label>
-                        </div>
-                        <div class="col-12">
-                          <label class="input-site w-100">
-                            <span class="input-site__label">Відгук</span>
-                            <textarea class="input-site__input" rows="5"></textarea>
-                          </label>
-                        </div>
-                        <div class="col-12">
-                          <label class="input-checkbox-2 w-100">
-                            <input type="checkbox" checked>
-                            <span class="input-checkbox-2_icon"></span>
-                            <span class="input-checkbox-2__label">Соглашаюсь с условиями положения о сборе и защите персональных данных и пользовательским соглашением</span>
-                          </label>
-                        </div>
-                        <div class="col-12">
-                          <div class="row mt-3 align-items-center g-3">
-                            <div class="col-sm-6">
-                              <div class="priceConsultation">
-                                <div class="priceConsultation_title">стоимость консультации</div>
-                                <div class="priceConsultation_total">120.00 UAH</div>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <button type="submit" class="btn-site-3 click-animation green w-100">запросить</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
+              <div class="section-info--content">
+                <div class="section-info--content__left">
+                  <h2 class="h1 section-info--content__title">
+                    Не знаешь какую программу выбрать?
+                  </h2>
+                  <form action="#">
+                    <div class="section-info--content__callBack">
+                      <label class="input-site">
+                        <span class="input-site__label">Номер телефона</span>
+                        <input class="input-site__input" type="tel" value="+380 (95) 344 23 44" />
+                      </label>
+                      <div>
 
-                  </div>
+                        <button type="submit" class="btn-site-3 click-animation h-100">звʼязатись зі мною</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="section-info--content__img">
+                  <img alt="" src="images/info-img.svg" />
                 </div>
               </div>
             </div>
@@ -744,6 +1784,35 @@
 
       <section class="section">
         <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="h1 mb-32 title-images d-none d-lg-block">
+                Узнайте все
+                <span class="image">
+                  <img alt="" src="images/title-images/image-1.jpg" />
+                </span>
+                <br />
+                o
+                <span class="image">
+                  <img alt="" src="images/title-images/image-2.jpg" />
+                </span>
+                здоровом питании
+                <br />
+                <span class="image">
+                  <img alt="" src="images/title-images/image-3.jpg" />
+                </span>
+                вместе со
+                <span class="image">
+                  <img alt="" src="images/title-images/image-4.jpg" />
+                </span>
+                Smakovski
+              </h2>
+
+              <h2 class="h1 mb-32 d-lg-none">
+                Узнайте все o здоровом питании вместе со Smakovski
+              </h2>
+            </div>
+          </div>
           <div class="row">
             <div class="col-12">
               <div class="swiper reviews-slider">
@@ -1112,449 +2181,49 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+            <div aria-hidden="true" class="modal fade" id="programModal" tabindex="-1">
+              <div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-content modal-content--green">
+                  <div class="modal-header mb-1 align-items-center">
+                    <h4 class="reviews-item--program__category">
+                      Программа питания
+                    </h4>
 
-      <section class="section">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="h1 mb-32">FAQ</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <nav>
-                <div class="faq-tabs mb-3" id="faqTab" role="tablist">
-                  <button class="faq-link active" id="cashback-tab" data-bs-toggle="tab" data-bs-target="#cashback" type="button" role="tab" aria-controls="cashback" aria-selected="true">
-                    <span class="faq-title">Кешбэк</span>
-                    <span class="faq-count">6</span>
-                  </button>
-                  <button class="faq-link" id="nutrition-tab" data-bs-toggle="tab" data-bs-target="#nutrition" type="button" role="tab" aria-controls="nutrition" aria-selected="false">
-                    <span class="faq-title">Питание</span>
-                    <span class="faq-count">4</span>
-                  </button>
-                  <button class="faq-link" id="product-tab" data-bs-toggle="tab" data-bs-target="#product" type="button" role="tab" aria-controls="product" aria-selected="false">
-                    <span class="faq-title">продукт</span>
-                    <span class="faq-count">8</span>
-                  </button>
-                  <button class="faq-link" id="tariff-tab" data-bs-toggle="tab" data-bs-target="#tariff" type="button" role="tab" aria-controls="tariff" aria-selected="false">
-                    <span class="faq-title">тарифы</span>
-                    <span class="faq-count">10</span>
-                  </button>
-                  <button class="faq-link" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment" type="button" role="tab" aria-controls="payment" aria-selected="false">
-                    <span class="faq-title">оплата и доставка</span>
-                    <span class="faq-count">8</span>
-                  </button>
-                  <button class="faq-link" id="storage-tab" data-bs-toggle="tab" data-bs-target="#storage" type="button" role="tab" aria-controls="storage" aria-selected="false">
-                    <span class="faq-title">хранение</span>
-                    <span class="faq-count">15</span>
-                  </button>
-                </div>
-              </nav>
-              <div class="tab-content faq-content" id="faq-tabContent">
-
-                <div class="tab-pane fade show active" id="cashback" role="tabpanel" aria-labelledby="cashback-tab">
-
-                  <div class="accordion-site" id="cashback-accordion">
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-cashback-1">
-                        <button class="accordion-site__button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-cashback-1" aria-expanded="true" aria-controls="collapse-cashback-1">
-                          ЧТО ТАКОЕ КЕШБЭК?
-                        </button>
-                      </h2>
-                      <div id="collapse-cashback-1" class="accordion-collapse collapse show" aria-labelledby="heading-cashback-1">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
+                    <button aria-label="Close" class="modal_close" data-bs-dismiss="modal" type="button">
+                      <svg>
+                        <use xlink:href="images/icons/sprite.svg#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="reviews-item--program__title">Slim Balance</div>
+                    <div class="reviews-item--program__subtitle">
+                      1000 ккал, 160 г
                     </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-cashback-2">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-cashback-2" aria-expanded="true" aria-controls="collapse-cashback-2">
-                          ЧТО ТАКОЕ КЕШБЭК?
-                        </button>
-                      </h2>
-                      <div id="collapse-cashback-2" class="accordion-collapse collapse " aria-labelledby="heading-cashback-2">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
+                    <div class="reviews-item--program__bottom">
+                      <div class="reviews-item--program__img">
+                        <picture>
+                          <source srcset="images/programs/image-4.webp" type="image/webp">
+                          <img alt="" src="images/programs/image-4.jpg" />
+                        </picture>
                       </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-cashback-3">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-cashback-3" aria-expanded="true" aria-controls="collapse-cashback-3">
-                          Почему я могу потратить только часть кешбэка?
-                        </button>
-                      </h2>
-                      <div id="collapse-cashback-3" class="accordion-collapse collapse " aria-labelledby="heading-cashback-3">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
+                      <div class="reviews-item--program__footer">
+                        <div class="reviews-item--program__footer--right">
+                          <div class="reviews-item--program__head">
+                            Длительность
+                          </div>
+                          <div class="reviews-item--program__time">20 дней</div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-cashback-4">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-cashback-4" aria-expanded="true" aria-controls="collapse-cashback-4">
-                          Где я увижу, сколько бонусов у меня на счете?
-                        </button>
-                      </h2>
-                      <div id="collapse-cashback-4" class="accordion-collapse collapse " aria-labelledby="heading-cashback-4">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-cashback-5">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-cashback-5" aria-expanded="true" aria-controls="collapse-cashback-5">
-                          На что я могу потратить кешбэк?
-                        </button>
-                      </h2>
-                      <div id="collapse-cashback-5" class="accordion-collapse collapse " aria-labelledby="heading-cashback-5">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
+                        <div class="reviews-item--program__btn">
+                          <form action="#">
+                            <button class="btn-site-3 click-animation" type="submit">
+                              Купить
+                            </button>
+                          </form>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                </div>
-
-                <div class="tab-pane fade" id="nutrition" role="tabpanel" aria-labelledby="nutrition-tab">
-
-                  <div class="accordion-site" id="nutrition-accordion">
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-nutrition-1">
-                        <button class="accordion-site__button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-nutrition-1" aria-expanded="true" aria-controls="collapse-nutrition-1">
-                          ЧТО ТАКОЕ КЕШБЭК?
-                        </button>
-                      </h2>
-                      <div id="collapse-nutrition-1" class="accordion-collapse collapse show" aria-labelledby="heading-nutrition-1">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-nutrition-2">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-nutrition-2" aria-expanded="true" aria-controls="collapse-nutrition-2">
-                          ЧТО ТАКОЕ КЕШБЭК?
-                        </button>
-                      </h2>
-                      <div id="collapse-nutrition-2" class="accordion-collapse collapse " aria-labelledby="heading-nutrition-2">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-nutrition-3">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-nutrition-3" aria-expanded="true" aria-controls="collapse-nutrition-3">
-                          Почему я могу потратить только часть кешбэка?
-                        </button>
-                      </h2>
-                      <div id="collapse-nutrition-3" class="accordion-collapse collapse " aria-labelledby="heading-nutrition-3">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-nutrition-4">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-nutrition-4" aria-expanded="true" aria-controls="collapse-nutrition-4">
-                          Где я увижу, сколько бонусов у меня на счете?
-                        </button>
-                      </h2>
-                      <div id="collapse-nutrition-4" class="accordion-collapse collapse " aria-labelledby="heading-nutrition-4">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-nutrition-5">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-nutrition-5" aria-expanded="true" aria-controls="collapse-nutrition-5">
-                          На что я могу потратить кешбэк?
-                        </button>
-                      </h2>
-                      <div id="collapse-nutrition-5" class="accordion-collapse collapse " aria-labelledby="heading-nutrition-5">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
-
-                  <div class="accordion-site" id="product-accordion">
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-product-1">
-                        <button class="accordion-site__button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-product-1" aria-expanded="true" aria-controls="collapse-product-1">
-                          ЧТО ТАКОЕ КЕШБЭК?
-                        </button>
-                      </h2>
-                      <div id="collapse-product-1" class="accordion-collapse collapse show" aria-labelledby="heading-product-1">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-product-2">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-product-2" aria-expanded="true" aria-controls="collapse-product-2">
-                          ЧТО ТАКОЕ КЕШБЭК?
-                        </button>
-                      </h2>
-                      <div id="collapse-product-2" class="accordion-collapse collapse " aria-labelledby="heading-product-2">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-product-3">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-product-3" aria-expanded="true" aria-controls="collapse-product-3">
-                          Почему я могу потратить только часть кешбэка?
-                        </button>
-                      </h2>
-                      <div id="collapse-product-3" class="accordion-collapse collapse " aria-labelledby="heading-product-3">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-product-4">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-product-4" aria-expanded="true" aria-controls="collapse-product-4">
-                          Где я увижу, сколько бонусов у меня на счете?
-                        </button>
-                      </h2>
-                      <div id="collapse-product-4" class="accordion-collapse collapse " aria-labelledby="heading-product-4">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-product-5">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-product-5" aria-expanded="true" aria-controls="collapse-product-5">
-                          На что я могу потратить кешбэк?
-                        </button>
-                      </h2>
-                      <div id="collapse-product-5" class="accordion-collapse collapse " aria-labelledby="heading-product-5">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="tab-pane fade" id="tariff" role="tabpanel" aria-labelledby="tariff-tab">
-
-                  <div class="accordion-site" id="tariff-accordion">
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-tariff-1">
-                        <button class="accordion-site__button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-tariff-1" aria-expanded="true" aria-controls="collapse-tariff-1">
-                          ЧТО ТАКОЕ КЕШБЭК?
-                        </button>
-                      </h2>
-                      <div id="collapse-tariff-1" class="accordion-collapse collapse show" aria-labelledby="heading-tariff-1">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-tariff-2">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-tariff-2" aria-expanded="true" aria-controls="collapse-tariff-2">
-                          ЧТО ТАКОЕ КЕШБЭК?
-                        </button>
-                      </h2>
-                      <div id="collapse-tariff-2" class="accordion-collapse collapse " aria-labelledby="heading-tariff-2">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-tariff-3">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-tariff-3" aria-expanded="true" aria-controls="collapse-tariff-3">
-                          Почему я могу потратить только часть кешбэка?
-                        </button>
-                      </h2>
-                      <div id="collapse-tariff-3" class="accordion-collapse collapse " aria-labelledby="heading-tariff-3">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-tariff-4">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-tariff-4" aria-expanded="true" aria-controls="collapse-tariff-4">
-                          Где я увижу, сколько бонусов у меня на счете?
-                        </button>
-                      </h2>
-                      <div id="collapse-tariff-4" class="accordion-collapse collapse " aria-labelledby="heading-tariff-4">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-tariff-5">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-tariff-5" aria-expanded="true" aria-controls="collapse-tariff-5">
-                          На что я могу потратить кешбэк?
-                        </button>
-                      </h2>
-                      <div id="collapse-tariff-5" class="accordion-collapse collapse " aria-labelledby="heading-tariff-5">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="tab-pane fade" id="payment" role="tabpanel" aria-labelledby="payment-tab">
-
-                  <div class="accordion-site" id="payment-accordion">
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-payment-1">
-                        <button class="accordion-site__button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-payment-1" aria-expanded="true" aria-controls="collapse-payment-1">
-                          ЧТО ТАКОЕ КЕШБЭК?
-                        </button>
-                      </h2>
-                      <div id="collapse-payment-1" class="accordion-collapse collapse show" aria-labelledby="heading-payment-1">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-payment-2">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-payment-2" aria-expanded="true" aria-controls="collapse-payment-2">
-                          ЧТО ТАКОЕ КЕШБЭК?
-                        </button>
-                      </h2>
-                      <div id="collapse-payment-2" class="accordion-collapse collapse " aria-labelledby="heading-payment-2">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-payment-3">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-payment-3" aria-expanded="true" aria-controls="collapse-payment-3">
-                          Почему я могу потратить только часть кешбэка?
-                        </button>
-                      </h2>
-                      <div id="collapse-payment-3" class="accordion-collapse collapse " aria-labelledby="heading-payment-3">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-payment-4">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-payment-4" aria-expanded="true" aria-controls="collapse-payment-4">
-                          Где я увижу, сколько бонусов у меня на счете?
-                        </button>
-                      </h2>
-                      <div id="collapse-payment-4" class="accordion-collapse collapse " aria-labelledby="heading-payment-4">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-payment-5">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-payment-5" aria-expanded="true" aria-controls="collapse-payment-5">
-                          На что я могу потратить кешбэк?
-                        </button>
-                      </h2>
-                      <div id="collapse-payment-5" class="accordion-collapse collapse " aria-labelledby="heading-payment-5">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="tab-pane fade" id="storage" role="tabpanel" aria-labelledby="storage-tab">
-
-                  <div class="accordion-site" id="storage-accordion">
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-storage-1">
-                        <button class="accordion-site__button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-storage-1" aria-expanded="true" aria-controls="collapse-storage-1">
-                          ЧТО ТАКОЕ КЕШБЭК?
-                        </button>
-                      </h2>
-                      <div id="collapse-storage-1" class="accordion-collapse collapse show" aria-labelledby="heading-storage-1">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-storage-2">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-storage-2" aria-expanded="true" aria-controls="collapse-storage-2">
-                          ЧТО ТАКОЕ КЕШБЭК?
-                        </button>
-                      </h2>
-                      <div id="collapse-storage-2" class="accordion-collapse collapse " aria-labelledby="heading-storage-2">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-storage-3">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-storage-3" aria-expanded="true" aria-controls="collapse-storage-3">
-                          Почему я могу потратить только часть кешбэка?
-                        </button>
-                      </h2>
-                      <div id="collapse-storage-3" class="accordion-collapse collapse " aria-labelledby="heading-storage-3">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-storage-4">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-storage-4" aria-expanded="true" aria-controls="collapse-storage-4">
-                          Где я увижу, сколько бонусов у меня на счете?
-                        </button>
-                      </h2>
-                      <div id="collapse-storage-4" class="accordion-collapse collapse " aria-labelledby="heading-storage-4">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-site__item">
-                      <h2 class="accordion-site__header" id="heading-storage-5">
-                        <button class="accordion-site__button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-storage-5" aria-expanded="true" aria-controls="collapse-storage-5">
-                          На что я могу потратить кешбэк?
-                        </button>
-                      </h2>
-                      <div id="collapse-storage-5" class="accordion-collapse collapse " aria-labelledby="heading-storage-5">
-                        <div class="accordion-site__body">
-                          Програма ідеально підходить для плавного зниження ваги та закріплення досягнутого результату. Ви будете харчуватися смачно, різноманітно, без почуття голоду, але водночас з дефіцитом калорій. Ми розробили раціони які допомагають легко худнути без шкоди для здоров’я. Ви можете обрати будь-який раціон з необхідною калорійністю залежно від ваших цілей та способу життя.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
               </div>
             </div>
@@ -1795,10 +2464,9 @@
     </footer>
 
 
-
   </div>
 
-  <button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+  <button class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal" type="button">
     <span class="callback_icon">
       <svg>
         <use xlink:href="images/icons/sprite.svg#phone-2"></use>
@@ -4511,7 +5179,6 @@
       </div>
     </div>
   </div>
-
 
 
 

@@ -1,0 +1,760 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+
+
+<div class="wrapper">
+
+  @@include('components/header/index.html')
+
+  <main id="main">
+
+    <section class="section">
+      <form action="#">
+
+        <div class="container">
+          <div class="row position-relative g-3">
+            <div class="col-lg flex-grow-1">
+              <div class="basket-box">
+                <h1 class="h1 basket-box_title">оформити замовлення</h1>
+                <div class="basket-box_item bg-1">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <div class="basket-box_item--title h4">Раціон харчування</div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="colBox h-100">
+                        <div class="row g-4">
+                          <div class="col-12">
+                            <div class="dropdown selectDesktop">
+                              <button class="dropdown-toggle drop-btn drop-btn--label" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="drop-btn_icon">
+                                 <svg>
+                                    <use xlink:href="images/icons/sprite.svg#dinner"></use>
+                                  </svg>
+                                </span>
+                                <span class="drop-btn_desc">
+                                  <span class="drop-btn_label">раціон харчування</span>
+                                  <!--                                  <span class="drop-btn_text">1 неделя</span>-->
+                                </span>
+                                <span class="drop-btn_arrow"></span>
+                              </button>
+                              <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop" >
+
+                                <label class="input-radio">
+                                  <input type="radio" name="dietFood">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">1350 ккал/день</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="dietFood">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">1050 ккал/день</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="dietFood">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">1550 ккал/день</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="dietFood">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">1650 ккал/день</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <div class="dropdown selectDesktop">
+                              <button class="dropdown-toggle drop-btn drop-btn--label" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="drop-btn_icon">
+                                 <svg>
+                                    <use xlink:href="images/icons/sprite.svg#calendar"></use>
+                                  </svg>
+                                </span>
+                                <span class="drop-btn_desc">
+                                  <span class="drop-btn_label">кількість днів</span>
+                                  <!--                                  <span class="drop-btn_text">1 неделя</span>-->
+                                </span>
+                                <span class="drop-btn_arrow"></span>
+                              </button>
+                              <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop" >
+
+                                <label class="input-radio">
+                                  <input type="radio" name="period">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">5 днiв</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="period">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">6 днiв</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="period">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">10 днiв</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="dietFood">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">1650 ккал/день</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <div class="dropdown selectDesktop">
+                              <button class="dropdown-toggle drop-btn drop-btn--label" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="drop-btn_icon">
+                                 <svg>
+                                    <use xlink:href="images/icons/sprite.svg#event"></use>
+                                  </svg>
+                                </span>
+                                <span class="drop-btn_desc">
+                                  <span class="drop-btn_label">Первый день доставки </span>
+                                  <!--                                  <span class="drop-btn_text">1 неделя</span>-->
+                                </span>
+                                <span class="drop-btn_arrow"></span>
+                              </button>
+
+                              <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop" >
+
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">07.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">09.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">10.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">11.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                                <label class="input-radio">
+                                  <input type="radio" name="firstDay">
+                                  <span class="input-radio_box">
+                                    <span class="input-radio_label">
+                                      <span class="input-radio_label--text">08.03.2023</span>
+                                    </span>
+                                  </span>
+                                </label>
+                              </div>
+
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <div class="drop-btn noArrow d-flex justify-content-between g-3">
+                              <div class="drop-btn_title">Без выходных</div>
+                              <label class="input-checkbox-2">
+                                <input type="checkbox">
+                                <span class="input-checkbox-2_icon m-0"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="colBox h-100">
+                        CALENDAR
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="basket-box_total">
+                        <div class="row g-2">
+                          <div class="col-12 d-flex justify-content-between">
+                            <div class="basket-box_total--title">вартість</div>
+                            <div class="basket-box_total--count">2 900.00 ₴</div>
+                          </div>
+                          <div class="col-12 d-flex justify-content-between">
+                            <div class="basket-box_total--title">знижка</div>
+                            <div class="basket-box_total--count">10%</div>
+                          </div>
+                          <div class="col-12 d-flex justify-content-between">
+                            <div class="basket-box_total--title">економія</div>
+                            <div class="basket-box_total--count">- 345.00 ₴</div>
+                          </div>
+                          <div class="col-12 d-flex justify-content-between">
+                            <div class="basket-box_total--title">вартість доставки</div>
+                            <div class="basket-box_total--count">445.00  ₴</div>
+                          </div>
+                          <div class="col-12 d-flex justify-content-between pt-2 border-top">
+                            <div class="basket-box_total--total">До сплати</div>
+                            <div class="basket-box_total--total">2 900.00 ₴</div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-32 g-4">
+                  <div class="col-12">
+                    <div class="form-title">
+                      <div class="form-title_count">1</div>
+                      контактні данні
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="filter-radioBtns" data-col="2">
+
+                      <label class="input-radio">
+                        <input type="radio" name="client" checked>
+                        <span class="input-radio_box">
+                          <span class="input-radio_label">
+                            <span class="input-radio_label--text">новий користувач</span>
+                          </span>
+                        </span>
+                      </label>
+
+                      <label type="button" class="input-radio active" data-bs-toggle="modal" data-bs-target="#modalLogin">
+                        <input type="radio" name="client">
+                        <span class="input-radio_box">
+                          <span class="input-radio_label">
+                            <span class="input-radio_label--text">постійний клієнт</span>
+                          </span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="row g-3">
+                      <div class="col-sm-4">
+                        <div class="wrap-input-site">
+                          <label class="input-site w-100">
+                            <span class="input-site__label">фіо</span>
+                            <input type="text" class="input-site__input">
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="wrap-input-site">
+                          <label class="input-site w-100">
+                            <span class="input-site__label">номер телефону</span>
+                            <input type="tel" class="input-site__input">
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="wrap-input-site">
+                          <label class="input-site w-100">
+                            <span class="input-site__label">Email</span>
+                            <input type="email" class="input-site__input">
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="collapse-item">
+                      <div class="collapse-item_btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-item-1" aria-expanded="false" aria-controls="collapse-item-1">
+                        <div class="collapse-item_icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#restaurant"></use>
+                          </svg>
+                        </div>
+                        <div class="collapse-item_title">інформація про алергії</div>
+                        <div class="collapse-item_icon collapse-item_icon--arrow"></div>
+                      </div>
+                      <div class="collapse" id="collapse-item-1">
+                        <div class="collapse-box">
+                          <div class="collapse-box_header">
+                            <div class="collapse-box_header__title h4">я не вживаю</div>
+                            <div class="collapse-box_header--count">
+                              Исключено: <span class="allergen-count">0</span>
+                              <button type="button" class="collapse-box_header--count-clear allergen-count-clear">
+                                <svg>
+                                  <use xlink:href="images/icons/sprite.svg#close"></use>
+                                </svg>
+                              </button>
+                            </div>
+
+                          </div>
+                          <div>
+                            <div class="collapse-box_item">
+                              <div class="row gy-4">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                  <label class="input-checkbox allergen-input ">
+                                    <input type="checkbox">
+                                    <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                  </label>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                  <label class="input-checkbox allergen-input "> 
+                                    <input type="checkbox">
+                                    <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Грецкий орех</span>
+                                  </span>
+                                  </label>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                  <label class="input-checkbox allergen-input "> 
+                                    <input type="checkbox">
+                                    <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                  </label>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                  <label class="input-checkbox allergen-input "> 
+                                    <input type="checkbox">
+                                    <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                  </label>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                  <label class="input-checkbox allergen-input "> 
+                                    <input type="checkbox">
+                                    <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                  </label>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                  <label class="input-checkbox allergen-input "> 
+                                    <input type="checkbox">
+                                    <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Грецкий орех</span>
+                                  </span>
+                                  </label>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                  <label class="input-checkbox allergen-input "> 
+                                    <input type="checkbox">
+                                    <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                  </label>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                  <label class="input-checkbox allergen-input "> 
+                                    <input type="checkbox">
+                                    <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                  </label>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                  <label class="input-checkbox allergen-input "> 
+                                    <input type="checkbox">
+                                    <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                  </label>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                  <label class="input-checkbox allergen-input "> 
+                                    <input type="checkbox">
+                                    <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Грецкий орех</span>
+                                  </span>
+                                  </label>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                  <label class="input-checkbox allergen-input "> 
+                                    <input type="checkbox">
+                                    <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                  </label>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                  <label class="input-checkbox allergen-input "> 
+                                    <input type="checkbox">
+                                    <span class="input-checkbox_box justify-content-start">
+                                    <span class="input-checkbox_icon"></span>
+                                    <span class="input-checkbox_label">Арахис</span>
+                                  </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="collapse-box_footer">
+                            <button type="button" class="btn-site-3 green">Сохранить</button>
+                            <button type="button" class="btn-site-3 noBg">Отменить</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="addProducts mt-0">
+                      <div class="addProducts_header">
+                        <div class="addProducts_header--desc">
+                          <div class="addProducts_header--title">потрібні прибори</div>
+                          <div class="addProducts_header--subtitle">допоможіть нам оптимізувати відходи</div>
+                        </div>
+                        <label class="input-checkbox-2">
+                          <input type="checkbox">
+                          <span class="input-checkbox-2_icon m-0"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-32">
+                  <div class="col-12">
+                    <div class="form-title">
+                      <div class="form-title_count">2</div>
+                      Доставка
+                    </div>
+                    <div class="deliveryForm deliveryType-js mb-3 active">
+                      <div class="row">
+                        <div class="col-12 d-flex justify-content-between">
+                          <label class="input-radio-2">
+                            <input type="radio" name="deliveryType" checked>
+                            <span class="input-radio-2_label fs-16">Самовывоз</span>
+                            <span class="input-radio-2_icon"></span>
+                            <span class="input-radio-2_info">Забрать 6 декабря с 14:00</span>
+                          </label>
+                          <div class="fs-16 text-uppercase green-text">безкоштовно</div>
+                        </div>
+                        <div class="deliveryForm_content--hidden">
+                          <div class="plBox mt-1">
+                            <div class="row">
+                              <div class="col-12">
+                                <select class="js-choice">
+                                  <option selected disabled>Вибирите улицу</option>
+                                  <option>ул. Богдана хмельницкого-черного, 132</option>
+                                  <option>ул. Багалея, 342</option>
+                                  <option>ул. Станиславского, 2434</option>
+                                  <option>ул. Круглоуниверситетская, 24</option>
+                                  <option>ул. Киевская, 778</option>
+                                </select>
+                              </div>
+
+                              <div class="col-8 col-md-4 mt-3">
+                                <div class="row g-2 fz-16">
+                                  <div class="col-12 d-flex justify-content-between">
+                                    <div class="basket-box_total--title fz-16 text-uppercase">Пн - Сб</div>
+                                    <div class="basket-box_total--count">09:00 - 19:00</div>
+                                  </div>
+                                  <div class="col-12 d-flex justify-content-between">
+                                    <div class="basket-box_total--title fz-16 text-uppercase">Вс</div>
+                                    <div class="basket-box_total--count">10:00 - 18:00</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="deliveryForm deliveryType-js">
+                      <div class="row">
+                        <div class="col-12 d-flex justify-content-between">
+                          <label class="input-radio-2">
+                            <input type="radio" name="deliveryType">
+                            <span class="input-radio-2_label fs-16">Курьер по вашему адресу</span>
+                            <span class="input-radio-2_icon"></span>
+                          </label>
+                          <div class="fs-16 text-nowrap">45.00 ₴</div>
+                        </div>
+                        <div class="col-12">
+                          <div class="deliveryForm_content plBox">
+
+                            <div class="deliveryForm_content--hidden">
+                              <div class="py-3">
+                                <div class="form-label mb-2">Адрес доставки</div>
+                                <div class="row mb-3 g-3">
+                                  <div class="col-sm-6 col-xl-3">
+                                    <select class="js-choice">
+                                      <option selected disabled>Вибирите город</option>
+                                      <option>Киев</option>
+                                      <option>Харьков</option>
+                                      <option>Житомер</option>
+                                      <option>Тернопиль</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-sm-6 col-xl-4">
+                                    <select class="js-choice">
+                                      <option selected disabled>Вибирите улицу</option>
+                                      <option>ул. Богдана хмельницкого-черного,  132</option>
+                                      <option>ул. Багалея, 342</option>
+                                      <option>ул. Станиславского, 2434</option>
+                                      <option>ул. Круглоуниверситетская, 24</option>
+                                      <option>ул. Киевская, 778</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-sm">
+                                    <div class="wrap-input-site">
+                                      <label class="input-site w-100">
+                                        <span class="input-site__label">Дом</span>
+                                        <input type="text" class="input-site__input">
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm">
+                                    <div class="wrap-input-site">
+                                      <label class="input-site w-100">
+                                        <span class="input-site__label">Квартира</span>
+                                        <input type="text" class="input-site__input">
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm">
+                                    <div class="wrap-input-site">
+                                      <label class="input-site w-100">
+                                        <span class="input-site__label">Этаж</span>
+                                        <input type="text" class="input-site__input">
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row g-3">
+                                  <div class="col-12">
+                                    <label class="input-checkbox-2 align-items-center">
+                                      <input type="checkbox">
+                                      <span class="input-checkbox-2_icon"></span>
+                                      <span class="input-checkbox-2__label text-uppercase">Запомнить меня</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-label">Доставка с 7 декабря с 10:00 до 13:00</div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-title">
+                      <div class="form-title_count">3</div>
+                      Оплата
+                    </div>
+                    <div class="row g-2 mb-4">
+                      <div class="col-12">
+                        <div class="pay-title">Оплата при получении</div>
+                      </div>
+                      <div class="col-12">
+                        <label class="input-radio-2">
+                          <input type="radio" name="payType">
+                          <span class="input-radio-2_label fs-16">Оплата наличкой</span>
+                          <span class="input-radio-2_icon"></span>
+                        </label>
+                      </div>
+                      <div class="col-12">
+                        <label class="input-radio-2">
+                          <input type="radio" name="payType">
+                          <span class="input-radio-2_label fs-16">Оплата картой при получении</span>
+                          <span class="input-radio-2_icon"></span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="row g-2">
+                      <div class="col-12">
+                        <div class="pay-title">Оплата онлайн</div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-between">
+                        <label class="input-radio-2">
+                          <input type="radio" name="payType">
+                          <span class="input-radio-2_label fs-16">Apple Pay</span>
+                          <span class="input-radio-2_icon"></span>
+                        </label>
+                        <div class="pay-icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#applePay"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-between">
+                        <label class="input-radio-2">
+                          <input type="radio" name="payType">
+                          <span class="input-radio-2_label fs-16">Google Pay</span>
+                          <span class="input-radio-2_icon"></span>
+                        </label>
+                        <div class="pay-icon">
+                          <svg>
+                            <use xlink:href="images/icons/sprite.svg#googlePay"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label class="input-radio-2">
+                          <input type="radio" name="payType">
+                          <span class="input-radio-2_label fs-16">VISA / MasterCard</span>
+                          <span class="input-radio-2_icon"></span>
+                          <span class="input-radio-2_info">Оплата банковской картой Visa / MasterCard</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg basket-sticky">
+              <div class="basket-total">
+                <div class="basket-total_row">
+                  <div class="basket-total_title">Итого</div>
+                  <div class="basket-total_count">2 900.00 ₴</div>
+                </div>
+                <div class="mt-3">
+                  <a href="#" class="btn-site-3 click-animation w-100">Подтвердить заказ</a>
+                </div>
+                <div class="mt-3 basket-total_info">
+                  Нажимая на кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </section>
+
+    @@include('components/section-faq/index.html')
+
+  </main>
+
+  @@include('components/footer/index.html')
+
+</div>
+
+
+<button type="button" class="callback" data-bs-target="#modalCallback" data-bs-toggle="modal">
+  <span class="callback_icon">
+     <svg>
+      <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+    </svg>
+  </span>
+</button>
+
+<div class="backdrop"></div>
+
+
+@@include('components/modals/index.html')
+
+@@include('components/scripts/index.html')

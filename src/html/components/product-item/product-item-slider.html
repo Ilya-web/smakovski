@@ -117,55 +117,55 @@
       <h2 class="product-item_title" data-bs-target="#modalChangeDish" data-bs-toggle="modal">@@title</h2>
       <div class="product-item_weight">@@weight</div>
     </div>
-    <div class="product-item_footer">
-      <div class="compound">
-        <div class="compound_total">
-          <div class="compound_title">всего</div>
-          <div class="compound_count">378 ккал</div>
-        </div>
-        <div class="compound_items">
-          <div class="compound_col">
-            <div class="compound_title">Белки</div>
-            <div class="compound_count">15.90 г</div>
-          </div>
-          <div class="compound_col">
-            <div class="compound_title">Жиры</div>
-            <div class="compound_count">32.20 г</div>
-          </div>
-          <div class="compound_col">
-            <div class="compound_title">Углеводы</div>
-            <div class="compound_count">35.80 г</div>
-          </div>
-        </div>
-      </div>
-      @@if(context.footerIsVisible) {
-      <form action="#">
-        <div class="product-item_form">
-          <div class="product-item_price">+ 30.00 ₴</div>
-          <button type="submit" class="btn-plus click-animation @@if(context.added){added}">
-            <svg>
-              @@if(!context.added){
-              <use xlink:href="images/icons/sprite.svg#plus"></use>
-              }
-              @@if(context.added){
-              <use xlink:href="images/icons/sprite.svg#check"></use>
-              }
-            </svg>
-          </button>
-        </div>
-      </form>
+<!--    <div class="product-item_footer">-->
+<!--      <div class="compound">-->
+<!--        <div class="compound_total">-->
+<!--          <div class="compound_title">всего</div>-->
+<!--          <div class="compound_count">378 ккал</div>-->
+<!--        </div>-->
+<!--        <div class="compound_items">-->
+<!--          <div class="compound_col">-->
+<!--            <div class="compound_title">Белки</div>-->
+<!--            <div class="compound_count">15.90 г</div>-->
+<!--          </div>-->
+<!--          <div class="compound_col">-->
+<!--            <div class="compound_title">Жиры</div>-->
+<!--            <div class="compound_count">32.20 г</div>-->
+<!--          </div>-->
+<!--          <div class="compound_col">-->
+<!--            <div class="compound_title">Углеводы</div>-->
+<!--            <div class="compound_count">35.80 г</div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      @@if(context.footerIsVisible) {-->
+<!--      <form action="#">-->
+<!--        <div class="product-item_form">-->
+<!--          <div class="product-item_price">+ 30.00 ₴</div>-->
+<!--          <button type="submit" class="btn-plus click-animation @@if(context.added){added}">-->
+<!--            <svg>-->
+<!--              @@if(!context.added){-->
+<!--              <use xlink:href="images/icons/sprite.svg#plus"></use>-->
+<!--              }-->
+<!--              @@if(context.added){-->
+<!--              <use xlink:href="images/icons/sprite.svg#check"></use>-->
+<!--              }-->
+<!--            </svg>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </form>-->
 
-      }
-      @@if(context.backdrop) {
-      <div class="product-item_mobileBtn mt-2 d-flex gap-2">
-        <button type="button" class="btn-site-3 green click-animation h-100 flex-grow-1" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>
-        <button type="button" class="product-item_changeBox--delete deleteBtn click-animation h-100" data-bs-target="#modalDelete" data-bs-toggle="modal">
-          <svg>
-            <use xlink:href="images/icons/sprite.svg#delete"></use>
-          </svg>
-        </button>
-      </div>
-      }
-    </div>
+<!--      }-->
+<!--      @@if(context.backdrop) {-->
+<!--      <div class="product-item_mobileBtn mt-2 d-flex gap-2">-->
+<!--        <button type="button" class="btn-site-3 green click-animation h-100 flex-grow-1" data-bs-target="#modalChangeDish" data-bs-toggle="modal">Изменить</button>-->
+<!--        <button type="button" class="product-item_changeBox&#45;&#45;delete deleteBtn click-animation h-100" data-bs-target="#modalDelete" data-bs-toggle="modal">-->
+<!--          <svg>-->
+<!--            <use xlink:href="images/icons/sprite.svg#delete"></use>-->
+<!--          </svg>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      }-->
+<!--    </div>-->
   </div>
 </div>

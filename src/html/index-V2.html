@@ -1,0 +1,519 @@
+@@include('components/head/index.html', {'title': 'Smakovski'})
+<!--@@include('components/loader/index.html')-->
+
+<div class="wrapper">
+  @@include('components/header/index.html')
+
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-lg-6">
+            <div class="sales text-center">
+              <div class="sales-icon">
+                <svg>
+                  <use xlink:href="images/icons/sprite.svg#moto"></use>
+                </svg>
+              </div>
+              <h2 class="text-uppercase sales-title">
+                смачні раціони на кожен день від 205 ₴
+              </h2>
+              <div class="sales-desc">
+                <p>Якщо не хочеш готувати, але хочеш харчуватися смачно та правильно!</p>
+                <p class="sales-time">
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#clock"></use>
+                  </svg>
+                  Раціони на 1, 5, 10, 20, 30 днів.
+                </p>
+              </div>
+              <div class="sales-btn">
+                <a class="btn-site-3 click-animation" href="#"
+                  ><span>замовити</span></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="swiper sales-slider">
+              <div class="swiper-wrapper">
+                @@loop('components/sales-slider_item/index.html','components/sales-slider_item/bd.json')
+              </div>
+
+              <div class="sales-slider-pagination slider-pagination"></div>
+              <button
+                class="sales-slider-prev slider-button-prev whiteBtn click-animation"
+                type="button"
+              ></button>
+              <button
+                class="sales-slider-next slider-button-next whiteBtn click-animation"
+                type="button"
+              ></button>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="aboutHomePage__img">
+              <img src="images/sales-slider/image-5.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="aboutHomePage__desc">
+              <div class="aboutHomePage__desc--logo">
+                <img src="images/logo.svg" alt="">
+              </div>
+              <h2 class="aboutHomePage__desc--title text-uppercase">Smakovski</h2>
+              <div class="aboutHomePage__desc--text text-center">Новий проект від E2GO та SERVIZIO (since 2013), відомого в Івано-Франківську сервіса доставки здорового харчування та кейтерингу.</div>
+              <div class="aboutHomePage__desc--btn">
+                <a href="#" class="btn-site">Про нас</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="offers">
+              <div class="offers-item offers-item-img">
+                <img alt="" src="images/offer-img.svg" />
+              </div>
+              @@loop('components/offer-item/index.html','components/offer-item/offer-bd.json')
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-lg-7 col-xl-6">
+            <form action="#">
+              <div class="chooseDiet">
+                <div class="chooseDiet__title h3">Вибрати раціон</div>
+
+                <div class="chooseDiet__tabs">
+                  <div class="chooseDiet__tabs--header">
+                    <input type="radio" id="tab1" name="tab" checked>
+                    <label for="tab1" class="chooseDiet__tabs--item">1200 ккал</label>
+                    <input type="radio" id="tab2" name="tab">
+                    <label for="tab2" class="chooseDiet__tabs--item">1350 ккал</label>
+                    <input type="radio" id="tab3" name="tab">
+                    <label for="tab3" class="chooseDiet__tabs--item">1500 ккал</label>
+                    <input type="radio" id="tab4" name="tab">
+                    <label for="tab4" class="chooseDiet__tabs--item">1800 ккал</label>
+                    <input type="radio" id="tab5" name="tab">
+                    <label for="tab5" class="chooseDiet__tabs--item">2000 ккал</label>
+                    <input type="radio" id="tab6" name="tab">
+                    <label for="tab6" class="chooseDiet__tabs--item">2200 ккал</label>
+                  </div>
+
+                  <div class="chooseDiet__content">
+                    <div class="chooseDiet__content--tab active">
+                      <div class="chooseDiet__content--title">1 прийомів їжі на день</div>
+                      <div class="chooseDiet__content--types">
+                        <div class="chooseDiet__content--type">1-й сніданок</div>
+                        <div class="chooseDiet__content--type">2-й сніданок</div>
+                        <div class="chooseDiet__content--type">обід</div>
+                        <div class="chooseDiet__content--type">перекус</div>
+                        <div class="chooseDiet__content--type">вечеря</div>
+                      </div>
+                      <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                    </div>
+                    <div class="chooseDiet__content--tab">
+                      <div class="chooseDiet__content--title">2 прийомів їжі на день</div>
+                      <div class="chooseDiet__content--types">
+                        <div class="chooseDiet__content--type">1-й сніданок</div>
+                        <div class="chooseDiet__content--type">2-й сніданок</div>
+                        <div class="chooseDiet__content--type">обід</div>
+                        <div class="chooseDiet__content--type">перекус</div>
+                        <div class="chooseDiet__content--type">вечеря</div>
+                      </div>
+                      <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                    </div>
+                    <div class="chooseDiet__content--tab">
+                      <div class="chooseDiet__content--title">3 прийомів їжі на день</div>
+                      <div class="chooseDiet__content--types">
+                        <div class="chooseDiet__content--type">1-й сніданок</div>
+                        <div class="chooseDiet__content--type">2-й сніданок</div>
+                        <div class="chooseDiet__content--type">обід</div>
+                        <div class="chooseDiet__content--type">перекус</div>
+                        <div class="chooseDiet__content--type">вечеря</div>
+                      </div>
+                      <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                    </div>
+                    <div class="chooseDiet__content--tab">
+                      <div class="chooseDiet__content--title">4 прийомів їжі на день</div>
+                      <div class="chooseDiet__content--types">
+                        <div class="chooseDiet__content--type">1-й сніданок</div>
+                        <div class="chooseDiet__content--type">2-й сніданок</div>
+                        <div class="chooseDiet__content--type">обід</div>
+                        <div class="chooseDiet__content--type">перекус</div>
+                        <div class="chooseDiet__content--type">вечеря</div>
+                      </div>
+                      <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                    </div>
+                    <div class="chooseDiet__content--tab">
+                      <div class="chooseDiet__content--title">5 прийомів їжі на день</div>
+                      <div class="chooseDiet__content--types">
+                        <div class="chooseDiet__content--type">1-й сніданок</div>
+                        <div class="chooseDiet__content--type">2-й сніданок</div>
+                        <div class="chooseDiet__content--type">обід</div>
+                        <div class="chooseDiet__content--type">перекус</div>
+                        <div class="chooseDiet__content--type">вечеря</div>
+                      </div>
+                      <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                    </div>
+                    <div class="chooseDiet__content--tab">
+                      <div class="chooseDiet__content--title">6 прийомів їжі на день</div>
+                      <div class="chooseDiet__content--types">
+                        <div class="chooseDiet__content--type">1-й сніданок</div>
+                        <div class="chooseDiet__content--type">2-й сніданок</div>
+                        <div class="chooseDiet__content--type">обід</div>
+                        <div class="chooseDiet__content--type">перекус</div>
+                        <div class="chooseDiet__content--type">вечеря</div>
+                      </div>
+                      <div class="chooseDiet__content--text">Такий раціон є оптимальним для людей з високим рівнем фізичної активності або тих, хто має більші енергетичні потреби.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chooseDiet__calcDays">
+                  <div class="chooseDiet__scale">
+                    <div class="chooseDiet__scale--col">
+                      <div class="chooseDiet__scale--item">пробний</div>
+                      <div class="chooseDiet__scale--item">1 день</div>
+                    </div>
+                    <div class="chooseDiet__scale--col">
+                      <div class="chooseDiet__scale--item">5 днів</div>
+                      <div class="chooseDiet__scale--item">10 днів</div>
+                    </div>
+                    <div class="chooseDiet__scale--col">
+                      <div class="chooseDiet__scale--item">20 днів</div>
+                      <div class="chooseDiet__scale--item">30 днів</div>
+                    </div>
+                  </div>
+                  <div class="chooseDiet__prices">
+                    <div class="chooseDiet__prices--col">
+                      <div class="chooseDiet__price">
+                        <div class="chooseDiet__price--total">460 ₴</div>
+                        <div class="chooseDiet__price--day">460 ₴/день</div>
+                      </div>
+                      <div class="chooseDiet__price">
+                        <div class="chooseDiet__price--total">525 ₴</div>
+                        <div class="chooseDiet__price--day">525 ₴/день</div>
+                      </div>
+                    </div>
+                    <div class="chooseDiet__prices--col">
+                      <div class="chooseDiet__price">
+                        <div class="chooseDiet__price--percent">-4%</div>
+                        <div class="chooseDiet__price--total">2525 ₴</div>
+                        <div class="chooseDiet__price--day">505 ₴/день</div>
+                      </div>
+                      <div class="chooseDiet__price">
+                        <div class="chooseDiet__price--percent">-12%</div>
+                        <div class="chooseDiet__price--total">4600 ₴</div>
+                        <div class="chooseDiet__price--day">460 ₴/день</div>
+                      </div>
+                    </div>
+                    <div class="chooseDiet__prices--col">
+                      <div class="chooseDiet__price">
+                        <div class="chooseDiet__price--percent">-15%</div>
+                        <div class="chooseDiet__price--total">8900 ₴</div>
+                        <div class="chooseDiet__price--day">445 ₴/день</div>
+                      </div>
+                      <div class="chooseDiet__price">
+                        <div class="chooseDiet__price--percent">-21%</div>
+                        <div class="chooseDiet__price--total">12 450 ₴</div>
+                        <div class="chooseDiet__price--day">415 ₴/день</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chooseDiet__footer">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <div class="dropdown selectDesktop">
+                        <button class="dropdown-toggle drop-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="drop-btn_text">10 днів</span>
+                          <span class="drop-btn_arrow"></span>
+                        </button>
+
+                        <div class="filter-radioBtns dropdown-menu dropdown-menu--desktop" >
+
+                          <label class="input-radio">
+                            <input type="radio" name="period">
+                            <span class="input-radio_box">
+                          <span class="input-radio_label">
+                            <span class="input-radio_label--text">пробний день</span>
+                          </span>
+                        </span>
+                          </label>
+                          <label class="input-radio">
+                            <input type="radio" name="period" >
+                            <span class="input-radio_box">
+                          <span class="input-radio_label">
+                            <span class="input-radio_label--text">1 день</span>
+                          </span>
+                        </span>
+                          </label>
+                          <label class="input-radio">
+                            <input type="radio" name="period">
+                            <span class="input-radio_box">
+                          <span class="input-radio_label">
+                            <span class="input-radio_label--text">5 днів</span>
+                          </span>
+                        </span>
+                          </label>
+                          <label class="input-radio">
+                            <input type="radio" name="period" checked>
+                            <span class="input-radio_box">
+                          <span class="input-radio_label">
+                            <span class="input-radio_label--text">10 днів</span>
+                          </span>
+                        </span>
+                          </label>
+                          <label class="input-radio">
+                            <input type="radio" name="period">
+                            <span class="input-radio_box">
+                          <span class="input-radio_label">
+                            <span class="input-radio_label--text">15 днів</span>
+                          </span>
+                        </span>
+                          </label>
+                          <label class="input-radio">
+                            <input type="radio" name="period">
+                            <span class="input-radio_box">
+                          <span class="input-radio_label">
+                            <span class="input-radio_label--text">20 днів</span>
+                          </span>
+                        </span>
+                          </label>
+                          <label class="input-radio">
+                            <input type="radio" name="period">
+                            <span class="input-radio_box">
+                          <span class="input-radio_label">
+                            <span class="input-radio_label--text">30 днів</span>
+                          </span>
+                        </span>
+                          </label>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="row g-3">
+                        <div class="col-md-8">
+                          <div class="chooseDiet__totalBox">
+                            <div class="chooseDiet__totalBox--price">4600.00 ₴</div>
+                            <div class="chooseDiet__totalBox--right">
+                              <ul class="chooseDiet__totalBox--info">
+                                <li>
+                                  <span>економія:</span>
+                                  <span>12%</span>
+                                </li>
+                                <li>
+                                  <span>ціна на день:</span>
+                                  <span>460.00 ₴</span>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <button type="submit" class="btn-site-3 click-animation">Замовити</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-lg-5 col-xl-6">
+            <div class="chooseDiet__img">
+              <img src="images/sales-slider/image-6.jpg" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="mb-32 d-flex justify-content-between align-items-end gap-3">
+              <h3 class="h3">Приклади наших страв</h3>
+              <div class="slider-buttons dates-slider-buttons">
+                <button type="button" class="productsItemSlider-prev slider-button-prev slider-button-prev--vertical click-animation swiper-button-disabled" disabled=""></button>
+                <button type="button" class="productsItemSlider-next slider-button-next slider-button-next--vertical click-animation"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="swiper productsItemSlider">
+            <div class="swiper-wrapper">
+              @@loop('components/product-item/product-item-slider.html','components/product-item/bd-slider.json')
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-info--content">
+              <div class="section-info--content__left">
+                <h2 class="h1 section-info--content__title">
+                  Не знаешь какую программу выбрать?
+                </h2>
+                <form action="#">
+                  <div class="section-info--content__callBack">
+                    <label class="input-site">
+                      <span class="input-site__label">Номер телефона</span>
+                      <input
+                        class="input-site__input"
+                        type="tel"
+                        value="+380 (95) 344 23 44"
+                      />
+                    </label>
+                    <div>
+
+                      <button type="submit" class="btn-site-3 click-animation h-100">звʼязатись зі мною</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="section-info--content__img">
+                <img alt="" src="images/info-img.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="h1 mb-32 title-images d-none d-lg-block">
+              Узнайте все
+              <span class="image"
+                ><img alt="" src="images/title-images/image-1.jpg"
+              /></span>
+              <br />
+              o
+              <span class="image"
+                ><img alt="" src="images/title-images/image-2.jpg"
+              /></span>
+              здоровом питании
+              <br />
+              <span class="image"
+                ><img alt="" src="images/title-images/image-3.jpg"
+              /></span>
+              вместе со
+              <span class="image"
+                ><img alt="" src="images/title-images/image-4.jpg"
+              /></span>
+              Smakovski
+            </h2>
+
+            <h2 class="h1 mb-32 d-lg-none">
+              Узнайте все o здоровом питании вместе со Smakovski
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="swiper reviews-slider">
+              <div class="swiper-wrapper">
+                @@loop('components/reviews-item/index.html','components/reviews-item/bd.json')
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="modal fade"
+            id="programModal"
+            tabindex="-1"
+          >
+            <div class="modal-dialog modal-sm modal-dialog-centered">
+              <div class="modal-content modal-content--green">
+                <div class="modal-header mb-1 align-items-center">
+                  <h4 class="reviews-item--program__category">
+                    Программа питания
+                  </h4>
+
+                  <button
+                    aria-label="Close"
+                    class="modal_close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  >
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="reviews-item--program__title">Slim Balance</div>
+                  <div class="reviews-item--program__subtitle">
+                    1000 ккал, 160 г
+                  </div>
+                  <div class="reviews-item--program__bottom">
+                    <div class="reviews-item--program__img">
+                      <img alt="" src="images/programs/image-4.jpg" />
+                    </div>
+                    <div class="reviews-item--program__footer">
+                      <div class="reviews-item--program__footer--right">
+                        <div class="reviews-item--program__head">
+                          Длительность
+                        </div>
+                        <div class="reviews-item--program__time">20 дней</div>
+                      </div>
+                      <div class="reviews-item--program__btn">
+                        <form action="#">
+                          <button
+                            class="btn-site-3 click-animation"
+                            type="submit"
+                          >
+                            Купить
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('components/footer/index.html')
+</div>
+
+<button
+  class="callback"
+  data-bs-target="#modalCallback"
+  data-bs-toggle="modal"
+  type="button"
+>
+  <span class="callback_icon">
+    <svg>
+      <use xlink:href="images/icons/sprite.svg#phone-2"></use>
+    </svg>
+  </span>
+</button>
+
+@@include('components/modals/index.html')
+<!--@@include('components/notification/index.html', {'successfully': true})-->
+<!--@@include('components/notification/index.html', {'error': true})-->
+@@include('components/scripts/index.html')
