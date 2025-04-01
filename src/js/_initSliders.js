@@ -14,10 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         el: `${salesSlider}-pagination`,
         clickable: true,
       },
-      navigation: {
-        nextEl: `${salesSlider}-next`,
-        prevEl: `${salesSlider}-prev`,
-      },
       breakpoints: {
         300: {
           slidesPerView: 1,

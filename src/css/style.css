@@ -12152,87 +12152,6 @@ hr {
     margin-top: 8px;
   }
 }
-.sales-slider-prev, .sales-slider-next {
-  position: absolute;
-  top: 50%;
-  z-index: 2;
-}
-@media (max-width: 575.98px) {
-  .sales-slider-prev, .sales-slider-next {
-    top: 29%;
-  }
-}
-.sales-slider-prev {
-  left: 16px;
-}
-@media (max-width: 575.98px) {
-  .sales-slider-prev {
-    left: 8px;
-  }
-}
-.sales-slider-next {
-  right: 16px;
-}
-@media (max-width: 575.98px) {
-  .sales-slider-next {
-    right: 8px;
-  }
-}
-
-.sales-item {
-  padding: 16px;
-  background: #ffffff;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-}
-@media (min-width: 576px) {
-  .sales-item {
-    position: absolute;
-    z-index: 2;
-    bottom: 16px;
-    right: 16px;
-    width: 60%;
-    min-width: 370px;
-  }
-}
-.sales-item_desc {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-.sales-item_desc .btn-plus {
-  margin-top: auto;
-}
-.sales-item_title {
-  font-size: 20px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
-.sales-item_subtitle {
-  color: #708200;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-.sales-item_img {
-  width: 50%;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.sales-item_img img {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
-  margin: 0 0 0 auto;
-  width: auto;
-}
 
 /*****sales-slider*****/
 /*****offers*****/
@@ -18067,6 +17986,38 @@ hr {
   .basket-total_info a:hover, .basket-total_info a:focus-visible {
     text-decoration: none;
   }
+}
+.basket-total_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  padding: 4px;
+  background: #F1FBC7;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.basket-total_item--img {
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 64px;
+  flex: 0 0 64px;
+  height: 64px;
+}
+.basket-total_item--img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.basket-total_item--title, .basket-total_item--days {
+  color: #708200;
+  font-size: 12px;
+}
+.basket-total_item--kal {
+  font-size: 20px;
+  margin-top: 5px;
 }
 
 /***basket-box***/
